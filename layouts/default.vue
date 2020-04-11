@@ -1,55 +1,81 @@
 <template>
-  <div>
+  <div id="main">
+    <div class="headroom">
+      <div class="navbar" role="navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://techlabs.org" target="_new"
+            ><img class="navbar-logo" src="~assets/techlabs-global-logo.svg" />
+          </a>
+          <a
+            class="navbar-item"
+            href="https://techlabs.org/location/Berlin"
+            target="_new"
+            ><img class="navbar-logo" src="~assets/techlabs-berlin-logo.jpg" />
+          </a>
+
+          <a
+            role="button"
+            class="navbar-burger burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbar"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbar" class="navbar-menu">
+          <!--
+          <div class="navbar-start">
+            <a class="navbar-item">Radar</a>
+          </div>
+          -->
+          <div class="navbar-end">
+            <div class="navbar-item navbar-social-link">
+              <a href="https://facebook.com" target="_new">
+                <Fab i="facebook-f" />
+              </a>
+            </div>
+            <div class="navbar-item navbar-social-link">
+              <a href="https://instagram.com" target="_new">
+                <Fab i="instagram" />
+              </a>
+            </div>
+            <div class="navbar-item navbar-social-link">
+              <a href="https://slack.com" target="_new">
+                <Fab i="slack" />
+              </a>
+            </div>
+            <div class="navbar-item">
+              <a
+                href="https://techlabs.org/location/Berlin"
+                target="_new"
+                class="techlabs-button"
+              >
+                <span class="icon">
+                  <Fas i="link" />
+                </span>
+                <span>About TechLabs Berlin</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <nuxt />
   </div>
 </template>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+<script>
+import Fab from '~/components/Fab.vue'
+import Fas from '~/components/Fas.vue'
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
+export default {
+  components: {
+    Fab,
+    Fas
+  }
 }
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
-</style>
+</script>

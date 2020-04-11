@@ -1,0 +1,70 @@
+@charset "utf-8"
+
+@import "~bulma/sass/utilities/_all"
+
+$primary: #fb1d5c
+$primary-invert: findColorInvert($primary)
+$strong-color: $primary
+
+$link: $grey-dark
+$link-hover: $primary
+$link-focus: $primary
+
+$navbar-item-hover-color: $primary
+
+@import "~bulma/sass/utilities/_all"
+@import "~bulma/sass/base/_all"
+@import "~bulma/sass/elements/_all"
+@import "~bulma/sass/form/_all"
+@import "~bulma/sass/components/_all"
+@import "~bulma/sass/grid/_all"
+@import "~bulma/sass/layout/_all"
+
+.navbar
+  max-width: 1140px
+  margin-left: auto
+  margin-right: auto
+
+.navbar-logo
+  height: 20px
+
+.navbar-social-link
+  position: relative
+  top: 2px
+
+.techlabs-button
+  @extend .button
+  @extend .has-text-weight-semibold
+
+  color: $primary
+  border: 1px solid $primary
+  border-radius: 5px
+  background-color: #ffffff
+
+  &:hover,
+  &.is-hovered
+    background-color: $primary
+    color: $white
+  &:focus,
+  &.is-focused
+    background-color: $primary
+    color: $white
+    &:not(:active)
+      box-shadow: $button-focus-box-shadow-size $button-focus-box-shadow-color
+  &:active,
+  &.is-active
+    background-color: $primary
+    color: $white
+
+.headroom
+  box-shadow: 0 5px 25px -5px rgba(15,18,63,.15)
+
+.highlighted
+  @extend .has-text-weight-semibold
+  color: $primary
+  background-color: #fee9ef
+  padding-left: .4rem
+  padding-right: .4rem
+  padding-top: .2rem
+  padding-bottom: .2rem
+  border-radius: 6px

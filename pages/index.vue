@@ -1,69 +1,37 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        radar
-      </h1>
-      <h2 class="subtitle">
-        The TechLabs Berlin semester radar shows all the important semester
-        information at a glance
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <section class="section">
+    <div class="card">
+      <div class="card-content">
+        <div class="status">
+          TechLabs Berlin is
+          <span class="highlighted">currently accepting applications</span>
+          until Friday, April 17. <br />
+          We will
+          <span class="highlighted">kick-off our semester</span> on Monday,
+          April 21.<br />
+        </div>
+        <p class="content has-text-centered">
+          <a
+            href="https://techlabs.org/location/Berlin"
+            target="_new"
+            class="techlabs-button"
+          >
+            Apply now!
+          </a>
+        </p>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
-<script>
-import Logo from '~/components/Logo.vue'
+<style lang="sass">
+@import "~bulma/sass/utilities/_all"
+@import "~bulma/sass/base/helpers"
+@import "~bulma/sass/elements/content"
 
-export default {
-  components: {
-    Logo
-  }
-}
-</script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
+.status
+  @extend .content
+  @extend .is-size-4
+  @extend .has-text-centered
+  line-height: 2
 </style>

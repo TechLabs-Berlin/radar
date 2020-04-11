@@ -23,7 +23,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['@/assets/styles.sass'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -35,7 +35,8 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
-    '@nuxtjs/stylelint-module'
+    '@nuxtjs/stylelint-module',
+    '@nuxtjs/fontawesome'
   ],
   /*
    ** Nuxt.js modules
@@ -45,7 +46,8 @@ export default {
     '@nuxtjs/bulma',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/style-resources'
   ],
   /*
    ** Build configuration
@@ -62,5 +64,11 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  fontawesome: {
+    icons: {
+      solid: ['faLink'],
+      brands: ['faSlack', 'faInstagram', 'faFacebookF']
+    }
   }
 }
