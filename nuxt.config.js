@@ -63,11 +63,26 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {
+      config.module.rules.push({
+        test: /\.ya?ml$/,
+        type: 'json',
+        use: 'yaml-loader'
+      })
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: "pre",
+          test: /\.(js|vue)$/,
+          loader: "eslint-loader",
+          exclude: /(node_modules)/,
+          options: { fix: true }
+        })
+      }
+    }
   },
   fontawesome: {
     icons: {
-      solid: ['faLink'],
+      solid: ['faLink', 'faFlag', 'faCalendarDay', 'faFile', 'faFilePdf', 'faFilePowerpoint', 'faFilm', 'faComments', 'faHeart', 'faExclamationCircle', 'faAngleUp', 'faAngleDown', 'faEyeSlash'],
       brands: ['faSlack', 'faInstagram', 'faFacebookF']
     }
   }

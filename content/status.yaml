@@ -1,0 +1,9 @@
+---
+  text: |
+    TechLabs Berlin is <span class="highlighted">currently accepting applications</span>
+    until Friday, April 17. We will <span class="highlighted">kick-off our semester</span> on Monday, April 21.
+  links:
+    - title: Watch our Info Session
+      url: https://www.youtube.com/watch?v=iL8MZkqpUIA
+    - title: Apply now!
+      url: https://techlabs.org/location/Berlin

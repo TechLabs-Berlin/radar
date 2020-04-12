@@ -1,0 +1,30 @@
+---
+- name: Previous Milestone
+  date: "2020-04-11T12:00:00+02:00"
+  description: ''
+  todos: []
+- name: My Milestone
+  date: "2020-04-13T20:00:00+02:00"
+  description: |
+    This is **my milestone** and you won't change that!
+  todos: []
+- name: Submit Your Track Personalization
+  date: "2020-04-17T20:00:00+02:00"
+  description: |
+    Here you will choose your track and get a personalized survey which allows edyoucated
+    to personalize the track to *your* needs.
+  todos:
+  - name: Submit the Form
+    resources:
+      - title: Typeform 1
+        type: feedback
+        url: https://typeform2.com
+      - title: Typeform 2
+        type: feedback
+        url: https://typeform.com
+  - name: Draw a Picture
+    resources: []
+- name: Future Milestone
+  date: "2020-05-11T12:00:00+02:00"
+  description: ''
+  todos: []

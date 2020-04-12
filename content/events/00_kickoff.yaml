@@ -1,0 +1,25 @@
+---
+  name: Semester Kickoff
+  date: "2020-04-17T20:00:00+02:00"
+  description: |
+    This is the semester [kickoff](https://techlabs.org). This will be awesome!
+
+    ## Our Agenda
+
+    1. Speak
+    1. Listen
+    1. Repeat
+  resources:
+    - title: Feedback
+      type: feedback
+      url: https://typeform.com
+    - title: Presentation
+      description: Additional material, only relevant for the Data Science Techies.
+      type: pdf
+      url: https://google.com
+    - title: Survey
+      type: link
+      url: https://bing.com
+    - title: Survey
+      type: dasds
+      url: https://bsing.com

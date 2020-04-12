@@ -71,11 +71,20 @@
 <script>
 import Fab from '~/components/Fab.vue'
 import Fas from '~/components/Fas.vue'
+import { initializeNavbar } from '~/assets/layout'
 
 export default {
   components: {
     Fab,
     Fas
+  },
+  mounted() {
+    initializeNavbar()
+  },
+  head() {
+    return {
+      title: 'TechLabs Berlin Semester Radar'
+    }
   }
 }
 </script>
