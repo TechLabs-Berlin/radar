@@ -13,8 +13,8 @@
         </p>
         <p>E-Mail-Adresse: berlin@techlabs.org</p>
         <p>
-          Vorstand: Sarah Woertler, Till Best, Brando Vasquez, Felix Seidel,
-          Jan-Philip Petershagen
+          Vorstand: Sarah Wörtler, Brando Vásquez, Felix Seidel, Jan Phillip
+          Petershagen, Till Best
         </p>
         <p>
           Online-Streitbeilegung gemäß Art. 14 Abs. 1 ODR-VO:<br />
