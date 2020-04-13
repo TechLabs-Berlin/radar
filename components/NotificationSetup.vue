@@ -8,12 +8,21 @@
         <Fas i="comment" /><span>We would like to keep you up-to-date</span>
       </h3>
 
-      <p>
-        Your browser supports push notifications. Click on the button below to
-        allow us to keep you up-to-date on TechLabs Berlin. We won't send more
-        than a few messages per week and you can unsubscribe at any time at the
-        bottom of this page.
-      </p>
+      <div class="columns">
+        <div class="column is-three-fifths">
+          Your browser supports push notifications. Click on the button below to
+          allow us to keep you up-to-date on TechLabs Berlin. We won't send more
+          than a few messages per week and you can unsubscribe at any time at
+          the bottom of this page.
+        </div>
+        <div class="column">
+          <img
+            class="setup-image"
+            src="~/assets/notification.png"
+            alt="An Update from TechLabs Berlin"
+          />
+        </div>
+      </div>
 
       <p class="has-text-centered">
         <a class="techlabs-button" @click="subscribe">Enable Notifications</a>
