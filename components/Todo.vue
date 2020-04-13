@@ -6,6 +6,7 @@
       class="is-checkradio is-medium"
       type="checkbox"
       name="exampleCheckboxLarge"
+      @click="toggleDone"
     />
     <label :for="milestoneId + '-' + id" :class="{ 'todo-done': done }"
       >{{ todo.name }}
@@ -24,6 +25,10 @@
 <script>
 import Resource from '~/components/Resource'
 import { sha256 } from '~/assets/crypto'
+
+function fullID(milestoneId, todoId) {
+  return sha256(milestoneId + '-' + todoId)
+}
 
 export default {
   components: {
@@ -47,6 +52,22 @@ export default {
   },
   async created() {
     this.id = await sha256(this.todo.name)
+    this.done = this.$store.state.todos.done.includes(
+      await fullID(this.milestoneId, this.id)
+    )
+  },
+  methods: {
+    async toggleDone() {
+      this.done = !this.done
+      if (this.done) {
+        this.$store.commit('todos/add', await fullID(this.milestoneId, this.id))
+      } else {
+        this.$store.commit(
+          'todos/remove',
+          await fullID(this.milestoneId, this.id)
+        )
+      }
+    }
   }
 }
 </script>

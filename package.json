@@ -30,7 +30,8 @@
     "bulma-checkradio": "^1.1.1",
     "date-fns": "^2.12.0",
     "markdown-it": "^10.0.0",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "vuex-persist": "^2.2.0"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.13.0",

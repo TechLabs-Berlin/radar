@@ -56,7 +56,7 @@
                 <span class="icon">
                   <Fas i="link" />
                 </span>
-                <span>About TechLabs Berlin</span>
+                <span>techlabs.org</span>
               </a>
             </div>
           </div>
