@@ -5,15 +5,13 @@
     :class="{ 'archive-striped': inactive }"
   >
     <div class="card-content">
-      <div class="columns is-mobile is-vcentered">
-        <div class="column" />
+      <div class="columns is-mobile is-centered is-vcentered">
         <div class="column is-narrow">
           <Fas i="flag" classes="icon is-medium" />
         </div>
         <div class="column is-narrow is-size-4 has-text-weight-semibold">
           {{ milestone.name }}
         </div>
-        <div class="column" />
       </div>
       <p
         v-if="deadlineRelative && !inactive"

@@ -87,5 +87,8 @@ export default {
       solid: ['faLink', 'faFlag', 'faCalendarDay', 'faFile', 'faFilePdf', 'faFilePowerpoint', 'faFilm', 'faComments', 'faHeart', 'faExclamationCircle', 'faAngleUp', 'faAngleDown', 'faEyeSlash'],
       brands: ['faSlack', 'faInstagram', 'faFacebookF']
     }
+  },
+  router: {
+    linkActiveClass: 'is-active'
   }
 }

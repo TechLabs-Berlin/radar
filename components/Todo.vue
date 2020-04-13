@@ -52,20 +52,17 @@ export default {
   },
   async created() {
     this.id = await sha256(this.todo.name)
-    this.done = this.$store.state.todos.done.includes(
-      await fullID(this.milestoneId, this.id)
-    )
+    const _fullID = await fullID(this.milestoneId, this.id)
+    this.done = this.$store.state.todos.done.includes(_fullID)
   },
   methods: {
     async toggleDone() {
       this.done = !this.done
+      const _fullID = await fullID(this.milestoneId, this.id)
       if (this.done) {
-        this.$store.commit('todos/add', await fullID(this.milestoneId, this.id))
+        this.$store.commit('todos/add', _fullID)
       } else {
-        this.$store.commit(
-          'todos/remove',
-          await fullID(this.milestoneId, this.id)
-        )
+        this.$store.commit('todos/remove', _fullID)
       }
     }
   }

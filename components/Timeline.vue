@@ -9,7 +9,11 @@
       <p>Show past events</p>
     </a>
     <div v-if="showsPastEvents">
-      <div v-for="entry in pastEntries" :key="entry.name">
+      <div
+        v-for="entry in pastEntries"
+        :key="entry.name"
+        class="timeline-entry"
+      >
         <Event
           v-if="entry.type == 'event'"
           :event="entry"
@@ -30,17 +34,23 @@
       <Fas i="eye-slash" />
       <p>Hide past events</p>
     </a>
-    <div v-for="entry in currentEntries" :key="entry.name">
-      <Event
-        v-if="entry.type == 'event'"
-        :event="entry"
-        :inactive="isPastEntry(entry) || isFutureEntry(entry)"
-      />
-      <Milestone
-        v-if="entry.type == 'milestone'"
-        :milestone="entry"
-        :inactive="isPastEntry(entry) || isFutureEntry(entry)"
-      />
+    <div>
+      <div
+        v-for="entry in currentEntries"
+        :key="entry.name"
+        class="timeline-entry"
+      >
+        <Event
+          v-if="entry.type == 'event'"
+          :event="entry"
+          :inactive="isPastEntry(entry) || isFutureEntry(entry)"
+        />
+        <Milestone
+          v-if="entry.type == 'milestone'"
+          :milestone="entry"
+          :inactive="isPastEntry(entry) || isFutureEntry(entry)"
+        />
+      </div>
     </div>
     <a
       v-if="futureEntries.length > 0 && showsFutureEvents"
@@ -51,7 +61,11 @@
       <p>Hide future events</p>
     </a>
     <div v-if="showsFutureEvents">
-      <div v-for="entry in futureEntries" :key="entry.name">
+      <div
+        v-for="entry in futureEntries"
+        :key="entry.name"
+        class="timeline-entry"
+      >
         <Event
           v-if="entry.type == 'event'"
           :event="entry"
@@ -140,4 +154,10 @@ export default {
   @extend .has-text-centered
   color: $grey
   display: block
+  margin-top: 2rem
+  margin-bottom: 2rem
+
+.timeline-entry
+  &:not(:first-child)
+    margin-top: 2rem
 </style>

@@ -26,28 +26,41 @@
           </a>
         </div>
         <div id="navbar" class="navbar-menu">
-          <!--
           <div class="navbar-start">
-            <a class="navbar-item">Radar</a>
+            <nuxt-link
+              to="/timeline"
+              class="navbar-item has-text-centered is-tab"
+              >Timeline</nuxt-link
+            >
+            <nuxt-link to="/faq" class="navbar-item has-text-centered is-tab"
+              >FAQ</nuxt-link
+            >
+            <nuxt-link to="/media" class="navbar-item has-text-centered is-tab"
+              >Media</nuxt-link
+            >
           </div>
-          -->
           <div class="navbar-end">
             <div class="navbar-item navbar-social-link">
-              <a href="https://facebook.com" target="_new">
+              <a href="https://facebook.com/techlabsberlin" target="_new">
                 <Fab i="facebook-f" />
+                <span class="navbar-social-link-handle">techlabsberlin</span>
               </a>
             </div>
             <div class="navbar-item navbar-social-link">
               <a href="https://instagram.com" target="_new">
                 <Fab i="instagram" />
+                <span class="navbar-social-link-handle">techlabs.berlin</span>
               </a>
             </div>
             <div class="navbar-item navbar-social-link">
               <a href="https://slack.com" target="_new">
                 <Fab i="slack" />
+                <span class="navbar-social-link-handle"
+                  >techlabsberlin.slack.com</span
+                >
               </a>
             </div>
-            <div class="navbar-item">
+            <div class="navbar-item has-text-centered">
               <a
                 href="https://techlabs.org/location/Berlin"
                 target="_new"
