@@ -38,15 +38,31 @@
             >
           </div>
         </div>
-        <div v-if="event.resources.length > 0" class="column">
-          <h4 class="resource-heading subtitle is-4">
-            Resources
-          </h4>
-          <Resource
-            v-for="resource in event.resources"
-            :key="resource.url"
-            :resource="resource"
-          />
+        <div class="column">
+          <div
+            v-if="!hideForms && event.forms.length > 0"
+            class="resource-group"
+          >
+            <h4 class="resource-heading subtitle is-4">
+              Forms
+            </h4>
+            <FormLink
+              v-for="form in event.forms"
+              :key="form.url"
+              :resource="form"
+              :to="'/events/' + event.slug"
+            />
+          </div>
+          <div v-if="event.resources.length > 0" class="resource-group">
+            <h4 class="resource-heading subtitle is-4">
+              Resources
+            </h4>
+            <Resource
+              v-for="resource in event.resources"
+              :key="resource.url"
+              :resource="resource"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -58,11 +74,13 @@ import MarkdownIt from 'markdown-it'
 import { parseISO, format, formatRelative, differenceInDays } from 'date-fns'
 import Resource from '~/components/Resource.vue'
 import Fas from '~/components/Fas.vue'
+import FormLink from '~/components/FormLink.vue'
 
 export default {
   components: {
     Resource,
-    Fas
+    Fas,
+    FormLink
   },
   props: {
     event: {
@@ -75,6 +93,11 @@ export default {
       default: false
     },
     hidePermalink: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    hideForms: {
       type: Boolean,
       required: false,
       default: false
@@ -117,6 +140,9 @@ export default {
 @import "~bulma/sass/utilities/_all"
 @import "~bulma/sass/base/helpers"
 @import "~bulma/sass/elements/title"
+
+.resource-group:not(:last-child)
+  margin-bottom: 2rem
 
 .resource-heading
   margin-bottom: 0.75rem !important

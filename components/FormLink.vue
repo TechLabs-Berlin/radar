@@ -1,13 +1,8 @@
 <template>
-  <a
-    v-if="!inline"
-    :href="resource.url"
-    target="_new"
-    class="resource-card-block"
-  >
+  <nuxt-link v-if="!inline" :to="to" class="resource-card-block">
     <div class="columns is-mobile resource-title">
       <div class="column is-narrow">
-        <Fas :i="icon" />
+        <Fas i="heart" />
       </div>
       <div class="column is-size-5">
         {{ resource.title }}
@@ -16,16 +11,11 @@
     <div v-if="resource.description" class="content resource-description">
       {{ resource.description }}
     </div>
-  </a>
-  <a
-    v-else-if="inline"
-    :href="resource.url"
-    target="_new"
-    class="resource-card-inline"
-  >
-    <Fas :i="icon" classes="icon resource-card-inline-icon" />
+  </nuxt-link>
+  <nuxt-link v-else-if="inline" :to="to" class="resource-card-inline">
+    <Fas i="heart" classes="icon resource-card-inline-icon" />
     <span class="resource-card-inline-title">{{ resource.title }}</span>
-  </a>
+  </nuxt-link>
 </template>
 
 <script>
@@ -40,26 +30,14 @@ export default {
       type: Object,
       required: true
     },
+    to: {
+      type: String,
+      required: true
+    },
     inline: {
       type: Boolean,
       required: false,
       default: false
-    }
-  },
-  computed: {
-    icon() {
-      switch (this.resource.type) {
-        case 'pdf':
-          return 'file-pdf'
-        case 'link':
-          return 'link'
-        case 'slides':
-          return 'file-powerpoint'
-        case 'social':
-          return 'comments'
-        default:
-          return 'file'
-      }
     }
   }
 }

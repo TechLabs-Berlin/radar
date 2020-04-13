@@ -13,10 +13,12 @@
     fdsf dfsd  fsd f sdf sdfsdf sdf fdsf dfsd  fsd f sdf sdfsdf sdffdsf dfsd  fsd f sdf sdfsdf sdffdsf dfsd  fsd f sdf sdfsdf sdffdsf dfsd  fsd f sdf sdfsdf sdffdsf dfsd  fsd f sdf sdfsdf sdffdsf dfsd  fsd f sdf sdfsdf sdffdsf dfsd  fsd f sdf sdfsdf sdf
     fdsf dfsd  fsd f sdf sdfsdf sdf
     fdsf dfsd  fsd f sdf sdfsdf sdffdsf dfsd  fsd f sdf sdfsdf sdffdsf dfsd  fsd f sdf sdfsdf sdffdsf dfsd  fsd f sdf sdfsdf sdffdsf dfsd  fsd f sdf sdfsdf sdffdsf dfsd  fsd f sdf sdfsdf sdffdsf dfsd  fsd f sdf sdfsdf sdffdsf dfsd  fsd f sdf sdfsdf sdffdsf dfsd  fsd f sdf sdfsdf sdffdsf dfsd  fsd f sdf sdfsdf sdffdsf dfsd  fsd f sdf sdfsdf sdffdsf dfsd  fsd f sdf sdfsdf sdf
-  resources:
+  forms:
     - title: Feedback
-      type: feedback
-      url: https://typeform.com
+      description: |
+        Feedback is so important to us! **Really!**
+      url: https://techlabsorg.typeform.com/to/voTAXD
+  resources:
     - title: Presentation
       description: Additional material, only relevant for the Data Science Techies.
       type: pdf
