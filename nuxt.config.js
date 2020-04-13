@@ -90,5 +90,19 @@ export default {
   },
   router: {
     linkActiveClass: 'is-active'
+  },
+  pwa: {
+    manifest: {
+      name: 'TechLabs Berlin',
+      lang: 'en'
+    },
+    meta: {
+      name: 'TechLabs Berlin',
+      author: 'TechLabs Berlin e.V.',
+      description: 'The TechLabs Berlin semester radar shows all the important semester information at a glance',
+      lang: 'en',
+      nativeUI: true,
+      appleStatusBarStyle: 'black-translucent'
+    }
   }
 }
