@@ -29,7 +29,15 @@
         <span class="event-date">On {{ dateAbsolute }}</span>
       </p>
       <div class="columns">
-        <div class="column is-three-fifths content" v-html="description" />
+        <div class="column is-three-fifths content">
+          <div class="event-description" v-html="description" />
+          <div v-if="!hidePermalink" class="permalink">
+            <nuxt-link :to="'/events/' + event.slug"
+              ><Fas i="share-square" classes="icon is-small" />&nbsp;
+              Permalink</nuxt-link
+            >
+          </div>
+        </div>
         <div v-if="event.resources.length > 0" class="column">
           <h4 class="resource-heading subtitle is-4">
             Resources
@@ -62,6 +70,11 @@ export default {
       required: true
     },
     inactive: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    hidePermalink: {
       type: Boolean,
       required: false,
       default: false
@@ -114,4 +127,11 @@ export default {
 
 .event-date
   vertical-align: top
+
+.event-description
+  padding-bottom: 2rem
+
+.permalink
+  position: absolute
+  bottom: 2rem
 </style>

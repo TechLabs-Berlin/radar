@@ -84,7 +84,7 @@ export default {
   },
   fontawesome: {
     icons: {
-      solid: ['faLink', 'faFlag', 'faCalendarDay', 'faFile', 'faFilePdf', 'faFilePowerpoint', 'faFilm', 'faComments', 'faHeart', 'faExclamationCircle', 'faAngleUp', 'faAngleDown', 'faEyeSlash'],
+      solid: ['faLink', 'faFlag', 'faCalendarDay', 'faFile', 'faFilePdf', 'faFilePowerpoint', 'faFilm', 'faComments', 'faHeart', 'faExclamationCircle', 'faAngleUp', 'faAngleDown', 'faEyeSlash', 'faShareSquare'],
       brands: ['faSlack', 'faInstagram', 'faFacebookF']
     }
   },
