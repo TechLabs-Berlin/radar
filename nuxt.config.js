@@ -102,7 +102,7 @@ export default {
       description: 'The TechLabs Berlin semester radar shows all the important semester information at a glance',
       lang: 'en',
       nativeUI: true,
-      appleStatusBarStyle: 'black-translucent'
+      appleStatusBarStyle: 'default'
     }
   }
 }
