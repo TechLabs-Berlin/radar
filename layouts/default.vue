@@ -3,15 +3,12 @@
     <div class="headroom">
       <div class="navbar" role="navigation">
         <div class="navbar-brand">
-          <a class="navbar-item" href="https://techlabs.org" target="_new"
+          <nuxt-link to="/timeline" class="navbar-item" target="_new"
             ><img class="navbar-logo" src="~assets/techlabs-global-logo.svg" />
-          </a>
-          <a
-            class="navbar-item"
-            href="https://techlabs.org/location/Berlin"
-            target="_new"
+          </nuxt-link>
+          <nuxt-link class="navbar-item" to="/timeline" target="_new"
             ><img class="navbar-logo" src="~assets/techlabs-berlin-logo.jpg" />
-          </a>
+          </nuxt-link>
 
           <a
             role="button"
@@ -66,9 +63,7 @@
                 target="_new"
                 class="techlabs-button"
               >
-                <span class="icon">
-                  <Fas i="link" />
-                </span>
+                <Fas i="link" />
                 <span>techlabs.org</span>
               </a>
             </div>
@@ -77,7 +72,28 @@
       </div>
     </div>
 
-    <nuxt />
+    <div class="main-content">
+      <nuxt />
+    </div>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Semester Radar</strong> by
+          <nuxt-link to="/contact">TechLabs Berlin e.V</nuxt-link>.<br />
+          Source code is available on
+          <a href="https://github.com/TechLabs-Berlin/radar" target="_new"
+            >GitHub</a
+          >
+          licensed
+          <a href="http://opensource.org/licenses/mit-license.php" target="_new"
+            >MIT</a
+          >.<br />
+          <nuxt-link to="/contact">Contact</nuxt-link>
+        </p>
+      </div>
+    </footer>
+    <div class="filler" />
   </div>
 </template>
 

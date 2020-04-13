@@ -53,7 +53,6 @@ export default {
 @import "~bulma/sass/elements/content"
 
 .faq-card
-  @extends .card
   margin-top: 2rem
   margin-bottom: 2rem
   margin-left: auto

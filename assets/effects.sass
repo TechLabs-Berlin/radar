@@ -1,0 +1,15 @@
+$includeClasses: false
+@import "variables"
+
+@import "~hover.css/scss/options"
+@import "~hover.css/scss/mixins"
+@import "~hover.css/scss/hacks"
+
+@import "~hover.css/scss/effects/2d-transitions/buzz-out"
+@import "~hover.css/scss/effects/shadow-and-glow-transitions/grow-shadow"
+
+.techlabs-button
+  +buzz-out
+
+.resource-card-block, .resource-card-inline
+  +grow-shadow
