@@ -90,13 +90,13 @@
 </template>
 
 <script>
-import { parseISO, differenceInHours, differenceInDays } from 'date-fns'
+import { differenceInHours, differenceInDays } from 'date-fns'
 import Fas from '~/components/Fas'
 import Event from '~/components/Event'
 import Milestone from '~/components/Milestone'
 
-const isPastEntry = (e) => differenceInHours(new Date(), parseISO(e.date)) > 12
-const isFutureEntry = (e) => differenceInDays(parseISO(e.date), new Date()) > 10
+const isPastEntry = (e) => differenceInHours(new Date(), e.date) > 12
+const isFutureEntry = (e) => differenceInDays(e.date, new Date()) > 10
 
 export default {
   components: {

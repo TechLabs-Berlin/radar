@@ -54,7 +54,8 @@ export default {
 
 .status
   @extend .content
-  @extend .is-size-4
+  @extend .is-size-6
+  @extend .is-size-5-desktop
   @extend .has-text-centered
   line-height: 2
 

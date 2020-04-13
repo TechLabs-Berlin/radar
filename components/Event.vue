@@ -5,14 +5,17 @@
     :class="{ 'archive-striped': inactive }"
   >
     <div class="card-content">
-      <p class="event-icon" :class="{ active: active, inactive: inactive }">
+      <p
+        class="title has-text-centered"
+        :class="{ active: active, inactive: inactive }"
+      >
         <Fas i="calendar-day" classes="icon is-large" />
       </p>
       <p class="title has-text-centered">
         {{ event.name }}
       </p>
       <p
-        v-if="dateRelative && !inactive"
+        v-if="dateRelative && active"
         class="subtitle has-text-centered has-text-weight-semibold"
         :class="{ 'has-text-danger': happeningSoon }"
       >
@@ -22,7 +25,7 @@
           i="exclamation-circle"
         />
         <span class="event-date" :title="dateAbsolute"
-          >Takes place on {{ dateRelative }}</span
+          >Takes place {{ dateRelative }}</span
         >
       </p>
       <p v-else-if="dateRelative" class="subtitle has-text-centered">
@@ -33,7 +36,7 @@
           <!--eslint-disable vue/no-v-html-->
           <div class="event-description" v-html="description" />
           <!--eslint-enable-->
-          <div v-if="!hidePermalink" class="permalink">
+          <div v-if="!hidePermalink" class="permalink-left">
             <nuxt-link :to="'/events/' + event.slug"
               ><Fas i="share-square" classes="icon is-small" />&nbsp;
               Permalink</nuxt-link
@@ -65,6 +68,12 @@
               :resource="resource"
             />
           </div>
+          <div v-if="!hidePermalink" class="permalink-right">
+            <nuxt-link :to="'/events/' + event.slug"
+              ><Fas i="share-square" classes="icon is-small" />&nbsp;
+              Permalink</nuxt-link
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -73,7 +82,7 @@
 
 <script>
 import MarkdownIt from 'markdown-it'
-import { parseISO, format, formatRelative, differenceInDays } from 'date-fns'
+import { format, formatRelative, differenceInDays } from 'date-fns'
 import Resource from '~/components/Resource.vue'
 import Fas from '~/components/Fas.vue'
 import FormLink from '~/components/FormLink.vue'
@@ -122,15 +131,14 @@ export default {
     }
   },
   created() {
-    this.date = parseISO(this.event.date)
     this.updateDate()
     this.updateDateInterval = setInterval(this.updateDeadline, 1000)
   },
   methods: {
     updateDate() {
-      this.dateRelative = formatRelative(this.date, new Date())
-      this.dateAbsolute = format(this.date, 'PPPPp')
-      this.happeningSoon = differenceInDays(this.date, new Date()) < 2
+      this.dateRelative = formatRelative(this.event.date, new Date())
+      this.dateAbsolute = format(this.event.date, 'PPPPp')
+      this.happeningSoon = differenceInDays(this.event.date, new Date()) < 2
     }
   }
 }
@@ -142,6 +150,7 @@ export default {
 @import "~bulma/sass/utilities/_all"
 @import "~bulma/sass/base/helpers"
 @import "~bulma/sass/elements/title"
+@import "~bulma/sass/components/navbar"
 
 .resource-group:not(:last-child)
   margin-bottom: 2rem
@@ -149,17 +158,21 @@ export default {
 .resource-heading
   margin-bottom: 0.75rem !important
 
-.event-icon
-  @extend .title
-  @extend .has-text-centered
-
 .event-date
   vertical-align: top
 
 .event-description
   padding-bottom: 2rem
 
-.permalink
-  position: absolute
-  bottom: 2rem
+.permalink-left
+  display: none
+  +from($tablet)
+    display: block
+    position: absolute
+    bottom: 2rem
+
+.permalink-right
+  @extend .has-text-centered
+  +from($tablet)
+    display: none
 </style>

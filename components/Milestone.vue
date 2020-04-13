@@ -5,14 +5,15 @@
     :class="{ 'archive-striped': inactive }"
   >
     <div class="card-content">
-      <div class="columns is-mobile is-centered is-vcentered">
-        <div class="column is-narrow">
-          <Fas i="flag" classes="icon is-medium" />
-        </div>
-        <div class="column is-narrow is-size-4 has-text-weight-semibold">
-          {{ milestone.name }}
-        </div>
-      </div>
+      <p
+        class="title has-text-centered"
+        :class="{ active: active, inactive: inactive }"
+      >
+        <Fas i="flag" classes="icon is-large" />
+      </p>
+      <p class="title has-text-centered">
+        {{ milestone.name }}
+      </p>
       <p
         v-if="deadlineRelative && !inactive"
         class="subtitle has-text-centered has-text-weight-semibold"
@@ -45,7 +46,7 @@
 
 <script>
 import MarkdownIt from 'markdown-it'
-import { parseISO, format, formatRelative, differenceInDays } from 'date-fns'
+import { format, formatRelative, differenceInDays } from 'date-fns'
 import Fas from '~/components/Fas'
 import Todo from '~/components/Todo'
 import { sha256 } from '~/assets/crypto'
@@ -78,10 +79,12 @@ export default {
     description() {
       const md = new MarkdownIt()
       return md.render(this.milestone.description)
+    },
+    active() {
+      return !this.inactive
     }
   },
   async created() {
-    this.deadlineDate = parseISO(this.milestone.date)
     this.updateDeadline()
     this.updateDeadlineInterval = setInterval(this.updateDeadline, 1000)
     this.id = await sha256(this.milestone.name)
@@ -91,9 +94,9 @@ export default {
   },
   methods: {
     updateDeadline() {
-      this.deadlineRelative = formatRelative(this.deadlineDate, new Date())
-      this.deadlineAbsolute = format(this.deadlineDate, 'PPPPp')
-      this.dueSoon = differenceInDays(this.deadlineDate, new Date()) < 2
+      this.deadlineRelative = formatRelative(this.milestone.date, new Date())
+      this.deadlineAbsolute = format(this.milestone.date, 'PPPPp')
+      this.dueSoon = differenceInDays(this.milestone.date, new Date()) < 2
     }
   }
 }

@@ -13,6 +13,7 @@ const events = Object.values(yamlEvents).map((e) => {
   return {
     ...e,
     type: 'event',
+    date: parseISO(e.date),
     slug: slugify(e.name)
   }
 })
@@ -20,11 +21,12 @@ const milestones = yamlMilestones.map((m) => {
   return {
     ...m,
     type: 'milestone',
+    date: parseISO(m.date),
     slug: slugify(m.name)
   }
 })
 const timeline = [...events, ...milestones].sort((e1, e2) =>
-  compareAsc(parseISO(e1.date), parseISO(e2.date))
+  compareAsc(e1.date, e2.date)
 )
 
 export { status, timeline }
