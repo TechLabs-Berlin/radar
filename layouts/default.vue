@@ -89,7 +89,8 @@
           <a href="http://opensource.org/licenses/mit-license.php" target="_new"
             >MIT</a
           >.<br />
-          <nuxt-link to="/contact">Contact</nuxt-link>
+          <nuxt-link to="/contact">Contact</nuxt-link><br />
+          <NotificationOptOut />
         </p>
       </div>
     </footer>
@@ -100,12 +101,14 @@
 <script>
 import Fab from '~/components/Fab.vue'
 import Fas from '~/components/Fas.vue'
+import NotificationOptOut from '~/components/NotificationOptOut'
 import { initializeNavbar } from '~/assets/layout'
 
 export default {
   components: {
     Fab,
-    Fas
+    Fas,
+    NotificationOptOut
   },
   mounted() {
     initializeNavbar()

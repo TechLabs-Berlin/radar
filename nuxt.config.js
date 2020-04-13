@@ -46,6 +46,7 @@ export default {
   modules: [
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
+    '@nuxtjs/onesignal',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
@@ -84,7 +85,7 @@ export default {
   },
   fontawesome: {
     icons: {
-      solid: ['faLink', 'faFlag', 'faCalendarDay', 'faFile', 'faFilePdf', 'faFilePowerpoint', 'faFilm', 'faComments', 'faHeart', 'faExclamationCircle', 'faAngleUp', 'faAngleDown', 'faEyeSlash', 'faShareSquare'],
+      solid: ['faLink', 'faFlag', 'faCalendarDay', 'faFile', 'faFilePdf', 'faFilePowerpoint', 'faFilm', 'faComments', 'faHeart', 'faExclamationCircle', 'faAngleUp', 'faAngleDown', 'faEyeSlash', 'faShareSquare', 'faComment', 'faCommentSlash'],
       brands: ['faSlack', 'faInstagram', 'faFacebookF']
     }
   },
@@ -104,6 +105,15 @@ export default {
       lang: 'en',
       nativeUI: true,
       appleStatusBarStyle: 'default'
+    }
+  },
+  oneSignal: {
+    init: {
+      appId: 'a6e6d796-6823-47c7-b420-32fd15288596',
+      allowLocalhostAsSecureOrigin: true,
+      welcomeNotification: {
+          disable: true
+      }
     }
   }
 }

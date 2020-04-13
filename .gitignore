@@ -88,3 +88,6 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# OneSignal SDK
+static/OneSignal*

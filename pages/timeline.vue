@@ -20,16 +20,19 @@
         </div>
       </div>
     </div>
+    <NotificationSetup />
     <Timeline :entries="timeline" />
   </div>
 </template>
 
 <script>
+import NotificationSetup from '~/components/NotificationSetup'
 import Timeline from '~/components/Timeline.vue'
 import { status, timeline } from '~/assets/content'
 
 export default {
   components: {
+    NotificationSetup,
     Timeline
   },
   data() {
