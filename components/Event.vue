@@ -30,7 +30,9 @@
       </p>
       <div class="columns">
         <div class="column is-three-fifths content">
+          <!--eslint-disable vue/no-v-html-->
           <div class="event-description" v-html="description" />
+          <!--eslint-enable-->
           <div v-if="!hidePermalink" class="permalink">
             <nuxt-link :to="'/events/' + event.slug"
               ><Fas i="share-square" classes="icon is-small" />&nbsp;

@@ -2,7 +2,9 @@
   <div class="card timeline-event">
     <div class="card-content content">
       <h2>{{ form.title }}</h2>
+      <!--eslint-disable vue/no-v-html-->
       <p v-if="form.description" v-html="description" />
+      <!--eslint-enable-->
       <Typeform :url="form.url" />
     </div>
   </div>

@@ -3,7 +3,9 @@
     <div class="card timeline-event status-card">
       <div class="card-content">
         <div class="status">
+          <!--eslint-disable vue/no-v-html-->
           <span v-html="status.text" />
+          <!--eslint-enable-->
         </div>
         <div class="columns is-centered">
           <div

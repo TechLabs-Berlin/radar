@@ -30,7 +30,9 @@
       <p v-else-if="deadlineRelative" class="subtitle has-text-centered">
         <span class="milestone-deadline">Due {{ deadlineAbsolute }}</span>
       </p>
+      <!--eslint-disable vue/no-v-html-->
       <p class="content" v-html="description" />
+      <!--eslint-enable-->
       <Todo
         v-for="todo in milestone.todos"
         :key="todo.name"
