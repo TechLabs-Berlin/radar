@@ -2,6 +2,7 @@ import { parseISO, compareAsc } from 'date-fns'
 import { slugify } from '~/assets/slug'
 import status from '~/content/status.yaml'
 import yamlMilestones from '~/content/milestones.yaml'
+import links from '~/content/links.yaml'
 
 const yamlEvents = {}
 function requireAll(r) {
@@ -29,4 +30,4 @@ const timeline = [...events, ...milestones].sort((e1, e2) =>
   compareAsc(e1.date, e2.date)
 )
 
-export { status, timeline }
+export { status, timeline, links }
