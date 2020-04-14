@@ -1,5 +1,6 @@
 <template>
   <div class="timeline-wrapper">
+    <SemesterOverview />
     <div class="card timeline-event status-card">
       <div class="card-content">
         <div class="status">
@@ -28,12 +29,14 @@
 <script>
 import NotificationSetup from '~/components/NotificationSetup'
 import Timeline from '~/components/Timeline.vue'
+import SemesterOverview from '~/components/SemesterOverview.vue'
 import { status, timeline } from '~/assets/content'
 
 export default {
   components: {
     NotificationSetup,
-    Timeline
+    Timeline,
+    SemesterOverview
   },
   data() {
     return {

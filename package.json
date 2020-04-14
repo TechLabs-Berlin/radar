@@ -24,6 +24,7 @@
     }
   },
   "dependencies": {
+    "@creativebulma/bulma-tooltip": "^1.0.2",
     "@nuxtjs/bulma": "^1.2.1",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/onesignal": "^3.0.0-beta.16",

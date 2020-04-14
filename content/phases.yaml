@@ -1,0 +1,30 @@
+---
+  - title: Kick-Off
+    description: |
+      You join the community and get access to our learning platform edyoucated.
+
+      We present our four tracks, you choose one and create your personal TechLabs journey based on your previous knowledge.
+    startWeekNum: 17
+    duration: 1
+
+  - title: Academy
+    description: |
+      You work through your track on edyoucated and become a master of your class.
+
+      We organize social events regularly so that you can connect with fellow Techies, share your insights and work together on difficulties.
+    startWeekNum: 18
+    duration: 6
+
+  - title: Projects
+    description: |
+      This is prime time! You imagine and implement a prototype in a project of your own.
+
+      You team up as a group of 4-6 Techies and work together to create something big. Experienced mentors will be on your side for support.
+    startWeekNum: 24
+    duration: 6
+
+  - title: Closing
+    description: |
+      You finish up your prototype and submit the final result to us. We organize a closing ceremony where you will be given your Digital Shaper Certificate.
+    startWeekNum: 30
+    duration: 1

@@ -85,7 +85,7 @@ export default {
   },
   fontawesome: {
     icons: {
-      solid: ['faLink', 'faFlag', 'faCalendarDay', 'faFile', 'faFilePdf', 'faFilePowerpoint', 'faFilm', 'faComments', 'faHeart', 'faExclamationCircle', 'faAngleUp', 'faAngleDown', 'faEyeSlash', 'faShareSquare', 'faComment', 'faCommentSlash'],
+      solid: ['faLink', 'faFlag', 'faCalendarDay', 'faFile', 'faFilePdf', 'faFilePowerpoint', 'faFilm', 'faComments', 'faHeart', 'faExclamationCircle', 'faAngleUp', 'faAngleDown', 'faEyeSlash', 'faShareSquare', 'faComment', 'faCommentSlash', 'faCheckCircle', 'faHourglassHalf'],
       brands: ['faSlack', 'faInstagram', 'faFacebookF']
     }
   },
@@ -109,7 +109,7 @@ export default {
   },
   oneSignal: {
     init: {
-      appId: 'a6e6d796-6823-47c7-b420-32fd15288596',
+      appId: '3f9d1a70-faff-4514-a594-65d4ae44b6b6',
       allowLocalhostAsSecureOrigin: true,
       welcomeNotification: {
           disable: true
