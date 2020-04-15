@@ -29,6 +29,34 @@
         </div>
       </div>
     </div>
+    <div class="card media-card">
+      <div class="card-content">
+        <h1 class="title">Q&amp;A Session</h1>
+        <div class="columns">
+          <div class="column">
+            <div class="video-container">
+              <iframe
+                class="video"
+                src="https://www.youtube-nocookie.com/embed/mnHizM8Pd0M"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="column">
+            <p><strong>Date:</strong> April 14, 2020</p>
+            <p>
+              We hosted a Q&amp;A session to answer all your questions about our
+              upcoming semester. In case you want to see a list of questions we
+              answered in this video and skip to a certain one, open the video
+              on YouTube and look at the video description. Please feel free to
+              reach out to us in case of any further questions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
