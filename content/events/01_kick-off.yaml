@@ -10,6 +10,28 @@
     1. **Administrative Topics** – your onboarding to our toolset, communication channels, regular meetings & next steps
     1. **Community Get-Together** – we want to get to know each other
     1. **Track Get-Together** – you'll meet other participants in the track you're planning to choose
-  forms: []
-  resources: []
-
+  forms:
+  - title: Feedback
+    description: Please leave feedback for our Kick-Off Event!
+    url: https://techlabsorg.typeform.com/to/SCoGA7
+  resources:
+    - title: "Meet: Kick-Off"
+      description: The main room where we will meet.
+      type: other
+      url: https://meet.google.com/hts-nbqy-kop
+    - title: "Meet: DS"
+      description: Break-Out Room for Data Science
+      type: other
+      url: https://meet.google.com/ept-mmdn-nyx
+    - title: "Meet: AI"
+      description: Break-Out Room for Artificial Intelligence
+      type: other
+      url: https://meet.google.com/vam-djgi-iof
+    - title: "Meet: WebDev"
+      description: Break-Out Room for Web Development
+      type: other
+      url: https://meet.google.com/prb-ifih-qnt
+    - title: "Meet: UX"
+      description: Break-Out Room for UX Design
+      type: other
+      url: https://meet.google.com/aep-cocb-wyq
