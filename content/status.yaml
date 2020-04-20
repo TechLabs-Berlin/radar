@@ -2,8 +2,4 @@
   text: |
     TechLabs Berlin is currently <span class="highlighted">onboarding Techies</span>.<br/>
     We will <span class="highlighted">host our Kick-Off</span> on Tuesday, April 23 at 20:00 CEST.
-  links:
-    - title: Watch our Info Session
-      url: https://www.youtube.com/watch?v=iL8MZkqpUIA
-    - title: Apply now!
-      url: https://techlabs.org/location/Berlin
+  links: []
