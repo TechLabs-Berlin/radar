@@ -89,7 +89,8 @@
           <a href="http://opensource.org/licenses/mit-license.php" target="_new"
             >MIT</a
           >.<br />
-          <nuxt-link to="/contact">Contact</nuxt-link><br />
+          <nuxt-link to="/contact">Contact</nuxt-link> &middot;
+          <nuxt-link to="/newsletter">Newsletter</nuxt-link><br />
           <NotificationOptOut />
         </p>
       </div>
