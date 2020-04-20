@@ -34,6 +34,14 @@
       - title: Join Slack
         type: feedback
         url: https://bln.techlabs.org/NBY
+  - name: Subscribe to our Calendar
+    resources:
+      - title: Web
+        type: other
+        url: https://bln.techlabs.org/FBN
+      - title: iCal
+        type: other
+        url: https://bln.techlabs.org/G5W
   - name: Attend the Kick-Off Event at Thursday, April 23 at 20:00 CEST
 
 - name: Choose Your TechLabs Track
