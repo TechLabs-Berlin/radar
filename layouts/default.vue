@@ -96,6 +96,12 @@
       </div>
     </footer>
     <div class="filler" />
+
+    <!-- simpleanalytics.com -->
+    <script async defer src="https://nlytcs.bln.techlabs.org/app.js"></script>
+    <noscript
+      ><img src="https://nlytcs.bln.techlabs.org/image.gif" alt=""
+    /></noscript>
   </div>
 </template>
 
