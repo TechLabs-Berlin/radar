@@ -15,3 +15,41 @@
       - title: Application Form
         type: feedback
         url: https://techlabsorg.typeform.com/to/voTAXD
+
+- name: Register for Summer Term 2020
+  date: "2020-04-23T19:00:00+02:00"
+  description: |
+    We're happy that you want to join our community. To get you started quickly, we have some tasks you need to do.
+
+    Please make sure to attend our Kick-Off Event because you will be given the most important information to
+    join TechLabs.
+  todos:
+  - name: Complete the Registration Form
+    resources:
+      - title: Registration Form
+        type: feedback
+        url: https://techlabsorg.typeform.com/to/U2RDGg
+  - name: Join our Slack Community
+    resources:
+      - title: Join Slack
+        type: feedback
+        url: https://bln.techlabs.org/NBY
+  - name: Attend the Kick-Off Event at Thursday, April 23 at 20:00 CEST
+
+- name: Choose Your TechLabs Track
+  date: "2020-04-26T23:59:59+02:00"
+  description: |
+    Now it is the time to choose if you want to learn Data Science, Artificial Intelligence, Web Development or
+    User Experience Design.
+
+    Please complete the following steps to choose your track:
+
+    1. Create an account at [edyoucated](https://edyoucated.org)
+    1. After logging in, choose **TechLabs Berlin**.
+    1. Complete the track personalization survey.
+    1. Back at edyoucated, confirm that you finished the survey.
+
+    After we've received all of your choices, we will evaluate your answers in the track personalization survey.
+    Then we will assign you to a track on edyoucated and you can start learning. Please allow some time between
+    you completing the survey and the track assignment as this process involves some manual steps. We will send you a
+    message on Slack as soon as you can access your track material on edyoucated.

@@ -1,9 +1,7 @@
 ---
   text: |
-    TechLabs Berlin is <span class="highlighted">currently accepting applications</span>
-    until Friday, April 17.<br/>
-    We will <span class="highlighted">host a Q&A session</span> on Tuesday, April 14 to answer
-    all your questions.
+    TechLabs Berlin is currently <span class="highlighted">onboarding Techies</span>.<br/>
+    We will <span class="highlighted">host our Kick-Off</span> on Tuesday, April 23 at 20:00 CEST.
   links:
     - title: Watch our Info Session
       url: https://www.youtube.com/watch?v=iL8MZkqpUIA
