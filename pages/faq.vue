@@ -28,10 +28,16 @@
         </p>
       </div>
     </div>
-    <div class="card faq-card">
+    <div v-for="section in faq" :key="section.title" class="card faq-card">
       <div class="card-content content">
-        <h2>What is the next event?</h2>
-        <p>The next event will be the Q&A session.</p>
+        <h2>{{ section.title }}</h2>
+        <div
+          v-for="(question, index) in section.questions"
+          :key="question.title"
+        >
+          <Question :title="question.title" :content="question.content" />
+          <div v-if="index < section.questions.length - 1" class="spacer" />
+        </div>
       </div>
     </div>
   </div>
@@ -39,16 +45,23 @@
 
 <script>
 import Fas from '~/components/Fas'
+import Question from '~/components/faq/Question'
+import { faq } from '~/assets/content'
 
 export default {
   components: {
-    Fas
+    Fas,
+    Question
+  },
+  data() {
+    return { faq }
   }
 }
 </script>
 
 <style lang="sass">
 @import "~bulma/sass/utilities/_all"
+@import "~/assets/variables"
 @import "~bulma/sass/base/helpers"
 @import "~bulma/sass/elements/content"
 
@@ -63,4 +76,26 @@ export default {
 .faq-button
   vertical-align: sub
   margin-left: 0.5rem
+
+.faq-card .content h2
+  margin-bottom: 2rem
+  &:after
+    background: none repeat scroll 0 0 $primary
+    bottom: -10px
+    content: ""
+    display: block
+    height: 4px
+    position: relative
+    width: 3.5rem
+
+.faq-card .content h3
+  @extend .is-size-5
+  margin-bottom: 1rem
+
+.spacer
+  height: 2px
+  width: 100%
+  background-color: $white-ter
+  margin-top: 1rem
+  margin-bottom: 1rem
 </style>
