@@ -44,13 +44,13 @@
               </a>
             </div>
             <div class="navbar-item navbar-social-link">
-              <a href="https://instagram.com" target="_new">
+              <a href="https://instagram.com/techlabs.berlin" target="_new">
                 <Fab i="instagram" />
                 <span class="navbar-social-link-handle">techlabs.berlin</span>
               </a>
             </div>
             <div class="navbar-item navbar-social-link">
-              <a href="https://slack.com" target="_new">
+              <a href="https://techlabsberlin.slack.com" target="_new">
                 <Fab i="slack" />
                 <span class="navbar-social-link-handle"
                   >techlabsberlin.slack.com</span
