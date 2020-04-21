@@ -1,5 +1,4 @@
 import { parseISO, compareAsc } from 'date-fns'
-import { slugify } from '~/assets/slug'
 import status from '~/content/status.yaml'
 import yamlMilestones from '~/content/milestones.yaml'
 import links from '~/content/links.yaml'
@@ -17,8 +16,7 @@ const events = Object.values(yamlEvents).map((e) => {
   return {
     ...e,
     type: 'event',
-    date: parseISO(e.date),
-    slug: slugify(e.name)
+    date: parseISO(e.date)
   }
 })
 const milestones = yamlMilestones.map((m) => {
