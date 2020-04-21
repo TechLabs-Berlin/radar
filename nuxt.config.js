@@ -137,11 +137,14 @@ export default {
   },
   oneSignal: {
     init: {
-      appId: 'a6e6d796-6823-47c7-b420-32fd15288596',
+      appId: process.env.ONESIGNAL_APP_ID,
       allowLocalhostAsSecureOrigin: true,
       welcomeNotification: {
           disable: true
       }
     }
+  },
+  env: {
+    baseURL: process.env.BASE_URL
   }
 }
