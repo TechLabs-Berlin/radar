@@ -5,6 +5,7 @@ import yamlMilestones from '~/content/milestones.yaml'
 import links from '~/content/links.yaml'
 import phases from '~/content/phases.yaml'
 import faq from '~/content/faq.yaml'
+import media from '~/content/media.yaml'
 
 const yamlEvents = {}
 function requireAll(r) {
@@ -32,4 +33,4 @@ const timeline = [...events, ...milestones].sort((e1, e2) =>
   compareAsc(e1.date, e2.date)
 )
 
-export { status, timeline, links, phases, faq }
+export { status, timeline, links, phases, faq, media }
