@@ -23,8 +23,7 @@ const milestones = yamlMilestones.map((m) => {
   return {
     ...m,
     type: 'milestone',
-    date: parseISO(m.date),
-    slug: slugify(m.name)
+    date: parseISO(m.date)
   }
 })
 const timeline = [...events, ...milestones].sort((e1, e2) =>

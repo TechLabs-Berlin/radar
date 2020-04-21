@@ -1,5 +1,6 @@
 ---
-- name: Apply for Summer Term 2020
+- slug: apply
+  name: Apply for Summer Term 2020
   date: "2020-04-17T23:59:59+02:00"
   description: |
     You can apply for TechLabs Berlin **until Friday, April 17**. All you need to do is to complete the application
@@ -16,7 +17,8 @@
         type: feedback
         url: https://techlabsorg.typeform.com/to/voTAXD
 
-- name: Register for Summer Term 2020
+- slug: register
+  name: Register for Summer Term 2020
   date: "2020-04-23T19:00:00+02:00"
   description: |
     We're happy that you want to join our community. To get you started quickly, we have some tasks you need to do.
@@ -44,7 +46,8 @@
         url: https://bln.techlabs.org/G5W
   - name: Attend the Kick-Off Event at Thursday, April 23 at 20:00 CEST
 
-- name: Choose Your TechLabs Track
+- slug: choose-track
+  name: Choose Your TechLabs Track
   date: "2020-04-26T23:59:59+02:00"
   description: |
     Now it is the time to choose if you want to learn Data Science, Artificial Intelligence, Web Development or
