@@ -155,9 +155,6 @@ export default {
 .resource-group:not(:last-child)
   margin-bottom: 2rem
 
-.resource-heading
-  margin-bottom: 0.75rem !important
-
 .event-date
   vertical-align: top
 

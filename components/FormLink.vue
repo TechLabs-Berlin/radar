@@ -1,10 +1,10 @@
 <template>
   <nuxt-link v-if="!inline" :to="to" class="resource-card-block">
-    <div class="columns is-mobile resource-title">
+    <div class="columns is-mobile resource-heading">
       <div class="column is-narrow">
-        <Fas i="heart" />
+        <Fas i="theater-masks" />
       </div>
-      <div class="column is-size-5">
+      <div class="column is-size-5 resource-title">
         {{ resource.title }}
       </div>
     </div>

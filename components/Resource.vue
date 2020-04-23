@@ -5,11 +5,11 @@
     target="_new"
     class="resource-card-block"
   >
-    <div class="columns is-mobile resource-title">
+    <div class="columns is-mobile resource-heading">
       <div class="column is-narrow">
         <Fas :i="icon" />
       </div>
-      <div class="column is-size-5">
+      <div class="column is-size-5 resource-title">
         {{ resource.title }}
       </div>
     </div>
@@ -55,8 +55,16 @@ export default {
           return 'link'
         case 'slides':
           return 'file-powerpoint'
-        case 'social':
-          return 'comments'
+        case 'typeform':
+          return 'theater-masks'
+        case 'calendar':
+          return 'calendar-alt'
+        case 'tool':
+          return 'toolbox'
+        case 'meeting':
+          return 'handshake'
+        case 'video':
+          return 'video'
         default:
           return 'file'
       }

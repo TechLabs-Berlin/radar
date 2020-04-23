@@ -18,21 +18,21 @@
   resources:
     - title: "Meet: Kick-Off"
       description: The main room where we will meet.
-      type: other
+      type: meeting
       url: https://meet.google.com/hts-nbqy-kop
     - title: "Meet: DS"
       description: Break-Out Room for Data Science
-      type: other
+      type: meeting
       url: https://meet.google.com/ept-mmdn-nyx
     - title: "Meet: AI"
       description: Break-Out Room for Artificial Intelligence
-      type: other
+      type: meeting
       url: https://meet.google.com/vam-djgi-iof
     - title: "Meet: WebDev"
       description: Break-Out Room for Web Development
-      type: other
+      type: meeting
       url: https://meet.google.com/prb-ifih-qnt
     - title: "Meet: UX"
       description: Break-Out Room for UX Design
-      type: other
+      type: meeting
       url: https://meet.google.com/aep-cocb-wyq

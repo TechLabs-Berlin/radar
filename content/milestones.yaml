@@ -29,20 +29,20 @@
   - name: Complete the Registration Form
     resources:
       - title: Registration Form
-        type: feedback
+        type: typeform
         url: https://techlabsorg.typeform.com/to/U2RDGg
   - name: Join our Slack Community
     resources:
       - title: Join Slack
-        type: feedback
+        type: tool
         url: https://bln.techlabs.org/NBY
   - name: Subscribe to our Calendar
     resources:
       - title: Web
-        type: other
+        type: calendar
         url: https://bln.techlabs.org/FBN
       - title: iCal
-        type: other
+        type: calendar
         url: https://bln.techlabs.org/G5W
   - name: Attend the Kick-Off Event at Thursday, April 23 at 20:00 CEST
 

@@ -85,8 +85,36 @@ export default {
   },
   fontawesome: {
     icons: {
-      solid: ['faLink', 'faFlag', 'faCalendarDay', 'faFile', 'faFilePdf', 'faFilePowerpoint', 'faFilm', 'faComments', 'faHeart', 'faExclamationCircle', 'faAngleUp', 'faAngleDown', 'faEyeSlash', 'faShareSquare', 'faComment', 'faCommentSlash', 'faCheckCircle', 'faHourglassHalf'],
-      brands: ['faSlack', 'faInstagram', 'faFacebookF']
+      solid: [
+        'faLink',
+        'faFlag',
+        'faCalendarDay',
+        'faFile',
+        'faFilePdf',
+        'faFilePowerpoint',
+        'faFilm',
+        'faComments',
+        'faHeart',
+        'faExclamationCircle',
+        'faAngleUp',
+        'faAngleDown',
+        'faEyeSlash',
+        'faShareSquare',
+        'faComment',
+        'faCommentSlash',
+        'faCheckCircle',
+        'faHourglassHalf',
+        'faTheaterMasks',
+        'faCalendarAlt',
+        'faToolbox',
+        'faHandshake',
+        'faVideo'
+      ],
+      brands: [
+        'faSlack',
+        'faInstagram',
+        'faFacebookF'
+      ]
     }
   },
   router: {
