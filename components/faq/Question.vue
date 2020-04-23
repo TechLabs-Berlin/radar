@@ -1,7 +1,9 @@
 <template>
   <div>
     <h3>{{ title }}</h3>
+    <!--eslint-disable vue/no-v-html-->
     <p v-html="formattedContent" />
+    <!--eslint-enable-->
   </div>
 </template>
 

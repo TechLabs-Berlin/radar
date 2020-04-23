@@ -16,7 +16,9 @@
         </div>
         <div class="column content">
           <p><strong>Date:</strong> {{ friendlyDate }}</p>
+          <!--eslint-disable vue/no-v-html-->
           <p v-html="formattedDescription"></p>
+          <!--eslint-enable-->
         </div>
       </div>
     </div>
