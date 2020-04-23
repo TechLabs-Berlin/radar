@@ -7,6 +7,7 @@
           :key="phase.title"
           :title="phase.title"
           :description="phase.description"
+          :initial-week-num="initialWeekNum"
           :start-week-num="phase.startWeekNum"
           :duration="phase.duration"
           :current-week-num="currentWeekNum"
@@ -29,6 +30,12 @@ export default {
     return {
       phases,
       currentWeekNum: getISOWeek(new Date())
+    }
+  },
+  computed: {
+    initialWeekNum() {
+      if (this.phases.length > 0) return phases[0].startWeekNum
+      else return 0
     }
   }
 }

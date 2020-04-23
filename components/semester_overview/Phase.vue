@@ -9,8 +9,9 @@
     >
       <Week
         v-for="week in weeks"
-        :key="week"
-        :week-num="week"
+        :key="week.relativeNumber"
+        :relative-week-num="week.relativeNumber"
+        :absolute-week-num="week.absoluteNumber"
         :current-week-num="currentWeekNum"
       />
     </div>
@@ -62,6 +63,10 @@ export default {
       type: String,
       required: true
     },
+    initialWeekNum: {
+      type: Number,
+      required: true
+    },
     startWeekNum: {
       type: Number,
       required: true
@@ -77,9 +82,10 @@ export default {
   },
   data() {
     // Generates a range with 12 elements and offset 10
-    const weeks = [...Array(this.duration).keys()].map(
-      (w) => w + this.startWeekNum
-    )
+    const weeks = [...Array(this.duration).keys()].map((w) => ({
+      absoluteNumber: w + this.startWeekNum,
+      relativeNumber: w + (this.startWeekNum - this.initialWeekNum)
+    }))
     return {
       weeks
     }

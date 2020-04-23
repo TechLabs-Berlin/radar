@@ -1,6 +1,6 @@
 <template>
   <div class="week">
-    <span class="weeknum">{{ weekNum }}</span>
+    <span class="weeknum">{{ relativeWeekNum }}</span>
     <Fas v-if="icon" :i="icon" :classes="'icon weekicon' + completedClass" />
   </div>
 </template>
@@ -13,7 +13,11 @@ export default {
     Fas
   },
   props: {
-    weekNum: {
+    absoluteWeekNum: {
+      type: Number,
+      required: true
+    },
+    relativeWeekNum: {
       type: Number,
       required: true
     },
@@ -24,15 +28,15 @@ export default {
   },
   computed: {
     icon() {
-      if (this.weekNum === this.currentWeekNum) {
+      if (this.absoluteWeekNum === this.currentWeekNum) {
         return 'hourglass-half'
-      } else if (this.weekNum < this.currentWeekNum) {
+      } else if (this.absoluteWeekNum < this.currentWeekNum) {
         return 'check-circle'
       }
       return undefined
     },
     completedClass() {
-      if (this.weekNum < this.currentWeekNum) {
+      if (this.absoluteWeekNum < this.currentWeekNum) {
         return ' completed'
       }
       return ''
