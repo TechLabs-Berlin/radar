@@ -36,3 +36,7 @@
       description: Break-Out Room for UX Design
       type: meeting
       url: https://meet.google.com/aep-cocb-wyq
+    - title: "Slides"
+      description: The presentation we showed you during the Kick-Off
+      type: slides
+      url: https://drive.google.com/a/techlabs.org/file/d/1m9chYWu00JFhqCcBVhcwnTYmjFtj89g2/view?usp=sharing

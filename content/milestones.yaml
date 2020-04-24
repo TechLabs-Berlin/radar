@@ -55,14 +55,51 @@
 
     We will post instructions how to choose your track in the Kick-Off Session.
 
-  # Please complete the following steps to choose your track:
+    Please complete the following steps to choose your track:
 
-  # 1. Create an account at [edyoucated](https://edyoucated.org)
-  # 1. After logging in, choose **TechLabs Berlin**.
-  # 1. Complete the track personalization survey.
-  # 1. Back at edyoucated, confirm that you finished the survey.
+    1. Create an account at [edyoucated](https://bln.techlabs.org/JOINEDY): [**bln.techlabs.org/JOINEDY**](https://bln.techlabs.org/JOINEDY)
+    1. After logging in, choose **TechLabs Berlin**.
+    1. Complete the track personalization survey.
+    1. Back at edyoucated, confirm that you finished the survey.
 
-  # After we've received all of your choices, we will evaluate your answers in the track personalization survey.
-  # Then we will assign you to a track on edyoucated and you can start learning. Please allow some time between
-  # you completing the survey and the track assignment as this process involves some manual steps. We will send you a
-  # message on Slack as soon as you can access your track material on edyoucated.
+    After we've received all of your choices, we will evaluate your answers in the track personalization survey.
+    Then we will assign you to a track on edyoucated and you can start learning. Please allow some time between
+    you completing the survey and the track assignment as this process involves some manual steps. We will send you a
+    message on Slack as soon as you can access your track material on edyoucated.
+  todos:
+  - name: Join our Slack Community
+    resources:
+    - title: Join Slack
+      type: tool
+      url: https://bln.techlabs.org/NBY
+  - name: Join edyoucated & complete the track personalization survey
+    resources:
+    - title: edyoucated Sign Up
+      type: tool
+      url: https://bln.techlabs.org/JOINEDY
+  - name: "Get the Github Student Developer Pack (if you're a student)"
+    resources:
+    - title: Github Student Developer Pack
+      type: tool
+      url: https://education.github.com/pack
+  - name: "Data Science Techies: Sign up for DataCamp"
+    resources:
+    - title: DataCamp for students
+      type: tool
+      url: https://www.datacamp.com/github-students
+    - title: DataCamp regular signup
+      type: tool
+      url: https://www.datacamp.com/billing/subscriptions/account
+  - name: "Web Development Techies: Sign up for Udemy"
+    resources:
+    - title: Udemy – The Web Developer Bootcamp
+      type: tool
+      url: https://www.udemy.com/course/the-web-developer-bootcamp/
+  - name: "UX Techies: Sign up for Udemy & Coursera"
+    resources:
+    - title: Udemy – UX & Web Design Master Course
+      type: tool
+      url: https://www.udemy.com/course/ux-web-design-master-course-strategy-design-development/
+    - title: "Coursera – UX Design: From Concept to Prototype"
+      type: tool
+      url: https://de.coursera.org/learn/ux-design-concept-wireframe
