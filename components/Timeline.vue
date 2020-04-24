@@ -90,12 +90,12 @@
 </template>
 
 <script>
-import { differenceInHours, differenceInDays } from 'date-fns'
+import { differenceInDays } from 'date-fns'
 import Fas from '~/components/Fas'
 import Event from '~/components/Event'
 import Milestone from '~/components/Milestone'
 
-const isPastEntry = (e) => differenceInHours(new Date(), e.date) > 12
+const isPastEntry = (e) => differenceInDays(new Date(), e.date) > 3
 const isFutureEntry = (e) => differenceInDays(e.date, new Date()) > 10
 
 export default {
