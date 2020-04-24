@@ -1,4 +1,4 @@
-import { parseISO, compareAsc } from 'date-fns'
+import { parseISO, compareDesc } from 'date-fns'
 import status from '~/content/status.yaml'
 import yamlMilestones from '~/content/milestones.yaml'
 import links from '~/content/links.yaml'
@@ -27,7 +27,7 @@ const milestones = yamlMilestones.map((m) => {
   }
 })
 const timeline = [...events, ...milestones].sort((e1, e2) =>
-  compareAsc(e1.date, e2.date)
+  compareDesc(e1.date, e2.date)
 )
 
 export { status, timeline, links, phases, faq, media }
