@@ -27,9 +27,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    { src: '~/plugins/vuex-persist', ssr: false }
-  ],
+  plugins: [{ src: '~/plugins/vuex-persist', ssr: false }],
   /*
    ** Nuxt.js dev-modules
    */
@@ -74,9 +72,9 @@ export default {
       })
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
-          enforce: "pre",
+          enforce: 'pre',
           test: /\.(js|vue)$/,
-          loader: "eslint-loader",
+          loader: 'eslint-loader',
           exclude: /(node_modules)/,
           options: { fix: true }
         })
@@ -110,11 +108,7 @@ export default {
         'faHandshake',
         'faVideo'
       ],
-      brands: [
-        'faSlack',
-        'faInstagram',
-        'faFacebookF'
-      ]
+      brands: ['faSlack', 'faInstagram', 'faFacebookF']
     }
   },
   router: {
@@ -129,7 +123,8 @@ export default {
     meta: {
       name: 'TechLabs Berlin Semester Radar',
       author: 'TechLabs Berlin e.V.',
-      description: 'The TechLabs Berlin semester radar shows all the important semester information at a glance',
+      description:
+        'The TechLabs Berlin semester radar shows all the important semester information at a glance',
       lang: 'en',
       nativeUI: true,
       appleStatusBarStyle: 'default'
@@ -140,7 +135,7 @@ export default {
       appId: process.env.ONESIGNAL_APP_ID,
       allowLocalhostAsSecureOrigin: true,
       welcomeNotification: {
-          disable: true
+        disable: true
       }
     }
   },
