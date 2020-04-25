@@ -6,8 +6,11 @@
           <nuxt-link to="/timeline" class="navbar-item" target="_new"
             ><img class="navbar-logo" src="~assets/techlabs-global-logo.svg" />
           </nuxt-link>
-          <nuxt-link class="navbar-item" to="/timeline" target="_new"
-            ><img class="navbar-logo" src="~assets/techlabs-berlin-logo.jpg" />
+          <nuxt-link
+            class="navbar-item techlabs-berlin-logo"
+            to="/timeline"
+            target="_new"
+            ><img class="navbar-logo" src="~assets/techlabs-berlin-logo.svg" />
           </nuxt-link>
 
           <a
@@ -127,3 +130,8 @@ export default {
   }
 }
 </script>
+
+<style lang="sass">
+.techlabs-berlin-logo
+  padding-left: 0
+</style>
