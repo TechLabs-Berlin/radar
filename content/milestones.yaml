@@ -103,3 +103,18 @@
     - title: "Coursera – UX Design: From Concept to Prototype"
       type: tool
       url: https://de.coursera.org/learn/ux-design-concept-wireframe
+
+- slug: project-idea-submission
+  name: Project Idea Submission
+  date: "2020-06-04T23:59:59+02:00"
+  description: |
+    After you've voted on a project to work on, this is where you will be
+    committing your idea. We will tell you how to do this in due time, of course.
+
+- slug: project-submission
+  name: Project Submission
+  date: "2020-07-19T23:59:59+02:00"
+  description: |
+    You did some nice work and now is the time to show it off! After you've
+    finished your implementation, you will officially submit your project to us
+    for review.
