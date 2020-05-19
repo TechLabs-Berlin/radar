@@ -7,5 +7,12 @@
 
     You will be able to learn about and participate in ideation methods from the Design Thinking Space.
     Of course this will be guided by TechLabs Berlin team members.
-  forms: []
-  resources: []
+  forms:
+  - title: Feedback
+    description: Please leave feedback for our Ideation Session!
+    url: https://techlabsorg.typeform.com/to/AY4WOU
+  resources:
+  - title: "Zoom Meeting"
+    description: Meeting Room
+    type: meeting
+    url: https://us02web.zoom.us/j/88265707772?pwd=djl2Yk1CK2lBUFYweVY3N2NTb0NQQT09
