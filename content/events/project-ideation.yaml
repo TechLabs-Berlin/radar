@@ -16,3 +16,7 @@
     description: Meeting Room
     type: meeting
     url: https://us02web.zoom.us/j/88265707772?pwd=djl2Yk1CK2lBUFYweVY3N2NTb0NQQT09
+  - title: "Miro Board"
+    description: We will use Miro to collect & document our ideas.
+    type: tool
+    url: https://miro.com/app/board/o9J_ks_JOto=/
