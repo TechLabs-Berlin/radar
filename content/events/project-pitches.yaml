@@ -15,3 +15,7 @@
     description: The main room where we will meet.
     type: meeting
     url: https://meet.google.com/jdy-tkzj-aoh
+  # - title: Slide Deck
+  #   description: Our slides we showed during the event.
+  #   type: slides
+  #   url: https://drive.google.com/file/d/190qGEcPSwF-_skZG_6Y85tjmUfHt3V-5/view?usp=sharing
