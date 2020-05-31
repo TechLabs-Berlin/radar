@@ -4,7 +4,14 @@
   date: "2020-06-01T19:00:00+02:00"
   description: |
     We want to hear about your great ideas! For every project, we ask for a
-    short pitch (not more than a few minutes) to tell everyone what it is all about.
+    short pitch (not more than two minutes) to tell everyone what it is all about.
     This will be your opportunity to look for team members – or for a project to join.
-  forms: []
-  resources: []
+  forms:
+  - title: Feedback
+    description: Please leave feedback for our Kick-Off Event!
+    url: https://techlabsorg.typeform.com/to/SCoGA7
+  resources:
+  - title: "Meet: Kick-Off"
+    description: The main room where we will meet.
+    type: meeting
+    url: https://meet.google.com/jdy-tkzj-aoh
