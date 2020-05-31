@@ -104,12 +104,16 @@
       type: tool
       url: https://de.coursera.org/learn/ux-design-concept-wireframe
 
-- slug: project-idea-submission
-  name: Project Idea Submission
+- slug: project-preference-submission
+  name: Project Preference Submission
   date: "2020-06-04T23:59:59+02:00"
   description: |
-    After you've voted on a project to work on, this is where you will be
-    committing your idea. We will tell you how to do this in due time, of course.
+    This is where you will tell us which project you want to work on.
+    We will tell you the result in due time (until June 8th) and ensure everyone gets their favorite project.
+  # resources:
+  # - title: Project Preference Submission Form
+  #   type: typeform
+  #   url: https://techlabsorg.typeform.com/to/YrU9jO
 
 - slug: project-submission
   name: Project Submission
