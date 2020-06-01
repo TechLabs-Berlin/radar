@@ -110,10 +110,12 @@
   description: |
     This is where you will tell us which project you want to work on.
     We will tell you the result in due time (until June 8th) and ensure everyone gets their favorite project.
-  resources:
-  - title: Project Preference Submission Form
-    type: typeform
-    url: https://techlabsorg.typeform.com/to/YrU9jO
+  todos:
+  - name: Submit your project preference
+    resources:
+    - title: Project Preference Submission Form
+      type: typeform
+      url: https://techlabsorg.typeform.com/to/YrU9jO
 
 - slug: project-submission
   name: Project Submission
