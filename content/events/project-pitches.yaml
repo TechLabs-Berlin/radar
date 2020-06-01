@@ -41,3 +41,7 @@
     description: Our slides we showed during the event.
     type: slides
     url: https://drive.google.com/file/d/190qGEcPSwF-_skZG_6Y85tjmUfHt3V-5/view?usp=sharing
+  - title: Meeting Recording
+    description: Recording of our intro, pitches and Q&A
+    type: video
+    url: https://www.youtube.com/watch?v=Be39HiXTKCw
