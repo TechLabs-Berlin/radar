@@ -47,6 +47,7 @@
 <script>
 import MarkdownIt from 'markdown-it'
 import { format, formatRelative, differenceInDays } from 'date-fns'
+import { de } from 'date-fns/locale'
 import Fas from '~/components/Fas'
 import Todo from '~/components/Todo'
 import { sha256 } from '~/assets/crypto'
@@ -94,8 +95,12 @@ export default {
   },
   methods: {
     updateDeadline() {
-      this.deadlineRelative = formatRelative(this.milestone.date, new Date())
-      this.deadlineAbsolute = format(this.milestone.date, 'PPPPp')
+      this.deadlineRelative = formatRelative(this.milestone.date, new Date(), {
+        locale: de
+      })
+      this.deadlineAbsolute = format(this.milestone.date, 'PPPPp', {
+        locale: de
+      })
       this.dueSoon = differenceInDays(this.milestone.date, new Date()) < 2
     }
   }

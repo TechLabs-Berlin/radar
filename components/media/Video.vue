@@ -28,6 +28,7 @@
 <script>
 import MarkdownIt from 'markdown-it'
 import { parseISO, format } from 'date-fns'
+import { de } from 'date-fns/locale'
 
 export default {
   props: {
@@ -50,7 +51,7 @@ export default {
   },
   computed: {
     friendlyDate() {
-      return format(parseISO(this.date), 'PP')
+      return format(parseISO(this.date), 'PP', { locale: de })
     },
     formattedDescription() {
       const md = new MarkdownIt()
