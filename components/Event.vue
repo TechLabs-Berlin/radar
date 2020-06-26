@@ -83,6 +83,7 @@
 <script>
 import MarkdownIt from 'markdown-it'
 import { format, formatRelative, differenceInDays } from 'date-fns'
+import { de } from 'date-fns/locale'
 import Resource from '~/components/Resource.vue'
 import Fas from '~/components/Fas.vue'
 import FormLink from '~/components/FormLink.vue'
@@ -136,8 +137,10 @@ export default {
   },
   methods: {
     updateDate() {
-      this.dateRelative = formatRelative(this.event.date, new Date())
-      this.dateAbsolute = format(this.event.date, 'PPPPp')
+      this.dateRelative = formatRelative(this.event.date, new Date(), {
+        locale: de
+      })
+      this.dateAbsolute = format(this.event.date, 'PPPPp', { locale: de })
       this.happeningSoon = differenceInDays(this.event.date, new Date()) < 2
     }
   }
