@@ -15,12 +15,12 @@
         {{ event.name }}
       </p>
       <p
-        v-if="dateRelative && active"
-        class="subtitle has-text-centered has-text-weight-semibold"
-        :class="{ 'has-text-danger': happeningSoon }"
+        v-if="active"
+        class="subtitle has-text-centered"
+        :class="{ 'has-text-danger': happeningVerySoon }"
       >
         <Fas
-          v-if="happeningSoon"
+          v-if="happeningVerySoon"
           classes="icon deadline-icon"
           i="exclamation-circle"
         />
@@ -34,7 +34,7 @@
           {{ dateRelative }}
         </span>
       </p>
-      <p v-else-if="dateRelative" class="subtitle has-text-centered">
+      <p v-else class="subtitle has-text-centered">
         <span class="event-date">On {{ dateAbsolute }}</span>
       </p>
       <div class="columns">
@@ -125,7 +125,8 @@ export default {
     return {
       dateRelative: '',
       dateAbsolute: '',
-      happeningSoon: false
+      happeningSoon: false,
+      happeningVerySoon: false
     }
   },
   computed: {
@@ -147,12 +148,13 @@ export default {
         locale: enUS
       })
       this.dateAbsolute =
-        format(this.event.date, 'EEEE, d.MMMM', {
+        format(this.event.date, 'EEEE, d. MMMM', {
           locale: enUS
         }) +
         ' at ' +
         format(this.event.date, 'p')
-      this.happeningSoon = differenceInDays(this.event.date, new Date()) < 2
+      this.happeningVerySoon = differenceInDays(this.event.date, new Date()) < 2
+      this.happeningSoon = differenceInDays(this.event.date, new Date()) < 7
       this.isInFuture = this.event.date > new Date()
     }
   }
