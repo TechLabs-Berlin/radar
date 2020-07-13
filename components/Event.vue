@@ -15,20 +15,26 @@
         {{ event.name }}
       </p>
       <p
-        v-if="dateRelative && active"
-        class="subtitle has-text-centered has-text-weight-semibold"
-        :class="{ 'has-text-danger': happeningSoon }"
+        v-if="active"
+        class="subtitle has-text-centered"
+        :class="{ 'has-text-danger': happeningVerySoon }"
       >
         <Fas
-          v-if="happeningSoon"
+          v-if="happeningVerySoon"
           classes="icon deadline-icon"
           i="exclamation-circle"
         />
-        <span class="event-date" :title="dateAbsolute"
-          >Takes place {{ dateRelative }}</span
-        >
+        <span class="event-date" :title="dateAbsolute">
+          <template v-if="isInFuture">
+            Takes place
+          </template>
+          <template v-else>
+            Took place
+          </template>
+          {{ dateRelative }}
+        </span>
       </p>
-      <p v-else-if="dateRelative" class="subtitle has-text-centered">
+      <p v-else class="subtitle has-text-centered">
         <span class="event-date">On {{ dateAbsolute }}</span>
       </p>
       <div class="columns">
@@ -83,7 +89,7 @@
 <script>
 import MarkdownIt from 'markdown-it'
 import { format, formatRelative, differenceInDays } from 'date-fns'
-import { de } from 'date-fns/locale'
+import { enUS } from 'date-fns/locale'
 import Resource from '~/components/Resource.vue'
 import Fas from '~/components/Fas.vue'
 import FormLink from '~/components/FormLink.vue'
@@ -119,7 +125,8 @@ export default {
     return {
       dateRelative: '',
       dateAbsolute: '',
-      happeningSoon: false
+      happeningSoon: false,
+      happeningVerySoon: false
     }
   },
   computed: {
@@ -138,10 +145,17 @@ export default {
   methods: {
     updateDate() {
       this.dateRelative = formatRelative(this.event.date, new Date(), {
-        locale: de
+        locale: enUS
       })
-      this.dateAbsolute = format(this.event.date, 'PPPPp', { locale: de })
-      this.happeningSoon = differenceInDays(this.event.date, new Date()) < 2
+      this.dateAbsolute =
+        format(this.event.date, 'EEEE, d. MMMM', {
+          locale: enUS
+        }) +
+        ' at ' +
+        format(this.event.date, 'p')
+      this.happeningVerySoon = differenceInDays(this.event.date, new Date()) < 2
+      this.happeningSoon = differenceInDays(this.event.date, new Date()) < 7
+      this.isInFuture = this.event.date > new Date()
     }
   }
 }

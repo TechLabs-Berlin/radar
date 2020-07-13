@@ -15,20 +15,18 @@
         {{ milestone.name }}
       </p>
       <p
-        v-if="deadlineRelative && !inactive"
-        class="subtitle has-text-centered has-text-weight-semibold"
-        :class="{ 'has-text-danger': dueSoon }"
+        v-if="dueSoon"
+        class="subtitle has-text-centered"
+        :class="{ 'has-text-danger': dueVerySoon }"
       >
         <Fas
-          v-if="dueSoon"
+          v-if="dueVerySoon"
           classes="icon deadline-icon"
           i="exclamation-circle"
         />
-        <span class="milestone-deadline" :title="deadlineAbsolute"
-          >Due {{ deadlineRelative }}</span
-        >
+        <span class="milestone-deadline">Due {{ deadlineRelative }}</span>
       </p>
-      <p v-else-if="deadlineRelative" class="subtitle has-text-centered">
+      <p v-else class="subtitle has-text-centered">
         <span class="milestone-deadline">Due {{ deadlineAbsolute }}</span>
       </p>
       <!--eslint-disable vue/no-v-html-->
@@ -47,7 +45,7 @@
 <script>
 import MarkdownIt from 'markdown-it'
 import { format, formatRelative, differenceInDays } from 'date-fns'
-import { de } from 'date-fns/locale'
+import { enUS } from 'date-fns/locale'
 import Fas from '~/components/Fas'
 import Todo from '~/components/Todo'
 import { sha256 } from '~/assets/crypto'
@@ -72,8 +70,7 @@ export default {
     return {
       id: '',
       deadlineRelative: '',
-      deadlineAbsolute: '',
-      dueSoon: false
+      deadlineAbsolute: ''
     }
   },
   computed: {
@@ -83,6 +80,12 @@ export default {
     },
     active() {
       return !this.inactive
+    },
+    dueSoon() {
+      return differenceInDays(this.milestone.date, new Date()) < 7
+    },
+    dueVerySoon() {
+      return differenceInDays(this.milestone.date, new Date()) < 2
     }
   },
   async created() {
@@ -96,12 +99,14 @@ export default {
   methods: {
     updateDeadline() {
       this.deadlineRelative = formatRelative(this.milestone.date, new Date(), {
-        locale: de
+        locale: enUS
       })
-      this.deadlineAbsolute = format(this.milestone.date, 'PPPPp', {
-        locale: de
-      })
-      this.dueSoon = differenceInDays(this.milestone.date, new Date()) < 2
+      this.deadlineAbsolute =
+        format(this.milestone.date, 'EEEE, d. MMMM', {
+          locale: enUS
+        }) +
+        ' at ' +
+        format(this.milestone.date, 'p')
     }
   }
 }
