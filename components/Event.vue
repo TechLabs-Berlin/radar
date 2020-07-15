@@ -15,7 +15,7 @@
         {{ event.name }}
       </p>
       <p
-        v-if="active"
+        v-if="isInFuture"
         class="subtitle has-text-centered"
         :class="{ 'has-text-danger': happeningVerySoon }"
       >
@@ -24,21 +24,17 @@
           classes="icon deadline-icon"
           i="exclamation-circle"
         />
-        <span class="event-date" :title="dateAbsolute">
-          <template v-if="isInFuture">
-            Takes place
-          </template>
-          <template v-else>
-            Took place
-          </template>
-          {{ dateRelative }}
+        <span class="event-date">
+          Takes place
+          <template v-if="happeningSoon">{{ dateRelative }}</template>
+          <template v-else>{{ dateAbsolute }}</template>
         </span>
       </p>
       <p v-else class="subtitle has-text-centered">
-        <span class="event-date">On {{ dateAbsolute }}</span>
+        <span class="event-date">Took place on {{ dateAbsolute }}</span>
       </p>
       <div class="columns">
-        <div class="column is-three-fifths content">
+        <div class="column content" :class="{ 'is-three-fifths': showSidebar }">
           <!--eslint-disable vue/no-v-html-->
           <div class="event-description" v-html="description" />
           <!--eslint-enable-->
@@ -49,7 +45,7 @@
             >
           </div>
         </div>
-        <div class="column">
+        <div v-if="showSidebar" class="column">
           <div
             v-if="!hideForms && event.forms.length > 0"
             class="resource-group"
@@ -126,7 +122,8 @@ export default {
       dateRelative: '',
       dateAbsolute: '',
       happeningSoon: false,
-      happeningVerySoon: false
+      happeningVerySoon: false,
+      isInFuture: false
     }
   },
   computed: {
@@ -136,14 +133,17 @@ export default {
     },
     active() {
       return !this.inactive
+    },
+    showSidebar() {
+      return this.event.forms.length > 0 || this.event.resources.length > 0
     }
   },
   created() {
-    this.updateDate()
-    this.updateDateInterval = setInterval(this.updateDeadline, 1000)
+    this.updateDates()
+    this.updateDatesInterval = setInterval(this.updateDates, 1000)
   },
   methods: {
-    updateDate() {
+    updateDates() {
       this.dateRelative = formatRelative(this.event.date, new Date(), {
         locale: enUS
       })

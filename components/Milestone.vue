@@ -15,7 +15,7 @@
         {{ milestone.name }}
       </p>
       <p
-        v-if="dueSoon"
+        v-if="isInFuture && dueSoon"
         class="subtitle has-text-centered"
         :class="{ 'has-text-danger': dueVerySoon }"
       >
@@ -70,7 +70,10 @@ export default {
     return {
       id: '',
       deadlineRelative: '',
-      deadlineAbsolute: ''
+      deadlineAbsolute: '',
+      dueSoon: false,
+      dueVerySoon: false,
+      isInFuture: false
     }
   },
   computed: {
@@ -80,24 +83,18 @@ export default {
     },
     active() {
       return !this.inactive
-    },
-    dueSoon() {
-      return differenceInDays(this.milestone.date, new Date()) < 7
-    },
-    dueVerySoon() {
-      return differenceInDays(this.milestone.date, new Date()) < 2
     }
   },
   async created() {
-    this.updateDeadline()
-    this.updateDeadlineInterval = setInterval(this.updateDeadline, 1000)
+    this.updateDates()
+    this.updateDatesInterval = setInterval(this.updateDates, 1000)
     this.id = await sha256(this.milestone.name)
   },
   destroyed() {
-    clearInterval(this.updateDeadlineInterval)
+    clearInterval(this.updateDatesInterval)
   },
   methods: {
-    updateDeadline() {
+    updateDates() {
       this.deadlineRelative = formatRelative(this.milestone.date, new Date(), {
         locale: enUS
       })
@@ -107,6 +104,9 @@ export default {
         }) +
         ' at ' +
         format(this.milestone.date, 'p')
+      this.dueSoon = differenceInDays(this.milestone.date, new Date()) < 7
+      this.dueVerySoon = differenceInDays(this.milestone.date, new Date()) < 2
+      this.isInFuture = this.milestone.date > new Date()
     }
   }
 }
