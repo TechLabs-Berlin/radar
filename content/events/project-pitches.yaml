@@ -24,15 +24,15 @@
     1. [Lorna Whitton - The Green Gang](https://drive.google.com/file/d/1VwcQve6F_lABNCM-3T5XMhNgj_BActmd/view?usp=sharing)
 
     (*click to view*)
-  forms:
-  - title: Feedback
-    description: Please leave feedback for our Kick-Off Event!
-    url: https://techlabsorg.typeform.com/to/QKwHXh
+  forms: []
+  # - title: Feedback
+  #   description: Please leave feedback for our Kick-Off Event!
+  #   url: https://techlabsorg.typeform.com/to/QKwHXh
   resources:
-  - title: Google Meet
-    description: The main room where we will meet.
-    type: meeting
-    url: https://meet.google.com/jdy-tkzj-aoh
+  # - title: Google Meet
+  #   description: The main room where we will meet.
+  #   type: meeting
+  #   url: https://meet.google.com/jdy-tkzj-aoh
   - title: Knowledge Base
     description: A comprehensive document of all you need to know for the Project Phase.
     type: link

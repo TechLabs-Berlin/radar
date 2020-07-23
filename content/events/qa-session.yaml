@@ -11,17 +11,17 @@
 
     To participate in the Q&A session, all you need is a web browser. You should bring a working microphone and
     (if you want) a webcam, too.
-  forms:
-    - title: Questions
-      description: ''
-      url: https://techlabsorg.typeform.com/to/Ojr6cj
+  forms: []
+    # - title: Questions
+    #   description: ''
+    #   url: https://techlabsorg.typeform.com/to/Ojr6cj
   resources:
     - title: Info Session
       description: We've published an info session on YouTube. It covers all major questions we've received so far.
       type: video
       url: https://www.youtube.com/watch?v=iL8MZkqpUIA
-    - title: Google Meet
-      description: This is the meeting where we will host the Q&A session.
-      type: meeting
-      url: https://meet.google.com/rej-wtry-etf
+    # - title: Google Meet
+    #   description: This is the meeting where we will host the Q&A session.
+    #   type: meeting
+    #   url: https://meet.google.com/rej-wtry-etf
 

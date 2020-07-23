@@ -19,10 +19,10 @@
       * Bring it home – select, cluster, label (15min)
     1. Ideation in break-out rooms
     1. Debrief with the whole group
-  forms:
-  - title: Feedback
-    description: Please leave feedback for our Ideation Session!
-    url: https://techlabsorg.typeform.com/to/AY4WOU
+  forms: []
+  # - title: Feedback
+  #   description: Please leave feedback for our Ideation Session!
+  #   url: https://techlabsorg.typeform.com/to/AY4WOU
   resources:
   # - title: "Zoom Meeting"
   #   description: Meeting Room
