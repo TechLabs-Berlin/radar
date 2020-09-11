@@ -1,9 +1,9 @@
 ---
 - slug: apply
-  name: Apply for Summer Term 2020
-  date: "2020-04-17T23:59:59+02:00"
+  name: Apply for the Winter Term 2020/21
+  date: '2020-09-28T23:59:59+02:00'
   description: |
-    You can apply for TechLabs Berlin **until Friday, April 17**. All you need to do is to complete the application
+    You can apply for TechLabs Berlin **until Monday, September 28**. All you need to do is to complete the application
     form linked below.
 
     Please note that the survey consists of several questions, some of them require you to reflect on yourself.
@@ -11,147 +11,145 @@
     In that way you can be sure that your learning experience will be awesome and that you'll all have a great time.
     On the other hand, it also means you'll have to invest 20 to 30 minutes. But it'll be worth it, we promise!
   todos:
-  - name: Submit Your Application
-    resources:
-      - title: Application Form
-        type: feedback
-        url: https://techlabsorg.typeform.com/to/voTAXD
+    - name: Submit Your Application
+      resources:
+        - title: Application Form
+          type: feedback
+          url: https://techlabsorg.typeform.com/to/voTAXD
+# - slug: register
+#   name: Register for Winter Term 2020/21
+#   date: '2020-10-11T19:00:00+02:00'
+#   description: |
+#     We're happy that you want to join our community. To get you started quickly, we have some tasks you need to do.
 
-- slug: register
-  name: Register for Summer Term 2020
-  date: "2020-04-23T19:00:00+02:00"
-  description: |
-    We're happy that you want to join our community. To get you started quickly, we have some tasks you need to do.
+#     Please make sure to attend our Kick-Off Event because you will be given the most important information to
+#     join TechLabs.
+#   todos:
+#     - name: Complete the Registration Form
+#       resources:
+#         - title: Registration Form
+#           type: typeform
+#           url: https://techlabsorg.typeform.com/to/U2RDGg
+#     - name: Join our Slack Community
+#       resources:
+#         - title: Join Slack
+#           type: tool
+#           url: https://bln.techlabs.org/NBY
+#     - name: Subscribe to our Calendar
+#       resources:
+#         - title: Web
+#           type: calendar
+#           url: https://bln.techlabs.org/FBN
+#         - title: iCal
+#           type: calendar
+#           url: https://bln.techlabs.org/G5W
+#     - name: Attend the Kick-Off Event on Monday, October 12, at 20:00 CEST
 
-    Please make sure to attend our Kick-Off Event because you will be given the most important information to
-    join TechLabs.
-  todos:
-  - name: Complete the Registration Form
-    resources:
-      - title: Registration Form
-        type: typeform
-        url: https://techlabsorg.typeform.com/to/U2RDGg
-  - name: Join our Slack Community
-    resources:
-      - title: Join Slack
-        type: tool
-        url: https://bln.techlabs.org/NBY
-  - name: Subscribe to our Calendar
-    resources:
-      - title: Web
-        type: calendar
-        url: https://bln.techlabs.org/FBN
-      - title: iCal
-        type: calendar
-        url: https://bln.techlabs.org/G5W
-  - name: Attend the Kick-Off Event at Thursday, April 23 at 20:00 CEST
+# - slug: choose-track
+#   name: Choose Your TechLabs Track
+#   date: '2020-10-15T23:59:59+02:00'
+#   description: |
+#     Now it is the time to choose if you want to learn Data Science, Artificial Intelligence, Web Development or
+#     User Experience Design.
 
-- slug: choose-track
-  name: Choose Your TechLabs Track
-  date: "2020-04-26T23:59:59+02:00"
-  description: |
-    Now it is the time to choose if you want to learn Data Science, Artificial Intelligence, Web Development or
-    User Experience Design.
+#     We will post instructions how to choose your track in the Kick-Off Session.
 
-    We will post instructions how to choose your track in the Kick-Off Session.
+#     Please complete the following steps to choose your track:
 
-    Please complete the following steps to choose your track:
+#     1. Create an account at [edyoucated](https://bln.techlabs.org/JOINEDY): [**bln.techlabs.org/JOINEDY**](https://bln.techlabs.org/JOINEDY)
+#     1. After logging in, choose **TechLabs Berlin**.
+#     1. Complete the track personalization survey.
+#     1. Back at edyoucated, confirm that you finished the survey.
 
-    1. Create an account at [edyoucated](https://bln.techlabs.org/JOINEDY): [**bln.techlabs.org/JOINEDY**](https://bln.techlabs.org/JOINEDY)
-    1. After logging in, choose **TechLabs Berlin**.
-    1. Complete the track personalization survey.
-    1. Back at edyoucated, confirm that you finished the survey.
+#     After we've received all of your choices, we will evaluate your answers in the track personalization survey.
+#     Then we will assign you to a track on edyoucated and you can start learning. Please allow some time between
+#     you completing the survey and the track assignment as this process involves some manual steps. We will send you a
+#     message on Slack as soon as you can access your track material on edyoucated.
+#   todos:
+#     - name: Join our Slack Community
+#       resources:
+#         - title: Join Slack
+#           type: tool
+#           url: https://bln.techlabs.org/NBY
+#     - name: Join edyoucated & complete the track personalization survey
+#       resources:
+#         - title: edyoucated Sign Up
+#           type: tool
+#           url: https://bln.techlabs.org/JOINEDY
+#     - name: "Get the Github Student Developer Pack (if you're a student)"
+#       resources:
+#         - title: Github Student Developer Pack
+#           type: tool
+#           url: https://education.github.com/pack
+#     - name: 'Data Science Techies: Sign up for DataCamp'
+#       resources:
+#         - title: DataCamp for students
+#           type: tool
+#           url: https://www.datacamp.com/github-students
+#         - title: DataCamp regular signup
+#           type: tool
+#           url: https://www.datacamp.com/billing/subscriptions/account
+#     - name: 'Web Development Techies: Sign up for Udemy'
+#       resources:
+#         - title: Udemy – The Web Developer Bootcamp
+#           type: tool
+#           url: https://www.udemy.com/course/the-web-developer-bootcamp/
+#     - name: 'UX Techies: Sign up for Udemy & Coursera'
+#       resources:
+#         - title: Udemy – UX & Web Design Master Course
+#           type: tool
+#           url: https://www.udemy.com/course/ux-web-design-master-course-strategy-design-development/
+#         - title: 'Coursera – UX Design: From Concept to Prototype'
+#           type: tool
+#           url: https://de.coursera.org/learn/ux-design-concept-wireframe
+# - slug: project-preference-submission
+#   name: Project Preference Submission
+#   date: "2020-06-04T23:59:59+02:00"
+#   description: |
+#     This is where you will tell us which project you want to work on.
+#     We will tell you the result in due time (until June 8th) and ensure everyone gets their favorite project.
+#   todos:
+#   - name: Submit your project preference
+#     resources:
+#     - title: Project Preference Submission Form
+#       type: typeform
+#       url: https://techlabsorg.typeform.com/to/YrU9jO
 
-    After we've received all of your choices, we will evaluate your answers in the track personalization survey.
-    Then we will assign you to a track on edyoucated and you can start learning. Please allow some time between
-    you completing the survey and the track assignment as this process involves some manual steps. We will send you a
-    message on Slack as soon as you can access your track material on edyoucated.
-  todos:
-  - name: Join our Slack Community
-    resources:
-    - title: Join Slack
-      type: tool
-      url: https://bln.techlabs.org/NBY
-  - name: Join edyoucated & complete the track personalization survey
-    resources:
-    - title: edyoucated Sign Up
-      type: tool
-      url: https://bln.techlabs.org/JOINEDY
-  - name: "Get the Github Student Developer Pack (if you're a student)"
-    resources:
-    - title: Github Student Developer Pack
-      type: tool
-      url: https://education.github.com/pack
-  - name: "Data Science Techies: Sign up for DataCamp"
-    resources:
-    - title: DataCamp for students
-      type: tool
-      url: https://www.datacamp.com/github-students
-    - title: DataCamp regular signup
-      type: tool
-      url: https://www.datacamp.com/billing/subscriptions/account
-  - name: "Web Development Techies: Sign up for Udemy"
-    resources:
-    - title: Udemy – The Web Developer Bootcamp
-      type: tool
-      url: https://www.udemy.com/course/the-web-developer-bootcamp/
-  - name: "UX Techies: Sign up for Udemy & Coursera"
-    resources:
-    - title: Udemy – UX & Web Design Master Course
-      type: tool
-      url: https://www.udemy.com/course/ux-web-design-master-course-strategy-design-development/
-    - title: "Coursera – UX Design: From Concept to Prototype"
-      type: tool
-      url: https://de.coursera.org/learn/ux-design-concept-wireframe
+# - slug: project-submission
+#   name: Project Submission
+#   date: "2020-07-19T23:59:59+02:00"
+#   description: |
+#     You did some nice work and now is the time to show it off! After you've
+#     finished your implementation, you will officially submit your project to us
+#     for review.
 
-- slug: project-preference-submission
-  name: Project Preference Submission
-  date: "2020-06-04T23:59:59+02:00"
-  description: |
-    This is where you will tell us which project you want to work on.
-    We will tell you the result in due time (until June 8th) and ensure everyone gets their favorite project.
-  todos:
-  - name: Submit your project preference
-    resources:
-    - title: Project Preference Submission Form
-      type: typeform
-      url: https://techlabsorg.typeform.com/to/YrU9jO
+#     Each team has to submit an **elevator pitch** in which you present your project and your results. The elevator pitch
+#     should be kept relatively short (between 2-5 mins) and highlight the most important aspects of your idea.
+#     In order to give you an impression of what an elevator pitch could look like and which points you should address,
+#     we've prepared a [small demo](https://drive.google.com/file/d/1pagQbB54jmMGk8yhwa-Aj8THDDTg24rq/view?usp=sharing)
+#     for you. The tool we used for this is called [Loom](https://loom.com)
 
-- slug: project-submission
-  name: Project Submission
-  date: "2020-07-19T23:59:59+02:00"
-  description: |
-    You did some nice work and now is the time to show it off! After you've
-    finished your implementation, you will officially submit your project to us
-    for review.
+#     These are the main points you should cover in your video:
 
-    Each team has to submit an **elevator pitch** in which you present your project and your results. The elevator pitch
-    should be kept relatively short (between 2-5 mins) and highlight the most important aspects of your idea.
-    In order to give you an impression of what an elevator pitch could look like and which points you should address,
-    we've prepared a [small demo](https://drive.google.com/file/d/1pagQbB54jmMGk8yhwa-Aj8THDDTg24rq/view?usp=sharing)
-    for you. The tool we used for this is called [Loom](https://loom.com)
+#     1. **The problem you found**: which project idea did you have? What problem should be solved or which question should be answered?
 
-    These are the main points you should cover in your video:
+#     2. **Your solution**: What is your solution to the problem? What results have you achieved?
 
-    1. **The problem you found**: which project idea did you have? What problem should be solved or which question should be answered?
+#     3. A **walkthrough-style demo** of the prototype
 
-    2. **Your solution**: What is your solution to the problem? What results have you achieved?
+#     4. What **knowledge** you used you learned with TechLabs
 
-    3. A **walkthrough-style demo** of the prototype
+#     5. **Success Story**: what are you happy with? What are your greatest personal moments of success? What were the biggest challenges? In which direction would you further extend your prototype?
 
-    4. What **knowledge** you used you learned with TechLabs
+#     In addition, we would like you to submit a **link to your GitHub repository** along with a *README* which outlines
+#     what steps are needed to operate the prototype. If in any way possible, please have a look how you can **deploy**
+#     your solution on a service such as Heroku to make it publicly available. This is not only beneficial for us but also
+#     for you, since you can directly refer to your work later on when you want to show it off to anyone.
 
-    5. **Success Story**: what are you happy with? What are your greatest personal moments of success? What were the biggest challenges? In which direction would you further extend your prototype?
-
-    In addition, we would like you to submit a **link to your GitHub repository** along with a *README* which outlines
-    what steps are needed to operate the prototype. If in any way possible, please have a look how you can **deploy**
-    your solution on a service such as Heroku to make it publicly available. This is not only beneficial for us but also
-    for you, since you can directly refer to your work later on when you want to show it off to anyone.
-
-    The Project Submission Form must be submitted **once per project team**.
-  todos:
-  - name: Submit your project
-    resources:
-    - title: Project Submission Form
-      type: typeform
-      url: https://techlabsorg.typeform.com/to/B0yaOa60
+#     The Project Submission Form must be submitted **once per project team**.
+#   todos:
+#   - name: Submit your project
+#     resources:
+#     - title: Project Submission Form
+#       type: typeform
+#       url: https://techlabsorg.typeform.com/to/B0yaOa60
