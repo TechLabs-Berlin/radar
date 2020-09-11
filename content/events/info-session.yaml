@@ -1,0 +1,26 @@
+---
+slug: info-session
+name: Info Session
+date: "2020-09-13T20:00:00+02:00"
+description: |
+  We're sure you'll have a lot of questions about TechLabs. 
+
+  On **September 13th at 8pm**, we will host an Info Session where we'll talk about TechLabs, the tracks we offer, and details about the upcoming semester.
+  Our goal is for everybody to have a clear understanding about TechLabs Berlin.
+
+  To participate in the Q&A session, all you need is a web browser. You should bring a working microphone and
+  (if you want) a webcam, too.
+forms:
+  []
+  # - title: Questions
+  #   description: ''
+  #   url: https://techlabsorg.typeform.com/to/Ojr6cj
+resources:
+  # - title: Info Session
+  #   description: We've published an info session on YouTube. It covers all major questions we've received so far.
+  #   type: video
+  #   url: https://www.youtube.com/watch?v=iL8MZkqpUIA
+  - title: Google Meet
+    description: This is the meeting where we will host the Q&A session.
+    type: meeting
+    url: https://bln.techlabs.org/YYG
