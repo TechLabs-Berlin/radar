@@ -10,7 +10,7 @@ const yamlEvents = {}
 function requireAll(r) {
   r.keys().forEach((key) => (yamlEvents[key] = r(key)))
 }
-requireAll(require.context('~/content/events/', true, /\.yaml$/))
+requireAll(require.context('~/content/events/', false, /\.yaml$/))
 
 const events = Object.values(yamlEvents).map((e) => {
   return {
