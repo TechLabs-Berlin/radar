@@ -1,7 +1,7 @@
 ---
 - slug: apply
   name: Apply for the Winter Term 2020/21
-  date: '2020-09-28T23:59:59+02:00'
+  date: "2020-09-28T23:59:59+02:00"
   description: |
     You can apply for TechLabs Berlin **until Monday, September 28**. All you need to do is to complete the application
     form linked below.
@@ -15,7 +15,7 @@
       resources:
         - title: Application Form
           type: feedback
-          url: https://techlabsorg.typeform.com/to/voTAXD
+          url: https://techlabsorg.typeform.com/to/auo2IeMv
 # - slug: register
 #   name: Register for Winter Term 2020/21
 #   date: '2020-10-11T19:00:00+02:00'
