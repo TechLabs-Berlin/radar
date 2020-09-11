@@ -103,17 +103,14 @@ export default {
     },
     inactive: {
       type: Boolean,
-      required: false,
       default: false
     },
     hidePermalink: {
       type: Boolean,
-      required: false,
       default: false
     },
     hideForms: {
       type: Boolean,
-      required: false,
       default: false
     }
   },

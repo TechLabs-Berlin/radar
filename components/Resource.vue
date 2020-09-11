@@ -42,7 +42,6 @@ export default {
     },
     inline: {
       type: Boolean,
-      required: false,
       default: false
     }
   },
