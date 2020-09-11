@@ -32,12 +32,14 @@
       <!--eslint-disable vue/no-v-html-->
       <p class="content" v-html="description" />
       <!--eslint-enable-->
-      <Todo
-        v-for="todo in milestone.todos"
-        :key="todo.name"
-        :todo="todo"
-        :milestone-id="id"
-      />
+      <template v-if="!inactive">
+        <Todo
+          v-for="todo in milestone.todos"
+          :key="todo.name"
+          :todo="todo"
+          :milestone-id="id"
+        />
+      </template>
     </div>
   </div>
 </template>
@@ -62,7 +64,6 @@ export default {
     },
     inactive: {
       type: Boolean,
-      required: false,
       default: false
     }
   },
