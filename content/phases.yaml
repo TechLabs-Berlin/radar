@@ -5,7 +5,14 @@
 
     The application phase will start on September 14th and will end on September 28th.
   startWeekNum: 38
-  duration: 4
+  duration: 2
+- title: Onboarding
+  description: |
+    We'll analyze all applications carefully and select our new students. 
+
+    During this time, we'll get in touch with the results of your application and start your onboarding process into the program.
+  startWeekNum: 40
+  duration: 2
 - title: Kick-Off
   description: |
     You join the community and get access to our learning platform edyoucated.
