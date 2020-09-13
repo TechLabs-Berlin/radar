@@ -11,10 +11,9 @@ description: |
   To participate in the Q&A session, all you need is a web browser. You should bring a working microphone and
   (if you want) a webcam, too.
 forms:
-  []
-  # - title: Questions
-  #   description: ''
-  #   url: https://techlabsorg.typeform.com/to/Ojr6cj
+  - title: Application Form
+    type: Application
+    url: https://techlabsorg.typeform.com/to/auo2IeMv
 resources:
   # - title: Info Session
   #   description: We've published an info session on YouTube. It covers all major questions we've received so far.
