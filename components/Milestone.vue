@@ -32,7 +32,7 @@
       <!--eslint-disable vue/no-v-html-->
       <p class="content" v-html="description" />
       <!--eslint-enable-->
-      <template v-if="!inactive">
+      <template>
         <Todo
           v-for="todo in milestone.todos"
           :key="todo.name"

@@ -14,11 +14,11 @@
     - name: Submit Your Application
       resources:
         - title: Application Form
-          type: feedback
+          type: Application
           url: https://techlabsorg.typeform.com/to/auo2IeMv
 # - slug: register
 #   name: Register for Winter Term 2020/21
-#   date: '2020-10-11T19:00:00+02:00'
+#   date: '2020-10-13T20:30:00+02:00'
 #   description: |
 #     We're happy that you want to join our community. To get you started quickly, we have some tasks you need to do.
 
