@@ -57,7 +57,7 @@
           <div class="field is-grouped">
             <div class="control">
               <button
-                class="button is-link"
+                class="techlabs-button"
                 :class="{ 'is-loading': loading }"
                 @click="checkForm"
               >
