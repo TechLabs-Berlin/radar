@@ -10,12 +10,13 @@
     This is intentional and ensures that we can build a community of very smart and motivated learners.
     In that way you can be sure that your learning experience will be awesome and that you'll all have a great time.
     On the other hand, it also means you'll have to invest 20 to 30 minutes. But it'll be worth it, we promise!
-  todos:
-    - name: Submit Your Application
-      resources:
-        - title: Application Form
-          type: Application
-          url: https://techlabsorg.typeform.com/to/auo2IeMv
+  # todos:
+  #   - name: Submit Your Application
+  #     resources:
+  #       - title: Application Form
+  #         type: Application
+  #         url: https://techlabsorg.typeform.com/to/auo2IeMv
+
 # - slug: register
 #   name: Register for Winter Term 2020/21
 #   date: '2020-10-13T20:30:00+02:00'
