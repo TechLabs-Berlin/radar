@@ -1,15 +1,15 @@
 ---
-- slug: apply
-  name: Apply for the Winter Term 2020/21
-  date: "2020-09-28T23:59:59+02:00"
-  description: |
-    You can apply for TechLabs Berlin **until Monday, September 28**. All you need to do is to complete the application
-    form linked below.
+# - slug: apply
+#   name: Apply for the Winter Term 2020/21
+#   date: "2020-09-28T23:59:59+02:00"
+#   description: |
+#     You can apply for TechLabs Berlin **until Monday, September 28**. All you need to do is to complete the application
+#     form linked below.
 
-    Please note that the survey consists of several questions, some of them require you to reflect on yourself.
-    This is intentional and ensures that we can build a community of very smart and motivated learners.
-    In that way you can be sure that your learning experience will be awesome and that you'll all have a great time.
-    On the other hand, it also means you'll have to invest 20 to 30 minutes. But it'll be worth it, we promise!
+#     Please note that the survey consists of several questions, some of them require you to reflect on yourself.
+#     This is intentional and ensures that we can build a community of very smart and motivated learners.
+#     In that way you can be sure that your learning experience will be awesome and that you'll all have a great time.
+#     On the other hand, it also means you'll have to invest 20 to 30 minutes. But it'll be worth it, we promise!
   # todos:
   #   - name: Submit Your Application
   #     resources:
@@ -17,34 +17,33 @@
   #         type: Application
   #         url: https://techlabsorg.typeform.com/to/auo2IeMv
 
-# - slug: register
-#   name: Register for Winter Term 2020/21
-#   date: '2020-10-13T20:30:00+02:00'
-#   description: |
-#     We're happy that you want to join our community. To get you started quickly, we have some tasks you need to do.
+- slug: register
+  name: Register for Winter Term 2020/21
+  date: '2020-10-09T20:30:00+02:00'
+  description: |
+    We're happy that you want to join our community. We need you to register on some platforms and to give us some account details so we can ensure a smooth learning experience for everyone.     
 
-#     Please make sure to attend our Kick-Off Event because you will be given the most important information to
-#     join TechLabs.
-#   todos:
-#     - name: Complete the Registration Form
-#       resources:
-#         - title: Registration Form
-#           type: typeform
-#           url: https://techlabsorg.typeform.com/to/U2RDGg
-#     - name: Join our Slack Community
-#       resources:
-#         - title: Join Slack
-#           type: tool
-#           url: https://bln.techlabs.org/NBY
-#     - name: Subscribe to our Calendar
-#       resources:
-#         - title: Web
-#           type: calendar
-#           url: https://bln.techlabs.org/FBN
-#         - title: iCal
-#           type: calendar
-#           url: https://bln.techlabs.org/G5W
-#     - name: Attend the Kick-Off Event on Monday, October 12, at 20:00 CEST
+    Please make sure to attend our Kick-Off Event on the 13th of October because you will be given the most important information to
+    join TechLabs.
+
+    **We reserve the right ro remove you from the program if you fail to finish tasks in a timely manner**
+  todos:
+    - name: Register on Edyoucated & GitHub
+      resources:
+        - title: Edyoucated Registration
+          type: tool
+          url: https://edyoucated.org/
+        - title: GitHub Registration
+          type: tool
+          url: https://github.com        
+    - name: Join our Slack Workspace, you have received an invitation on the E-Mail you applied with
+    - name: Fill out the account survey
+      resources:
+        - title: Account Survey
+          type: typeform
+          url: https://techlabsorg.typeform.com/to/vfYmJ6k7
+    - name: "Optional: Play around with Edyoucated and GitHub"   
+    - name: Attend the Kick-Off Event on Monday, October 13, at 20:00 CEST
 
 # - slug: choose-track
 #   name: Choose Your TechLabs Track
