@@ -36,7 +36,7 @@
         - title: GitHub Registration
           type: tool
           url: https://github.com
-    - name: Join our Slack Workspace (you should have received an invitation in the email address you used in your application)
+    - name: Join our Slack Workspace (you will receive an invitation in the email address you used in your application)
     - name: Fill out the account survey
       resources:
         - title: Account Survey
