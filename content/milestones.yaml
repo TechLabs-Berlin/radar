@@ -36,6 +36,11 @@
         - title: GitHub Registration
           type: tool
           url: https://github.com
+    - name: Join our Edyoucated team after you registered on Edyoucated by clikcing on the link
+      resources:
+        - title: Edyoucated Team
+          type: tool
+          url: https://app.edyoucated.org/invitation/team/c0684cfc-42a3-475f-b74f-e7b7970b5899
     - name: Join our Slack Workspace (you should have received an invitation in the email address you used in your application)
     - name: Fill out the account survey
       resources:
