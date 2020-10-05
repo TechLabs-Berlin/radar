@@ -10,23 +10,23 @@
 #     This is intentional and ensures that we can build a community of very smart and motivated learners.
 #     In that way you can be sure that your learning experience will be awesome and that you'll all have a great time.
 #     On the other hand, it also means you'll have to invest 20 to 30 minutes. But it'll be worth it, we promise!
-  # todos:
-  #   - name: Submit Your Application
-  #     resources:
-  #       - title: Application Form
-  #         type: Application
-  #         url: https://techlabsorg.typeform.com/to/auo2IeMv
+# todos:
+#   - name: Submit Your Application
+#     resources:
+#       - title: Application Form
+#         type: Application
+#         url: https://techlabsorg.typeform.com/to/auo2IeMv
 
 - slug: register
   name: Register for Winter Term 2020/21
-  date: '2020-10-09T20:30:00+02:00'
+  date: "2020-10-09T20:30:00+02:00"
   description: |
-    We're happy that you want to join our community. We need you to register on some platforms and to give us some account details so we can ensure a smooth learning experience for everyone.     
+    We're happy that you want to join our community. We need you to register on our platforms and to give us your account details so we can ensure a smooth learning experience for everyone.     
 
-    Please make sure to attend our Kick-Off Event on the 13th of October because you will be given the most important information to
+    Please make sure to attend our **Kick-Off Event on the 13th of October**, where you will be given the most important information to
     join TechLabs.
 
-    **We reserve the right ro remove you from the program if you fail to finish tasks in a timely manner**
+    _Please note that we reserve the right ro remove you from the program if you fail to finish tasks in a timely manner._
   todos:
     - name: Register on Edyoucated & GitHub
       resources:
@@ -35,16 +35,15 @@
           url: https://edyoucated.org/
         - title: GitHub Registration
           type: tool
-          url: https://github.com        
-    - name: Join our Slack Workspace, you have received an invitation on the E-Mail you applied with
+          url: https://github.com
+    - name: Join our Slack Workspace (you should have received an invitation in the email address you used in your application)
     - name: Fill out the account survey
       resources:
         - title: Account Survey
           type: typeform
           url: https://techlabsorg.typeform.com/to/vfYmJ6k7
-    - name: "Optional: Play around with Edyoucated and GitHub"   
-    - name: Attend the Kick-Off Event on Monday, October 13, at 20:00 CEST
-
+    - name: "Optional: Play around with Edyoucated and GitHub"
+    - name: Attend the Kick-Off Event on Tuesday, October 13, at 20:00 CEST (link will be posted soon!)
 # - slug: choose-track
 #   name: Choose Your TechLabs Track
 #   date: '2020-10-15T23:59:59+02:00'
