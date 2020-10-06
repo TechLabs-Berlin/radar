@@ -1,0 +1,26 @@
+---
+  slug: social-1
+  name: "Social Meetup #1"
+  date: "2020-10-20T20:00:00+02:00"
+  description: |
+    We want to invite you for a round of digital socialising. We will provide some input
+    on habit building. You will be able to share your initial experiences with your track: what's your first impression?
+    Do you like the topic? What are you struggling with?
+
+    Our Agenda:
+
+    1. Welcome  
+    2. How to build habits & learn
+    3. Icebreaking Session to get to know each other
+    4. Speeddating
+    5. Fun Game Time!    
+  forms: []
+  # - title: Feedback
+  #   description: Please leave feedback for our Social Meetup!
+  #   url: https://techlabsorg.typeform.com/to/MeO8vt
+  resources:
+    # - title: "Slides"
+    #   description: The presentation we showed you during the Social Meetup
+    #   type: slides
+    #   url: https://drive.google.com/file/d/1CvUkvnL87QnRGYYpMEF-DsLpkirpdaNv/view?usp=sharing
+    []

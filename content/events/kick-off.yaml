@@ -1,6 +1,6 @@
 ---
   slug: kick-off
-  name: Semester Kick-Off
+  name: Welcome Event WS20/21
   date: "2020-10-13T20:00:00+02:00"
   description: |
     This is where your Digital Shaper Journey will start. We'll give you a summary on all you need to know to master your track.
@@ -8,9 +8,11 @@
     Our topics include:
 
     1. **Key Facts** regarding TechLabs, the Digital Shaper program, certificate and community
-    1. **Administrative Topics** – your onboarding to our toolset, communication channels, regular meetings & next steps
-    1. **Community Get-Together** – we want to get to know each other
-    1. **Track Get-Together** – you'll meet other participants in the track you're planning to choose
+    2. **Administrative Topics** – your onboarding to our toolset, communication channels, regular meetings & next steps    
+    3. **Track Get-Together** – you'll meet other participants in the track you're planning to choose, and can ask the Track Leads for more information
+
+    Our goal is for everybody to have a clear understanding about TechLabs Berlin. We will share the link to join here a few days before the event.
+
   forms: []
   # - title: Feedback
   #   description: Please leave feedback for our Kick-Off Event!
