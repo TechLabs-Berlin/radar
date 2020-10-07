@@ -26,7 +26,7 @@
         />
         <span class="event-date">
           Takes place
-          <template v-if="happeningSoon">{{ dateRelative }}</template>
+          <template v-if="happeningSoon">this {{ dateRelative }}</template>
           <template v-else>{{ dateAbsolute }}</template>
         </span>
       </p>
@@ -151,7 +151,7 @@ export default {
         ' at ' +
         format(this.event.date, 'p')
       this.happeningVerySoon = differenceInDays(this.event.date, new Date()) < 2
-      this.happeningSoon = differenceInDays(this.event.date, new Date()) < 7
+      this.happeningSoon = differenceInDays(this.event.date, new Date()) < 6
       this.isInFuture = this.event.date > new Date()
     }
   }
@@ -178,12 +178,12 @@ export default {
 .permalink-left
   display: none
   +from($tablet)
-    display: block
-    position: absolute
-    bottom: 2rem
+  display: block
+  position: absolute
+  bottom: 2rem
 
 .permalink-right
   @extend .has-text-centered
   +from($tablet)
-    display: none
+  display: none
 </style>

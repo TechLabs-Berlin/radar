@@ -24,7 +24,7 @@
           classes="icon deadline-icon"
           i="exclamation-circle"
         />
-        <span class="milestone-deadline">Due {{ deadlineRelative }}</span>
+        <span class="milestone-deadline">Due this {{ deadlineRelative }}</span>
       </p>
       <p v-else class="subtitle has-text-centered">
         <span class="milestone-deadline">Due {{ deadlineAbsolute }}</span>
@@ -105,7 +105,7 @@ export default {
         }) +
         ' at ' +
         format(this.milestone.date, 'p')
-      this.dueSoon = differenceInDays(this.milestone.date, new Date()) < 7
+      this.dueSoon = differenceInDays(this.milestone.date, new Date()) < 6
       this.dueVerySoon = differenceInDays(this.milestone.date, new Date()) < 2
       this.isInFuture = this.milestone.date > new Date()
     }
