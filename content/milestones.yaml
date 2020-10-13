@@ -41,7 +41,7 @@
         - title: Edyoucated Team Sign-Up
           type: tool
           url: https://app.edyoucated.org/invitation/team/c0684cfc-42a3-475f-b74f-e7b7970b5899
-    - name: Join our Slack Workspace (you will receive an invitation in the email address you used in your application)
+    - name: Join our Slack Workspace (you should have received an invitation in the email address you used in your application)
     - name: Fill out the account survey
       resources:
         - title: Account Survey
@@ -49,63 +49,55 @@
           url: https://techlabsorg.typeform.com/to/vfYmJ6k7
     - name: "Optional: Play around with Edyoucated and GitHub"
     - name: Attend the Kick-Off Event on Tuesday, October 13, at 20:00 CEST (link will be posted soon!)
-# - slug: choose-track
-#   name: Choose Your TechLabs Track
-#   date: '2020-10-15T23:59:59+02:00'
-#   description: |
-#     Now it is the time to choose if you want to learn Data Science, Artificial Intelligence, Web Development or
-#     User Experience Design.
+- slug: choose-track
+  name: Choose Your TechLabs Track
+  date: '2020-10-16T20:30:00+02:00'
+  description: |
+    Now it is the time to choose if you want to learn Data Science, Artificial Intelligence, Web Development or
+    User Experience Design.
 
-#     We will post instructions how to choose your track in the Kick-Off Session.
+    We will post instructions how to choose your track in the Kick-Off Session.
 
-#     Please complete the following steps to choose your track:
+    Please complete the following steps to choose your track:
 
-#     1. Create an account at [edyoucated](https://bln.techlabs.org/JOINEDY): [**bln.techlabs.org/JOINEDY**](https://bln.techlabs.org/JOINEDY)
-#     1. After logging in, choose **TechLabs Berlin**.
-#     1. Complete the track personalization survey.
-#     1. Back at edyoucated, confirm that you finished the survey.
+    1. Complete the track personalization survey.
 
-#     After we've received all of your choices, we will evaluate your answers in the track personalization survey.
-#     Then we will assign you to a track on edyoucated and you can start learning. Please allow some time between
-#     you completing the survey and the track assignment as this process involves some manual steps. We will send you a
-#     message on Slack as soon as you can access your track material on edyoucated.
-#   todos:
-#     - name: Join our Slack Community
-#       resources:
-#         - title: Join Slack
-#           type: tool
-#           url: https://bln.techlabs.org/NBY
-#     - name: Join edyoucated & complete the track personalization survey
-#       resources:
-#         - title: edyoucated Sign Up
-#           type: tool
-#           url: https://bln.techlabs.org/JOINEDY
-#     - name: "Get the Github Student Developer Pack (if you're a student)"
-#       resources:
-#         - title: Github Student Developer Pack
-#           type: tool
-#           url: https://education.github.com/pack
-#     - name: 'Data Science Techies: Sign up for DataCamp'
-#       resources:
-#         - title: DataCamp for students
-#           type: tool
-#           url: https://www.datacamp.com/github-students
-#         - title: DataCamp regular signup
-#           type: tool
-#           url: https://www.datacamp.com/billing/subscriptions/account
-#     - name: 'Web Development Techies: Sign up for Udemy'
-#       resources:
-#         - title: Udemy – The Web Developer Bootcamp
-#           type: tool
-#           url: https://www.udemy.com/course/the-web-developer-bootcamp/
-#     - name: 'UX Techies: Sign up for Udemy & Coursera'
-#       resources:
-#         - title: Udemy – UX & Web Design Master Course
-#           type: tool
-#           url: https://www.udemy.com/course/ux-web-design-master-course-strategy-design-development/
-#         - title: 'Coursera – UX Design: From Concept to Prototype'
-#           type: tool
-#           url: https://de.coursera.org/learn/ux-design-concept-wireframe
+    After we've received all of your choices, we will evaluate your answers in the track personalization survey.
+    Then we will assign you to a track on edyoucated and you can start learning. Please allow some time between
+    you completing the survey and the track assignment as this process involves some manual steps. We will send you a
+    message on Slack as soon as you can access your track material on edyoucated.
+  todos:
+    - name: Complete the track personalization survey
+      resources:
+        - title: Track Personalization Survey
+          type: tool
+          url: https://techlabsorg.typeform.com/to/R06fDcey
+    - name: "Get the Github Student Developer Pack (if you're a student)"
+      resources:
+        - title: Github Student Developer Pack
+          type: tool
+          url: https://education.github.com/pack
+    - name: 'Data Science Techies: Sign up for DataCamp'
+      resources:
+        - title: DataCamp for students
+          type: tool
+          url: https://www.datacamp.com/github-students
+        - title: DataCamp regular signup
+          type: tool
+          url: https://www.datacamp.com/billing/subscriptions/account
+    - name: 'Web Development Techies: Sign up for Udemy'
+      resources:
+        - title: Udemy – The Web Developer Bootcamp
+          type: tool
+          url: https://www.udemy.com/course/the-web-developer-bootcamp/
+    - name: 'UX Techies: Sign up for Udemy & Coursera'
+      resources:
+        - title: Udemy – UX & Web Design Master Course
+          type: tool
+          url: https://www.udemy.com/course/ux-web-design-master-course-strategy-design-development/
+        - title: 'Coursera – UX Design: From Concept to Prototype'
+          type: tool
+          url: https://de.coursera.org/learn/ux-design-concept-wireframe
 # - slug: project-preference-submission
 #   name: Project Preference Submission
 #   date: "2020-06-04T23:59:59+02:00"
