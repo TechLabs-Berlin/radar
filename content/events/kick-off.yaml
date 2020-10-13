@@ -18,27 +18,31 @@
     description: Please leave feedback for our Kick-Off Event!
     url: https://techlabsorg.typeform.com/to/bEsJr5Gh
   resources: 
-    - title: "Meet: Kick-Off"
-      description: "The main room where we will meet. Passcode: 58008393"
-      type: meeting
-      url: https://uni-potsdam.zoom.us/j/68970635463
-    - title: "Meet: DS"
-      description: Break-Out Room for Data Science
-      type: meeting
-      url: https://meet.google.com/ept-mmdn-nyx
-    - title: "Meet: AI"
-      description: Break-Out Room for Artificial Intelligence
-      type: meeting
-      url: https://meet.google.com/vam-djgi-iof
-    - title: "Meet: WebDev"
-      description: Break-Out Room for Web Development
-      type: meeting
-      url: https://meet.google.com/prb-ifih-qnt
-    - title: "Meet: UX"
-      description: Break-Out Room for UX Design
-      type: meeting
-      url: https://meet.google.com/aep-cocb-wyq
-    # - title: "Slides"
-    #   description: The presentation we showed you during the Kick-Off
-    #   type: slides
-    #   url: https://drive.google.com/a/techlabs.org/file/d/1m9chYWu00JFhqCcBVhcwnTYmjFtj89g2/view?usp=sharing
+    # - title: "Meet: Kick-Off"
+    #   description: "The main room where we will meet. Passcode: 58008393"
+    #   type: meeting
+    #   url: https://uni-potsdam.zoom.us/j/68970635463
+    # - title: "Meet: DS"
+    #   description: Break-Out Room for Data Science
+    #   type: meeting
+    #   url: https://meet.google.com/ept-mmdn-nyx
+    # - title: "Meet: AI"
+    #   description: Break-Out Room for Artificial Intelligence
+    #   type: meeting
+    #   url: https://meet.google.com/vam-djgi-iof
+    # - title: "Meet: WebDev"
+    #   description: Break-Out Room for Web Development
+    #   type: meeting
+    #   url: https://meet.google.com/prb-ifih-qnt
+    # - title: "Meet: UX"
+    #   description: Break-Out Room for UX Design
+    #   type: meeting
+    #   url: https://meet.google.com/aep-cocb-wyq
+    - title: "Slides"
+      description: The presentation we showed you during the Kick-Off
+      type: slides
+      url: https://drive.google.com/file/d/1UP_R4Mf9jSzzeL71Vyqc4qU8rKfCwfJr/view?usp=sharing
+    - title: "Recording"
+      description: The recording of the Kick-Off presentation
+      type: slides
+      url: https://drive.google.com/file/d/1upS7UrhzjBpMXWFGxCDrIC4f134X83ML/view?usp=sharing
