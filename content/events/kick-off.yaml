@@ -1,7 +1,7 @@
 ---
   slug: kick-off
   name: Welcome Event WS20/21
-  date: "2020-10-13T20:00:00+02:00"
+  date: "2020-10-13T19:30:00+02:00"
   description: |
     This is where your Digital Shaper Journey will start. We'll give you a summary on all you need to know to master your track.
 
@@ -40,7 +40,7 @@
     #   url: https://meet.google.com/aep-cocb-wyq
     - title: "Slides"
       description: The presentation we showed you during the Kick-Off
-      type: slides
+      type: slidesxw
       url: https://drive.google.com/file/d/1UP_R4Mf9jSzzeL71Vyqc4qU8rKfCwfJr/view?usp=sharing
     - title: "Recording"
       description: The recording of the Kick-Off presentation
