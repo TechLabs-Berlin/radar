@@ -23,4 +23,9 @@
     #   description: The presentation we showed you during the Social Meetup
     #   type: slides
     #   url: https://drive.google.com/file/d/1CvUkvnL87QnRGYYpMEF-DsLpkirpdaNv/view?usp=sharing
-    []
+    - title: "Zoom Room"
+      description: "The main room where we will meet."
+      type: meeting
+      url: https://us02web.zoom.us/j/87172235672?pwd=R1VKRmp1SEhSODBkU3dmR2ZDbDg1dz09
+
+    
