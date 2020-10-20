@@ -14,15 +14,15 @@
     3. Icebreaking Session to get to know each other
     4. Speeddating
     5. Fun Game Time!    
-  forms: []
-  # - title: Feedback
-  #   description: Please leave feedback for our Social Meetup!
-  #   url: https://techlabsorg.typeform.com/to/MeO8vt
+  forms: 
+  - title: Feedback
+    description: Please leave feedback for our Social Meetup!
+    url: https://techlabsorg.typeform.com/to/nTa42Tzi
   resources:
-    # - title: "Slides"
-    #   description: The presentation we showed you during the Social Meetup
-    #   type: slides
-    #   url: https://drive.google.com/file/d/1CvUkvnL87QnRGYYpMEF-DsLpkirpdaNv/view?usp=sharing
+    - title: "Slides"
+      description: The presentation we showed you during the Social Meetup
+      type: slides
+      url: https://drive.google.com/file/d/1-2kIja1MYhVnKQr2hkeSv_tlwjTIy2hC/view?usp=sharing
     - title: "Zoom Room"
       description: "The main room where we will meet."
       type: meeting
