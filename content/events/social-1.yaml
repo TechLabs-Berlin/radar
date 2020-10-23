@@ -15,17 +15,17 @@
     4. Speeddating
     5. Fun Game Time!    
   forms: 
-  - title: Feedback
-    description: Please leave feedback for our Social Meetup!
-    url: https://techlabsorg.typeform.com/to/nTa42Tzi
+    - title: Feedback
+      description: Please leave feedback for our Social Meetup!
+      url: https://techlabsorg.typeform.com/to/nTa42Tzi
   resources:
     - title: "Slides"
       description: The presentation we showed you during the Social Meetup
       type: slides
       url: https://drive.google.com/file/d/1-2kIja1MYhVnKQr2hkeSv_tlwjTIy2hC/view?usp=sharing
-    - title: "Zoom Room"
-      description: "The main room where we will meet."
-      type: meeting
-      url: https://us02web.zoom.us/j/87172235672?pwd=R1VKRmp1SEhSODBkU3dmR2ZDbDg1dz09
+    # - title: "Zoom Room"
+    #   description: "The main room where we will meet."
+    #   type: meeting
+    #   url: https://us02web.zoom.us/j/87172235672?pwd=R1VKRmp1SEhSODBkU3dmR2ZDbDg1dz09
 
     
