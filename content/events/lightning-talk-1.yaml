@@ -5,9 +5,9 @@
   description: |
     Our first speaker will be Moritz Tittler from Visit4Me. He will give you a presentation about the Berlin Tech Start Up Scene and his journey to found a tech start up!
   forms: []
-  # - title: Feedback
-  #   description: Please leave feedback for our Speed Dating Session!
-  #   url: https://techlabsorg.typeform.com/to/un22x1
+  - title: Feedback
+    description: Please leave feedback for our first lightning talk!
+    url: https://techlabsorg.typeform.com/to/Hv5QT1eR
   resources: 
   - title: "Zoom Meeting"
     description: Meeting Room
