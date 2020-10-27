@@ -4,7 +4,7 @@
   date: "2020-10-27T19:30:00+01:00"
   description: |
     Our first speaker will be Moritz Tittler from Visit4Me. He will give you a presentation about the Berlin Tech Start Up Scene and his journey to found a tech start up!
-  forms: []
+  forms: 
   - title: Feedback
     description: Please leave feedback for our first lightning talk!
     url: https://techlabsorg.typeform.com/to/Hv5QT1eR
