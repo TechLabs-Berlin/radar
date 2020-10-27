@@ -53,7 +53,7 @@
               </a>
             </div>
             <div class="navbar-item navbar-social-link">
-              <a href="https://techlabsberlin.slack.com" target="_new">
+              <a href="https://techlabs-community.slack.com/" target="_new">
                 <Fab i="slack" />
                 <span class="navbar-social-link-handle"
                   >techlabsberlin.slack.com</span
