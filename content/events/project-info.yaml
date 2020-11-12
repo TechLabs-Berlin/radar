@@ -11,40 +11,15 @@
   # - title: Feedback
   #   description: Please leave feedback for our Kick-Off Event!
   #   url: https://techlabsorg.typeform.com/to/FY5s24
-  resources: []
+  resources: 
   # - title: Slide Deck
   #   description: Our slides we showed during the event.
   #   type: slides
   #   url: https://drive.google.com/file/d/1ov3sbnaF1Xkkd5qkQUrM0S9Y71WrFggZ/view?usp=sharing
-  # - title: Main Room
-  #   description: The main room where we will meet.
-  #   type: meeting
-  #   url: https://meet.google.com/egw-ckdn-cnw
-  # - title: Berlin Historical Tours
-  #   description: Project Break-Out Room
-  #   type: meeting
-  #   url: https://meet.google.com/mau-knvr-cwj
-  # - title: Plant Journey
-  #   description: Project Break-Out Room
-  #   type: meeting
-  #   url: https://meet.google.com/eom-wnny-yiw
-  # - title: Public Transport Safety App
-  #   description: Project Break-Out Room
-  #   type: meeting
-  #   url: https://meet.google.com/iro-fqrv-sai
-  # - title: SOKR
-  #   description: Project Break-Out Room
-  #   type: meeting
-  #   url: https://meet.google.com/tjx-iihy-dfk
-  # - title: The Green Gang
-  #   description: Project Break-Out Room
-  #   type: meeting
-  #   url: https://meet.google.com/wec-uedn-mvc
-  # - title: Berlinrents.live
-  #   description: Project Break-Out Room
-  #   type: meeting
-  #   url: https://meet.google.com/zgm-eqfk-cop
-  # - title: Weltgeist
-  #   description: Project Break-Out Room
-  #   type: meeting
-  #   url: https://meet.google.com/jtm-ebsg-gbc
+  - title: Meeting Room
+    description: The main room where we will meet.
+    type: meeting
+    url: https://us02web.zoom.us/j/89625663530?pwd=UEdkYklnUnZKbmN0YjMxN3BYRitHUT09
+
+
+
