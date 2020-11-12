@@ -13,10 +13,13 @@
     1. Introduction to our ideation format
     2. Ideation in break-out rooms
     3. Debrief with the whole group
-  forms: []
+  forms: 
   # - title: Feedback
   #   description: Please leave feedback for our Ideation Session!
   #   url: https://techlabsorg.typeform.com/to/AY4WOU
+  - title: Registration form
+    description: We need to know how many people you are before the event. Registration is open till Monday 11pm.
+    url: https://techlabsorg.typeform.com/to/aEqx3GGt
   resources:
     []
   # - title: "Zoom Meeting"

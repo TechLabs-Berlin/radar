@@ -7,10 +7,10 @@
 
     We will answer all these questions and more during this event!
 
-  forms: []
-  # - title: Feedback
-  #   description: Please leave feedback for our Kick-Off Event!
-  #   url: https://techlabsorg.typeform.com/to/FY5s24
+  forms: 
+  - title: Feedback
+    description: Please leave feedback for our Kick-Off Event!
+    url: https://techlabsorg.typeform.com/to/GS9FtMPe
   resources: 
   # - title: Slide Deck
   #   description: Our slides we showed during the event.
