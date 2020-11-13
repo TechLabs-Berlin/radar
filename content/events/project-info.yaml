@@ -20,6 +20,11 @@
     description: The main room where we will meet.
     type: meeting
     url: https://us02web.zoom.us/j/89625663530?pwd=UEdkYklnUnZKbmN0YjMxN3BYRitHUT09
+  - title: "Recording"
+    description: The recording of the info presentation
+    type: video
+    url: https://drive.google.com/file/d/1D7zlqp3eK2psGkOyl8SYpDre5pKjNNDt/view?usp=sharing
+
 
 
 
