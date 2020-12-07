@@ -7,11 +7,16 @@ description: |
 
   We will provide a lot of workshops with different topics the **whole weekend**! 
   
-  The perfect time to close skill gaps for your project!
-forms: []
-resources:
-  []
-  # - title: Info Session
-  #   description: We've published an info session on YouTube. It covers all major questions we've received so far.
-  #   type: video
-  #   url: https://www.youtube.com/watch?v=iL8MZkqpUIA
+  The perfect time to close the skills gap between your current level and the skills you need to finish your project succesfully.
+  Registration is open until this Friday 11:59am!.
+forms:
+  - title: Registration
+    description: Registration for the workshops for the workshop weekend
+    url: https://techlabsorg.typeform.com/to/rB1UA0yh#Registration Form
+resources:  
+  - title: Schedule
+    description: The schedule with all workshops
+    type: link
+    url: https://www.notion.so/techlabs/cd6dc42841634c5393b14585671be523?v=03b78d40f5c64913afe7bfdfd5c45477
+
+  
