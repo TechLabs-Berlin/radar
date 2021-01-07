@@ -13,3 +13,6 @@
     description: Meeting Room
     type: meeting
     url:  https://us02web.zoom.us/j/83611762474?pwd=b3BERTFIYUhqRmJxU2tGYVptTGMwUT09
+  - title: Call Recording       
+    type: video
+    url: https://drive.google.com/file/d/1maXMoyL2y5ABWzBwBbPslHe6Rwg6mTAc/view?usp=sharing
