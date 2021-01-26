@@ -10,8 +10,8 @@
   # - title: Feedback
   #   description: Please leave feedback for our Speed Dating Session!
   #   url: https://techlabsorg.typeform.com/to/un22x1
-  resources: []
-  # - title: "Zoom Meeting"
-  #   description: Meeting Room
-  #   type: meeting
-  #   url: https://us02web.zoom.us/j/85300283401?pwd=V29pampMY2N1QUFKM3lyYng4S1NEQT09
+  resources: 
+  - title: "Zoom Meeting"
+    description: "Password for Zoom Meeting: 81412026"
+    type: meeting
+    url: https://uni-potsdam.zoom.us/j/61792424201
