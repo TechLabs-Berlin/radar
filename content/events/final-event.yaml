@@ -7,7 +7,25 @@
     project work and celebrate your collaborative learning effort together!
 
     After a short introduction, each group has the chance to present their elevator pitch to their
-    fellow participants. Afterwards we'll have a short feedback round as well as a Q&A. Please make sure that at least
-    one member of your team is available to present your project and answer questions.
+    fellow participants. Afterwards we'll have a short feedback round as well as a Q&A. 
+
+    Running Order:
+    1. REpsyched
+    2. MySports
+    3. Travel-20
+    4. Migr-ai-tion
+    5. Arture
+    6. Interactive Diary
+    7. Am-i-an-emergency.com
+    8. Grooup’d
+    9. Flip the script
+    10. H8-Identifier
+
+
+    To wrap it up we will have a open network session where you can celebrate together your great work!
   forms: []
-  resources: []
+  resources: 
+  - title: "Information for Pitch and Submission"
+    type: link
+    url: https://www.notion.so/techlabs/Requirements-for-Techies-Summary-adebfd1a49e64e5e882e67edbf915505
+

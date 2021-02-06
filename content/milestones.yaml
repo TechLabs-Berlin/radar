@@ -111,41 +111,38 @@
       type: typeform
       url: https://techlabsorg.typeform.com/to/QYLWpkOz
 
-# - slug: project-submission
-#   name: Project Submission
-#   date: "2020-07-19T23:59:59+02:00"
-#   description: |
-#     You did some nice work and now is the time to show it off! After you've
-#     finished your implementation, you will officially submit your project to us
-#     for review.
+- slug: project-submission
+  name: Project Submission
+  date: "2021-02-14T23:59:59+02:00"
+  description: |
+    You did some nice work and now is the time to show it off! After you've
+    finished your implementation, you will officially submit your project to us
+    for review.
 
-#     Each team has to submit an **elevator pitch** in which you present your project and your results. The elevator pitch
-#     should be kept relatively short (between 2-5 mins) and highlight the most important aspects of your idea.
-#     In order to give you an impression of what an elevator pitch could look like and which points you should address,
-#     we've prepared a [small demo](https://drive.google.com/file/d/1pagQbB54jmMGk8yhwa-Aj8THDDTg24rq/view?usp=sharing)
-#     for you. The tool we used for this is called [Loom](https://loom.com)
+    These are the main points you should cover in your video:
 
-#     These are the main points you should cover in your video:
+    1. **The problem you found**: which project idea did you have? What problem should be solved or which question should be answered?
 
-#     1. **The problem you found**: which project idea did you have? What problem should be solved or which question should be answered?
+    2. **Your solution**: What is your solution to the problem? What results have you achieved?
 
-#     2. **Your solution**: What is your solution to the problem? What results have you achieved?
+    3. A **walkthrough-style demo** of the prototype
 
-#     3. A **walkthrough-style demo** of the prototype
+    4. What **knowledge** you used you learned with TechLabs
 
-#     4. What **knowledge** you used you learned with TechLabs
+    5. **Success Story**: what are you happy with? What are your greatest personal moments of success? What were the biggest challenges? In which direction would you further extend your prototype?
 
-#     5. **Success Story**: what are you happy with? What are your greatest personal moments of success? What were the biggest challenges? In which direction would you further extend your prototype?
+    In addition, we would like you to submit a **link to your GitHub repository** along with a *README* which outlines
+    what steps are needed to operate the prototype.  Please include the required **Blog Post** and **Short Project Description** as *Markdown* file in the repository.
 
-#     In addition, we would like you to submit a **link to your GitHub repository** along with a *README* which outlines
-#     what steps are needed to operate the prototype. If in any way possible, please have a look how you can **deploy**
-#     your solution on a service such as Heroku to make it publicly available. This is not only beneficial for us but also
-#     for you, since you can directly refer to your work later on when you want to show it off to anyone.
-
-#     The Project Submission Form must be submitted **once per project team**.
-#   todos:
-#   - name: Submit your project
-#     resources:
-#     - title: Project Submission Form
-#       type: typeform
-#       url: https://techlabsorg.typeform.com/to/B0yaOa60
+    The Project Submission Form must be submitted **once per project team**.
+  todos:
+  - name: Requirements to fullfill
+    resources:
+    - title: Requirements
+      type: link
+      url: https://www.notion.so/techlabs/Requirements-for-Techies-Summary-adebfd1a49e64e5e882e67edbf915505
+  - name: Submit your project
+    resources:
+    - title: Project Submission Form
+      type: typeform
+      url: https://techlabsorg.typeform.com/to/JxHy4WNc
