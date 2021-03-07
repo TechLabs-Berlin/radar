@@ -13,11 +13,13 @@
 
     Our goal is for everybody to have a clear understanding about TechLabs Berlin. We will share the link to join here a few days before the event.
 
-  #  forms: 
+  forms: 
+    []
   # - title: Feedback
   #   description: Please leave feedback for our Kick-Off Event!
   #   url: https://techlabsorg.typeform.com/to/bEsJr5Gh
-  # resources: 
+  resources: 
+    []
     # - title: "Meet: Kick-Off"
     #   description: "The main room where we will meet. Passcode: 58008393"
     #   type: meeting
