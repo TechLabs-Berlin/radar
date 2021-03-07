@@ -1,155 +1,60 @@
 export default {
-  mode: 'spa',
-  /*
-   ** Headers of the page
-   */
+  // Target: https://go.nuxtjs.dev/config-target
+  target: 'static',
+
+  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'radar_new',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || ''
-      }
+      { hid: 'description', name: 'description', content: '' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-  /*
-   ** Customize the progress-bar color
-   */
-  loading: { color: '#fff' },
-  /*
-   ** Global CSS
-   */
-  css: ['@/assets/styles.sass'],
-  /*
-   ** Plugins to load before mounting the App
-   */
-  plugins: [{ src: '~/plugins/vuex-persist', ssr: false }],
-  /*
-   ** Nuxt.js dev-modules
-   */
+
+  // Global CSS: https://go.nuxtjs.dev/config-css
+  css: [],
+
+  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+  plugins: [],
+
+  // Auto import components: https://go.nuxtjs.dev/config-components
+  components: true,
+
+  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
+    // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    // Doc: https://github.com/nuxt-community/stylelint-module
+    // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
-    '@nuxtjs/fontawesome'
+    // https://go.nuxtjs.dev/tailwindcss
+    '@nuxtjs/tailwindcss',
   ],
-  /*
-   ** Nuxt.js modules
-   */
+
+  // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    '@nuxtjs/bulma',
-    '@nuxtjs/onesignal',
+    // https://go.nuxtjs.dev/axios
+    '@nuxtjs/axios',
+    // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
-    '@nuxtjs/style-resources',
-    '@nuxtjs/axios'
+    // https://go.nuxtjs.dev/content
+    '@nuxt/content',
   ],
-  axios: {
-    // headers: {
-    //   'Access-Control-Allow-Headers': 'Content-Type',
-    //   'Access-Control-Allow-Origin': '*',
-    //   'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST',
-    //   'Access-Control-Allow-Headers':
-    //     'Access-Control-Allow-Origin, Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers'
-    // }
-  },
-  /*
-   ** Build configuration
-   */
-  build: {
-    postcss: {
-      preset: {
-        features: {
-          customProperties: false
-        }
-      }
-    },
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {
-      config.module.rules.push({
-        test: /\.ya?ml$/,
-        type: 'json',
-        use: 'yaml-loader'
-      })
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/,
-          options: { fix: true }
-        })
-      }
-    }
-  },
-  fontawesome: {
-    icons: {
-      solid: [
-        'faLink',
-        'faFlag',
-        'faCalendarDay',
-        'faFile',
-        'faFilePdf',
-        'faFilePowerpoint',
-        'faFilm',
-        'faComments',
-        'faHeart',
-        'faExclamationCircle',
-        'faAngleUp',
-        'faAngleDown',
-        'faEyeSlash',
-        'faShareSquare',
-        'faComment',
-        'faCommentSlash',
-        'faCheckCircle',
-        'faHourglassHalf',
-        'faTheaterMasks',
-        'faCalendarAlt',
-        'faToolbox',
-        'faHandshake',
-        'faVideo'
-      ],
-      brands: ['faSlack', 'faInstagram', 'faFacebookF']
-    }
-  },
-  router: {
-    linkActiveClass: 'is-active'
-  },
+
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  axios: {},
+
+  // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      name: 'TechLabs Berlin Semester Radar',
-      short_name: 'TechLabs Berlin',
-      lang: 'en'
-    },
-    meta: {
-      name: 'TechLabs Berlin Semester Radar',
-      author: 'TechLabs Berlin e.V.',
-      description:
-        'The TechLabs Berlin semester radar shows all the important semester information at a glance',
       lang: 'en',
-      nativeUI: true,
-      appleStatusBarStyle: 'default'
-    }
+    },
   },
-  oneSignal: {
-    init: {
-      appId: process.env.ONESIGNAL_APP_ID,
-      allowLocalhostAsSecureOrigin: true,
-      welcomeNotification: {
-        disable: true
-      }
-    }
-  },
-  env: {
-    baseURL: process.env.BASE_URL
-  }
+
+  // Content module configuration: https://go.nuxtjs.dev/config-content
+  content: {},
+
+  // Build Configuration: https://go.nuxtjs.dev/config-build
+  build: {},
 }
