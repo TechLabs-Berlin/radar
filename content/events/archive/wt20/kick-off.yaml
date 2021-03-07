@@ -1,7 +1,7 @@
 ---
   slug: kick-off
-  name: Welcome Event ST21
-  date: "2021-03-16T19:30:00+02:00"
+  name: Welcome Event WS20/21
+  date: "2020-10-13T19:30:00+02:00"
   description: |
     This is where your Digital Shaper Journey will start. We'll give you a summary on all you need to know to master your track.
 
@@ -14,12 +14,10 @@
     Our goal is for everybody to have a clear understanding about TechLabs Berlin. We will share the link to join here a few days before the event.
 
   forms: 
-    []
-  # - title: Feedback
-  #   description: Please leave feedback for our Kick-Off Event!
-  #   url: https://techlabsorg.typeform.com/to/bEsJr5Gh
+  - title: Feedback
+    description: Please leave feedback for our Kick-Off Event!
+    url: https://techlabsorg.typeform.com/to/bEsJr5Gh
   resources: 
-    []
     # - title: "Meet: Kick-Off"
     #   description: "The main room where we will meet. Passcode: 58008393"
     #   type: meeting
@@ -40,11 +38,11 @@
     #   description: Break-Out Room for UX Design
     #   type: meeting
     #   url: https://meet.google.com/aep-cocb-wyq
-    # - title: "Slides"
-    #   description: The presentation we showed you during the Kick-Off
-    #   type: slides
-    #   url: https://drive.google.com/file/d/1XBI-2QSYIQ2mLOE3A0W-qPRLYkJEWACZ/view?usp=sharing
-    # - title: "Recording"
-    #   description: The recording of the Kick-Off presentation
-    #   type: video
-    #   url: https://drive.google.com/file/d/1upS7UrhzjBpMXWFGxCDrIC4f134X83ML/view?usp=sharing
+    - title: "Slides"
+      description: The presentation we showed you during the Kick-Off
+      type: slides
+      url: https://drive.google.com/file/d/1XBI-2QSYIQ2mLOE3A0W-qPRLYkJEWACZ/view?usp=sharing
+    - title: "Recording"
+      description: The recording of the Kick-Off presentation
+      type: video
+      url: https://drive.google.com/file/d/1upS7UrhzjBpMXWFGxCDrIC4f134X83ML/view?usp=sharing
