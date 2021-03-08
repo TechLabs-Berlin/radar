@@ -18,6 +18,8 @@
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.8.3",
     "nuxt": "^2.14.12"
+    "date-fns": "^2.19.0",
+    "vue-tippy": "^4.8.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^5.0.0",
