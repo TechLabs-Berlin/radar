@@ -1,6 +1,7 @@
 <template>
   <div>
     <Nuxt />
+    <SvgSprite />
   </div>
 </template>
 
