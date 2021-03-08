@@ -1,0 +1,7 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+@import './custom.scss';
+@import './vue-tippy.scss';
+
+@import "tailwindcss/utilities";
