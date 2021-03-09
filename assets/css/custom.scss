@@ -4,3 +4,19 @@ html,
 #__layout {
   @apply h-full antialiased text-gray-700 bg-gray-50;
 }
+
+a.nuxt-link-exact-active {
+  @apply text-pink-600 font-bold relative;
+}
+a.nuxt-link-exact-active::after {
+  @apply bg-pink-600;
+
+  content: '';
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(1rem);
+}
