@@ -1,5 +1,5 @@
 <template>
-  <div class="p-8 border rounded-xl">
+  <div class="p-8 bg-white border rounded-xl">
     <ul v-if="timeline.length" class="space-y-8">
       <li v-for="(milestone, i) in timeline" :key="milestone.startDate">
         <!-- phase title  -->
