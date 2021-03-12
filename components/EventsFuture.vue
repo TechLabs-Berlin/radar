@@ -40,7 +40,7 @@ export default defineComponent({
     },
   },
   setup() {
-    const showEvents = ref(false)
+    const showEvents = ref(true)
     const toggle = () => (showEvents.value = !showEvents.value)
     return {
       showEvents,
