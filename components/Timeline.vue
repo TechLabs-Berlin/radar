@@ -1,19 +1,20 @@
 <template>
   <div class="p-8 bg-white border shadow-lg rounded-xl">
     <ul v-if="compiledTimeline.length" class="space-y-8">
-      <li v-for="(milestone, i) in compiledTimeline" :key="milestone.startDate">
+      <li v-for="milestone in compiledTimeline" :key="milestone.startDate">
         <!-- phase title  -->
         <h3
           class="flex items-center justify-between mb-4 text-xs font-semibold tracking-wide uppercase"
         >
           <span>{{ milestone.title }}</span
-          ><span :name="`info-${i}`" class="text-gray-500"
+          ><span
+            v-tippy="{ placement: 'right', theme: 'tl' }"
+            class="py-1 pl-2 text-gray-500"
+            :content="milestone.description"
             ><TIcon icon="question-circle"
           /></span>
         </h3>
-        <Tippy :to="`info-${i}`" theme="tl" placement="right">
-          <p class="p-2 text-left">{{ milestone.description }}</p>
-        </Tippy>
+
         <!-- weeks  -->
         <div class="space-y-4">
           <TimelineWeek

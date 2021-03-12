@@ -1,18 +1,25 @@
 <template>
   <div class="flex items-center space-x-2">
     <div
-      v-tippy
+      v-tippy="{ theme: 'tl' }"
       :content="weekDates"
-      class="flex items-center justify-center flex-none w-10 h-10 font-mono text-sm font-semibold border rounded-lg shadow"
+      class="relative flex items-center justify-center flex-none w-10 h-10 font-mono text-sm font-semibold border rounded-lg shadow"
       :class="
         clsx({
-          'bg-pink-600 text-white border-white': weekStatus === 'current',
-          'bg-gray-200 text-gray-500': weekStatus === 'past',
+          'text-pink-600': weekStatus === 'current',
+          'bg-gray-100 text-gray-500': weekStatus === 'past',
           'bg-white': weekStatus === 'future',
         })
       "
     >
       W{{ week.number }}
+      <template v-if="['current', 'past'].includes(weekStatus)">
+        <TIcon
+          :icon="weekStatus === 'current' ? 'hourglass-half' : 'check-circle'"
+          class="absolute bottom-0 right-0 transform translate-x-1/2 translate-y-1/2"
+          :class="weekStatus === 'current' ? 'text-pink-600' : 'text-gray-700'"
+        />
+      </template>
     </div>
     <ul v-if="week.events.length" class="text-xs">
       <li v-for="e in week.events" :key="e.slug">
