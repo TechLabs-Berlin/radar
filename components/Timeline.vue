@@ -1,7 +1,7 @@
 <template>
-  <div class="p-8 bg-white border rounded-xl">
-    <ul v-if="timeline.length" class="space-y-8">
-      <li v-for="(milestone, i) in timeline" :key="milestone.startDate">
+  <div class="p-8 bg-white border shadow-lg rounded-xl">
+    <ul v-if="compiledTimeline.length" class="space-y-8">
+      <li v-for="(milestone, i) in compiledTimeline" :key="milestone.startDate">
         <!-- phase title  -->
         <h3
           class="flex items-center justify-between mb-4 text-xs font-semibold tracking-wide uppercase"
@@ -15,60 +15,65 @@
           <p class="p-2 text-left">{{ milestone.description }}</p>
         </Tippy>
         <!-- weeks  -->
-        <ul class="space-y-4">
-          <li
+        <div class="space-y-4">
+          <TimelineWeek
             v-for="week in milestone.weeks"
             :key="week.number"
-            class="flex items-center justify-center w-10 h-10 border rounded-lg shadow"
-          >
-            {{ week.number }}
-          </li>
-        </ul>
+            :week="week"
+          />
+        </div>
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-import {
-  defineComponent,
-  useFetch,
-  useContext,
-  ref,
-  computed,
-} from '@nuxtjs/composition-api'
-import { eachWeekOfInterval } from 'date-fns'
+import { defineComponent, ref } from '@nuxtjs/composition-api'
+import { eachWeekOfInterval, isSameWeek } from 'date-fns'
 
 export default defineComponent({
-  setup() {
-    const { $content } = useContext()
+  props: {
+    timeline: {
+      type: Object,
+      required: true,
+    },
+    events: {
+      type: Array,
+      default: () => [],
+    },
+  },
+  setup(props) {
+    const compiledTimeline = ref(compileTimeline(props.timeline))
 
-    const timelineContent = ref('')
-
-    const { fetch, fetchState } = useFetch(async () => {
-      timelineContent.value = await $content('timeline').fetch()
-    })
-    const timeline = computed(() =>
-      timelineContent.value ? compileTimeline(timelineContent.value) : []
-    )
     function compileTimeline({ timeline }) {
+      if (!timeline) return []
       let weekNumber = 1
       return timeline.map((milestone) => {
         const start = new Date(milestone.startDate)
         const end = new Date(milestone.endDate)
         const weeks = eachWeekOfInterval({ start, end }, { weekStartsOn: 1 })
-        weeks.forEach((week) => {
-          week.number = weekNumber
+        const objWeeks = weeks.map((week) => {
+          const number = weekNumber
+          const events = findWeekEvents(week, props.events)
           weekNumber++
+          return {
+            number,
+            events,
+            week,
+          }
         })
         return {
           ...milestone,
-          weeks,
+          weeks: objWeeks,
         }
       })
     }
 
-    return { timeline, fetch, fetchState, timelineContent }
+    function findWeekEvents(week, events) {
+      return events.filter((e) => isSameWeek(new Date(week), new Date(e.date)))
+    }
+
+    return { compiledTimeline }
   },
 })
 </script>

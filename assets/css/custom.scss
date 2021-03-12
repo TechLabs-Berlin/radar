@@ -5,10 +5,10 @@ html,
   @apply h-full antialiased text-gray-700 bg-gray-50;
 }
 
-a.nuxt-link-exact-active {
+.nuxt-link-exact-active {
   @apply text-pink-600 font-bold relative;
 }
-a.nuxt-link-exact-active::after {
+.nuxt-link-exact-active::after {
   @apply bg-pink-600;
 
   content: '';
