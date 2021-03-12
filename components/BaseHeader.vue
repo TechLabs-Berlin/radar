@@ -5,13 +5,18 @@
       <nav class="flex items-center">
         <ul class="flex items-center space-x-8 font-semibold uppercase">
           <li>
-            <NuxtLink class="nav-link" to="/">Timeline</NuxtLink>
+            <NuxtLink class="hover:text-pink-600" to="/">Timeline</NuxtLink>
           </li>
           <li>
-            <NuxtLink class="nav-link" to="/faq">FAQ</NuxtLink>
+            <NuxtLink class="hover:text-pink-600" to="/faq">FAQ</NuxtLink>
           </li>
           <li>
-            <NuxtLink class="nav-link" to="/media">Media</NuxtLink>
+            <NuxtLink class="hover:text-pink-600" to="/media">Media</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink class="hover:text-pink-600" to="/newsletter"
+              >Newsletter</NuxtLink
+            >
           </li>
         </ul>
       </nav>
@@ -52,8 +57,3 @@ export default {
   },
 }
 </script>
-<style lang="scss" scoped>
-.nav-link:hover {
-  @apply text-pink-600;
-}
-</style>
