@@ -8,7 +8,9 @@
         <EventListItem :tl-event="currentEvent" is-current-event />
       </div>
       <!-- FUTURE EVENTS  -->
-      <EventsFuture :events="futureEvents" />
+      <EventsFuture
+        :events="futureEvents.filter(({ slug }) => slug !== currentEvent.slug)"
+      />
     </div>
   </div>
   <div v-else>
