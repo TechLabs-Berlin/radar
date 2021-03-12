@@ -1,0 +1,31 @@
+---
+  slug: social-3
+  name: "Social Meetup #3"
+  date: "2020-06-25T19:00:00+02:00"
+  description: |
+    We want to invite you for a round of digital socialising.
+
+    Because we want to encourage you to not only talk about your own success/failure stories but also to benefit from
+    what your fellow participants have already learned, we will set up different breakout rooms where you can meet to
+    discuss specific topics together.
+
+    After a short introduction you'll be able to decide whether you want to join
+    a breakout session about **How to connect DS Backend with HTML, CSS, JS Frontend (Flask)** hosted by Bogdan or to
+    take part in a **SQL crash course** with Anna (of course its also able to switch between the two sessions).
+  forms: []
+  # - title: Feedback
+  #   description: Please leave feedback for our Social Event!
+  #   url: https://techlabsorg.typeform.com/to/ZRZAlTkk
+  resources: []
+  # - title: Main Room
+  #   description: The main room where we will meet.
+  #   type: meeting
+  #   url: https://meet.google.com/ign-cytz-yvb
+  # - title: Break-Out Room – Flask
+  #   description: How to connect DS Backend with HTML,CSS, JS Frontend (Flask)
+  #   type: meeting
+  #   url: https://meet.google.com/jqp-wqgw-fcq
+  # - title: Break-Out Room – SQL
+  #   description: SQL Crash Course
+  #   type: meeting
+  #   url: https://meet.google.com/ovw-xxps-oin

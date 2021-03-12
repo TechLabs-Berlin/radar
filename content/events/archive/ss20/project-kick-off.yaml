@@ -1,0 +1,66 @@
+---
+  slug: project-kick-off
+  name: Project Kick-Off
+  date: "2020-06-09T19:00:00+02:00"
+  description: |
+    On this event we will officially kick-off the project phase. Main points will be a recap of how this phase
+    works, how you can build a successful project, and how to communicate effectively.
+
+    ## Agenda:
+
+    1. Project Phase Introduction
+      * Why is Project Management important?
+      * Project Management Roles & TechLabs
+      * Communication Principles
+      * Planning Processes & Tools
+      * Responsibilities
+      * Source Code Management with Git & Live Demo
+      * Where to learn more
+      * Code of Conduct
+    2. Break-Out Session per Project
+      * Get to know your team – let's play a game!
+      * Get to know your mentor
+      * Plan your jour fixe
+      * Talk about what you will start with
+      * Distribute roles
+  forms: []
+  # - title: Feedback
+  #   description: Please leave feedback for our Kick-Off Event!
+  #   url: https://techlabsorg.typeform.com/to/FY5s24
+  resources:
+  - title: Slide Deck
+    description: Our slides we showed during the event.
+    type: slides
+    url: https://drive.google.com/file/d/1ov3sbnaF1Xkkd5qkQUrM0S9Y71WrFggZ/view?usp=sharing
+  # - title: Main Room
+  #   description: The main room where we will meet.
+  #   type: meeting
+  #   url: https://meet.google.com/egw-ckdn-cnw
+  # - title: Berlin Historical Tours
+  #   description: Project Break-Out Room
+  #   type: meeting
+  #   url: https://meet.google.com/mau-knvr-cwj
+  # - title: Plant Journey
+  #   description: Project Break-Out Room
+  #   type: meeting
+  #   url: https://meet.google.com/eom-wnny-yiw
+  # - title: Public Transport Safety App
+  #   description: Project Break-Out Room
+  #   type: meeting
+  #   url: https://meet.google.com/iro-fqrv-sai
+  # - title: SOKR
+  #   description: Project Break-Out Room
+  #   type: meeting
+  #   url: https://meet.google.com/tjx-iihy-dfk
+  # - title: The Green Gang
+  #   description: Project Break-Out Room
+  #   type: meeting
+  #   url: https://meet.google.com/wec-uedn-mvc
+  # - title: Berlinrents.live
+  #   description: Project Break-Out Room
+  #   type: meeting
+  #   url: https://meet.google.com/zgm-eqfk-cop
+  # - title: Weltgeist
+  #   description: Project Break-Out Room
+  #   type: meeting
+  #   url: https://meet.google.com/jtm-ebsg-gbc

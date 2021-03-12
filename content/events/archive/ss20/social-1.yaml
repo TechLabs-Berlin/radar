@@ -1,0 +1,45 @@
+---
+  slug: social-1
+  name: "Social Meetup #1"
+  date: "2020-05-07T20:00:00+02:00"
+  description: |
+    We want to invite you for a round of digital socialising. We will provide some input
+    on habit building and we will share an outlook of the semester. You will be able to
+    share your initial experiences with your track: what's your first impression?
+    Do you like the topic? What are you struggling with?
+
+    Our Agenda:
+
+    1. How to build habits & learn (Sarah)
+    1. Icebreaking Session (Brando)
+    1. Semester Outlook (Sarah)
+    1. Break-Out Session per Track
+  forms: []
+  # - title: Feedback
+  #   description: Please leave feedback for our Social Meetup!
+  #   url: https://techlabsorg.typeform.com/to/MeO8vt
+  resources:
+    - title: "Slides"
+      description: The presentation we showed you during the Social Meetup
+      type: slides
+      url: https://drive.google.com/file/d/1CvUkvnL87QnRGYYpMEF-DsLpkirpdaNv/view?usp=sharing
+    # - title: "Meet: Main Room"
+    #   description: The main room where we will meet.
+    #   type: meeting
+    #   url: https://meet.google.com/uwx-iymj-vtp
+    # - title: "Meet: DS"
+    #   description: Break-Out Room for Data Science
+    #   type: meeting
+    #   url: https://meet.google.com/ptm-bdgq-mji
+    # - title: "Meet: AI"
+    #   description: Break-Out Room for Artificial Intelligence
+    #   type: meeting
+    #   url: https://meet.google.com/rnq-hyuw-gbr
+    # - title: "Meet: WebDev"
+    #   description: Break-Out Room for Web Development
+    #   type: meeting
+    #   url: https://meet.google.com/muf-ktid-zyo
+    # - title: "Meet: UX"
+    #   description: Break-Out Room for UX Design
+    #   type: meeting
+    #   url: https://meet.google.com/dgi-uewq-ykw

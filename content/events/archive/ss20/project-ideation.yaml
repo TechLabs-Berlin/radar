@@ -1,0 +1,38 @@
+---
+  slug: project-ideation
+  name: Project Ideation Session
+  date: "2020-05-19T19:00:00+02:00"
+  description: |
+    We will foster your creativity to imagine project ideas based on real-world problems.
+
+    You will be able to learn about and participate in ideation methods from the Design Thinking Space.
+    Of course this will be guided by TechLabs Berlin team members.
+
+    Our Agenda:
+
+    1. Recap: Project Phase (Max)
+    1. Introduction to our ideation format (Rimante)
+      * Problem Statement (15min)
+      * Silent Ideation (10min)
+      * Changing Perspectives – how would a superhero do this? (10min)
+      * Reverse Brainstorming – how can we make it worse? (10min)
+      * Bring it home – select, cluster, label (15min)
+    1. Ideation in break-out rooms
+    1. Debrief with the whole group
+  forms: []
+  # - title: Feedback
+  #   description: Please leave feedback for our Ideation Session!
+  #   url: https://techlabsorg.typeform.com/to/AY4WOU
+  resources:
+  # - title: "Zoom Meeting"
+  #   description: Meeting Room
+  #   type: meeting
+  #   url: https://us02web.zoom.us/j/88265707772?pwd=djl2Yk1CK2lBUFYweVY3N2NTb0NQQT09
+  - title: "Miro Board"
+    description: We will use Miro to collect & document our ideas.
+    type: tool
+    url: https://miro.com/app/board/o9J_ks_JOto=/
+  - title: "Presentation Slides"
+    description: Introduction slides we showed you
+    type: slides
+    url: https://drive.google.com/open?id=1-4fh9cOGZIf3y5y8BsxCvdPQirt0VdkH
