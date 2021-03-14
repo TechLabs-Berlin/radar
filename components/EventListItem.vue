@@ -16,7 +16,24 @@
       </header>
       <main>
         <!-- eslint-disable-next-line vue/no-v-html -->
-        <div class="prose" v-html="$md.render(tlEvent.description)" />
+        <div class="pb-10 prose" v-html="$md.render(tlEvent.description)" />
+        <aside v-if="hasResources" class="space-y-8">
+          <EventListItemResourceList
+            v-if="tlEvent.meetings"
+            :resources="tlEvent.meetings"
+            title="Meeting Rooms"
+          />
+          <EventListItemResourceList
+            v-if="tlEvent.forms"
+            :resources="tlEvent.forms"
+            title="Forms"
+          />
+          <EventListItemResourceList
+            v-if="tlEvent.resources"
+            :resources="tlEvent.resources"
+            title="Other Resources"
+          />
+        </aside>
       </main>
     </article>
   </WrapperContentBox>
@@ -24,7 +41,7 @@
 
 <script>
 import { format, isPast } from 'date-fns'
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, computed } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
@@ -41,11 +58,15 @@ export default defineComponent({
   },
   setup(props) {
     const eventDate = new Date(props.tlEvent.date)
-
+    const hasResources = computed(
+      () =>
+        props.tlEvent.resources || props.tlEvent.forms || props.tlEvent.meetings
+    )
     return {
       format,
       isPast,
       eventDate,
+      hasResources,
     }
   },
 })

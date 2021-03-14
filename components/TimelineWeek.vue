@@ -21,7 +21,11 @@
         />
       </template>
     </div>
-    <ul v-if="week.events.length" class="text-xs">
+    <ul
+      v-if="week.events.length"
+      class="text-xs"
+      :class="{ 'opacity-75': weekStatus === 'past' }"
+    >
       <li v-for="e in week.events" :key="e.slug">
         <span> {{ format(new Date(e.date), 'MMM d') }} </span><br /><span
           class="font-semibold"

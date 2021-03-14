@@ -3,7 +3,7 @@
     class="p-8 border rounded-xl"
     :class="{
       'stripe-bg shadow-lg': faded,
-      'border-pink-600 bg-white shadow-xl': emphasized,
+      'bg-white shadow-xl': emphasized,
       'shadow-lg bg-white': !faded && !emphasized,
     }"
   >

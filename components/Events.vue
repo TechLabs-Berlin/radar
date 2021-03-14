@@ -2,13 +2,18 @@
   <div v-if="events.length">
     <div>
       <!-- PAST EVENTS  -->
-      <EventsPast :events="pastEvents" :show="showPastEvents" />
+      <EventsPast
+        v-if="pastEvents.length"
+        :events="pastEvents"
+        :show="showPastEvents"
+      />
       <!-- CURRENT EVENT  -->
       <div class="mb-8">
         <EventListItem :tl-event="currentEvent" is-current-event />
       </div>
       <!-- FUTURE EVENTS  -->
       <EventsFuture
+        v-if="futureEvents.length"
         :events="futureEvents.filter(({ slug }) => slug !== currentEvent.slug)"
       />
     </div>
