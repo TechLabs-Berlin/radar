@@ -1,7 +1,8 @@
 <template>
   <WrapperContentBox :faded="isPastEvent" :emphasized="isCurrentEvent">
-    <article class="space-y-8">
-      <header>
+    <article class="relative">
+      <Stamp v-if="isCurrentEvent" :date="tlEvent.date" />
+      <header class="mb-8">
         <p
           class="mb-4 text-4xl font-bold text-center"
           :class="isCurrentEvent ? 'text-pink-600' : 'text-gray-400'"
@@ -15,26 +16,33 @@
         </p>
       </header>
       <main>
+        <!-- BODY  -->
         <!-- eslint-disable-next-line vue/no-v-html -->
         <div class="pb-10 prose" v-html="$md.render(tlEvent.description)" />
-        <aside v-if="hasResources" class="space-y-8">
-          <EventListItemResourceList
-            v-if="tlEvent.meetings"
-            :resources="tlEvent.meetings"
-            title="Meeting Rooms"
-          />
-          <EventListItemResourceList
-            v-if="tlEvent.forms"
-            :resources="tlEvent.forms"
-            title="Forms"
-          />
-          <EventListItemResourceList
-            v-if="tlEvent.resources"
-            :resources="tlEvent.resources"
-            title="Other Resources"
-          />
-        </aside>
       </main>
+      <!-- RESOURCES  -->
+      <aside v-if="showResources && hasResources" class="space-y-8">
+        <EventListItemResourceList
+          v-if="tlEvent.meetings"
+          :resources="tlEvent.meetings"
+          title="Meeting Rooms"
+        />
+        <EventListItemResourceList
+          v-if="tlEvent.forms"
+          :resources="tlEvent.forms"
+          title="Forms"
+        />
+        <EventListItemResourceList
+          v-if="tlEvent.resources"
+          :resources="tlEvent.resources"
+          title="Other Resources"
+        />
+      </aside>
+      <aside v-else-if="isCurrentEvent">
+        <p class="italic text-center text-gray-400">
+          Links and other resources will be posted soon!
+        </p>
+      </aside>
     </article>
   </WrapperContentBox>
 </template>
@@ -53,6 +61,9 @@ export default defineComponent({
       type: Boolean,
     },
     isPastEvent: {
+      type: Boolean,
+    },
+    showResources: {
       type: Boolean,
     },
   },

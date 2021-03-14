@@ -9,7 +9,11 @@
       />
       <!-- CURRENT EVENT  -->
       <div class="mb-8">
-        <EventListItem :tl-event="currentEvent" is-current-event />
+        <EventListItem
+          :tl-event="currentEvent"
+          is-current-event
+          :show-resources="isToday(currentEvent.date)"
+        />
       </div>
       <!-- FUTURE EVENTS  -->
       <EventsFuture
@@ -59,7 +63,7 @@ export default defineComponent({
       return futureEvents.value.find(({ date }) => isSameDay(date, closestDate))
     })
 
-    return { pastEvents, currentEvent, futureEvents }
+    return { pastEvents, currentEvent, futureEvents, isToday }
   },
 })
 </script>
