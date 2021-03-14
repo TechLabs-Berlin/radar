@@ -59,18 +59,4 @@ export default defineComponent({
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: max-content;
 }
-
-.title-with-lines {
-  @apply w-full mb-8 text-xs font-bold tracking-wide uppercase flex flex-none;
-}
-.title-with-lines::before,
-.title-with-lines::after {
-  content: '';
-  flex-grow: 1;
-  margin: 0 1rem;
-  background: linear-gradient(to right, #464646, #464646);
-  background-size: 100% 1px;
-  background-position: 0% 50%;
-  background-repeat: repeat-x;
-}
 </style>

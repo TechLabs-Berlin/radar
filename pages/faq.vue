@@ -23,10 +23,16 @@ export default defineComponent({
 
 <template>
   <main>
-    <div class="max-w-2xl px-4 py-8 mx-auto space-y-8">
-      <h1 class="text-4xl font-bold text-center">Frequently Asked Questions</h1>
+    <div class="py-4 md:py-8 lg:mx-auto lg:max-w-2xl">
+      <h1 class="mb-8 text-4xl font-bold text-center">
+        Frequently Asked Questions
+      </h1>
       <template v-if="!fetchState.pending">
-        <WrapperContentBox v-for="section in faq.sections" :key="section.title">
+        <WrapperContentBox
+          v-for="section in faq.sections"
+          :key="section.title"
+          class="mb-4 md:mb-8"
+        >
           <h2 class="relative mb-8 text-2xl font-bold section-title">
             {{ section.title }}
           </h2>

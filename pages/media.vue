@@ -23,8 +23,8 @@ export default defineComponent({
 
 <template>
   <main>
-    <div class="max-w-2xl px-4 py-8 mx-auto space-y-8">
-      <h1 class="text-4xl font-bold text-center">Media</h1>
+    <div class="h-full py-4 md:py-8 lg:mx-auto lg:max-w-2xl">
+      <h1 class="mb-8 text-4xl font-bold text-center">Media</h1>
       <template v-if="!fetchState.pending">
         <template v-if="!mediaItems.items || !mediaItems.items.length">
           <WrapperContentBox>
@@ -38,6 +38,7 @@ export default defineComponent({
           <WrapperContentBox
             v-for="media in mediaItems.items"
             :key="media.title"
+            class="mb-4 md:mb-8"
           >
             <div class="flex justify-between mb-4">
               <div>

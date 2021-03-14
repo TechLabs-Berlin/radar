@@ -1,10 +1,11 @@
 ---
-items: 
-  - title: Info Session
-    youtubeURL: https://youtu.be/uwFGUYBvo0k
-    date: "2020-04-10"
-    description: |
-      This is a warm welcome from your TechLabs Berlin team. In this video, we introduce TechLabs, our Digital Shaper program with its four tracks: Data Science, Artificial Intelligence, Web Development and User Experience Design. We discuss how we will structure our upcoming semester, how you can participate and what you need to do to get your Digital Shaper certificate.
+items:
+  []
+  # - title: Info Session
+  #   youtubeURL: https://youtu.be/uwFGUYBvo0k
+  #   date: "2020-04-10"
+  #   description: |
+  #     This is a warm welcome from your TechLabs Berlin team. In this video, we introduce TechLabs, our Digital Shaper program with its four tracks: Data Science, Artificial Intelligence, Web Development and User Experience Design. We discuss how we will structure our upcoming semester, how you can participate and what you need to do to get your Digital Shaper certificate.
 
   # - title: Q&A Session
   #   youtubeURL: https://www.youtube-nocookie.com/embed/mnHizM8Pd0M

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="p-8 border rounded-xl"
+    class="p-4 border lg:p-8 rounded-xl"
     :class="{
       'stripe-bg shadow-lg': faded,
       'bg-white shadow-xl': emphasized,

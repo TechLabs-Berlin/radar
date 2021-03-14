@@ -1,7 +1,7 @@
 <template>
   <main>
-    <div class="max-w-2xl px-4 py-8 mx-auto space-y-8">
-      <h1 class="text-4xl font-bold text-center">Newsletter</h1>
+    <div class="py-4 md:py-8 lg:mx-auto lg:max-w-2xl">
+      <h1 class="mb-8 text-4xl font-bold text-center">Newsletter</h1>
       <WrapperContentBox>
         <!-- SHOW SUCCESS MSG  -->
         <div v-if="status === 'success'">

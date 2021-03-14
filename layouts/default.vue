@@ -1,17 +1,18 @@
 <template>
   <div class="h-full bg-gray-50">
-    <div class="h-full main-grid">
-      <BaseHeader />
+    <div class="w-full h-full max-w-5xl px-2 mx-auto layout-grid">
+      <HeaderCompact />
       <Nuxt />
-      <BaseFooter />
+      <FooterPrimary />
     </div>
     <SvgSprite />
   </div>
 </template>
 
 <style lang="scss" scoped>
-.main-grid {
+.layout-grid {
   display: grid;
+  grid-gap: 1.5rem;
   grid-template-rows: auto 1fr auto;
 }
 </style>

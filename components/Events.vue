@@ -2,11 +2,26 @@
   <div v-if="events.length">
     <div>
       <!-- PAST EVENTS  -->
-      <EventsPast
-        v-if="pastEvents.length"
-        :events="pastEvents"
-        :show="showPastEvents"
-      />
+      <div v-if="pastEvents.length">
+        <div class="flex items-start justify-end h-8">
+          <button
+            class="flex space-x-4 text-gray-500 focus:outline-none active:outline-none"
+            @click="showPastEvents = !showPastEvents"
+          >
+            <p class="text-center">
+              {{ showPastEvents ? 'Hide' : 'Show' }} Past Events
+            </p>
+            <p class="text-center">
+              <TIcon
+                :icon="showPastEvents ? 'eye-slash' : 'chevron-up'"
+                class="inline-block"
+              />
+            </p>
+          </button>
+        </div>
+        <EventsPast :events="pastEvents" :show="showPastEvents" />
+      </div>
+
       <!-- CURRENT EVENT  -->
       <div class="mb-8">
         <EventListItem
@@ -32,38 +47,24 @@
 </template>
 
 <script>
-import { computed, defineComponent } from '@nuxtjs/composition-api'
-import { isToday, isPast, isFuture, closestTo, isSameDay } from 'date-fns'
+import { defineComponent, ref } from '@nuxtjs/composition-api'
+import { useEvents } from '@/composables/useEvents.js'
 
 export default defineComponent({
   props: {
-    showPastEvents: {
-      type: Boolean,
-    },
     events: {
       type: Array,
       default: () => [],
     },
   },
   setup(props) {
-    const events = computed(() =>
-      props.events.map((e) => ({ ...e, date: new Date(e.date) }))
-    )
-    const pastEvents = computed(() =>
-      events.value.filter(({ date }) => isPast(date) && !isToday(date))
+    const { pastEvents, currentEvent, futureEvents, isToday } = useEvents(
+      props.events
     )
 
-    const futureEvents = computed(() =>
-      events.value.filter(({ date }) => isFuture(date) || isToday(date))
-    )
+    const showPastEvents = ref(false)
 
-    const currentEvent = computed(() => {
-      const futureDates = futureEvents.value.map(({ date }) => date)
-      const closestDate = closestTo(new Date(), futureDates)
-      return futureEvents.value.find(({ date }) => isSameDay(date, closestDate))
-    })
-
-    return { pastEvents, currentEvent, futureEvents, isToday }
+    return { pastEvents, currentEvent, futureEvents, isToday, showPastEvents }
   },
 })
 </script>

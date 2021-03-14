@@ -1,7 +1,7 @@
 <template>
   <div>
     <template v-if="events.length">
-      <ul v-if="show" class="mb-8 space-y-8">
+      <ul v-if="show" class="mb-8 space-y-4 md:space-y-8">
         <li v-for="e in events" :key="e.slug">
           <EventListItem :tl-event="e" is-past-event show-resources />
         </li>

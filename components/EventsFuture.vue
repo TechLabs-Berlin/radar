@@ -11,7 +11,7 @@
           </p>
         </div>
       </div>
-      <ul class="space-y-8">
+      <ul class="mb-8 space-y-4 md:space-y-8">
         <li v-for="e in events" :key="e.slug">
           <EventListItem :tl-event="e" />
         </li>

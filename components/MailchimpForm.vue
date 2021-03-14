@@ -1,10 +1,10 @@
 <template>
   <div>
-    <p>
+    <p class="mb-8">
       Stay in the loop and get notifications about upcoming events, workshops,
       new application dates, partnership opportunities, and more.
     </p>
-    <div class="max-w-md p-8 mx-auto">
+    <div class="w-full md:p-8 md:mx-auto lg:max-w-md">
       <form class="space-y-4" @submit.prevent="checkForm">
         <div class="field">
           <label class="label"
@@ -55,7 +55,7 @@
         </div>
         <div class="pt-4">
           <button
-            class="flex items-center px-4 py-2 space-x-2 font-bold border-2 border-gray-700 rounded-lg min-w-md hover:border-pink-600 hover:text-white hover:bg-pink-600 disabled:opacity-75"
+            class="flex items-center justify-center w-full px-4 py-2 space-x-2 font-bold border-2 border-gray-700 rounded-lg md:min-w-md hover:border-pink-600 hover:text-white hover:bg-pink-600 disabled:opacity-75"
             :disabled="loading"
             @click="checkForm"
           >

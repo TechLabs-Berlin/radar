@@ -1,36 +1,39 @@
 <template>
-  <div class="p-8 bg-white border shadow-lg rounded-xl">
-    <ul v-if="compiledTimeline.length" class="space-y-8">
-      <li v-for="milestone in compiledTimeline" :key="milestone.startDate">
-        <!-- phase title  -->
-        <h3
-          class="flex items-center justify-between mb-4 text-xs font-semibold tracking-wide uppercase"
-        >
-          <span>{{ milestone.title }}</span
-          ><span
-            v-tippy="{ placement: 'right', theme: 'tl' }"
-            class="py-1 pl-2 text-gray-500"
-            :content="milestone.description"
-            ><TIcon icon="question-circle"
-          /></span>
-        </h3>
+  <div :class="{ 'pt-8': pastEvents.length }" class="w-full">
+    <div class="w-full p-8 mx-auto bg-white border shadow-lg rounded-xl">
+      <ul v-if="compiledTimeline.length" class="space-y-8">
+        <li v-for="milestone in compiledTimeline" :key="milestone.startDate">
+          <!-- phase title  -->
+          <h3
+            class="flex items-center justify-between mb-4 text-xs font-semibold tracking-wide uppercase"
+          >
+            <span>{{ milestone.title }}</span
+            ><span
+              v-tippy="{ placement: 'right', theme: 'tl' }"
+              class="py-1 pl-2 text-gray-500"
+              :content="milestone.description"
+              ><TIcon icon="question-circle"
+            /></span>
+          </h3>
 
-        <!-- weeks  -->
-        <div class="space-y-4">
-          <TimelineWeek
-            v-for="week in milestone.weeks"
-            :key="week.number"
-            :week="week"
-          />
-        </div>
-      </li>
-    </ul>
+          <!-- weeks  -->
+          <div class="space-y-4">
+            <TimelineWeek
+              v-for="week in milestone.weeks"
+              :key="week.number"
+              :week="week"
+            />
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
 import { defineComponent, ref } from '@nuxtjs/composition-api'
 import { eachWeekOfInterval, isSameWeek } from 'date-fns'
+import { useEvents } from '@/composables/useEvents.js'
 
 export default defineComponent({
   props: {
@@ -44,6 +47,7 @@ export default defineComponent({
     },
   },
   setup(props) {
+    const { pastEvents } = useEvents(props.events)
     const compiledTimeline = ref(compileTimeline(props.timeline))
 
     function compileTimeline({ timeline }) {
@@ -74,7 +78,7 @@ export default defineComponent({
       return events.filter((e) => isSameWeek(new Date(week), new Date(e.date)))
     }
 
-    return { compiledTimeline }
+    return { compiledTimeline, pastEvents }
   },
 })
 </script>

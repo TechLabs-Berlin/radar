@@ -1,6 +1,6 @@
 <template>
   <WrapperContentBox :faded="isPastEvent" :emphasized="isCurrentEvent">
-    <article class="relative">
+    <article class="relative pt-8 lg:pt-0">
       <Stamp v-if="isCurrentEvent" :date="tlEvent.date" />
       <header class="mb-8">
         <p
