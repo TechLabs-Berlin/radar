@@ -12,7 +12,7 @@
         <h2 class="text-2xl font-bold text-center">{{ tlEvent.name }}</h2>
         <p class="text-lg text-center">
           {{ isPast(eventDate) ? 'Took' : 'Takes' }} place on
-          {{ format(eventDate, "MMMM do, 'at' h:mm aaaa") }}
+          {{ format(new Date(eventDate), "MMMM do, 'at' h:mm aaaa") }}
         </p>
       </header>
       <main>
