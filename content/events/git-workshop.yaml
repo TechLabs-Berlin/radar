@@ -1,13 +1,14 @@
 ---
 slug: git-workshop
-name: GIT Workshop
-date: "2021-04-17T19:30:00+02:00"
+name: Git Workshop
+date: "2021-04-17T10:00:00+02:00"
 description: |
-  GIT Workshop!
+  Git Workshop!
 
-  We will provide the GIT Workshop where you'll have a brief Git introduction.
-
-  The perfect time to close the skills gap between your current level and the skills you need to work on your project successfully.
+  Git is a tool which allows you to work collaborative with other people on a software project, preventing mistakes and allowing to return to a previous state. TechLabs required the usage of Git from all Techies during the project phase. 
+  
+  We **strongly recommend** to attend this session, to be able to use Git. It will be an interactive workshop of 3h.
+  
 forms:
   []
   # - title: Registration
