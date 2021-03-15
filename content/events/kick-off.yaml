@@ -1,9 +1,9 @@
 ---
+
 name: Welcome Event ST21
 date: '2021-03-16T19:30:00+01:00'
 description: |
   This is where your Digital Shaper Journey will start. We'll give you a summary on all you need to know to master your track.
-
   Our topics include:
 
   1. **Key Facts** regarding TechLabs, the Digital Shaper program, certificate and community
@@ -11,6 +11,7 @@ description: |
   3. **Track Get-Together** – you'll meet other participants in the track you're planning to choose, and can ask the Track Leads for more information
 
   Our goal is for everybody to have a clear understanding about TechLabs Berlin. We will share the link to join here a few days before the event.
+
 
 meetings:
   - title: 'Meet: Kick-Off'
