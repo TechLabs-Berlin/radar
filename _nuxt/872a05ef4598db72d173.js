@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{389:function(n,e,t){"use strict";t.r(e);var o={fetch:function(n){n.params;(0,n.redirect)(301,"/timeline")}},c=t(9),component=Object(c.a)(o,void 0,void 0,!1,null,null,null);e.default=component.exports}}]);
