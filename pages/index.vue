@@ -6,7 +6,18 @@
         <Timeline :timeline="timeline" :events="events" />
       </div>
       <div class="events">
-        <Events :events="events" />
+        <Events
+          v-if="events.length"
+          :events="events"
+          :milestones="milestones"
+        />
+        <div v-else>
+          <WrapperContentBox>
+            <p class="prose text-center">
+              We are preparing the next term for you.<br />Stay tuned.
+            </p></WrapperContentBox
+          >
+        </div>
       </div>
     </div>
   </main>
@@ -19,10 +30,14 @@ export default defineComponent({
     const { $content } = useContext()
     const events = useAsync(() => $content('/events').sortBy('date').fetch())
     const timeline = useAsync(() => $content('timeline').fetch())
+    const milestones = useAsync(() =>
+      $content('/milestones').sortBy('deadline').fetch()
+    )
 
     return {
       events,
       timeline,
+      milestones,
     }
   },
 })
