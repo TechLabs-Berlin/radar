@@ -1,101 +1,61 @@
-<template>
-  <div>
-    <div class="card faq-card">
-      <div class="card-content content">
-        <h1 class="title">Frequently Asked Questions</h1>
-        <p class="content">
-          For general questions regarding the TechLabs Digital Shaper program,
-          such as:
-        </p>
-        <ul>
-          <li>How much time to invest</li>
-          <li>What expenses you will have to pay</li>
-          <li>How to receive the Digital Shaper certificate</li>
-          <li>…</li>
-        </ul>
-        <p class="content">
-          Please also have a look at the
-          <a
-            href="https://techlabs.org/faq"
-            target="_new"
-            class="techlabs-button faq-button"
-          >
-            <span class="icon">
-              <Fas i="link" />
-            </span>
-            <span>FAQs at techlabs.org</span>
-          </a>
-        </p>
-      </div>
-    </div>
-    <div v-for="section in faq" :key="section.title" class="card faq-card">
-      <div class="card-content content">
-        <h2>{{ section.title }}</h2>
-        <div
-          v-for="(question, index) in section.questions"
-          :key="question.title"
-        >
-          <Question :title="question.title" :content="question.content" />
-          <div v-if="index < section.questions.length - 1" class="spacer" />
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script>
-import Fas from '~/components/Fas'
-import Question from '~/components/faq/Question'
-import { faq } from '~/assets/content'
+import {
+  defineComponent,
+  useFetch,
+  useContext,
+  ref,
+} from '@nuxtjs/composition-api'
 
-export default {
-  components: {
-    Fas,
-    Question
+export default defineComponent({
+  setup() {
+    const { $content } = useContext()
+
+    const faq = ref(null)
+
+    const { fetchState } = useFetch(async () => {
+      faq.value = await $content('faq').fetch()
+    })
+
+    return { faq, fetchState }
   },
-  data() {
-    return { faq }
-  }
-}
+})
 </script>
 
-<style lang="sass">
-@import "~bulma/sass/utilities/_all"
-@import "~/assets/variables"
-@import "~bulma/sass/base/helpers"
-@import "~bulma/sass/elements/content"
+<template>
+  <main>
+    <div class="py-4 md:py-8 lg:mx-auto lg:max-w-2xl">
+      <h1 class="mb-8 text-4xl font-bold text-center">
+        Frequently Asked Questions
+      </h1>
+      <template v-if="!fetchState.pending">
+        <WrapperContentBox
+          v-for="section in faq.sections"
+          :key="section.title"
+          class="mb-4 md:mb-8"
+        >
+          <h2 class="relative mb-8 text-2xl font-bold section-title">
+            {{ section.title }}
+          </h2>
+          <div v-for="question in section.questions" :key="question.title">
+            <h3 class="mb-2 text-base font-bold">{{ question.title }}</h3>
+            <!-- eslint-disable-next-line vue/no-v-html -->
+            <div class="mb-4 prose" v-html="$md.render(question.content)" />
+          </div>
+        </WrapperContentBox>
+      </template>
+    </div>
+  </main>
+</template>
 
-.faq-card
-  margin-top: 2rem
-  margin-bottom: 2rem
-  margin-left: auto
-  margin-right: auto
-  max-width: $desktop * (9/12)
-  border-radius: 8px
+<style lang="scss" scoped>
+.section-title::after {
+  content: '';
+  @apply bg-pink-600;
 
-.faq-button
-  vertical-align: sub
-  margin-left: 0.5rem
-
-.faq-card .content h2
-  margin-bottom: 2rem
-  &:after
-    background: none repeat scroll 0 0 $primary
-    bottom: -10px
-    content: ""
-    display: block
-    height: 4px
-    position: relative
-    width: 3.5rem
-
-.faq-card .content h3
-  @extend .is-size-5
-  margin-bottom: 1rem
-
-.spacer
-  height: 2px
-  width: 100%
-  background-color: $white-ter
-  margin-top: 1rem
-  margin-bottom: 1rem
+  width: 40px;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+}
 </style>

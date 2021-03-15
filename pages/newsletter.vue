@@ -1,75 +1,48 @@
 <template>
-  <div>
-    <!-- SHOW SUCCESS MSG  -->
-    <div v-if="status === 'success'" class="card timeline-event status-card">
-      <div class="card-content">
-        <div class="status">
-          <h3>Done!</h3>
+  <main>
+    <div class="py-4 md:py-8 lg:mx-auto lg:max-w-2xl">
+      <h1 class="mb-8 text-4xl font-bold text-center">Newsletter</h1>
+      <WrapperContentBox>
+        <!-- SHOW SUCCESS MSG  -->
+        <div v-if="status === 'success'">
+          <h3 class="mb-2 font-bold">Done!</h3>
+          <p>Thank you for the support and we'll be in touch :)</p>
+        </div>
+
+        <!-- SHOW FAIL, TRY AGAIN  -->
+        <div v-else-if="status === 'failure'">
+          <h3 class="mb-2 font-bold">Ooops...</h3>
           <p>
-            Thank you for the support and we'll be in touch :)
+            ... something went wrong!
+            <NuxtLink to="/newsletter">Wanna try again?</NuxtLink>
           </p>
         </div>
-      </div>
-    </div>
 
-    <!-- SHOW FAIL, TRY AGAIN  -->
-    <div
-      v-else-if="status === 'failure'"
-      class="card timeline-event status-card"
-    >
-      <div class="card-content">
-        <div class="status">
-          <h3>Ooops...</h3>
-          <p>
-            ... something went wrong! Wanna try again?
-          </p>
+        <!-- SHOW SUBSCRIPTION FORM -->
+        <div v-else>
+          <MailchimpForm
+            @success="status = 'success'"
+            @failure="status = 'failure'"
+          />
         </div>
-      </div>
+      </WrapperContentBox>
     </div>
-
-    <!-- SHOW SUBSCRIPTION FORM -->
-    <div v-else>
-      <!-- <iframe
-        class="signup mj-w-res-iframe"
-        frameborder="0"
-        scrolling="no"
-        marginheight="0"
-        marginwidth="0"
-        src="https://app.mailjet.com/widget/iframe/5567/qAw"
-      ></iframe> -->
-      <MailchimpForm
-        @success="status = 'success'"
-        @failure="status = 'failure'"
-      />
-    </div>
-  </div>
+  </main>
 </template>
 
 <script>
+import { defineComponent } from '@nuxtjs/composition-api'
 import MailchimpForm from '~/components/MailchimpForm'
-export default {
+
+export default defineComponent({
   name: 'PageNewsletter',
   components: {
-    MailchimpForm
+    MailchimpForm,
   },
   data() {
     return {
-      status: this.$route.query.status
+      status: this.$route.query.status,
     }
-  }
-}
+  },
+})
 </script>
-
-<style lang="sass">
-.signup-wrapper
-  width: 400px
-  margin-left: auto
-  margin-right: auto
-
-.signup
-  width: 100%
-  height: 450px
-
-.status-card
-  margin-top: 2rem
-</style>

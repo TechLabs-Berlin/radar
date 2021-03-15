@@ -1,167 +1,84 @@
 <template>
-  <div>
-    <!-- Future Events START -->
-    <div v-if="showsFutureEvents">
-      <div
-        v-for="entry in futureEntries"
-        :key="entry.name"
-        class="timeline-entry"
-      >
-        <Event
-          v-if="entry.type == 'event'"
-          :event="entry"
-          :inactive="isPastEntry(entry) || isFutureEntry(entry)"
-        />
-        <Milestone
-          v-if="entry.type == 'milestone'"
-          :milestone="entry"
-          :inactive="isPastEntry(entry) || isFutureEntry(entry)"
-        />
-      </div>
+  <div :class="{ 'pt-8': pastEvents.length }" class="w-full">
+    <div class="w-full p-8 mx-auto bg-white border shadow-lg rounded-xl">
+      <ul v-if="compiledTimeline.length" class="space-y-8">
+        <li v-for="milestone in compiledTimeline" :key="milestone.startDate">
+          <!-- phase title  -->
+          <h3
+            class="flex items-center justify-between mb-4 text-xs font-semibold tracking-wide uppercase"
+          >
+            <span>{{ milestone.title }}</span
+            ><span
+              v-tippy="{ placement: 'right', theme: 'tl' }"
+              class="py-1 pl-2 text-gray-500"
+              :content="milestone.description"
+              ><TIcon icon="question-circle"
+            /></span>
+          </h3>
+
+          <!-- weeks  -->
+          <div class="space-y-4">
+            <TimelineWeek
+              v-for="week in milestone.weeks"
+              :key="week.number"
+              :week="week"
+            />
+          </div>
+        </li>
+      </ul>
     </div>
-    <a
-      v-if="futureEntries.length > 0 && !showsFutureEvents"
-      class="timeline-show"
-      @click="showsFutureEvents = true"
-    >
-      <p>Show future events</p>
-      <Fas i="angle-up" />
-    </a>
-    <a
-      v-if="futureEntries.length > 0 && showsFutureEvents"
-      class="timeline-show"
-      @click="showsFutureEvents = false"
-    >
-      <Fas i="eye-slash" />
-      <p>Hide future events</p>
-    </a>
-    <!-- Future Events END -->
-    <div>
-      <div
-        v-for="entry in currentEntries"
-        :key="entry.name"
-        class="timeline-entry"
-      >
-        <Event
-          v-if="entry.type == 'event'"
-          :event="entry"
-          :inactive="isPastEntry(entry) || isFutureEntry(entry)"
-        />
-        <Milestone
-          v-if="entry.type == 'milestone'"
-          :milestone="entry"
-          :inactive="isPastEntry(entry) || isFutureEntry(entry)"
-        />
-      </div>
-    </div>
-    <!-- Past Events START -->
-    <a
-      v-if="pastEntries.length > 0 && showsPastEvents"
-      class="timeline-show"
-      @click="showsPastEvents = false"
-    >
-      <Fas i="eye-slash" />
-      <p>Hide past events</p>
-    </a>
-    <a
-      v-if="pastEntries.length > 0 && !showsPastEvents"
-      class="timeline-show"
-      @click="showsPastEvents = true"
-    >
-      <Fas i="angle-down" />
-      <p>Show past events</p>
-    </a>
-    <div v-if="showsPastEvents">
-      <div
-        v-for="entry in pastEntries"
-        :key="entry.name"
-        class="timeline-entry"
-      >
-        <Event
-          v-if="entry.type == 'event'"
-          :event="entry"
-          :inactive="isPastEntry(entry) || isFutureEntry(entry)"
-        />
-        <Milestone
-          v-if="entry.type == 'milestone'"
-          :milestone="entry"
-          :inactive="isPastEntry(entry) || isFutureEntry(entry)"
-        />
-      </div>
-    </div>
-    <!-- Past Events END -->
   </div>
 </template>
 
 <script>
-import { differenceInDays } from 'date-fns'
-import Fas from '~/components/Fas'
-import Event from '~/components/Event'
-import Milestone from '~/components/Milestone'
+import { defineComponent, ref } from '@nuxtjs/composition-api'
+import { eachWeekOfInterval, isSameWeek } from 'date-fns'
+import { useEvents } from '@/composables/useEvents.js'
 
-const isPastEntry = (e) => differenceInDays(new Date(), e.date) > 3
-const isFutureEntry = (e) => differenceInDays(e.date, new Date()) > 10
-
-export default {
-  components: {
-    Fas,
-    Event,
-    Milestone
-  },
+export default defineComponent({
   props: {
-    entries: {
+    timeline: {
+      type: Object,
+      required: true,
+    },
+    events: {
       type: Array,
-      required: true
-    }
-  },
-  data() {
-    return {
-      showsPastEvents: false,
-      showsFutureEvents: false
-    }
-  },
-  computed: {
-    currentEntries() {
-      return this.entries.filter((e) => !isPastEntry(e) && !isFutureEntry(e))
+      default: () => [],
     },
-    pastEntries() {
-      return this.entries.filter(isPastEntry)
-    },
-    futureEntries() {
-      return this.entries.filter(isFutureEntry)
-    },
-    shownEntries() {
-      let entries = []
-      if (this.showsPastEvents) {
-        entries = entries.concat(this.pastEntries)
-      }
-      entries = entries.concat(this.currentEntries)
-      if (this.showsFutureEvents) {
-        entries = entries.concat(this.futureEntries)
-      }
-      return entries
-    }
   },
-  methods: {
-    isPastEntry,
-    isFutureEntry
-  }
-}
+  setup(props) {
+    const { pastEvents } = useEvents(props.events)
+    const compiledTimeline = ref(compileTimeline(props.timeline))
+
+    function compileTimeline({ timeline }) {
+      if (!timeline) return []
+      let weekNumber = 1
+      return timeline.map((milestone) => {
+        const start = new Date(milestone.startDate)
+        const end = new Date(milestone.endDate)
+        const weeks = eachWeekOfInterval({ start, end }, { weekStartsOn: 1 })
+        const objWeeks = weeks.map((week) => {
+          const number = weekNumber
+          const events = findWeekEvents(week, props.events)
+          weekNumber++
+          return {
+            number,
+            events,
+            week,
+          }
+        })
+        return {
+          ...milestone,
+          weeks: objWeeks,
+        }
+      })
+    }
+
+    function findWeekEvents(week, events) {
+      return events.filter((e) => isSameWeek(new Date(week), new Date(e.date)))
+    }
+
+    return { compiledTimeline, pastEvents }
+  },
+})
 </script>
-
-<style lang="sass">
-@import "~bulma/sass/utilities/_all"
-@import "~assets/variables"
-@import "~bulma/sass/base/helpers"
-
-.timeline-show
-  @extend .has-text-centered
-  color: $grey
-  display: block
-  margin-top: 2rem
-  margin-bottom: 2rem
-
-.timeline-entry
-  &:not(:first-child)
-    margin-top: 2rem
-</style>

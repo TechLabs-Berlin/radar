@@ -1,0 +1,11 @@
+.tippy-tooltip.tl-theme {
+  @apply px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl shadow-xl text-gray-700 text-sm;
+}
+
+.tippy-tooltip.tl-theme[data-animatefill] {
+  background-color: transparent;
+}
+
+.tippy-tooltip.tl-theme .tippy-backdrop {
+  @apply bg-gray-50;
+}

@@ -1,0 +1,44 @@
+# dates: always start the week on a Monday and end it on a Sunday
+---
+timeline:
+  # - title: Past week example
+  #   description: |
+  #     to be deleted!!
+  #   startDate: 2021/03/01
+  #   endDate: 2021/03/07
+  # - title: Selection & Onboarding
+  #   description: |
+  #     We'll analyze all applications carefully and select our new students.
+  #     During this time, we'll get in touch with the results of your application and start your onboarding process into the program.
+  #   startDate: 2021/03/08
+  #   endDate: 2021/03/14
+
+  - title: Kick-Off Week
+    description: |
+      You join the community and get access to our learning platform edyoucated.
+
+      We present our four tracks, you choose one and create your personal TechLabs journey based on your previous knowledge.
+    startDate: 2021/03/15
+    endDate: 2021/03/21
+
+  - title: Academy Phase
+    description: |
+      You work through your track on edyoucated and become a master of your class.
+
+      We organize social events regularly so that you can connect with fellow Techies, share your insights and work together on difficulties.
+    startDate: 2021/03/22
+    endDate: 2021/05/16
+
+  - title: Project Phase
+    description: |
+      This is prime time! You imagine and implement a prototype in a project of your own.
+
+      You team up as a group of 4-6 Techies and work together to create something big. Experienced mentors will be on your side for support.
+    startDate: 2021/05/17
+    endDate: 2021/07/04
+
+  - title: Closing Week
+    description: |
+      You finish up your prototype and submit the final result to us. We organize a closing ceremony where you will be given your Digital Shaper Certificate.
+    startDate: 2021/07/05
+    endDate: 2021/07/11

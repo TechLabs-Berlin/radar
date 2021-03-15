@@ -1,0 +1,39 @@
+body,
+html,
+#__nuxt,
+#__layout {
+  @apply h-full antialiased text-gray-700 bg-gray-50;
+}
+
+.nuxt-link-exact-active {
+  @apply text-pink-600 font-bold relative;
+}
+.nuxt-link-exact-active::after {
+  @apply bg-pink-600;
+
+  content: '';
+  width: 100%;
+  height: 4px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.title-with-lines {
+  @apply w-full mb-8 text-xs font-bold tracking-wide uppercase flex flex-none;
+}
+.title-with-lines::before,
+.title-with-lines::after {
+  content: '';
+  flex-grow: 1;
+  margin: 0 1rem;
+  background: linear-gradient(to right, #464646, #464646);
+  background-size: 100% 1px;
+  background-position: 0% 50%;
+  background-repeat: repeat-x;
+}
