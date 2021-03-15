@@ -1,48 +1,43 @@
 <template>
-  <div v-if="events.length">
-    <div>
-      <!-- PAST EVENTS  -->
-      <div v-if="pastEvents.length">
-        <div class="flex items-start justify-end h-8">
-          <button
-            class="flex space-x-4 text-gray-500 focus:outline-none active:outline-none"
-            @click="showPastEvents = !showPastEvents"
-          >
-            <p class="text-center">
-              {{ showPastEvents ? 'Hide' : 'Show' }} Past Events
-            </p>
-            <p class="text-center">
-              <TIcon
-                :icon="showPastEvents ? 'eye-slash' : 'chevron-up'"
-                class="inline-block"
-              />
-            </p>
-          </button>
-        </div>
-        <EventsPast :events="pastEvents" :show="showPastEvents" />
+  <div>
+    <!-- PAST EVENTS  -->
+    <div v-if="pastEvents.length">
+      <div class="flex items-start justify-end h-8">
+        <button
+          class="flex space-x-4 text-gray-500 focus:outline-none active:outline-none"
+          @click="showPastEvents = !showPastEvents"
+        >
+          <p class="text-center">
+            {{ showPastEvents ? 'Hide' : 'Show' }} Past Events
+          </p>
+          <p class="text-center">
+            <TIcon
+              :icon="showPastEvents ? 'eye-slash' : 'chevron-up'"
+              class="inline-block"
+            />
+          </p>
+        </button>
       </div>
+      <EventsPast :events="pastEvents" :show="showPastEvents" />
+    </div>
 
-      <!-- CURRENT EVENT  -->
-      <div class="mb-8">
-        <EventListItem
-          :tl-event="currentEvent"
-          is-current-event
-          :show-resources="isToday(currentEvent.date)"
-        />
-      </div>
-      <!-- FUTURE EVENTS  -->
-      <EventsFuture
-        v-if="futureEvents.length"
-        :events="futureEvents.filter(({ slug }) => slug !== currentEvent.slug)"
+    <!-- CURRENT EVENT  -->
+    <div class="mb-8">
+      <EventListItem
+        :tl-event="currentEvent"
+        is-current-event
+        :show-resources="isToday(currentEvent.date)"
       />
     </div>
-  </div>
-  <div v-else>
-    <WrapperContentBox>
-      <p class="prose text-center">
-        We are preparing the next term for you.<br />Stay tuned.
-      </p></WrapperContentBox
-    >
+    <!-- MILESTONE  -->
+    <div class="mb-8">
+      <Milestones v-if="milestones.length" :milestones="milestones" />
+    </div>
+    <!-- FUTURE EVENTS  -->
+    <EventsFuture
+      v-if="futureEvents.length"
+      :events="futureEvents.filter(({ slug }) => slug !== currentEvent.slug)"
+    />
   </div>
 </template>
 
@@ -53,6 +48,10 @@ import { useEvents } from '@/composables/useEvents.js'
 export default defineComponent({
   props: {
     events: {
+      type: Array,
+      default: () => [],
+    },
+    milestones: {
       type: Array,
       default: () => [],
     },
