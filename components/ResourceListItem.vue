@@ -4,14 +4,14 @@
     target="blank"
     class="flex items-start w-full h-full px-4 py-3 text-left transition-all duration-100 ease-in-out border-2 rounded-lg hover:border-blue-600 hover:shadow-lg hover:text-blue-600"
   >
-    <div>
-      <div class="space-x-2">
-        <span class="text-xl"
-          ><TIcon :icon="icons[resource.type]" class="inline-block"
-        /></span>
-        <span class="font-bold">{{ resource.title }}</span>
+    <div class="flex space-x-4">
+      <p class="flex-none text-xl">
+        <TIcon :icon="icons[resource.type]" class="inline-block" />
+      </p>
+      <div>
+        <p class="font-bold">{{ resource.title }}</p>
+        <p class="text-sm">{{ resource.description }}</p>
       </div>
-      <span class="text-sm">{{ resource.description }}</span>
     </div>
   </button>
 </template>

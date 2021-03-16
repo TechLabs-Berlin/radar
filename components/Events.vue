@@ -23,11 +23,7 @@
 
     <!-- CURRENT EVENT  -->
     <div class="mb-8">
-      <EventListItem
-        :tl-event="currentEvent"
-        is-current-event
-        :show-resources="isToday(currentEvent.date)"
-      />
+      <EventListItem :tl-event="currentEvent" is-current-event />
     </div>
     <!-- MILESTONE  -->
     <div class="mb-8">

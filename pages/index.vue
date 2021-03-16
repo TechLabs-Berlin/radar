@@ -3,11 +3,15 @@
     <div class="w-full main-grid">
       <div class="w-64 mx-auto timeline">
         <h3 class="md:hidden title-with-lines">Timeline</h3>
-        <Timeline :timeline="timeline" :events="events" />
+        <Timeline
+          :timeline="timeline"
+          :events="events"
+          :milestones="milestones"
+        />
       </div>
       <div class="events">
         <Events
-          v-if="events.length"
+          v-if="events && events.length"
           :events="events"
           :milestones="milestones"
         />

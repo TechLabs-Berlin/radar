@@ -45,6 +45,10 @@ export default defineComponent({
       type: Array,
       default: () => [],
     },
+    milestones: {
+      type: Array,
+      default: () => [],
+    },
   },
   setup(props) {
     const { pastEvents } = useEvents(props.events)
@@ -60,10 +64,12 @@ export default defineComponent({
         const objWeeks = weeks.map((week) => {
           const number = weekNumber
           const events = findWeekEvents(week, props.events)
+          const milestones = findWeekMilestones(week, props.milestones)
           weekNumber++
           return {
             number,
             events,
+            milestones,
             week,
           }
         })
@@ -76,6 +82,11 @@ export default defineComponent({
 
     function findWeekEvents(week, events) {
       return events.filter((e) => isSameWeek(new Date(week), new Date(e.date)))
+    }
+    function findWeekMilestones(week, milestones) {
+      return milestones.filter((e) =>
+        isSameWeek(new Date(week), new Date(e.deadline))
+      )
     }
 
     return { compiledTimeline, pastEvents }
