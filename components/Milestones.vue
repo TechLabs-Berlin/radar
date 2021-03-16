@@ -28,7 +28,7 @@
           </p>
         </header>
 
-        <main class="space-y-8">
+        <main v-if="currentMilestone.todos.length" class="space-y-8">
           <p class="text-center">
             <button
               v-if="showTasks"
@@ -104,7 +104,9 @@ export default defineComponent({
       milestones.filter(({ deadline }) => isFuture(deadline))
     )
     const currentMilestone = computed(() =>
-      futureMilestones.value.length ? futureMilestones.value[0] : null
+      futureMilestones.value && futureMilestones.value.length
+        ? futureMilestones.value[0]
+        : null
     )
 
     return {

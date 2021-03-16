@@ -26,7 +26,7 @@ todos:
       - title: Github Student Developer Pack
         type: tool
         url: https://education.github.com/pack
-  - name: "Data Science Techies: Sign up for DataCamp"
+  - name: 'Data Science Techies: Sign up for DataCamp'
     resources:
       - title: DataCamp for students
         type: tool
@@ -34,16 +34,19 @@ todos:
       - title: DataCamp regular signup
         type: tool
         url: https://www.datacamp.com/billing/subscriptions/account
-  - name: "Web Development Techies: Sign up for Udemy"
+  - name: 'Web Development Techies: Sign up for Udemy'
     resources:
-      - title: Udemy – The Web Developer Bootcamp
+      - title: Udemy
+        description: The Web Developer Bootcamp
         type: tool
         url: https://www.udemy.com/course/the-web-developer-bootcamp/
-  - name: "UX Techies: Sign up for Udemy & Coursera"
-resources:
-  - title: Udemy – UX & Web Design Master Course
-    type: tool
-    url: https://www.udemy.com/course/ux-web-design-master-course-strategy-design-development/
-  - title: "Coursera – UX Design: From Concept to Prototype"
-    type: tool
-    url: https://de.coursera.org/learn/ux-design-concept-wireframe
+  - name: 'UX Techies: Sign up for Udemy & Coursera'
+    resources:
+      - title: Udemy
+        description: UX & Web Design Master Course
+        type: tool
+        url: https://www.udemy.com/course/ux-web-design-master-course-strategy-design-development/
+      - title: 'Coursera'
+        description: 'UX Design: From Concept to Prototype'
+        type: tool
+        url: https://de.coursera.org/learn/ux-design-concept-wireframe

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center space-x-2">
+  <div class="flex items-start space-x-2">
     <div
       v-tippy="{ theme: 'tl' }"
       :content="weekDates"
@@ -16,24 +16,59 @@
       <template v-if="['current', 'past'].includes(weekStatus)">
         <TIcon
           :icon="weekStatus === 'current' ? 'hourglass-half' : 'check-circle'"
-          class="absolute bottom-0 right-0 transform translate-x-1/2 translate-y-1/2"
+          class="absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1"
           :class="weekStatus === 'current' ? 'text-pink-600' : 'text-gray-700'"
         />
       </template>
     </div>
-    <ul
-      v-if="week.events.length"
-      class="text-xs"
-      :class="{ 'opacity-75': weekStatus === 'past' }"
-    >
-      <li v-for="e in week.events" :key="e.slug">
-        <span> {{ format(new Date(e.date), 'MMM d') }} </span><br /><span
-          class="font-semibold"
-          >{{ e.name }}</span
+    <!-- events  -->
+    <div>
+      <template v-if="week.events.length || week.milestones.length">
+        <ul
+          v-if="week.events.length"
+          class="mt-1 text-xs"
+          :class="{ 'opacity-75': weekStatus === 'past' }"
         >
-      </li>
-    </ul>
-    <p v-else class="text-xs italic text-gray-400">&mdash;</p>
+          <li v-for="e in week.events" :key="e.slug" class="flex space-x-2">
+            <p>
+              <TIcon
+                icon="calendar-day"
+                class="inline-block text-xs text-gray-300 mt-05"
+              />
+            </p>
+            <div>
+              <p class="font-semibold">{{ e.name }}</p>
+              <p>
+                {{ format(new Date(e.date), 'MMM d') }}
+              </p>
+            </div>
+          </li>
+        </ul>
+        <ul
+          v-if="week.milestones.length"
+          class="mt-1 text-xs"
+          :class="{ 'opacity-75': weekStatus === 'past' }"
+        >
+          <li
+            v-for="milestone in week.milestones"
+            :key="milestone.slug"
+            class="flex space-x-2"
+          >
+            <p>
+              <TIcon
+                icon="check-square"
+                class="inline-block text-xs text-gray-300 mt-05"
+              />
+            </p>
+            <div>
+              <p class="font-semibold">{{ milestone.title }}</p>
+              <p>Due {{ format(new Date(milestone.deadline), 'MMM d') }}</p>
+            </div>
+          </li>
+        </ul>
+      </template>
+      <p v-else class="text-xs italic text-gray-400">&mdash;</p>
+    </div>
   </div>
 </template>
 
@@ -72,3 +107,9 @@ export default defineComponent({
   },
 })
 </script>
+
+<style lang="scss" scoped>
+.mt-05 {
+  margin-top: 0.05rem;
+}
+</style>
