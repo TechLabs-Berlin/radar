@@ -33,7 +33,10 @@
             <p>
               <TIcon
                 icon="calendar-day"
-                class="inline-block text-xs text-gray-300 mt-05"
+                class="inline-block text-xs mt-05"
+                :class="
+                  weekStatus === 'current' ? 'text-pink-600' : 'text-gray-300'
+                "
               />
             </p>
             <div>
@@ -57,7 +60,10 @@
             <p>
               <TIcon
                 icon="check-square"
-                class="inline-block text-xs text-gray-300 mt-05"
+                class="inline-block text-xs mt-05"
+                :class="
+                  weekStatus === 'current' ? 'text-pink-600' : 'text-gray-300'
+                "
               />
             </p>
             <div>
