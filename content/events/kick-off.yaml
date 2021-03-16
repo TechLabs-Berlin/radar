@@ -39,7 +39,10 @@ forms:
   #   type: form
   #   url: https://techlabsorg.typeform.com/to/bEsJr5Gh
 resources:
-  []
+  - title: 'ST21 Google Calendar'
+    description: Link to our shared calendar with all events and milestones
+    type: link
+    url: https://calendar.google.com/calendar/u/1?cid=Y18ydHRmNWxycW11b25qdDVrNXFqZzBmaG5iZ0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t
   # - title: 'Slides'
   #   description: The presentation we showed you during the Kick-Off
   #   type: slides
