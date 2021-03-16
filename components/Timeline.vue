@@ -56,7 +56,7 @@ export default defineComponent({
 
     function compileTimeline({ timeline }) {
       if (!timeline) return []
-      let weekNumber = 1
+      let weekNumber = 0
       return timeline.map((milestone) => {
         const start = new Date(milestone.startDate)
         const end = new Date(milestone.endDate)
