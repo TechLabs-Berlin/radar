@@ -21,7 +21,7 @@
         <div class="pb-10 prose" v-html="$md.render(tlEvent.description)" />
       </main>
       <!-- RESOURCES  -->
-      <aside v-if="showResources && hasResources" class="space-y-8">
+      <aside v-if="true && hasResources" class="space-y-8">
         <EventListItemResourceList
           v-if="tlEvent.meetings"
           :resources="tlEvent.meetings"

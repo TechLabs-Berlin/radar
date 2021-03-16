@@ -36,7 +36,7 @@
     "@nuxtjs/eslint-config": "^5.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/stylelint-module": "^4.0.0",
-    "@nuxtjs/tailwindcss": "^3.4.2",
+    "@nuxtjs/tailwindcss": "^3.4.3",
     "@vue/test-utils": "^1.1.2",
     "autoprefixer": "^9",
     "babel-core": "7.0.0-bridge.0",
@@ -56,7 +56,7 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
     "svg-inline-loader": "^0.8.2",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
     "vue-jest": "^3.0.4",
     "yaml-validator": "^3.0.1"
   },

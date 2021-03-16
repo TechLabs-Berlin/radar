@@ -1,7 +1,7 @@
 ---
   slug: project-ideation
   name: Project Ideation Session
-  date: "2021-04-27T19:30:00+02:00"
+  date: "2021-04-20T19:30:00+02:00"
   description: |
     We will foster your creativity to imagine project ideas based on real-world problems.
 
@@ -19,11 +19,11 @@
   #   description: Please leave feedback for our Ideation Session!
   #   url: https://techlabsorg.typeform.com/to/fEd1vDI6
   resources:
-    []
-  # - title: "Miro Board Learning Board"
-  #   description: Please use this Miro Board to familiarize yourself with Miro
-  #   type: tool
-  #   url: https://miro.com/app/board/o9J_lfbo188=/
+    # []
+  - title: "Miro Board Learning Board"
+    description: Please use this Miro Board to familiarize yourself with Miro
+    type: tool
+    url: https://miro.com/app/board/o9J_lfbo188=/
   # - title: "Result Miro Boards"
   #   description: Your results of the Ideation Session!
   #   type: tool

@@ -2,31 +2,48 @@
 title: Track Personalization
 deadline: 2021-03-19T23:59:59+01:00
 description: |
-  We're happy that you want to join our community. We need you to register on our platforms and to give us your account details so we can ensure a smooth learning experience for everyone.     
+  Now it is the time to choose if you want to learn Data Science, Artificial Intelligence, Web Development or
+  User Experience Design.
 
-  Please make sure to attend our **Kick-Off Event on the 13th of October**, where you will be given the most important information to
-  join TechLabs.
+  We will post instructions how to choose your track in the Kick-Off Session.
 
-  _Please note that we reserve the right ro remove you from the program if you fail to finish tasks in a timely manner._
+  Please complete the following steps to choose your track:
+
+  1. Complete the track personalization survey.
+
+  After we've received all of your choices, we will evaluate your answers in the track personalization survey.
+  Then we will assign you to a track on edyoucated and you can start learning. Please allow some time between
+  you completing the survey and the track assignment as this process involves some manual steps. We will send you a
+  message on Slack as soon as you can access your track material on edyoucated.
 todos:
-  - name: Register on Edyoucated & GitHub
+  - name: Complete the track personalization survey
     resources:
-      - title: Edyoucated Registration
+      - title: Track Personalization Survey
         type: tool
-        url: https://edyoucated.org/
-      - title: GitHub Registration
-        type: tool
-        url: https://github.com
-  - name: Join our Edyoucated team after you registered on Edyoucated
+        url: https://techlabsorg.typeform.com/to/R06fDcey
+  - name: "Get the Github Student Developer Pack (if you're a student)"
     resources:
-      - title: Edyoucated Team Sign-Up
+      - title: Github Student Developer Pack
         type: tool
-        url: https://app.edyoucated.org/invitation/team/c0684cfc-42a3-475f-b74f-e7b7970b5899
-  - name: Join our Slack Workspace (you should have received an invitation in the email address you used in your application)
-  - name: Fill out the account survey
+        url: https://education.github.com/pack
+  - name: "Data Science Techies: Sign up for DataCamp"
     resources:
-      - title: Account Survey
-        type: form
-        url: https://techlabsorg.typeform.com/to/vfYmJ6k7
-  - name: 'Optional: Play around with Edyoucated and GitHub'
-  - name: Attend the Kick-Off Event on Tuesday, October 13, at 20:00 CEST (link will be posted soon!)
+      - title: DataCamp for students
+        type: tool
+        url: https://www.datacamp.com/github-students
+      - title: DataCamp regular signup
+        type: tool
+        url: https://www.datacamp.com/billing/subscriptions/account
+  - name: "Web Development Techies: Sign up for Udemy"
+    resources:
+      - title: Udemy – The Web Developer Bootcamp
+        type: tool
+        url: https://www.udemy.com/course/the-web-developer-bootcamp/
+  - name: "UX Techies: Sign up for Udemy & Coursera"
+resources:
+  - title: Udemy – UX & Web Design Master Course
+    type: tool
+    url: https://www.udemy.com/course/ux-web-design-master-course-strategy-design-development/
+  - title: "Coursera – UX Design: From Concept to Prototype"
+    type: tool
+    url: https://de.coursera.org/learn/ux-design-concept-wireframe
