@@ -81,11 +81,13 @@ export default defineComponent({
     }
 
     function findWeekEvents(week, events) {
-      return events.filter((e) => isSameWeek(new Date(week), new Date(e.date)))
+      return events.filter((e) =>
+        isSameWeek(new Date(week), new Date(e.date), { weekStartsOn: 1 })
+      )
     }
     function findWeekMilestones(week, milestones) {
       return milestones.filter((e) =>
-        isSameWeek(new Date(week), new Date(e.deadline))
+        isSameWeek(new Date(week), new Date(e.deadline), { weekStartsOn: 1 })
       )
     }
 
