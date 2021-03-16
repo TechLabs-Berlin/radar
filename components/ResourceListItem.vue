@@ -1,5 +1,5 @@
 <template>
-  <button
+  <a
     :href="resource.url"
     target="blank"
     class="flex items-start w-full h-full px-4 py-3 text-left transition-all duration-100 ease-in-out border-2 rounded-lg hover:border-blue-600 hover:shadow-lg hover:text-blue-600"
@@ -13,7 +13,7 @@
         <p class="text-sm">{{ resource.description }}</p>
       </div>
     </div>
-  </button>
+  </a>
 </template>
 
 <script>
