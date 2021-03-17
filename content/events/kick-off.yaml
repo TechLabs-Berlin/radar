@@ -32,6 +32,10 @@ meetings:
     description: Break-Out Room for UX Design
     type: meeting
     url: https://meet.google.com/aep-cocb-wyq
+  - title: 'Social: Wonder'
+    description: Join us in our Berliner Wonder Space!
+    type: meeting
+    url: https://www.wonder.me/r?id=a3f2b91d-5ab4-4127-ac47-894c257e8bdf&emailVerificationToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTQyNDMzNDM4OTcsImVtYWlsIjoibWF4aW1pbGlhbi5zY2hhbGxAbWFpbC5kZSIsInJvb21JZCI6ImEzZjJiOTFkLTVhYjQtNDEyNy1hYzQ3LTg5NGMyNTdlOGJkZiIsImlhdCI6MTYxMzAzMzc0M30.EyNP3NLajeYosiy9RtFvsogzClZIVnxHRVS9irPr7Qg%20Kind%20Regards
 forms:
   []
   # - title: Feedback
