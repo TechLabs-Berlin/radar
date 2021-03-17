@@ -25,12 +25,13 @@
         <div class="pb-10 prose" v-html="$md.render(tlEvent.description)" />
       </main>
       <!-- RESOURCES  -->
-      <aside v-if="isCurrentEvent && hasResources" class="space-y-8">
+      <aside v-if="showResources && hasResources" class="space-y-8">
         <EventListItemResourceList
-          v-if="tlEvent.meetings && tlEvent.meetings.length"
+          v-if="isCurrentEvent && tlEvent.meetings && tlEvent.meetings.length"
           :resources="tlEvent.meetings"
           title="Meeting Rooms"
         />
+
         <EventListItemResourceList
           v-if="tlEvent.forms && tlEvent.forms.length"
           :resources="tlEvent.forms"
@@ -39,7 +40,7 @@
         <EventListItemResourceList
           v-if="tlEvent.resources && tlEvent.resources.length"
           :resources="tlEvent.resources"
-          title="Other Resources"
+          title="Resources"
         />
       </aside>
       <aside v-else-if="isCurrentEvent">
@@ -65,6 +66,9 @@ export default defineComponent({
       type: Boolean,
     },
     isPastEvent: {
+      type: Boolean,
+    },
+    showResources: {
       type: Boolean,
     },
   },
