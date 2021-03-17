@@ -1,7 +1,9 @@
 <template>
   <WrapperContentBox :faded="isPastEvent" :emphasized="isCurrentEvent">
     <article class="relative pt-8 lg:pt-0">
-      <Stamp v-if="isCurrentEvent" :date="tlEvent.date" />
+      <ClientOnly>
+        <Stamp v-if="isCurrentEvent" :date="tlEvent.date" />
+      </ClientOnly>
       <header class="mb-8">
         <p
           class="mb-4 text-4xl font-bold text-center"
@@ -10,10 +12,12 @@
           <TIcon icon="calendar-day" class="inline-block" />
         </p>
         <h2 class="text-2xl font-bold text-center">{{ tlEvent.name }}</h2>
-        <p class="text-lg text-center">
-          {{ isPast(eventDate) ? 'Took' : 'Takes' }} place on
-          {{ format(new Date(eventDate), "MMMM do, 'at' h:mm aaaa") }}
-        </p>
+        <ClientOnly>
+          <p class="text-lg text-center">
+            {{ isPast(eventDate) ? 'Took' : 'Takes' }} place on
+            {{ format(new Date(eventDate), "MMMM do, 'at' h:mm aaaa") }}
+          </p>
+        </ClientOnly>
       </header>
       <main>
         <!-- BODY  -->
