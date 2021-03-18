@@ -4,14 +4,31 @@
       <ClientOnly>
         <Stamp v-if="isCurrentEvent" :date="tlEvent.date" />
       </ClientOnly>
-      <header class="mb-8">
+      <header class="flex flex-col items-center mb-8">
         <p
           class="mb-4 text-4xl font-bold text-center"
           :class="isCurrentEvent ? 'text-pink-600' : 'text-gray-400'"
         >
           <TIcon icon="calendar-day" class="inline-block" />
         </p>
-        <h2 class="mb-1 text-2xl font-bold text-center">{{ tlEvent.name }}</h2>
+        <template v-if="showPermalink">
+          <NuxtLink :to="`/event/${tlEvent.slug}`" class="title-link">
+            <h2
+              class="relative inline-block mb-1 text-2xl font-bold hover:underline"
+            >
+              {{ tlEvent.name }}
+              <div
+                class="absolute top-0 right-0 hidden pl-2 text-base text-blue-600 transform translate-x-full translate-y-1 icon"
+              >
+                <TIcon icon="link" class="inline-block" />
+              </div></h2
+          ></NuxtLink>
+        </template>
+        <template v-else>
+          <h2 class="inline-block mb-1 text-2xl font-bold">
+            {{ tlEvent.name }}
+          </h2>
+        </template>
         <ClientOnly>
           <p class="text-lg text-center">
             {{ isPast(eventDate) ? 'Took' : 'Takes' }} place on
@@ -71,6 +88,9 @@ export default defineComponent({
     showResources: {
       type: Boolean,
     },
+    showPermalink: {
+      type: Boolean,
+    },
   },
   setup(props) {
     const eventDate = new Date(props.tlEvent.date)
@@ -87,3 +107,8 @@ export default defineComponent({
   },
 })
 </script>
+<style lang="scss" scoped>
+.title-link:hover .icon {
+  @apply inline-block;
+}
+</style>
