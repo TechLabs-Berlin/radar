@@ -43,14 +43,14 @@ forms:
   #   type: form
   #   url: https://techlabsorg.typeform.com/to/bEsJr5Gh
 resources:
+  - title: 'Slides'
+    description: The presentation we showed you during the Kick-Off
+    type: slides
+    url: https://docs.google.com/presentation/d/e/2PACX-1vTHjTj5f6Kg6oD1iUSYrW8-T60ShHCOKBEXOr4e-9ADaaUsnmI7XSOZFlsy5vnFVUDU4lsbdu0gDVOu/pub?start=false&loop=false&delayms=3000
   - title: 'ST21 Google Calendar'
     description: Link to our shared calendar with all events and milestones
     type: link
     url: https://calendar.google.com/calendar/u/1?cid=Y18ydHRmNWxycW11b25qdDVrNXFqZzBmaG5iZ0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t
-  # - title: 'Slides'
-  #   description: The presentation we showed you during the Kick-Off
-  #   type: slides
-  #   url: https://drive.google.com/file/d/1XBI-2QSYIQ2mLOE3A0W-qPRLYkJEWACZ/view?usp=sharing
   # - title: 'Recording'
   #   description: The recording of the Kick-Off presentation
   #   type: video

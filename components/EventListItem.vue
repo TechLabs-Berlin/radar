@@ -11,7 +11,7 @@
         >
           <TIcon icon="calendar-day" class="inline-block" />
         </p>
-        <h2 class="text-2xl font-bold text-center">{{ tlEvent.name }}</h2>
+        <h2 class="mb-1 text-2xl font-bold text-center">{{ tlEvent.name }}</h2>
         <ClientOnly>
           <p class="text-lg text-center">
             {{ isPast(eventDate) ? 'Took' : 'Takes' }} place on
