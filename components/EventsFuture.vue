@@ -13,7 +13,7 @@
       </div>
       <ul class="mb-8 space-y-4 md:space-y-8">
         <li v-for="e in events" :key="e.slug">
-          <EventListItem :tl-event="e" />
+          <EventListItem :tl-event="e" show-permalink />
         </li>
       </ul>
     </template>
