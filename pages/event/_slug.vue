@@ -5,7 +5,10 @@
         ><TIcon icon="chevron-left" class="inline-block" /> Back to the
         Timeline</NuxtLink
       >
-      <EventListItem :tl-event="event[0]" show-resources />
+      <WrapperContentBox v-if="$fetchState.pending"
+        >Loading...</WrapperContentBox
+      >
+      <EventListItem v-else :tl-event="event[0]" show-resources />
     </div>
   </main>
 </template>
@@ -14,19 +17,22 @@
 import {
   defineComponent,
   useContext,
-  useAsync,
+  useFetch,
   useRoute,
+  ref,
 } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   setup() {
     const { $content } = useContext()
     const route = useRoute()
-    const event = useAsync(() =>
-      $content('/events')
-        .where({ slug: route.value.params.slug })
-        .limit(1)
-        .fetch()
+    const event = ref('')
+    useFetch(
+      async () =>
+        (event.value = await $content('/events')
+          .where({ slug: route.value.params.slug })
+          .limit(1)
+          .fetch())
     )
 
     return {

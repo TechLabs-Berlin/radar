@@ -1,6 +1,6 @@
 <template>
   <main class="h-full bg-gray-50">
-    <div class="w-full main-grid">
+    <div v-if="!$fetchState.pending" class="w-full main-grid">
       <div class="w-64 mx-auto timeline">
         <h3 class="md:hidden title-with-lines">Timeline</h3>
         <Timeline
@@ -28,15 +28,25 @@
 </template>
 
 <script>
-import { useAsync, defineComponent, useContext } from '@nuxtjs/composition-api'
+import {
+  useFetch,
+  defineComponent,
+  useContext,
+  ref,
+} from '@nuxtjs/composition-api'
 export default defineComponent({
   setup() {
     const { $content } = useContext()
-    const events = useAsync(() => $content('/events').sortBy('date').fetch())
-    const timeline = useAsync(() => $content('timeline').fetch())
-    const milestones = useAsync(() =>
-      $content('/milestones').sortBy('deadline').fetch()
-    )
+    const events = ref()
+    const timeline = ref()
+    const milestones = ref()
+    useFetch(async () => {
+      events.value = await $content('/events').sortBy('date').fetch()
+      timeline.value = await $content('timeline').fetch()
+      milestones.value = await $content('/milestones')
+        .sortBy('deadline')
+        .fetch()
+    })
 
     return {
       events,
