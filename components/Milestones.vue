@@ -10,13 +10,26 @@
     </div> -->
     <WrapperContentBox v-if="currentMilestone">
       <article class="relative pt-8 lg:pt-0">
-        <header class="mb-8">
+        <header class="flex flex-col items-center mb-8">
           <p class="mb-4 text-4xl font-bold text-center text-pink-600">
             <TIcon icon="clipboard-list" class="inline-block" />
           </p>
-          <h2 class="text-2xl font-bold text-center">
-            {{ currentMilestone.title }}
-          </h2>
+
+          <NuxtLink
+            :to="`/milestone/${currentMilestone.slug}`"
+            class="title-link"
+          >
+            <h2
+              class="relative inline-block mb-1 text-2xl font-bold hover:underline"
+            >
+              {{ currentMilestone.title }}
+              <div
+                class="absolute top-0 right-0 hidden pl-2 text-base text-blue-600 transform translate-x-full translate-y-1 icon"
+              >
+                <TIcon icon="link" class="inline-block" />
+              </div></h2
+          ></NuxtLink>
+
           <p class="mb-4 text-lg text-center">
             Due
             {{
@@ -126,5 +139,8 @@ export default defineComponent({
   grid-gap: 1rem;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: max-content;
+}
+.title-link:hover .icon {
+  @apply inline-block;
 }
 </style>
