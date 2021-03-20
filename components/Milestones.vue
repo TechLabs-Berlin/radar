@@ -29,54 +29,65 @@
                 <TIcon icon="link" class="inline-block" />
               </div></h2
           ></NuxtLink>
-
-          <p class="mb-4 text-lg text-center">
-            Due
-            {{
-              format(
-                new Date(currentMilestone.deadline),
-                "MMMM do, 'at' h:mm aaaa"
-              )
-            }}
-          </p>
+          <ClientOnly>
+            <p class="text-lg text-center">
+              Due
+              {{
+                format(
+                  new Date(currentMilestone.deadline),
+                  "MMMM do, 'at' h:mm aaaa"
+                )
+              }}
+            </p>
+          </ClientOnly>
         </header>
 
-        <main v-if="currentMilestone.todos.length" class="space-y-8">
-          <p class="text-center">
-            <button
-              v-if="showTasks"
-              class="px-2 py-1 text-sm font-semibold tracking-wide uppercase border-2 rounded-lg"
-              @click="toggleTasks"
-            >
-              <TIcon icon="eye-slash" class="inline-block" /> Hide tasks
-            </button>
-            <button
-              v-else
-              class="px-2 py-1 text-sm font-semibold tracking-wide uppercase border-2 rounded-lg"
-              @click="toggleTasks"
-            >
-              <TIcon icon="chevron-down" class="inline-block" /> Show tasks
-            </button>
-          </p>
-          <ul v-if="showTasks" class="space-y-8 text-lg">
-            <li
-              v-for="todo in currentMilestone.todos"
-              :key="todo.name"
-              class="flex space-x-4"
-            >
-              <div>
-                <TIcon icon="check-square" class="text-2xl text-blue-600" />
-              </div>
-              <div>
-                <p>{{ todo.name }}</p>
-                <ul v-if="todo.resources" class="mt-4 link-grid">
-                  <li v-for="resource in todo.resources" :key="resource.title">
-                    <ResourceListItem :resource="resource" />
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
+        <main class="space-y-8">
+          <!-- eslint-disable-next-line vue/no-v-html -->
+          <div
+            class="prose text-center"
+            v-html="$md.render(currentMilestone.description)"
+          />
+          <template v-if="currentMilestone.todos.length">
+            <p class="text-center">
+              <button
+                v-if="showTasks"
+                class="px-2 py-1 text-sm font-semibold tracking-wide uppercase border-2 rounded-lg"
+                @click="toggleTasks"
+              >
+                <TIcon icon="eye-slash" class="inline-block" /> Hide tasks
+              </button>
+              <button
+                v-else
+                class="px-2 py-1 text-sm font-semibold tracking-wide uppercase border-2 rounded-lg"
+                @click="toggleTasks"
+              >
+                <TIcon icon="chevron-down" class="inline-block" /> Show tasks
+              </button>
+            </p>
+            <ul v-if="showTasks" class="space-y-8 text-lg">
+              <li
+                v-for="todo in currentMilestone.todos"
+                :key="todo.name"
+                class="flex space-x-4"
+              >
+                <div>
+                  <TIcon icon="check-square" class="text-2xl text-blue-600" />
+                </div>
+                <div>
+                  <p>{{ todo.name }}</p>
+                  <ul v-if="todo.resources" class="mt-4 link-grid">
+                    <li
+                      v-for="resource in todo.resources"
+                      :key="resource.title"
+                    >
+                      <ResourceListItem :resource="resource" />
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </template>
         </main>
       </article>
     </WrapperContentBox>
