@@ -10,16 +10,22 @@
             class="space-y-2 text-sm font-semibold text-right uppercase lg:flex lg:items-center lg:space-x-4 lg:space-y-0"
           >
             <li @click="toggle">
-              <NuxtLink class="hover:text-pink-600" to="/">Timeline</NuxtLink>
+              <NuxtLink class="hover:text-pink-600 nav-link" to="/"
+                >Timeline</NuxtLink
+              >
             </li>
             <li @click="toggle">
-              <NuxtLink class="hover:text-pink-600" to="/faq">FAQ</NuxtLink>
+              <NuxtLink class="hover:text-pink-600 nav-link" to="/faq"
+                >FAQ</NuxtLink
+              >
             </li>
             <li @click="toggle">
-              <NuxtLink class="hover:text-pink-600" to="/media">Media</NuxtLink>
+              <NuxtLink class="hover:text-pink-600 nav-link" to="/media"
+                >Media</NuxtLink
+              >
             </li>
             <li @click="toggle">
-              <NuxtLink class="hover:text-pink-600" to="/newsletter"
+              <NuxtLink class="hover:text-pink-600 nav-link" to="/newsletter"
                 >Newsletter</NuxtLink
               >
             </li>
