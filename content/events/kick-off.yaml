@@ -51,7 +51,7 @@ resources:
     description: Link to our shared calendar with all events and milestones
     type: link
     url: https://calendar.google.com/calendar/u/1?cid=Y18ydHRmNWxycW11b25qdDVrNXFqZzBmaG5iZ0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t
-  # - title: 'Recording'
-  #   description: The recording of the Kick-Off presentation
-  #   type: video
-  #   url: https://drive.google.com/file/d/1upS7UrhzjBpMXWFGxCDrIC4f134X83ML/view?usp=sharing
+  - title: 'Recording'
+    description: The recording of the Kick-Off Event
+    type: video
+    url: https://drive.google.com/file/d/1fM-QE8TqLhqvdjiXg3JcgtMD0pM699gs/view?usp=sharing
