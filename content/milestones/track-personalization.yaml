@@ -1,20 +1,16 @@
 ---
 title: Track Personalization
 deadline: 2021-03-19T23:59:59+01:00
+type: tasks
 description: |
-  Now it is the time to choose if you want to learn Data Science, Artificial Intelligence, Web Development or
-  User Experience Design.
+  Now it is the time to choose if you want to learn Data Science, Artificial Intelligence, Web Development or User Experience Design.
 
   We will post instructions how to choose your track in the Kick-Off Session.
 
-  Please complete the following steps to choose your track:
+  After we've received all of your choices, we will evaluate your answers in the track personalization survey. Then we will assign you to a track on edyoucated and you can start learning. Please allow some time between you completing the survey and the track assignment as this process involves some manual steps. We will send you a message on Slack as soon as you can access your track material on edyoucated.
 
-  1. Complete the track personalization survey.
+   Please complete the following tasks to personalize your track:
 
-  After we've received all of your choices, we will evaluate your answers in the track personalization survey.
-  Then we will assign you to a track on edyoucated and you can start learning. Please allow some time between
-  you completing the survey and the track assignment as this process involves some manual steps. We will send you a
-  message on Slack as soon as you can access your track material on edyoucated.
 todos:
   - name: Complete the track personalization survey
     resources:

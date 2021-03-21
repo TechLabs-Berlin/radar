@@ -1,8 +1,9 @@
 ---
 title: Hatching Phase
 deadline: 2021-04-05T22:59:59+01:00
+type: cutoff
 description: |
-  You need to have finished at least **10h** of your track until the deadline, otherwise you will be removed from the program.
+  You need to have finished at least **10h** of your track until the deadline. __This is a cutting point__: if you fail to complete it, you will be removed from the program.
 todos:
   []
   # - name: Requirements to fullfill
