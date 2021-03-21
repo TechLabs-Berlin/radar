@@ -28,12 +28,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style lang="scss" scoped>
-.link-grid {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: max-content;
-}
-</style>
