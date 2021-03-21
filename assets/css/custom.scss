@@ -5,6 +5,17 @@ html,
   @apply h-full antialiased text-gray-700 bg-gray-50;
 }
 
+/* layout */
+
+/* resource list items */
+.link-grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: max-content;
+}
+
+/* links */
 .nav-link.nuxt-link-exact-active {
   @apply text-pink-600 font-bold relative;
 }
@@ -16,6 +27,11 @@ html,
   height: 4px;
 }
 
+a.regular-link:hover {
+  @apply underline;
+}
+
+/* transition fade animation */
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s;
@@ -24,6 +40,7 @@ html,
   opacity: 0;
 }
 
+/* faq and other sections */
 .title-with-lines {
   @apply w-full mb-8 text-xs font-bold tracking-wide uppercase flex flex-none;
 }

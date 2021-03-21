@@ -24,54 +24,19 @@
     <!-- events  -->
     <div>
       <template v-if="week.events.length || week.milestones.length">
-        <ul
-          v-if="week.events.length"
-          class="mt-1 text-xs"
-          :class="{ 'opacity-75': weekStatus === 'past' }"
-        >
-          <li v-for="e in week.events" :key="e.slug" class="flex space-x-2">
-            <p>
-              <TIcon
-                icon="calendar-day"
-                class="inline-block text-xs mt-05"
-                :class="
-                  weekStatus === 'current' ? 'text-pink-600' : 'text-gray-300'
-                "
-              />
-            </p>
-            <div>
-              <p class="font-semibold">{{ e.name }}</p>
-              <p>
-                {{ format(new Date(e.date), 'MMM d') }}
-              </p>
-            </div>
-          </li>
-        </ul>
-        <ul
+        <TimelineWeekItems v-if="week.events.length" :events="week.events">
+          <template #event="{ event }">
+            <TimelineWeekEvent :event="event" :week-status="weekStatus" />
+          </template>
+        </TimelineWeekItems>
+        <TimelineWeekItems
           v-if="week.milestones.length"
-          class="mt-1 text-xs"
-          :class="{ 'opacity-75': weekStatus === 'past' }"
+          :events="week.milestones"
         >
-          <li
-            v-for="milestone in week.milestones"
-            :key="milestone.slug"
-            class="flex space-x-2"
-          >
-            <p>
-              <TIcon
-                icon="check-square"
-                class="inline-block text-xs mt-05"
-                :class="
-                  weekStatus === 'current' ? 'text-pink-600' : 'text-gray-300'
-                "
-              />
-            </p>
-            <div>
-              <p class="font-semibold">{{ milestone.title }}</p>
-              <p>Due {{ format(new Date(milestone.deadline), 'MMM d') }}</p>
-            </div>
-          </li>
-        </ul>
+          <template #event="{ event }">
+            <TimelineWeekMilestone :milestone="event" />
+          </template>
+        </TimelineWeekItems>
       </template>
       <p v-else class="text-xs italic text-gray-400">&mdash;</p>
     </div>
