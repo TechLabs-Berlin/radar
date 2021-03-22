@@ -1,9 +1,16 @@
 import { computed } from '@nuxtjs/composition-api'
-import { isToday, isPast, isFuture, closestTo, isSameDay } from 'date-fns'
+import {
+  isToday,
+  isPast,
+  isFuture,
+  closestTo,
+  isSameDay,
+  parseISO,
+} from 'date-fns'
 
 export const useEvents = (eventList) => {
   const events = computed(() =>
-    eventList.map((e) => ({ ...e, date: new Date(e.date) }))
+    eventList.map((e) => ({ ...e, date: parseISO(e.date) }))
   )
   const pastEvents = computed(() =>
     events.value.filter(({ date }) => isPast(date) && !isToday(date))

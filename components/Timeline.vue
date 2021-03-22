@@ -32,7 +32,13 @@
 
 <script>
 import { defineComponent, ref } from '@nuxtjs/composition-api'
-import { eachWeekOfInterval, isSameWeek } from 'date-fns'
+import {
+  eachWeekOfInterval,
+  isSameWeek,
+  parseISO,
+  startOfDay,
+  endOfDay,
+} from 'date-fns'
 import { useEvents } from '@/composables/useEvents.js'
 
 export default defineComponent({
@@ -58,8 +64,8 @@ export default defineComponent({
       if (!timeline) return []
       let weekNumber = 0
       return timeline.map((milestone) => {
-        const start = new Date(milestone.startDate)
-        const end = new Date(milestone.endDate)
+        const start = startOfDay(new Date(milestone.startDate))
+        const end = endOfDay(new Date(milestone.endDate))
         const weeks = eachWeekOfInterval({ start, end }, { weekStartsOn: 1 })
         const objWeeks = weeks.map((week) => {
           const number = weekNumber
@@ -82,12 +88,12 @@ export default defineComponent({
 
     function findWeekEvents(week, events) {
       return events.filter((e) =>
-        isSameWeek(new Date(week), new Date(e.date), { weekStartsOn: 1 })
+        isSameWeek(new Date(week), parseISO(e.date), { weekStartsOn: 1 })
       )
     }
     function findWeekMilestones(week, milestones) {
       return milestones.filter((e) =>
-        isSameWeek(new Date(week), new Date(e.deadline), { weekStartsOn: 1 })
+        isSameWeek(new Date(week), parseISO(e.deadline), { weekStartsOn: 1 })
       )
     }
 
