@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1616320261",layout:"default",error:a,serverRendered:true,routePath:"\u002Fmilestone\u002F80-checkpoint-cutoff",config:{app:{basePath:"\u002F",assetsPath:"\u002F_nuxt\u002F",cdnURL:a},content:{dbHash:"a2f5bab9"}},globalRefs:{}}}(null));
