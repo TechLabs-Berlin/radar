@@ -1,9 +1,7 @@
 <template>
   <WrapperContentBox :faded="isPastEvent" :emphasized="isCurrentEvent">
     <article class="relative pt-8 lg:pt-0">
-      <ClientOnly>
-        <Stamp v-if="isCurrentEvent" :date="tlEvent.date" />
-      </ClientOnly>
+      <Stamp v-if="isCurrentEvent" :date="eventDate" />
       <header class="flex flex-col items-center mb-8">
         <p
           class="mb-4 text-4xl font-bold text-center"
@@ -29,12 +27,13 @@
             {{ tlEvent.name }}
           </h2>
         </template>
-        <ClientOnly>
+
+        <div>
           <p class="text-lg text-center">
             {{ isPast(eventDate) ? 'Took' : 'Takes' }} place on
-            {{ format(new Date(eventDate), "MMMM do, 'at' h:mm aaaa") }}
+            {{ format(eventDate, "MMMM do, 'at' h:mm aaaa") }}
           </p>
-        </ClientOnly>
+        </div>
       </header>
       <main>
         <!-- BODY  -->
