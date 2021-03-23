@@ -41,35 +41,39 @@
         <div class="pb-10 prose" v-html="$md.render(tlEvent.description)" />
       </main>
       <!-- RESOURCES  -->
-      <aside v-if="showResources && hasResources" class="space-y-8">
-        <EventListItemResourceList
-          v-if="isCurrentEvent && tlEvent.meetings && tlEvent.meetings.length"
-          :resources="tlEvent.meetings"
-          title="Meeting Rooms"
-        />
-
-        <EventListItemResourceList
-          v-if="tlEvent.forms && tlEvent.forms.length"
-          :resources="tlEvent.forms"
-          title="Forms"
-        />
-        <EventListItemResourceList
-          v-if="tlEvent.resources && tlEvent.resources.length"
-          :resources="tlEvent.resources"
-          title="Resources"
-        />
-      </aside>
-      <aside v-else-if="isCurrentEvent">
-        <p class="italic text-center text-gray-400">
-          Links and other resources will be posted soon!
-        </p>
+      <aside v-if="hasResources" class="space-y-8">
+        <template
+          v-if="isInOneHour && tlEvent.meetings && tlEvent.meetings.length"
+        >
+          <EventListItemResourceList
+            :resources="tlEvent.meetings"
+            title="Meeting Rooms"
+          />
+        </template>
+        <template v-else-if="isCurrentEvent">
+          <p class="italic text-center text-gray-400">
+            Links and other resources will be posted soon!
+          </p>
+        </template>
+        <template v-if="showResources">
+          <EventListItemResourceList
+            v-if="tlEvent.forms && tlEvent.forms.length"
+            :resources="tlEvent.forms"
+            title="Forms"
+          />
+          <EventListItemResourceList
+            v-if="tlEvent.resources && tlEvent.resources.length"
+            :resources="tlEvent.resources"
+            title="Resources"
+          />
+        </template>
       </aside>
     </article>
   </WrapperContentBox>
 </template>
 
 <script>
-import { format, isPast } from 'date-fns'
+import { format, isPast, differenceInMinutes } from 'date-fns'
 import { defineComponent, computed } from '@nuxtjs/composition-api'
 
 export default defineComponent({
@@ -97,11 +101,17 @@ export default defineComponent({
       () =>
         props.tlEvent.resources || props.tlEvent.forms || props.tlEvent.meetings
     )
+    const isInOneHour = computed(
+      () => differenceInMinutes(eventDate, new Date()) <= 60
+    )
+    const diff = computed(() => differenceInMinutes(eventDate, new Date()))
     return {
       format,
       isPast,
       eventDate,
       hasResources,
+      isInOneHour,
+      diff,
     }
   },
 })
