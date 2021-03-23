@@ -15,10 +15,6 @@ meetings:
     description: 'Come chat with us! TV-Show themed!'
     type: meeting
     url: https://www.wonder.me/r?id=6f0d4912-b679-4d7f-ab4b-197100eb71d8
-  - title: Skribbl
-    description: Let's test your drawing and guessing skills!
-    type: game
-    url: https://skribbl.io/?4cHF8TISXd3c
 forms:
   - title: 'Feedback: Lightning Talk #1'
     type: form
