@@ -11,6 +11,10 @@ meetings:
     description: 'The main room where we will meet.'
     type: meeting
     url: https://us02web.zoom.us/j/89044089990?pwd=OU9XcytaVDh5VTJaYXgxY0xvS2dUZz09
+  - title: 'Vevox Poll Session'
+    description: 'Word clouds and polls'
+    type: game
+    url: https://vevox.app/#/m/173131964
   - title: 'Wonder Room: TV Shows'
     description: 'Come chat with us! TV-Show themed!'
     type: meeting
