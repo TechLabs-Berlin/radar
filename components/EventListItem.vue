@@ -1,5 +1,8 @@
 <template>
-  <WrapperContentBox :faded="isPastEvent" :emphasized="isCurrentEvent">
+  <WrapperContentBox
+    :faded="isPastDate && !isLive"
+    :emphasized="isCurrentEvent"
+  >
     <article class="relative pt-8 lg:pt-0">
       <Stamp v-if="isCurrentEvent" :date="eventDate" />
       <header class="flex flex-col items-center mb-8">
@@ -30,7 +33,7 @@
 
         <div>
           <p class="text-lg text-center">
-            {{ isPast(eventDate) ? 'Took' : 'Takes' }} place on
+            {{ verb }} place on
             {{ format(eventDate, "MMMM do, 'at' h:mm aaaa") }}
           </p>
         </div>
@@ -43,7 +46,11 @@
       <!-- RESOURCES  -->
       <aside v-if="hasResources" class="space-y-8">
         <template
-          v-if="isInOneHour && tlEvent.meetings && tlEvent.meetings.length"
+          v-if="
+            (isInOneHour || isLive) &&
+            tlEvent.meetings &&
+            tlEvent.meetings.length
+          "
         >
           <EventListItemResourceList
             :resources="tlEvent.meetings"
@@ -55,7 +62,7 @@
             Links and other resources will be posted soon!
           </p>
         </template>
-        <template v-if="showResources">
+        <template v-if="isLive || isPastDate">
           <EventListItemResourceList
             v-if="tlEvent.forms && tlEvent.forms.length"
             :resources="tlEvent.forms"
@@ -73,8 +80,9 @@
 </template>
 
 <script>
-import { format, isPast, differenceInMinutes } from 'date-fns'
+import { format } from 'date-fns'
 import { defineComponent, computed } from '@nuxtjs/composition-api'
+import { useEvent } from '@/composables/useEvent'
 
 export default defineComponent({
   props: {
@@ -97,21 +105,30 @@ export default defineComponent({
   },
   setup(props) {
     const eventDate = new Date(props.tlEvent.date)
+    const { isPastDate, isFutureDate, isLive, isInOneHour } = useEvent({
+      ...props.tlEvent,
+      date: eventDate,
+    })
     const hasResources = computed(
       () =>
         props.tlEvent.resources || props.tlEvent.forms || props.tlEvent.meetings
     )
-    const isInOneHour = computed(
-      () => differenceInMinutes(eventDate, new Date()) <= 60
-    )
-    const diff = computed(() => differenceInMinutes(eventDate, new Date()))
+
+    const verb = computed(() => {
+      if (isLive.value) return 'Taking'
+      if (isPastDate.value) return 'Took'
+      return 'Takes'
+    })
+
     return {
       format,
-      isPast,
       eventDate,
       hasResources,
       isInOneHour,
-      diff,
+      isLive,
+      isPastDate,
+      isFutureDate,
+      verb,
     }
   },
 })

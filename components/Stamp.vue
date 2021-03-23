@@ -9,7 +9,7 @@
 
 <script>
 import { defineComponent, computed } from '@nuxtjs/composition-api'
-import { isFuture, isToday } from 'date-fns'
+import { useEvent } from '@/composables/useEvent'
 export default defineComponent({
   props: {
     date: {
@@ -18,12 +18,12 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const isFutureDate = computed(() => isFuture(props.date))
-    const isTodayDate = computed(() => isToday(props.date))
+    const { isLive, isFutureDate, isTodayDate } = useEvent({ date: props.date })
+
     const text = computed(() => {
+      if (isLive.value) return 'live!'
       if (isTodayDate.value) return 'today!'
-      if (isFutureDate.value) return 'next'
-      return 'live!'
+      return 'next'
     })
     const classNames = computed(() => {
       if (isFutureDate.value && !isTodayDate.value)
@@ -35,6 +35,7 @@ export default defineComponent({
       isTodayDate,
       text,
       classNames,
+      isLive,
     }
   },
 })
