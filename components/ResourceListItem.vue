@@ -33,6 +33,7 @@ export default defineComponent({
       video: 'youtube',
       link: 'link',
       tool: 'tools',
+      game: 'dice',
     }
     return {
       icons,

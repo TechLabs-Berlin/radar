@@ -11,12 +11,28 @@ meetings:
     description: 'The main room where we will meet.'
     type: meeting
     url: https://us02web.zoom.us/j/89044089990?pwd=OU9XcytaVDh5VTJaYXgxY0xvS2dUZz09
-forms: []
-# - title: Feedback
-#   description: Please leave feedback for our first lightning talk!
-#   url: https://techlabsorg.typeform.com/to/Hv5QT1eR
+  - title: 'Wonder Room: TV Shows'
+    description: 'Come chat with us! TV-Show themed!'
+    type: meeting
+    url: https://www.wonder.me/r?id=6f0d4912-b679-4d7f-ab4b-197100eb71d8
+  - title: Skribbl
+    description: Let's test your drawing and guessing skills!
+    type: game
+    url: https://skribbl.io/?4cHF8TISXd3c
+forms:
+  - title: 'Feedback: Lightning Talk #1'
+    type: form
+    description: Please leave your feedback!
+    url: https://techlabsorg.typeform.com/to/pVVp2Rjc
+  - title: 'Feedback: Application & Onboarding Process'
+    type: form
+    description: Please let us know how it went!
+    url: https://techlabsorg.typeform.com/to/dIjB8ka5
 resources:
-  []
+  - title: 'Slides'
+    description: The presentation shown during the event
+    type: slides
+    url: https://docs.google.com/presentation/d/e/2PACX-1vQ24WlYkTmAV2Xb1XBFozhZeN5DGK0hUPhITOAHkwKAOPHWj35xn1O8m3hrwuraVg6Rg7k6G6f0W3oo/pub?start=false&loop=false&delayms=3000
   # - title: Call Recording
   #   type: video
   #   url: https://drive.google.com/file/d/1uzQQ5-hGRSGskheym8H6SIwSW2rRYTq-/view?usp=sharing
