@@ -6,7 +6,11 @@ description: |
   Are you losing the war for your attention? Entrepreneur __Marcel Poelker__, invites you to a public talk on how to achieve your goals and release your inner workhorse.
 
   Marcel is founder and CTO of __[Taledo](https://www.taledo.com/)__, an all-in-one recruiting platform for attracting, managing and hiring the best talent. Over the years, he has helped companies grow and candidates advance their careers.
-meetings: []
+meetings:
+  - title: 'Meet: Lightning Talk #1'
+    description: 'The main room where we will meet.'
+    type: meeting
+    url: https://us02web.zoom.us/j/89044089990?pwd=OU9XcytaVDh5VTJaYXgxY0xvS2dUZz09
 forms: []
 # - title: Feedback
 #   description: Please leave feedback for our first lightning talk!

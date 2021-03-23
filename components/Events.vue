@@ -23,7 +23,13 @@
 
     <!-- CURRENT EVENT  -->
     <div class="mb-8">
-      <EventListItem :tl-event="currentEvent" is-current-event show-permalink />
+      <ClientOnly>
+        <EventListItem
+          :tl-event="currentEvent"
+          is-current-event
+          show-permalink
+        />
+      </ClientOnly>
     </div>
     <!-- MILESTONE  -->
     <div class="mb-8">
