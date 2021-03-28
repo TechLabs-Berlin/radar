@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { useMeta, defineComponent, useRoute } from '@nuxtjs/composition-api'
 import MailchimpForm from '~/components/MailchimpForm'
 
 export default defineComponent({
@@ -39,10 +39,13 @@ export default defineComponent({
   components: {
     MailchimpForm,
   },
-  data() {
-    return {
-      status: this.$route.query.status,
-    }
+  setup() {
+    useMeta({ title: 'Newsletter' })
+
+    const route = useRoute()
+    const status = route.value.query.status
+    return { status }
   },
+  head: {},
 })
 </script>

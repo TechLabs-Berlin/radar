@@ -11,8 +11,13 @@ html,
 .link-grid {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: max-content;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
+}
+@screen md {
+  .link-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* links */

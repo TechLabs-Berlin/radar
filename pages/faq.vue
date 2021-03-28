@@ -4,10 +4,12 @@ import {
   useFetch,
   useContext,
   ref,
+  useMeta,
 } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   setup() {
+    useMeta({ title: 'FAQ' })
     const { $content } = useContext()
 
     const faq = ref(null)
@@ -18,6 +20,7 @@ export default defineComponent({
 
     return { faq, fetchState }
   },
+  head: {},
 })
 </script>
 

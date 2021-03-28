@@ -1,5 +1,9 @@
 <template>
   <div>
+    <!-- MILESTONE  -->
+    <div class="mb-8">
+      <Milestones v-if="milestones.length" :milestones="milestones" />
+    </div>
     <!-- PAST EVENTS  -->
     <div v-if="pastEvents.length">
       <div class="flex items-start justify-end h-8">
@@ -30,10 +34,6 @@
           show-permalink
         />
       </ClientOnly>
-    </div>
-    <!-- MILESTONE  -->
-    <div class="mb-8">
-      <Milestones v-if="milestones.length" :milestones="milestones" />
     </div>
     <!-- FUTURE EVENTS  -->
     <EventsFuture

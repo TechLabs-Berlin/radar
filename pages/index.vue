@@ -1,3 +1,37 @@
+<script>
+import {
+  useFetch,
+  defineComponent,
+  useContext,
+  ref,
+  useMeta,
+} from '@nuxtjs/composition-api'
+export default defineComponent({
+  setup() {
+    const { title } = useMeta()
+    title.value = 'Timeline'
+    const { $content } = useContext()
+    const events = ref()
+    const timeline = ref()
+    const milestones = ref()
+    useFetch(async () => {
+      events.value = await $content('/events').sortBy('date').fetch()
+      timeline.value = await $content('timeline').fetch()
+      milestones.value = await $content('/milestones')
+        .sortBy('deadline')
+        .fetch()
+    })
+
+    return {
+      events,
+      timeline,
+      milestones,
+    }
+  },
+  head: {},
+})
+</script>
+
 <template>
   <main class="h-full bg-gray-50">
     <div v-if="!$fetchState.pending" class="w-full main-grid">
@@ -26,36 +60,6 @@
     </div>
   </main>
 </template>
-
-<script>
-import {
-  useFetch,
-  defineComponent,
-  useContext,
-  ref,
-} from '@nuxtjs/composition-api'
-export default defineComponent({
-  setup() {
-    const { $content } = useContext()
-    const events = ref()
-    const timeline = ref()
-    const milestones = ref()
-    useFetch(async () => {
-      events.value = await $content('/events').sortBy('date').fetch()
-      timeline.value = await $content('timeline').fetch()
-      milestones.value = await $content('/milestones')
-        .sortBy('deadline')
-        .fetch()
-    })
-
-    return {
-      events,
-      timeline,
-      milestones,
-    }
-  },
-})
-</script>
 
 <style lang="scss" scoped>
 .main-grid {

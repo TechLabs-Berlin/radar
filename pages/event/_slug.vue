@@ -20,6 +20,7 @@ import {
   useFetch,
   useRoute,
   ref,
+  useMeta,
 } from '@nuxtjs/composition-api'
 
 export default defineComponent({
@@ -34,10 +35,11 @@ export default defineComponent({
           .limit(1)
           .fetch())
     )
-
+    useMeta(() => ({ title: event.value ? event.value[0].name : 'Event' }))
     return {
       event,
     }
   },
+  head: {},
 })
 </script>

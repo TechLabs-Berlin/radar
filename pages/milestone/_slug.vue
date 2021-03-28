@@ -20,6 +20,7 @@ import {
   useFetch,
   useRoute,
   ref,
+  useMeta,
 } from '@nuxtjs/composition-api'
 import MilestoneListItem from '~/components/MilestoneListItem.vue'
 
@@ -28,7 +29,7 @@ export default defineComponent({
   setup() {
     const { $content } = useContext()
     const route = useRoute()
-    const milestone = ref({})
+    const milestone = ref()
     useFetch(
       async () =>
         (milestone.value = await $content('/milestones')
@@ -36,11 +37,15 @@ export default defineComponent({
           .limit(1)
           .fetch())
     )
+    useMeta(() => ({
+      title: milestone.value ? milestone.value[0].title : 'Milestone',
+    }))
 
     return {
       milestone,
     }
   },
+  head: {},
 })
 </script>
 
