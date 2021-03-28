@@ -4,10 +4,13 @@ import {
   useFetch,
   useContext,
   ref,
+  useMeta,
 } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   setup() {
+    useMeta({ title: 'Media' })
+
     const { $content } = useContext()
 
     const mediaItems = ref(null)
@@ -18,6 +21,7 @@ export default defineComponent({
 
     return { mediaItems, fetchState }
   },
+  head: {},
 })
 </script>
 

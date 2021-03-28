@@ -33,9 +33,12 @@ import {
   defineComponent,
   useContext,
   ref,
+  useMeta,
 } from '@nuxtjs/composition-api'
 export default defineComponent({
   setup() {
+    const { title } = useMeta()
+    title.value = 'Timeline'
     const { $content } = useContext()
     const events = ref()
     const timeline = ref()
@@ -54,6 +57,7 @@ export default defineComponent({
       milestones,
     }
   },
+  head: {},
 })
 </script>
 
