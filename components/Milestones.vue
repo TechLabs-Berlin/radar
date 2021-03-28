@@ -64,7 +64,4 @@ export default defineComponent({
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: max-content;
 }
-.title-link:hover .icon {
-  @apply inline-block;
-}
 </style>

@@ -1,32 +1,3 @@
-<template>
-  <main class="h-full bg-gray-50">
-    <div v-if="!$fetchState.pending" class="w-full main-grid">
-      <div class="w-64 mx-auto timeline">
-        <h3 class="md:hidden title-with-lines">Timeline</h3>
-        <Timeline
-          :timeline="timeline"
-          :events="events"
-          :milestones="milestones"
-        />
-      </div>
-      <div class="events">
-        <Events
-          v-if="events && events.length"
-          :events="events"
-          :milestones="milestones"
-        />
-        <div v-else>
-          <WrapperContentBox>
-            <p class="prose text-center">
-              We are preparing the next term for you.<br />Stay tuned.
-            </p></WrapperContentBox
-          >
-        </div>
-      </div>
-    </div>
-  </main>
-</template>
-
 <script>
 import {
   useFetch,
@@ -60,6 +31,35 @@ export default defineComponent({
   head: {},
 })
 </script>
+
+<template>
+  <main class="h-full bg-gray-50">
+    <div v-if="!$fetchState.pending" class="w-full main-grid">
+      <div class="w-64 mx-auto timeline">
+        <h3 class="md:hidden title-with-lines">Timeline</h3>
+        <Timeline
+          :timeline="timeline"
+          :events="events"
+          :milestones="milestones"
+        />
+      </div>
+      <div class="events">
+        <Events
+          v-if="events && events.length"
+          :events="events"
+          :milestones="milestones"
+        />
+        <div v-else>
+          <WrapperContentBox>
+            <p class="prose text-center">
+              We are preparing the next term for you.<br />Stay tuned.
+            </p></WrapperContentBox
+          >
+        </div>
+      </div>
+    </div>
+  </main>
+</template>
 
 <style lang="scss" scoped>
 .main-grid {

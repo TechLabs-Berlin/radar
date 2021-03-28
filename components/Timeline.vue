@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ 'pt-8': pastEvents.length }" class="w-full">
+  <div class="w-full">
     <div class="w-full p-8 mx-auto bg-white border shadow-lg rounded-xl">
       <ul v-if="compiledTimeline.length" class="space-y-8">
         <li v-for="milestone in compiledTimeline" :key="milestone.startDate">
@@ -39,7 +39,6 @@ import {
   startOfDay,
   endOfDay,
 } from 'date-fns'
-import { useEvents } from '@/composables/useEvents.js'
 
 export default defineComponent({
   props: {
@@ -57,7 +56,6 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const { pastEvents } = useEvents(props.events)
     const compiledTimeline = ref(compileTimeline(props.timeline))
 
     function compileTimeline({ timeline }) {
@@ -97,7 +95,7 @@ export default defineComponent({
       )
     }
 
-    return { compiledTimeline, pastEvents }
+    return { compiledTimeline }
   },
 })
 </script>
