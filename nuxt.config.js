@@ -4,9 +4,6 @@ const GOOGLE_FONT_URL =
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-  generate: {
-    exclude: ['/'],
-  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {

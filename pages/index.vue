@@ -37,18 +37,22 @@ export default defineComponent({
     <div v-if="!$fetchState.pending" class="w-full main-grid">
       <div class="w-64 mx-auto timeline">
         <h3 class="md:hidden title-with-lines">Timeline</h3>
-        <Timeline
-          :timeline="timeline"
-          :events="events"
-          :milestones="milestones"
-        />
+        <ClientOnly>
+          <Timeline
+            :timeline="timeline"
+            :events="events"
+            :milestones="milestones"
+          />
+        </ClientOnly>
       </div>
       <div class="events">
-        <Events
-          v-if="events && events.length"
-          :events="events"
-          :milestones="milestones"
-        />
+        <ClientOnly>
+          <Events
+            v-if="events && events.length"
+            :events="events"
+            :milestones="milestones"
+          />
+        </ClientOnly>
         <div v-else>
           <WrapperContentBox>
             <p class="prose text-center">
