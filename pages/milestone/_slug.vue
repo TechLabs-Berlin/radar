@@ -8,7 +8,11 @@
       <WrapperContentBox v-if="$fetchState.pending"
         >Loading...</WrapperContentBox
       >
-      <MilestoneListItem v-else :milestone="milestone[0]" always-show-tasks />
+      <MilestoneListItem
+        v-else-if="milestone[0]"
+        :milestone="milestone[0]"
+        always-show-tasks
+      />
     </div>
   </main>
 </template>

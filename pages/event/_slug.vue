@@ -8,7 +8,7 @@
       <WrapperContentBox v-if="$fetchState.pending"
         >Loading...</WrapperContentBox
       >
-      <EventListItem v-else :tl-event="event[0]" show-resources />
+      <EventListItem v-else-if="event[0]" :tl-event="event[0]" show-resources />
     </div>
   </main>
 </template>
