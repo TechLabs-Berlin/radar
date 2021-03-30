@@ -18,10 +18,10 @@ meetings:
     type: game
     url: https://vevox.app/#/m/173131964
 forms:
-  []
-  # - title: Registration
-  #   description: Registration for the workshops for the workshop weekend
-  #   url: https://techlabsorg.typeform.com/to/rB1UA0yh#Registration Form
+  - title: 'Feedback: Terminal Workshop'
+    type: form
+    description: Please leave your feedback!
+    url: https://techlabsorg.typeform.com/to/dMrncvs6
 showResources: true
 resources:
   - title: Preparation for Windows Users
