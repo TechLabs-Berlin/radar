@@ -34,6 +34,7 @@ export default defineComponent({
       link: 'link',
       tool: 'tools',
       game: 'dice',
+      nothing: 'thumbs-up',
     }
     return {
       icons,

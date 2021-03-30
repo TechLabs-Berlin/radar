@@ -62,7 +62,9 @@
             Links and other resources will be posted soon!
           </p>
         </template>
-        <template v-if="isLive || isPastDate">
+        <template
+          v-if="isLive || isPastDate || showResources || tlEvent.showResources"
+        >
           <EventListItemResourceList
             v-if="tlEvent.forms && tlEvent.forms.length"
             :resources="tlEvent.forms"
