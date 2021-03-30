@@ -46,13 +46,11 @@ export default defineComponent({
         </ClientOnly>
       </div>
       <div class="events">
-        <ClientOnly>
-          <Events
-            v-if="events && events.length"
-            :events="events"
-            :milestones="milestones"
-          />
-        </ClientOnly>
+        <div v-if="events && events.length">
+          <ClientOnly>
+            <Events :events="events" :milestones="milestones" />
+          </ClientOnly>
+        </div>
         <div v-else>
           <WrapperContentBox>
             <p class="prose text-center">
