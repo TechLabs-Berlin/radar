@@ -32,3 +32,7 @@ resources:
     description: Nothing to do for you :)
     type: nothing
     url: https://media.giphy.com/media/xVTmx9Vw0Y6SE1wb8n/source.gif
+  - title: 'Slides'
+    description: The presentation showed during the workshop
+    type: slides
+    url: https://docs.google.com/presentation/d/e/2PACX-1vThqw-slf5LZhaODT2pthFl1jQjbkVfOR914HZexPV-_7LNMxwqy570dhsqNlZkoeoMqirBzg6UVXow/pub?start=false&loop=false&delayms=3000
