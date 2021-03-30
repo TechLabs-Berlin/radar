@@ -13,17 +13,22 @@ meetings:
     description: 'The main room where we will meet.'
     type: meeting
     url: https://us02web.zoom.us/j/84554906516?pwd=QnNyQkRzYWpwNFRadDNEYTE2RWZnQT09
+  - title: Social Polls
+    description: Link to participate in the special social experiment
+    type: game
+    url: https://vevox.app/#/m/173131964
 forms:
   []
   # - title: Registration
   #   description: Registration for the workshops for the workshop weekend
   #   url: https://techlabsorg.typeform.com/to/rB1UA0yh#Registration Form
+showResources: true
 resources:
-  - title: Preperation for Windows Users!
+  - title: Preparation for Windows Users
     description: Install git bash to use for the terminal workshop!
     type: link
     url: https://gitforwindows.org/
-  - title: Preperation for Mac Users!
-    description: Nothing to do for you!
-  - title: Preperation for Linux Users!
-    description: Nothing to do for you!
+  - title: Preparation for Mac or Linux Users
+    description: Nothing to do for you :)
+    type: nothing
+    url: https://media.giphy.com/media/xVTmx9Vw0Y6SE1wb8n/source.gif
