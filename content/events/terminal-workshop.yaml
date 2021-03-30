@@ -1,19 +1,24 @@
 ---
 slug: terminal-workshop
 name: Terminal Workshop
-date: "2021-03-30T19:30:00+02:00"
+date: '2021-03-30T19:30:00+02:00'
 description: |
   Terminal Workshop!
 
   We will provide the Terminal Workshop where you'll learn how to control the system via a text-based interface through the command-line app.
 
   If you have never worked with the Terminal/Bash/Command Line before we **strongly recommend** to attend this event, to learn the skills required for the Git workshop.
+meetings:
+  - title: 'Meet: Terminal Workshop'
+    description: 'The main room where we will meet.'
+    type: meeting
+    url: https://us02web.zoom.us/j/84554906516?pwd=QnNyQkRzYWpwNFRadDNEYTE2RWZnQT09
 forms:
   []
   # - title: Registration
   #   description: Registration for the workshops for the workshop weekend
   #   url: https://techlabsorg.typeform.com/to/rB1UA0yh#Registration Form
-resources:  
+resources:
   - title: Preperation for Windows Users!
     description: Install git bash to use for the terminal workshop!
     type: link
@@ -22,5 +27,3 @@ resources:
     description: Nothing to do for you!
   - title: Preperation for Linux Users!
     description: Nothing to do for you!
-
-
