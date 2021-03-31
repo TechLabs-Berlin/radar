@@ -1,6 +1,3 @@
-const GOOGLE_FONT_URL =
-  'https://fonts.googleapis.com/css2?family=Livvic:wght@300;400;600;700'
-
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -17,26 +14,7 @@ export default {
         content: process.env.npm_package_description || '',
       },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'preconnect',
-        href: 'https://fonts.gstatic.com',
-        crossorigin: true,
-      },
-      { rel: 'preload', as: 'style', href: `${GOOGLE_FONT_URL}&display=swap` },
-      {
-        rel: 'stylesheet',
-        href: `${GOOGLE_FONT_URL}&display=swap`,
-        media: 'print',
-        onload: 'this.media="all"',
-      },
-    ],
-    noscript: [
-      {
-        link: [{ rel: 'stylesheet', href: `${GOOGLE_FONT_URL}&display=swap` }],
-      },
-    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -58,38 +36,23 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/composition-api',
     '@nuxt/image',
+    '@nuxtjs/google-fonts',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/markdownit',
   ],
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
-
-  // PWA module configuration: https://go.nuxtjs.dev/pwa
-  pwa: {
-    manifest: {
-      name: 'TechLabs Berlin Semester Radar',
-      short_name: 'TechLabs Berlin',
-      lang: 'en',
+  googleFonts: {
+    families: {
+      Livvic: [300, 400, 600, 700],
     },
-    meta: {
-      name: 'TechLabs Berlin Semester Radar',
-      author: 'TechLabs Berlin e.V.',
-      description:
-        'The TechLabs Berlin semester radar shows all the important semester information at a glance',
-      lang: 'en',
-      nativeUI: true,
-      appleStatusBarStyle: 'default',
-    },
+    display: 'swap',
+    download: true,
+    subsets: 'latin',
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
