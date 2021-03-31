@@ -5,12 +5,10 @@
         ><TIcon icon="chevron-left" class="inline-block" /> Back to the
         Timeline</NuxtLink
       >
-      <WrapperContentBox v-if="$fetchState.pending"
-        >Loading...</WrapperContentBox
-      >
+
       <MilestoneListItem
-        v-else-if="milestone[0]"
-        :milestone="milestone[0]"
+        v-if="milestone"
+        :milestone="milestone"
         always-show-tasks
       />
     </div>
@@ -18,42 +16,31 @@
 </template>
 
 <script>
-import {
-  defineComponent,
-  useContext,
-  useFetch,
-  useRoute,
-  ref,
-  useMeta,
-} from '@nuxtjs/composition-api'
-import MilestoneListItem from '~/components/MilestoneListItem.vue'
+import { defineComponent } from '@nuxtjs/composition-api'
+import MilestoneListItem from '@/components/MilestoneListItem'
 
 export default defineComponent({
   components: { MilestoneListItem },
-  setup() {
-    const { $content } = useContext()
-    const route = useRoute()
-    const milestone = ref()
-    useFetch(
-      async () =>
-        (milestone.value = await $content('/milestones')
-          .where({ slug: route.value.params.slug })
-          .limit(1)
-          .fetch())
-    )
-    useMeta(() => ({
-      title: milestone.value ? milestone.value[0].title : 'Milestone',
-    }))
-
+  async asyncData({ $content, params }) {
+    const milestone = await $content('milestones', params.slug).fetch()
     return {
       milestone,
     }
   },
-  head: {},
+  data() {
+    return {
+      milestone: null,
+    }
+  },
+  head() {
+    return {
+      title: this.milestone.title,
+    }
+  },
 })
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 .link-grid {
   display: grid;
   grid-gap: 1rem;
