@@ -24,15 +24,23 @@ forms:
     url: https://techlabsorg.typeform.com/to/dMrncvs6
 showResources: true
 resources:
-  - title: Preparation for Windows Users
-    description: Install git bash to use for the terminal workshop!
-    type: link
-    url: https://gitforwindows.org/
-  - title: Preparation for Mac or Linux Users
-    description: Nothing to do for you :)
-    type: nothing
-    url: https://media.giphy.com/media/xVTmx9Vw0Y6SE1wb8n/source.gif
   - title: 'Slides'
     description: The presentation showed during the workshop
     type: slides
     url: https://docs.google.com/presentation/d/e/2PACX-1vThqw-slf5LZhaODT2pthFl1jQjbkVfOR914HZexPV-_7LNMxwqy570dhsqNlZkoeoMqirBzg6UVXow/pub?start=false&loop=false&delayms=3000
+  - title: 'Recording'
+    description: Watch the Terminal Workshop
+    type: video
+    url: https://drive.google.com/file/d/1QGZBRQuKuwaqiKLSKRfG1vnn9M93OkMz/view?usp=sharing
+  - title: Git Bash
+    description: For Windows users
+    type: link
+    url: https://gitforwindows.org/
+  - title: Command Line Cheat-Sheet
+    description: Useful collection of commands for the Terminal
+    type: link
+    url: https://cheatography.com/davechild/cheat-sheets/linux-command-line/
+  - title: Command Line Power User
+    description: Short free course from Wes Bos to further your knowledge
+    type: link
+    url: https://commandlinepoweruser.com/
