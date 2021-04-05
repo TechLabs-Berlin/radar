@@ -1,25 +1,29 @@
 ---
-  slug: lightning-talk-2
-  name: "Lightning Talk #2"
-  date: "2021-04-06T19:30:00+02:00"
-  description: |
-    Experts from various tech fields will give insights about the technology they use!
-  meetings:
-    []
+slug: career-changers
+name: 'Career Changers: Discussion Panel'
+date: '2021-04-06T19:30:00+02:00'
+description: |
+  We invited seven guests to talk about their transition into new careers. From journalists to a barista, this diverse group of professionals decided to take the plunge and pursue new paths. They prove that you are not defined by your careers, and that you get to decide when to step away from your current job to pursue something that makes you happier.
 
-  forms: 
-    []
-  # - title: Feedback
-  #   description: Please leave feedback for our first lightning talk!
-  #   url: https://techlabsorg.typeform.com/to/Hv5QT1eR
-  resources: 
-    []
-    # - title: Call Recording       
-    #   type: video
-    #   url: https://drive.google.com/file/d/1uzQQ5-hGRSGskheym8H6SIwSW2rRYTq-/view?usp=sharing
-    # - title: Moritz Entrepreneurship Presentation Part 1       
-    #   type: video
-    #   url: https://drive.google.com/file/d/1SNi0eXrVnowlM13ooljPvM_1E7bF0iZ4/view?usp=sharing
-    # - title: Moritz Entrepreneurship Presentation Part 2       
-    #   type: video
-    #   url: https://drive.google.com/file/d/1GhXEl1xM8OM44brVYjz6khZo3Zcdn8Qo/view?usp=sharing
+  Hosted by Zubin J., the event will be on a panel format, with prepared questions from Zubin and, of course, any questions **you** might have.
+meetings:
+  - title: 'Career Changers: Discussion Panel'
+    description: 'The main room where we will meet.'
+    type: meeting
+    url: https://us02web.zoom.us/j/88320184543?pwd=N040YkhMZkxnZ0UveHFSZkZOM01pZz09
+
+forms: []
+# - title: Feedback
+#   description: Please leave feedback for our first lightning talk!
+#   url: https://techlabsorg.typeform.com/to/Hv5QT1eR
+resources:
+  []
+  # - title: Call Recording
+  #   type: video
+  #   url: https://drive.google.com/file/d/1uzQQ5-hGRSGskheym8H6SIwSW2rRYTq-/view?usp=sharing
+  # - title: Moritz Entrepreneurship Presentation Part 1
+  #   type: video
+  #   url: https://drive.google.com/file/d/1SNi0eXrVnowlM13ooljPvM_1E7bF0iZ4/view?usp=sharing
+  # - title: Moritz Entrepreneurship Presentation Part 2
+  #   type: video
+  #   url: https://drive.google.com/file/d/1GhXEl1xM8OM44brVYjz6khZo3Zcdn8Qo/view?usp=sharing
