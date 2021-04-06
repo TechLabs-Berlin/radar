@@ -11,6 +11,10 @@ meetings:
     description: 'The main room where we will meet.'
     type: meeting
     url: https://us02web.zoom.us/j/88320184543?pwd=N040YkhMZkxnZ0UveHFSZkZOM01pZz09
+  - title: Polls
+    description: Link to participate in the polls section
+    type: game
+    url: vevox.app/#/m/110397865
 
 forms:
   - title: Feedback
