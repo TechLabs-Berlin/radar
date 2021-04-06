@@ -12,10 +12,10 @@ meetings:
     type: meeting
     url: https://us02web.zoom.us/j/88320184543?pwd=N040YkhMZkxnZ0UveHFSZkZOM01pZz09
 
-forms: []
-# - title: Feedback
-#   description: Please leave feedback for our first lightning talk!
-#   url: https://techlabsorg.typeform.com/to/Hv5QT1eR
+forms:
+  - title: Feedback
+    description: Please leave feedback for our this week's event!
+    url: https://techlabsorg.typeform.com/to/W6akrzQU
 resources:
   []
   # - title: Call Recording
