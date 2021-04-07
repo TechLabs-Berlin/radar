@@ -1,14 +1,13 @@
 ---
-slug: git-workshop
 name: Git Workshop
-date: "2021-04-17T10:00:00+02:00"
+date: '2021-04-17T10:00:00+02:00'
 description: |
   Git Workshop!
 
   Git is a tool which allows you to work collaborative with other people on a software project, preventing mistakes and allowing to return to a previous state. TechLabs required the usage of Git from all Techies during the project phase. 
-  
+
   We **strongly recommend** to attend this session, to be able to use Git. It will be an interactive workshop of 3h.
-  
+
 forms:
   []
   # - title: Registration
@@ -20,5 +19,3 @@ resources:
   #   description: The schedule with all workshops
   #   type: link
   #   url: https://www.notion.so/techlabs/cd6dc42841634c5393b14585671be523?v=03b78d40f5c64913afe7bfdfd5c45477
-
-
