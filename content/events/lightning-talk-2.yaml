@@ -21,13 +21,11 @@ forms:
     description: Please leave feedback for our this week's event!
     url: https://techlabsorg.typeform.com/to/W6akrzQU
 resources:
-  []
-  # - title: Call Recording
-  #   type: video
-  #   url: https://drive.google.com/file/d/1uzQQ5-hGRSGskheym8H6SIwSW2rRYTq-/view?usp=sharing
-  # - title: Moritz Entrepreneurship Presentation Part 1
-  #   type: video
-  #   url: https://drive.google.com/file/d/1SNi0eXrVnowlM13ooljPvM_1E7bF0iZ4/view?usp=sharing
-  # - title: Moritz Entrepreneurship Presentation Part 2
-  #   type: video
-  #   url: https://drive.google.com/file/d/1GhXEl1xM8OM44brVYjz6khZo3Zcdn8Qo/view?usp=sharing
+  - title: 'Slides'
+    description: The presentation shown during the event
+    type: slides
+    url: https://docs.google.com/presentation/d/e/2PACX-1vSHqE211m6T2vSnhgnb77E5LYMeZ-R417J3NyL_UP9368L2pArK5jrK824AzSQpC_3DBi3xxZ-LTBmK/pub?start=false&loop=false&delayms=3000
+  - title: 'Recording'
+    description: The recording of the event
+    type: video
+    url: https://drive.google.com/file/d/1K9y78BYlgNSLZItSbQeQx1h-FPGfd4Zp/view?usp=sharing
