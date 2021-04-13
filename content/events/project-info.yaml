@@ -11,6 +11,10 @@ meetings:
     description: 'The main room where we will meet.'
     type: meeting
     url: https://stroeer.zoom.us/j/6376720436
+  - title: Q&A
+    description: Write your questions here and we'll answer at the end of the event.
+    type: form
+    url: https://vevox.app/#/m/110397865
 forms: []
 # - title: Feedback
 #   description: Please leave feedback for our Kick-Off Event!
