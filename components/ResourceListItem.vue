@@ -1,7 +1,7 @@
 <template>
   <a
     :href="resource.url"
-    target="blank"
+    target="_blank"
     class="flex items-start w-full h-full px-4 py-3 text-left transition-all duration-100 ease-in-out border-2 rounded-lg hover:border-blue-600 hover:shadow-lg hover:text-blue-600"
   >
     <div class="flex space-x-4">
