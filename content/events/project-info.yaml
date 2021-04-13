@@ -15,10 +15,19 @@ meetings:
     description: Write your questions here and we'll answer at the end of the event.
     type: form
     url: https://vevox.app/#/m/198368616
-forms: []
-# - title: Feedback
-#   description: Please leave feedback for our Kick-Off Event!
-#   url: https://techlabsorg.typeform.com/to/GS9FtMPe
+  - title: Wonder Room
+    description: Get in and find your group!
+    type: game
+    url: http://escape.verhellen.be/
+  - title: Escape Room Game
+    description: A Murderer is on the loose...
+    type: game
+    url: http://escape.verhellen.be/
+forms:
+  - title: Feedback
+    type: form
+    description: Please leave feedback for our Project Info Session Event
+    url: https://techlabsorg.typeform.com/to/eAUNSlXW
 resources:
   - title: Slide Deck
     description: Our slides we showed during the event.
