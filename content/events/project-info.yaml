@@ -2,10 +2,15 @@
 name: Project Info Session
 date: '2021-04-13T19:30:00+02:00'
 description: |
-  You are unsure what you need to do in the project phase? How do you find team partners or an idea? What did happen last semester? 
+  This session will provide you with all information you need to enter and complete the Project Phase.
 
-  We will answer all these questions and more during this event!
+  We'll get into details about generating ideas, pitching, selecting teams and mentors, project development, and final deliverables. And, of course, answer any extra questions you might have.
 
+meetings:
+  - title: 'Project Info Session'
+    description: 'The main room where we will meet.'
+    type: meeting
+    url: https://stroeer.zoom.us/j/6376720436
 forms: []
 # - title: Feedback
 #   description: Please leave feedback for our Kick-Off Event!
@@ -15,10 +20,6 @@ resources: []
 #   description: Our slides we showed during the event.
 #   type: slides
 #   url: https://docs.google.com/presentation/d/1znit4Um-c22m7tVu75g8Mz_fcM-WIIHQ9m1gIckb5WY/edit?usp=sharing
-# - title: Meeting Room
-#   description: The main room where we will meet.
-#   type: meeting
-#   url: https://us02web.zoom.us/j/89625663530?pwd=UEdkYklnUnZKbmN0YjMxN3BYRitHUT09
 # - title: "Recording"
 #   description: The recording of the info presentation
 #   type: video
