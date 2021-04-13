@@ -18,11 +18,11 @@ meetings:
   - title: Wonder Room
     description: Get in and find your group!
     type: game
-    url: http://escape.verhellen.be/
+    url: https://www.wonder.me/r?id=60f06e54-ab00-4558-8c4e-b8cc383b9f57
   - title: Escape Room Game
     description: A Murderer is on the loose...
     type: game
-    url: https://www.wonder.me/r?id=60f06e54-ab00-4558-8c4e-b8cc383b9f57
+    url: http://escape.verhellen.be/
 forms:
   - title: Feedback
     type: form
