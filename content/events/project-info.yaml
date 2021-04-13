@@ -15,13 +15,25 @@ forms: []
 # - title: Feedback
 #   description: Please leave feedback for our Kick-Off Event!
 #   url: https://techlabsorg.typeform.com/to/GS9FtMPe
-resources: []
-# - title: Slide Deck
-#   description: Our slides we showed during the event.
-#   type: slides
-#   url: https://docs.google.com/presentation/d/1znit4Um-c22m7tVu75g8Mz_fcM-WIIHQ9m1gIckb5WY/edit?usp=sharing
-# - title: "Recording"
-#   description: The recording of the info presentation
-#   type: video
-#   url: https://drive.google.com/file/d/1D7zlqp3eK2psGkOyl8SYpDre5pKjNNDt/view?usp=sharing
+resources:
+  - title: Slide Deck
+    description: Our slides we showed during the event.
+    type: slides
+    url: https://docs.google.com/presentation/d/e/2PACX-1vStLu24nxWZzbteE0uB7Fnf7PdqkOs3Bfn8mIja0y0kx1EEdI-dD5vpXw2SPdvTmoVJ2Lut1Hjf4IhE/pub?start=false&loop=false&delayms=3000
+  - title: Project Pitches - ST20
+    description: The recording of the ST20 Project Pitching Session
+    type: video
+    url: https://drive.google.com/file/d/1FN8jAaUkcslNobALNRP3kpOwcBNFOguv/view?usp=sharing
+  - title: Final Event - ST20
+    description: The recording of the ST20 Final Event
+    type: video
+    url: https://drive.google.com/file/d/1fXMPJtwCavtqdsrUyFu_L0OHYk62Dy52/view?usp=sharing
+  - title: Project Pitches - WT20/21
+    description: The recording of the WT20/21 Project Pitching Session
+    type: video
+    url: https://drive.google.com/file/d/10B3OqgHaS1Om-PxGwxocH0ek0b-2PqCE/view?usp=sharing
+  - title: Final Event - WT20/21
+    description: The recording of the WT20/21 Final Event
+    type: video
+    url: https://www.youtube.com/watch?v=gTOKrfjXu9E
 
