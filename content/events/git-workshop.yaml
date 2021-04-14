@@ -1,21 +1,27 @@
 ---
 name: Git Workshop
-date: '2021-04-17T10:00:00+02:00'
+date: "2021-04-17T10:00:00+02:00"
 description: |
-  Git Workshop!
+  In our 3h interactive Git Workshop we will teach you all the Git skills you need for your upcoming project phase.
 
-  Git is a tool which allows you to work collaborative with other people on a software project, preventing mistakes and allowing to return to a previous state. TechLabs required the usage of Git from all Techies during the project phase. 
+  Git is a tool which allows you to create save points of the current status of your project and return back to it anytime. Git allows you to play around with your code, without being worried to break it! 
+  Even better: This does not only work alone, but also working together with other people! Git (& our used online service GitHub) is designed in a way that multiple people can work on a project at the same time easily.
 
-  We **strongly recommend** to attend this session, to be able to use Git. It will be an interactive workshop of 3h.
+  We **strongly recommend** to attend this session, to be able to use Git, since TechLabs requires the usage of Git from all Techies during the project phase. It will be an interactive workshop of 3h.
 
+  We really want to give you the best experience for learning Git, so we put in the effort to create an interactive workshop, where we will teach you the skills and then give you the chance to practice them in breakout rooms guided by our mentors. To not waste time on installation, Git needs to be installed and set up properly to be used for the workshop! For setting up and testing if you configured everything we require everyone who wants to attend to follow the preperation steps **until Friday the 16th of April 4pm**:
 forms:
   []
   # - title: Registration
   #   description: Registration for the workshops for the workshop weekend
   #   url: https://techlabsorg.typeform.com/to/rB1UA0yh#Registration Form
+showResources: true
 resources:
-  []
-  # - title: Schedule
-  #   description: The schedule with all workshops
-  #   type: link
-  #   url: https://www.notion.so/techlabs/cd6dc42841634c5393b14585671be523?v=03b78d40f5c64913afe7bfdfd5c45477
+  - title: Registration & Preperation
+    description: Follow all the steps to register and prepare for the git workshop!
+    type: link
+    url: https://www.notion.so/techlabs/Tasks-to-do-before-the-GIT-workshop-ed5f297d05d44029b124bc12df4db03d
+  - title: "Recording from last semester"
+    description: If you already want to know what we will teach, here is a recording from last semester
+    type: video
+    url: https://www.notion.so/techlabs/Tasks-to-do-before-the-GIT-workshop-ed5f297d05d44029b124bc12df4db03d#326054068a45438584b76e81911a1807
