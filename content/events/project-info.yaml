@@ -33,6 +33,10 @@ resources:
     description: Our slides we showed during the event.
     type: slides
     url: https://docs.google.com/presentation/d/e/2PACX-1vStLu24nxWZzbteE0uB7Fnf7PdqkOs3Bfn8mIja0y0kx1EEdI-dD5vpXw2SPdvTmoVJ2Lut1Hjf4IhE/pub?start=false&loop=false&delayms=3000
+  - title: ST21 Project Info Session Recording
+    description: The recording of this event
+    type: video
+    url: https://drive.google.com/file/d/1MOFJMA5PcCBW9P1Mj-CeRoz9OJtJc-7L/view?usp=sharing
   - title: Project Pitches - ST20
     description: The recording of the ST20 Project Pitching Session
     type: video
