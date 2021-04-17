@@ -4,7 +4,7 @@ date: "2021-04-17T10:00:00+02:00"
 description: |
   In our 3h interactive Git Workshop we will teach you all the Git skills you need for your upcoming project phase.
 
-  Git is a tool which allows you to create save points of the current status of your project and return back to it anytime. Git allows you to play around with your code, without being worried to break it! 
+  Git is a tool which allows you to create save points of the current status of your project and return back to it anytime. Git allows you to play around with your code, without being worried to break it!
   Even better: This does not only work alone, but also working together with other people! Git (& our used online service GitHub) is designed in a way that multiple people can work on a project at the same time easily.
 
   We **strongly recommend** to attend this session, to be able to use Git, since TechLabs requires the usage of Git from all Techies during the project phase. It will be an interactive workshop of 3h.
@@ -17,12 +17,13 @@ meetings:
     url: "https://www.notion.so/techlabs/Meeting-Link-0f20378d447b408e9d52b8b651c11864"
 forms:
   - title: Feedback
-    description: Please leave feedback for our Kick-Off Event!
+    description: Please leave feedback about the workshop
+    type: form
     url: https://techlabsorg.typeform.com/to/CUFOFuXu
 showResources: true
 resources:
-  - title: Registration & Preperation
-    description: Follow all the steps to register and prepare for the git workshop!
+  - title: Registration & Preparation
+    description: Follow all the steps to register and prepare for workshop
     type: link
     url: https://www.notion.so/techlabs/Tasks-to-do-before-the-GIT-workshop-ed5f297d05d44029b124bc12df4db03d
   - title: Cheat Sheet
