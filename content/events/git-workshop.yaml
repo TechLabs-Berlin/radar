@@ -10,11 +10,11 @@ description: |
   We **strongly recommend** to attend this session, to be able to use Git, since TechLabs requires the usage of Git from all Techies during the project phase. It will be an interactive workshop of 3h.
 
   We really want to give you the best experience for learning Git, so we put in the effort to create an interactive workshop, where we will teach you the skills and then give you the chance to practice them in breakout rooms guided by our mentors. To not waste time on installation, Git needs to be installed and set up properly to be used for the workshop! For setting up and testing if you configured everything we require everyone who wants to attend to follow the preperation steps **until Friday the 16th of April 4pm**:
-meetings:
-  - title: "No Meeting Link in Radar"
-    description: "The meeting link will be send to your e-mail you used for the set-up at 9:30am"
-    type: meeting
-    url: "https://www.notion.so/techlabs/Meeting-Link-0f20378d447b408e9d52b8b651c11864"
+# meetings:
+#   - title: "No Meeting Link in Radar"
+#     description: "The meeting link will be send to your e-mail you used for the set-up at 9:30am"
+#     type: meeting
+#     url: "https://www.notion.so/techlabs/Meeting-Link-0f20378d447b408e9d52b8b651c11864"
 forms:
   - title: Feedback
     description: Please leave feedback about the workshop
@@ -22,15 +22,19 @@ forms:
     url: https://techlabsorg.typeform.com/to/CUFOFuXu
 showResources: true
 resources:
-  - title: Registration & Preparation
-    description: Follow all the steps to register and prepare for workshop
+  - title: Git Preperation
+    description: Follow all the steps to prepare Git!
     type: link
     url: https://www.notion.so/techlabs/Tasks-to-do-before-the-GIT-workshop-ed5f297d05d44029b124bc12df4db03d
   - title: Cheat Sheet
     description: Cheat Sheet to follow along during the presentation
     type: link
     url: https://www.notion.so/techlabs/Git-Cheat-Sheet-for-Workshop-0bd6770a14764a4f9b0948a7ca9572c6
-  - title: "Recording from last semester"
-    description: If you already want to know what we will teach, here is a recording from last semester
+  - title: "Recording from this semester"
+    description: Recording from this semester
     type: video
-    url: https://www.notion.so/techlabs/Tasks-to-do-before-the-GIT-workshop-ed5f297d05d44029b124bc12df4db03d#326054068a45438584b76e81911a1807
+    url: https://drive.google.com/file/d/1rcfCdIiNPRZHNokzeiQDj5-5KInK5-qJ/view?usp=sharing
+  - title: "Slides"
+    description: "Slides for the session"
+    type: slides
+    url: https://drive.google.com/file/d/1mGmXeo_3HOfUrZppihvBS-kU7puH_nFI/view?usp=sharing
