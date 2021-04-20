@@ -15,12 +15,9 @@ description: |
   2. Ideation in break-out rooms
   3. Debrief with the whole group
 forms:
-  - title: Registration Form
-    description: Please register until Monday, 23:59!
-    url: https://techlabsorg.typeform.com/to/bp4pqAZw
-# - title: Feedback
-#   description: Please leave feedback for our Ideation Session!
-#   url: https://techlabsorg.typeform.com/to/fEd1vDI6
+  - title: Feedback
+    description: Please leave feedback for our Ideation Session!
+    url: https://techlabsorg.typeform.com/to/dpLdXQPb
 showResources: true
 resources:
   # []
