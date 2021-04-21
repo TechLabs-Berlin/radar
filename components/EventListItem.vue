@@ -59,7 +59,7 @@
         </template>
         <template v-else-if="isCurrentEvent">
           <p class="italic text-center text-gray-400">
-            Links and other resources will be posted soon!
+            Other event links will be posted soon!
           </p>
         </template>
         <template
