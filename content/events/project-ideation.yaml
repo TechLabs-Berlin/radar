@@ -7,18 +7,21 @@ description: |
   You will be able to learn about and participate in ideation methods from the Design Thinking Space.
   Of course this will be guided by TechLabs Berlin team members and Design Thinking Experts!
 
+  **Registration is open until Monday, 23:59**
+
   Our Agenda:
 
   1. Introduction to our ideation format
   2. Ideation in break-out rooms
   3. Debrief with the whole group
-forms: []
-# - title: Feedback
-#   description: Please leave feedback for our Ideation Session!
-#   url: https://techlabsorg.typeform.com/to/fEd1vDI6
+forms:
+  - title: Feedback
+    description: Please leave feedback for our Ideation Session!
+    url: https://techlabsorg.typeform.com/to/dpLdXQPb
+showResources: true
 resources:
   # []
-  - title: 'Miro Board Learning Board'
+  - title: "Miro Board Learning Board"
     description: Please use this Miro Board to familiarize yourself with Miro
     type: tool
     url: https://miro.com/app/board/o9J_lfbo188=/
