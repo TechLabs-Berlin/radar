@@ -1,13 +1,13 @@
 ---
   slug: final-event
-  name: Final Event
+  title: Final Event
   date: "2021-02-11T19:30:00+01:00"
   description: |
     In our Final Event we will revisit your TechLabs journey this semester, present your
     project work and celebrate your collaborative learning effort together!
 
     After a short introduction, each group has the chance to present their elevator pitch to their
-    fellow participants. Afterwards we'll have a short feedback round as well as a Q&A. 
+    fellow participants. Afterwards we'll have a short feedback round as well as a Q&A.
 
     Running Order:
     1. REpsyched
@@ -24,7 +24,7 @@
 
     To wrap it up we will have a open network session where you can celebrate together your great work!
   forms: []
-  resources: 
+  resources:
   - title: "Information for Pitch and Submission"
     type: link
     url: https://www.notion.so/techlabs/Requirements-for-Techies-Summary-adebfd1a49e64e5e882e67edbf915505

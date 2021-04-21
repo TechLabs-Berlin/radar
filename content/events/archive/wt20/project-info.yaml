@@ -1,17 +1,17 @@
 ---
   slug: project-info
-  name: Project Info
+  title: Project Info
   date: "2020-11-12T19:30:00+01:00"
   description: |
-    You are unsure what you need to do in the project phase? How do you find team partners or an idea? What did happen last semester? 
+    You are unsure what you need to do in the project phase? How do you find team partners or an idea? What did happen last semester?
 
     We will answer all these questions and more during this event!
 
-  forms: 
+  forms:
   - title: Feedback
     description: Please leave feedback for our Kick-Off Event!
     url: https://techlabsorg.typeform.com/to/GS9FtMPe
-  resources: 
+  resources:
   - title: Slide Deck
     description: Our slides we showed during the event.
     type: slides

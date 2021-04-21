@@ -17,7 +17,7 @@
             <h2
               class="relative inline-block mb-1 text-2xl font-bold hover:underline"
             >
-              {{ tlEvent.name }}
+              {{ tlEvent.title }}
               <div
                 class="absolute top-0 right-0 hidden pl-2 text-base text-blue-600 transform translate-x-full translate-y-1 icon"
               >
@@ -27,7 +27,7 @@
         </template>
         <template v-else>
           <h2 class="inline-block mb-1 text-2xl font-bold">
-            {{ tlEvent.name }}
+            {{ tlEvent.title }}
           </h2>
         </template>
 

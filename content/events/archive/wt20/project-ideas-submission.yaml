@@ -1,16 +1,16 @@
 ---
   slug: project-ideas-submission
-  name: Project Ideas Submission
+  title: Project Ideas Submission
   date: "2020-11-24T23:30:00+01:00"
   description: |
-    Hope you are had a great week and that you got the most out from the Project Ideation session to help you come up with the best possible ideas for the project. 
-    That said you can now submit your project ideas to us. 
-    
+    Hope you are had a great week and that you got the most out from the Project Ideation session to help you come up with the best possible ideas for the project.
+    That said you can now submit your project ideas to us.
+
     For that, just fill the Typeform below. Please, note that you should have your presentation pitch deck ready to be attached.
     You can check out the sample pitch deck below.
 
     We are super excited to receive your project ideas.
-  forms: 
+  forms:
     - title: Submission Link
       description: The Typeform for your submission.
       url: https://techlabsorg.typeform.com/to/gAiksYF5

@@ -1,6 +1,6 @@
 ---
   slug: project-ideation
-  name: Project Ideation Session
+  title: Project Ideation Session
   date: "2020-11-17T19:30:00+01:00"
   description: |
     We will foster your creativity to imagine project ideas based on real-world problems.
@@ -13,7 +13,7 @@
     1. Introduction to our ideation format
     2. Ideation in break-out rooms
     3. Debrief with the whole group
-  forms: 
+  forms:
   - title: Feedback
     description: Please leave feedback for our Ideation Session!
     url: https://techlabsorg.typeform.com/to/fEd1vDI6

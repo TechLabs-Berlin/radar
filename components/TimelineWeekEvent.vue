@@ -14,7 +14,7 @@
     <div>
       <p class="font-semibold" :class="{ 'line-through': !isFutureEvent }">
         <NuxtLink :to="`/event/${event.slug}`" class="regular-link">{{
-          event.name
+          event.title
         }}</NuxtLink>
       </p>
       <p>

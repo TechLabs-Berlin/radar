@@ -1,6 +1,6 @@
 ---
   slug: lightning-talk-4
-  name: "Lightning Talk #4"
+  title: "Lightning Talk #4"
   date: "2021-01-26T19:30:00+01:00"
   description: |
     **NEXT Data Service AG** delivers “AI-driven Data Services”. As innovation partner we initiate, invent and proof AI-Services + deliver and provide them as Full-Service-Provider mostly in Software-as-a-Service (SaaS)-contracts.
@@ -10,7 +10,7 @@
   # - title: Feedback
   #   description: Please leave feedback for our Speed Dating Session!
   #   url: https://techlabsorg.typeform.com/to/un22x1
-  resources: 
+  resources:
   - title: "Zoom Meeting"
     description: "Password for Zoom Meeting: 81412026"
     type: meeting

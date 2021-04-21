@@ -1,6 +1,6 @@
 ---
   slug: project-kick-off
-  name: Project Kick-Off
+  title: Project Kick-Off
   date: "2020-12-08T19:30:00+01:00"
   description: |
     On this event we will officially kick-off the project phase. Main points will be a recap of how this phase
@@ -13,19 +13,19 @@
       * Project Management Roles & TechLabs
       * Communication Principles
       * Planning Processes & Tools
-      * Responsibilities      
-      * Where to learn more      
+      * Responsibilities
+      * Where to learn more
     2. Break-Out Session per Project
       * Get to know your team – let's play a game!
       * Get to know your mentor
       * Plan your jour fixe
       * Talk about what you will start with
       * Distribute roles
-  forms: 
+  forms:
   - title: Feedback
     description: Please leave feedback for our Kick-Off Event!
     url: https://techlabsorg.typeform.com/to/O7rdPudn
-  resources: 
+  resources:
   # - title: Slide Deck
   #   description: Our slides we showed during the event.
   #   type: slides

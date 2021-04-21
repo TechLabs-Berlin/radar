@@ -1,14 +1,14 @@
 ---
   slug: project-pitches
-  name: Project Pitches
+  title: Project Pitches
   date: "2020-11-26T19:30:00+01:00"
   description: |
-    We received 24 Project Pitches from you, and are super excited to hear you tell us about it. 
-    In this event, you'll present your idea to all techies, in a short, 2-3 minutes presentation 
+    We received 24 Project Pitches from you, and are super excited to hear you tell us about it.
+    In this event, you'll present your idea to all techies, in a short, 2-3 minutes presentation
     (there are a lot of decks, so please be mindful of your presentation time!).
 
     You will all have the change to make questions and later select your favorite 3 projects. We'll then assign the teams and get it all started!
-    
+
     ## Project Pitch Decks
 
     These are the pitches being presented in this event (and that's also the presentation order):
@@ -39,7 +39,7 @@
     24. [Urs Schmidt - H8 Identifier](https://drive.google.com/file/d/1q0oZk03hIJItXcWl1NNLsT8wiG8GCpKb/view?usp=sharing)
 
     (*click to view*)
-  forms: 
+  forms:
   - title: Feedback
     description: Please leave feedback for our Kick-Off Event!
     url: https://techlabsorg.typeform.com/to/DsoDLEfG
