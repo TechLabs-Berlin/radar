@@ -2,11 +2,12 @@
 title: Project Pitching Session
 date: '2021-04-27T19:30:00+02:00'
 description: |
-  We will received Project Pitches from you, and are super excited to hear you tell us about it.
-  In this event, you'll present your idea to all techies, in a short, 2-3 minutes presentation
-  (there are a lot of decks, so please be mindful of your presentation time!).
+  After receiving all the Project Pitches, we are super excited to hear you presenting them!
 
-  You will all have the change to make questions and later select your favorite 3 projects. We'll then assign the teams and get it all started!
+  Your presentation should be short, 2-3 minutes long as there will be a lot of pitches and you should be mindful of others presenting their ideas, too.
+  Everyone will have the chance to ask questions and later select the favorite 3 projects.
+
+  We'll then assign the teams according to your selections and get it all started!
 showResources: true
 forms:
   []
@@ -15,6 +16,10 @@ resources:
     type: form
     description: Use this form to submit your pitch
     url: https://techlabsorg.typeform.com/to/UH73PM6J
+  - title: Pitch Deck Template
+    type: slides
+    description: Example template for your pitch deck
+    url: https://docs.google.com/presentation/d/1mHh2_3CeoGA-a2FLyrCPOlf0fufzNnRMhF9m7PZwstk/edit?usp=sharing
   # - title: Knowledge Base
   #   description: A comprehensive document of all you need to know for the Project Phase.
   #   type: link
