@@ -1,5 +1,5 @@
 ---
-title: Project Pitches
+title: Project Pitching Session
 date: '2021-04-27T19:30:00+02:00'
 description: |
   We will received Project Pitches from you, and are super excited to hear you tell us about it.
@@ -8,10 +8,11 @@ description: |
 
   You will all have the change to make questions and later select your favorite 3 projects. We'll then assign the teams and get it all started!
 
-forms: []
-# - title: Feedback
-#   description: Please leave feedback for our Kick-Off Event!
-#   url: https://techlabsorg.typeform.com/to/DsoDLEfG
+forms:
+  - title: Pitch Submission Form
+    type: form
+    description: Use this form to submit your pitch
+    url: https://techlabsorg.typeform.com/to/UH73PM6J
 resources:
   []
   # - title: Knowledge Base
