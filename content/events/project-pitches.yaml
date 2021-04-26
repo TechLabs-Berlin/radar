@@ -8,18 +8,19 @@ description: |
   Everyone will have the chance to ask questions and later select the favorite 3 projects.
 
   We'll then assign the teams according to your selections and get it all started!
-showResources: true
+# showResources: true
 forms:
   []
 resources:
-  - title: Pitch Submission Form
-    type: form
-    description: Use this form to submit your pitch
-    url: https://techlabsorg.typeform.com/to/UH73PM6J
-  - title: Pitch Deck Template
-    type: slides
-    description: Example template for your pitch deck
-    url: https://docs.google.com/presentation/d/1mHh2_3CeoGA-a2FLyrCPOlf0fufzNnRMhF9m7PZwstk/edit?usp=sharing
+  []
+  # - title: Pitch Submission Form
+  #   type: form
+  #   description: Use this form to submit your pitch
+  #   url: https://techlabsorg.typeform.com/to/UH73PM6J
+  # - title: Pitch Deck Template
+  #   type: slides
+  #   description: Example template for your pitch deck
+  #   url: https://docs.google.com/presentation/d/1mHh2_3CeoGA-a2FLyrCPOlf0fufzNnRMhF9m7PZwstk/edit?usp=sharing
   # - title: Knowledge Base
   #   description: A comprehensive document of all you need to know for the Project Phase.
   #   type: link
