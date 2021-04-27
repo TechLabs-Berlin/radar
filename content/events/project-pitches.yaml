@@ -8,7 +8,7 @@ description: |
   Everyone will have the chance to ask questions and later select the favorite 3 projects.
 
   We'll then assign the teams according to your selections and get it all started!
-# showResources: true
+showResources: true
 forms:
   []
 resources:
