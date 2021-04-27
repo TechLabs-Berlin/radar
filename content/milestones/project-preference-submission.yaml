@@ -9,14 +9,13 @@ description: |
   Please keep in mind: **failure to send your project preferences will result in the removal from the program**.
 
 todos:
-  []
-  # - name: Submit your project preferences
-  #   resources:
-  #     - title: Preference Submission Form
-  #       type: form
-  #       description: Use this form to submit your preferences
-  #       url: https://techlabsorg.typeform.com/to/DmjHLfHT
-  #     - title: Slide Deck with Pitches
-  #       description: Our slides we showed during the event, including all Pitches
-  #       type: slides
-  #       url: https://docs.google.com/presentation/d/1oOa3QBk_1qzXLXZIqSrI0NAXIY_hczoaPcE7tzuGNS0/edit?usp=sharing
+  - name: Submit your project preferences
+    resources:
+      - title: Preference Submission Form
+        type: form
+        description: Use this form to submit your preferences
+        url: https://techlabsorg.typeform.com/to/DmjHLfHT
+      - title: Slide Deck with Pitches
+        description: Our slides we showed during the event, including all Pitches
+        type: slides
+        url: https://docs.google.com/presentation/d/1oOa3QBk_1qzXLXZIqSrI0NAXIY_hczoaPcE7tzuGNS0/edit?usp=sharing

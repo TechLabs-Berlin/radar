@@ -16,10 +16,10 @@ resources:
     description: The main room where we will meet.
     type: meeting
     url:  https://us02web.zoom.us/j/81900765993?pwd=QWg4UTc2L2VzSDZ5TEErK0pvTExKdz09
-  # - title: Slide Deck with Pitches
-  #   description: Our slides we showed during the event, including all Pitches
-  #   type: slides
-  #   url: https://docs.google.com/presentation/d/1oOa3QBk_1qzXLXZIqSrI0NAXIY_hczoaPcE7tzuGNS0/edit?usp=sharing
+  - title: Slide Deck with Pitches
+    description: Our slides we showed during the event, including all Pitches
+    type: slides
+    url: https://docs.google.com/presentation/d/1oOa3QBk_1qzXLXZIqSrI0NAXIY_hczoaPcE7tzuGNS0/edit?usp=sharing
   # - title: Meeting Recording
   #   description: Recording of our intro, pitches and Q&A
   #   type: video
