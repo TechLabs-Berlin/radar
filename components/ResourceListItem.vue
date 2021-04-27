@@ -2,7 +2,12 @@
   <a
     :href="resource.url"
     target="_blank"
-    class="flex items-start w-full h-full px-4 py-3 text-left transition-all duration-100 ease-in-out border-2 rounded-lg hover:border-blue-600 hover:shadow-lg hover:text-blue-600"
+    class="flex items-start w-full h-full px-4 py-3 text-left transition-all duration-100 ease-in-out border-2 rounded-lg hover:shadow-lg"
+    :class="
+      onPink
+        ? 'border-pink-900 hover:border-pink-600 hover:text-pink-600'
+        : 'hover:border-blue-600 hover:text-blue-600'
+    "
   >
     <div class="flex space-x-4">
       <p class="flex-none text-xl">
@@ -23,6 +28,9 @@ export default defineComponent({
     resource: {
       type: Object,
       required: true,
+    },
+    onPink: {
+      type: Boolean,
     },
   },
   setup() {

@@ -1,16 +1,21 @@
 ---
 slug: project-preference-submission
 title: Project Preference Submission
-deadline: 2021-04-30T22:00:00+01:00
+deadline: 2021-04-30T22:59:00+01:00
 type: cutoff
 description: |
   After seeing all the pitches by your fellow Techies, you'll need to submit your TOP 3 preferences (in no particular order). We'll then assemble the team the best way possible, trying our best to respect your preferences.
 
   Please keep in mind: failure to send your project preferences will result in the removal from the program.
+
 todos:
-  []
-  # - name: Submit your project preference
-  # resources:
-  # - title: Project Preference Submission Form
-  # type: typeform
-  # url: https://techlabsorg.typeform.com/to/QYLWpkOz
+  - name: Submit your project preferences
+    resources:
+      - title: Preference Submission Form
+        type: form
+        description: Use this form to submit your preferences
+        url: https://techlabsorg.typeform.com/to/DmjHLfHT
+      - title: Slide Deck with Pitches
+        description: Our slides we showed during the event, including all Pitches
+        type: slides
+        url: https://docs.google.com/presentation/d/1oOa3QBk_1qzXLXZIqSrI0NAXIY_hczoaPcE7tzuGNS0/edit?usp=sharing

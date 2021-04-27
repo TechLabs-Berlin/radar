@@ -50,7 +50,7 @@ export default defineComponent({
               </div></h2
           ></NuxtLink>
           <ClientOnly>
-            <p class="text-lg text-center">
+            <p class="text-lg">
               Due
               {{
                 format(new Date(milestone.deadline), "MMMM do, 'at' h:mm aaaa")
@@ -64,17 +64,17 @@ export default defineComponent({
         <!-- eslint-disable-next-line vue/no-v-html -->
         <div class="prose" v-html="$md.render(milestone.description)" />
         <template v-if="milestone.todos.length">
-          <p v-if="!alwaysShowTasks" class="text-center">
+          <p v-if="!alwaysShowTasks">
             <button
               v-if="showTasks"
-              class="px-2 py-1 text-sm font-semibold tracking-wide uppercase border-2 rounded-lg"
+              class="px-2 py-1 text-sm font-semibold tracking-wide text-pink-900 uppercase border-2 border-pink-900 rounded-lg focus:outline-none active:outline-none"
               @click="toggleTasks"
             >
               <TIcon icon="eye-slash" class="inline-block" /> Hide tasks
             </button>
             <button
               v-else
-              class="px-2 py-1 text-sm font-semibold tracking-wide uppercase border-2 rounded-lg"
+              class="px-2 py-1 text-sm font-semibold tracking-wide text-pink-900 uppercase border-2 border-pink-900 rounded-lg focus:outline-none active:outline-none"
               @click="toggleTasks"
             >
               <TIcon icon="chevron-down" class="inline-block" /> Show tasks
@@ -87,13 +87,13 @@ export default defineComponent({
               class="flex space-x-4"
             >
               <div>
-                <TIcon icon="check-square" class="text-2xl text-blue-600" />
+                <TIcon icon="check-square" class="text-2xl text-pink-600" />
               </div>
               <div>
                 <p>{{ todo.name }}</p>
                 <ul v-if="todo.resources" class="mt-4 link-grid">
                   <li v-for="resource in todo.resources" :key="resource.title">
-                    <ResourceListItem :resource="resource" />
+                    <ResourceListItem :resource="resource" on-pink />
                   </li>
                 </ul>
               </div>
