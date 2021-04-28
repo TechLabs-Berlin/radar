@@ -20,7 +20,7 @@ resources:
     description: Our slides we showed during the event, including all Pitches
     type: slides
     url: https://docs.google.com/presentation/d/1oOa3QBk_1qzXLXZIqSrI0NAXIY_hczoaPcE7tzuGNS0/edit?usp=sharing
-  # - title: Meeting Recording
-  #   description: Recording of our intro, pitches and Q&A
-  #   type: video
-  #   url: https://drive.google.com/file/d/1T6GGU5G5w_JYTT3aLEN5WSBeMZcOjjLz/view?usp=sharing
+  - title: Meeting Recording
+    description: Recording of your pitches
+    type: video
+    url: https://drive.google.com/file/d/1Jikn3mHcnxS0cV4Y4igj1vTX7eAdBh7m/view?usp=sharing
