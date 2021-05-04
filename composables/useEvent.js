@@ -10,7 +10,7 @@ export const useEvent = (event) => {
   })
   const isInOneHour = computed(() => {
     const diff = differenceInMinutes(event.date, new Date())
-    return diff <= 120 && diff >= 0
+    return diff <= 60 && diff >= 0
   })
   const isPastDate = computed(() => isPast(event.date))
   return { isLive, isFutureDate, isTodayDate, isInOneHour, isPastDate }
