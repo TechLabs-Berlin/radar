@@ -6,73 +6,17 @@ description: |
 
   We'll also give you some pointers about how to get started and what should you pay attention to next.
 
-forms: []
-# - title: Feedback
-#   description: Please leave feedback for our Kick-Off Event!
-#   url: https://techlabsorg.typeform.com/to/O7rdPudn
+forms:
+  - title: Feedback
+    description: Please leave feedback for our Kick-Off Event!
+    url: https://techlabsorg.typeform.com/to/oZS7IyrX
 meetings:
   - title: Main Room
     description: The main room where we will meet.
     type: meeting
     url:  https://us02web.zoom.us/j/86013006199?pwd=eEFjaFVkQkdVR3NXNjhVZ21objFhUT09
 resources:
-  []
-# - title: Slide Deck
-#   description: Our slides we showed during the event.
-#   type: slides
-#   url: https://docs.google.com/presentation/d/1OaGOG7g8doNWDeIjLwNNxJLLO8A5pYFLQ7b4572rO1s/edit?usp=sharing
-
-  # - title: Newcomer
-  #   description: Project Break-Out Room
-  #   type: meeting
-  #   url: https://meet.google.com/mak-dxkq-wro
-
-  # - title: Planet's Little Helper
-  #   description: Project Break-Out Room
-  #   type: meeting
-  #   url:
-
-  # - title: Stress Tracker
-  #   description: Project Break-Out Room
-  #   type: meeting
-  #   url:
-
-  # - title: TerraViz
-  #   description: Project Break-Out Room
-  #   type: meeting
-  #   url:
-
-  # - title: Artifacts
-  #   description: Project Break-Out Room
-  #   type: meeting
-  #   url:
-
-  # - title: birdsAI
-  #   description: Project Break-Out Room
-  #   type: meeting
-  #   url:
-
-  # - title: Busking Radar
-  #   description: Project Break-Out Room
-  #   type: meeting
-  #   url:
-
-  # - title: ChestX
-  #   description: Project Break-Out Room
-  #   type: meeting
-  #   url:
-
-  # - title: Jobzilla
-  #   description: Project Break-Out Room
-  #   type: meeting
-  #   url:
-
-  # - title: What Street Art
-  #   description: Project Break-Out Room
-  #   type: meeting
-  #   url:
-
-  # - title: What the Wine
-  #   description: Project Break-Out Room
-  #   type: meeting
-  #   url:
+  - title: Slide Deck
+    description: Our slides we showed during the event.
+    type: slides
+    url: https://docs.google.com/presentation/d/1OaGOG7g8doNWDeIjLwNNxJLLO8A5pYFLQ7b4572rO1s/edit?usp=sharing
