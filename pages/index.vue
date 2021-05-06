@@ -15,8 +15,11 @@ export default defineComponent({
     const timeline = ref()
     const milestones = ref()
     useFetch(async () => {
-      if (process.process.env.SCOPE === 'public') {
-        events.value = await $content('/events').sortBy('date').fetch()
+      if (process.env.SCOPE === 'public') {
+        events.value = await $content('/events')
+          .sortBy('date')
+          .where({ is_public: { $eq: true } })
+          .fetch()
         timeline.value = []
         milestones.value = []
       } else {
