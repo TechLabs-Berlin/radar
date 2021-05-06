@@ -70,6 +70,49 @@ We use a personalized AWS Lambda function endpoint in our newsletter form, conne
 
 The footer contents can be changed in the file `content/footer.yaml`.
 
+## Content
+
+All content in the Radar is written on YAML files. YAML (a recursive acronym for "YAML Ain't Markup Language") is a human-readable data-serialization language. It is commonly used for configuration files and in applications where data is being stored or transmitted. In simple terms, it is a text file that allows structure data.
+
+The content files are located in the folder `/content`. You can edit any of these files and see the changes in real time in you local dev environment. To publish content changes, you'd have to simply `git commit` and `git push` to your repo, so that the action to rebuild and redeploying the content is fired.
+
+There are three main pieces of content you'll be working with: the Timeline, the Events, and the Milestones.
+
+### Timeline
+
+By editing the file `/content/timeline.yaml`, you define the main __sections__ within the timeline. The weeks in each section are populated automatically from the start and end dates. The files is a collection of items under `timeline:`, which contain the following properties:
+
+| property | description | example | required | default |
+| --- | --- | --- | --- |
+| `title`|the title of the timeline section|Academic Phase|yes|-|
+| `description`|the description of the timeline section, shown when hovering over the (?) icon next to the section title|(see below)|yes|-|
+| `startDate`|the section's starting date (Monday), in the format YYY/MM/DD |2021/05/17|yes|-|
+| `endDate`|the section's ending date (Sunday), in the format YYY/MM/DD |2021/07/04|yes|-|
+
+For example:
+
+```yaml
+- title: Project Phase
+  description: |
+      This is prime time! You imagine and implement a prototype in a project of your own.
+
+      You team up as a group of 4-6 Techies and work together to create something big. Experienced mentors will be on your side for support.
+  startDate: 2021/05/17
+  endDate: 2021/07/04
+```
+
+... will result in:
+
+<p><img src="https://user-images.githubusercontent.com/5139870/117278292-ec54b580-ae60-11eb-8bca-9c59e3283576.png" width="600"/></p>
+
+The Events and Milestones are then placed automatically within their respective weeks on the Timeline.
+
+### Events
+
+Inside the `/content/events` folder, you'll find files to all the events in the semester. They all follow a similar structure:
+
+
+
 ## Build Setup
 
 ```bash
