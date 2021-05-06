@@ -1,0 +1,10 @@
+---
+  navLinks:
+    - title: Timeline
+      path: /
+    - title: FAQ
+      path: /faq
+    - title: Media
+      path: /media
+    - title: Newsletter
+      path: /newsletter
