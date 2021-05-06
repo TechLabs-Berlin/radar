@@ -33,7 +33,7 @@ jobs:
           BASE_URL: ${{ secrets.BASE_URL }}
           MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
           ONESIGNAL_APP_ID: ${{ secrets.ONESIGNAL_APP_ID }}
-          EXTERNAL: true
+          SCOPE: "public"
 
       - name: Upload build
         uses: actions/upload-artifact@v2
@@ -51,6 +51,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: TechLabs-Berlin/radar-external.git
+          token: ${{ secrets.PAT }}
           ref: deploy
           path: deploy
 
@@ -62,7 +63,7 @@ jobs:
 
       - name: Copy frontend build to deploy repo
         run: |
-          cp -r deploy/.git deploy/CNAME deploy/README.md build/
+          cp -r deploy/.git deploy/README.md build/
 
       - name: Configure git
         run: |
@@ -76,5 +77,5 @@ jobs:
         working-directory: build
 
       - name: Push deploy repo
-        run: git push
+        run: git push https://${{secrets.PAT}}:x-oauth-basic@github.com/TechLabs-Berlin/radar-external.git
         working-directory: build

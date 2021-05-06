@@ -15,11 +15,17 @@ export default defineComponent({
     const timeline = ref()
     const milestones = ref()
     useFetch(async () => {
-      events.value = await $content('/events').sortBy('date').fetch()
-      timeline.value = await $content('timeline').fetch()
-      milestones.value = await $content('/milestones')
-        .sortBy('deadline')
-        .fetch()
+      if (process.process.env.SCOPE === 'public') {
+        events.value = await $content('/events').sortBy('date').fetch()
+        timeline.value = []
+        milestones.value = []
+      } else {
+        events.value = await $content('/events').sortBy('date').fetch()
+        timeline.value = await $content('timeline').fetch()
+        milestones.value = await $content('/milestones')
+          .sortBy('deadline')
+          .fetch()
+      }
     })
 
     return {
