@@ -20,3 +20,7 @@ resources:
     description: Our slides we showed during the event.
     type: slides
     url: https://docs.google.com/presentation/d/1OaGOG7g8doNWDeIjLwNNxJLLO8A5pYFLQ7b4572rO1s/edit?usp=sharing
+  - title: 'Recording'
+    description: The recording of the event
+    type: video
+    url: https://drive.google.com/file/d/1alErHBNwCms5bBXSGiuuoELge60hPdDR/view?usp=sharing
