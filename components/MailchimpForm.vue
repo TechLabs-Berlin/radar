@@ -68,63 +68,77 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import {
+  defineComponent,
+  reactive,
+  ref,
+  useContext,
+  useFetch,
+} from '@nuxtjs/composition-api'
 
-const SIGNUP_URL =
-  'https://a696oel4ti.execute-api.eu-central-1.amazonaws.com/dev/add-to-list'
 export default defineComponent({
   name: 'MailchimpForm',
-  data() {
-    return {
-      form: {
-        email: '',
-        name: '',
-        consent: true,
-      },
-      errorEmail: false,
-      errorConsent: false,
-      loading: false,
-    }
-  },
-  methods: {
-    async submit(email, name) {
-      this.loading = true
+  setup(_, { emit }) {
+    const form = reactive({ email: '', name: '', consent: true })
+    const errorEmail = ref(false)
+    const errorConsent = ref(false)
+    const loading = ref(false)
+
+    const { $content, $axios } = useContext()
+    const content = ref(null)
+    useFetch(async () => {
+      content.value = await $content('newsletter').fetch()
+    })
+
+    async function submit(email, name) {
+      const SIGNUP_URL = content.value.signUpUrl
+      loading.value = true
       const data = {
         email,
         name,
       }
       try {
-        const response = await this.$axios.$post(SIGNUP_URL, data, {
+        const response = await $axios.$post(SIGNUP_URL, data, {
           headers: {
             'Content-Type': 'application/json',
           },
         })
         console.log('SUCCESS')
         console.log(response)
-        this.$emit('success')
+        emit('success')
       } catch (e) {
         console.log('ERROR')
         console.error(e)
-        this.$emit('failure')
+        emit('failure')
       } finally {
-        this.loading = false
+        loading.value = false
       }
-    },
-    checkForm(e) {
-      this.errorConsent = !this.form.consent
-      this.errorEmail = false
-      if (!this.form.email || !this.validEmail(this.form.email)) {
-        this.errorEmail = true
+    }
+
+    function checkForm(e) {
+      errorConsent.value = !form.consent
+      errorEmail.value = false
+      if (!form.email || !validEmail(form.email)) {
+        errorEmail.value = true
       }
-      if (!this.errorConsent && !this.errorEmail) {
-        this.submit(this.form.email, this.form.name)
+      if (!errorConsent.value && !errorEmail.value) {
+        submit(form.email, form.name)
       }
       e.preventDefault()
-    },
-    validEmail(email) {
+    }
+
+    function validEmail(email) {
       const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       return re.test(email)
-    },
+    }
+
+    return {
+      form,
+      errorEmail,
+      errorConsent,
+      loading,
+      checkForm,
+    }
   },
 })
 </script>
