@@ -63,7 +63,7 @@ jobs:
 
       - name: Copy frontend build to deploy repo
         run: |
-          cp -r deploy/.git deploy/README.md build/
+          cp -r deploy/.git deploy/CNAME deploy/README.md build/
 
       - name: Configure git
         run: |
