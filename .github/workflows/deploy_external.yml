@@ -1,9 +1,9 @@
-name: Radar Deployment
+name: Radar External Deployment
 
 on:
   push:
     branches:
-      - external_deployment
+      - master
 
 jobs:
   build:
