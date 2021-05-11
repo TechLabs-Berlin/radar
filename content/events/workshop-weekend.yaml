@@ -2,19 +2,24 @@
 title: Workshop Weekend
 date: '2021-05-15T10:00:00+02:00'
 description: |
-  Workshop Weekend Time!
-
-  We will provide a lot of workshops with different topics the **whole weekend**!
-
-  The perfect time to close the skills gap between your current level and the skills you need to finish your project succesfully.
+  During this weekend, we'll have a series of workshops to help you prepare for the upcoming Project Phase.
+showResources: true
 forms:
   []
-  # - title: Registration
-  #   description: Registration for the workshops for the workshop weekend
-  #   url: https://techlabsorg.typeform.com/to/rB1UA0yh#Registration Form
 resources:
-  []
-  # - title: Schedule
-  #   description: The schedule with all workshops
-  #   type: link
-  #   url: https://www.notion.so/techlabs/cd6dc42841634c5393b14585671be523?v=03b78d40f5c64913afe7bfdfd5c45477
+  - title: Registration all workshops
+    type: form
+    description: Registration for workshops for the workshop weekend
+    url: https://techlabsorg.typeform.com/to/gUsXngfE
+  - title: Registration for Tech for Good
+    type: form
+    description: Limited to 30 participants
+    url: https://techlabsorg.typeform.com/to/heifm6va
+  - title: Schedule & Links
+    description: The schedule with all workshops and their respective links
+    type: link
+    url: https://www.notion.so/techlabs/477086fad8a54f3aac6e7e31224f55c5?v=949c64cbf9f144c19983edb4a03a6ddb
+  - title: Workshop Weekend Slack Channel
+    description: Join this channel for questions and general chat about the WW
+    type: tool
+    url: https://techlabs-community.slack.com/archives/C021CMF0K4J
