@@ -1,38 +1,39 @@
 ---
-title: 'Lightning Talk #1: The Productivity Formula'
-date: '2021-03-23T19:30:00+01:00'
+title: "Lightning Talk #1: The Productivity Formula"
+date: "2021-03-23T19:30:00+01:00"
+is_public: true
 description: |
   Are you losing the war for your attention? Entrepreneur __Marcel Poelker__, invites you to a public talk on how to achieve your goals and release your inner workhorse.
 
   Marcel is founder and CTO of __[Taledo](https://www.taledo.com/)__, an all-in-one recruiting platform for attracting, managing and hiring the best talent. Over the years, he has helped companies grow and candidates advance their careers.
 meetings:
-  - title: 'Meet: Lightning Talk #1'
-    description: 'The main room where we will meet.'
+  - title: "Meet: Lightning Talk #1"
+    description: "The main room where we will meet."
     type: meeting
     url: https://us02web.zoom.us/j/89044089990?pwd=OU9XcytaVDh5VTJaYXgxY0xvS2dUZz09
-  - title: 'Wonder Room: TV Shows'
-    description: 'Come chat with us! TV-Show themed!'
+  - title: "Wonder Room: TV Shows"
+    description: "Come chat with us! TV-Show themed!"
     type: meeting
     url: https://www.wonder.me/r?id=6f0d4912-b679-4d7f-ab4b-197100eb71d8
-  - title: 'Skribbl.io'
-    description: 'Get on and open a room!'
+  - title: "Skribbl.io"
+    description: "Get on and open a room!"
     type: game
     url: https://skribbl.io/
 forms:
-  - title: 'Feedback: Lightning Talk #1'
+  - title: "Feedback: Lightning Talk #1"
     type: form
     description: Please leave your feedback!
     url: https://techlabsorg.typeform.com/to/pVVp2Rjc
-  - title: 'Feedback: Application & Onboarding Process'
+  - title: "Feedback: Application & Onboarding Process"
     type: form
     description: Please let us know how it went!
     url: https://techlabsorg.typeform.com/to/dIjB8ka5
 resources:
-  - title: 'Slides'
+  - title: "Slides"
     description: The presentation shown during the event
     type: slides
     url: https://docs.google.com/presentation/d/e/2PACX-1vQ24WlYkTmAV2Xb1XBFozhZeN5DGK0hUPhITOAHkwKAOPHWj35xn1O8m3hrwuraVg6Rg7k6G6f0W3oo/pub?start=false&loop=false&delayms=3000
-  - title: 'Recording'
+  - title: "Recording"
     description: The recording of the event
     type: video
     url: https://drive.google.com/file/d/1oWIiX4aDRJkqfLCBsFVWQPXYh3mz4dqr/view?usp=sharing

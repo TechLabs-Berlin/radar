@@ -14,18 +14,29 @@ export default defineComponent({
     const events = ref()
     const timeline = ref()
     const milestones = ref()
+    const isPublic = ref(process.env.SCOPE === 'public')
     useFetch(async () => {
-      events.value = await $content('/events').sortBy('date').fetch()
-      timeline.value = await $content('timeline').fetch()
-      milestones.value = await $content('/milestones')
-        .sortBy('deadline')
-        .fetch()
+      if (isPublic.value) {
+        events.value = await $content('/events')
+          .sortBy('date')
+          .where({ is_public: { $eq: true } })
+          .fetch()
+        timeline.value = []
+        milestones.value = []
+      } else {
+        events.value = await $content('/events').sortBy('date').fetch()
+        timeline.value = await $content('timeline').fetch()
+        milestones.value = await $content('/milestones')
+          .sortBy('deadline')
+          .fetch()
+      }
     })
 
     return {
       events,
       timeline,
       milestones,
+      isPublic,
     }
   },
   head: {},
@@ -35,7 +46,7 @@ export default defineComponent({
 <template>
   <main class="h-full bg-gray-50">
     <div v-if="!$fetchState.pending" class="w-full main-grid">
-      <div class="w-64 mx-auto timeline">
+      <div class="w-64 mx-auto timeline" v-if="!isPublic">
         <h3 class="md:hidden title-with-lines">Timeline</h3>
         <ClientOnly>
           <Timeline
