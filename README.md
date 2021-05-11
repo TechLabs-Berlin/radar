@@ -23,7 +23,7 @@ The main items in the Radar are: the **Timeline**, the **Events**, and the **Mil
 
 All Events and Milestones have their own pages, accessible by either clicking on their titles or on their names within the Timeline. This allows for sending out links to specific events and milestones to the students, when necessary.
 
-Additionally, there are also other secondary pages displayed when clicking on the hamburger menu on top right: __FAQ__, __Media__, and __Newsletter__.
+Additionally, there are also other secondary pages displayed when clicking on the hamburger menu on top right: **FAQ**, **Media**, and **Newsletter**.
 
 # How to use it
 
@@ -57,7 +57,7 @@ For the location badge, you can replace `static/icon-location.png` with the badg
 
 <p align="center"><img src="https://user-images.githubusercontent.com/5139870/117255002-6da04e00-ae49-11eb-9c9a-1c9871daf4e9.png" width="600"/></p>
 
-The top menu (hamburger) is composed of internal links to other pages and social icons leading to our social media pages. 
+The top menu (hamburger) is composed of internal links to other pages and social icons leading to our social media pages.
 
 - Internal links: you can modify the links in the file `content/nav-links.yaml`
 - Social links: you can modify the links in the file `content/social-links.yaml`
@@ -80,23 +80,23 @@ There are three main pieces of content you'll be working with: the Timeline, the
 
 ### Timeline
 
-By editing the file `/content/timeline.yaml`, you define the main __sections__ within the timeline. The weeks in each section are populated automatically from the start and end dates. The files is a collection of items under `timeline:`, which contain the following properties:
+By editing the file `/content/timeline.yaml`, you define the main **sections** within the timeline. The weeks in each section are populated automatically from the start and end dates. The files is a collection of items under `timeline:`, which contain the following properties:
 
-| property | description | example | required | default |
-| --- | --- | --- | --- |
-| `title`|the title of the timeline section|Academic Phase|yes|-|
-| `description`|the description of the timeline section, shown when hovering over the (?) icon next to the section title|(see below)|yes|-|
-| `startDate`|the section's starting date (Monday), in the format YYY/MM/DD |2021/05/17|yes|-|
-| `endDate`|the section's ending date (Sunday), in the format YYY/MM/DD |2021/07/04|yes|-|
+| property      | description                                                                                              | example        | required | default |
+| ------------- | -------------------------------------------------------------------------------------------------------- | -------------- | -------- | ------- |
+| `title`       | the title of the timeline section                                                                        | Academic Phase | yes      | -       |
+| `description` | the description of the timeline section, shown when hovering over the (?) icon next to the section title | (see below)    | yes      | -       |
+| `startDate`   | the section's starting date (Monday), in the format YYY/MM/DD                                            | 2021/05/17     | yes      | -       |
+| `endDate`     | the section's ending date (Sunday), in the format YYY/MM/DD                                              | 2021/07/04     | yes      | -       |
 
 For example:
 
 ```yaml
 - title: Project Phase
   description: |
-      This is prime time! You imagine and implement a prototype in a project of your own.
+    This is prime time! You imagine and implement a prototype in a project of your own.
 
-      You team up as a group of 4-6 Techies and work together to create something big. Experienced mentors will be on your side for support.
+    You team up as a group of 4-6 Techies and work together to create something big. Experienced mentors will be on your side for support.
   startDate: 2021/05/17
   endDate: 2021/07/04
 ```
@@ -109,9 +109,29 @@ The Events and Milestones are then placed automatically within their respective 
 
 ### Events
 
-Inside the `/content/events` folder, you'll find files to all the events in the semester. They all follow a similar structure:
+Inside the `/content/events` folder, you'll find files to all the events in the semester. Each file contain the following properties:
 
+| property        | description                                                                                                                    | example                     | required | type       |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------- | -------- | ---------- | -------- |
+| `title`         | the event title                                                                                                                | Welcome Event ST21          | yes      | `string`   |
+| `date`          | time and date of the event, including timezone                                                                                 | `2021-03-16T19:30:00+02:00` | yes      | `datetime` |
+| `description`   | the event's description (accepts Markdown)                                                                                     | (see below)                 | yes      | `string`   | markdown |
+| `showResources` | use in case you want the listing to display the items in `resources` before the event                                          | `true`                      | no       | `boolean`  |
+| `meetings`      | where you place the video links for the meetings; these are going to appear on the event card 60 minutes before the event time | (see below)                 | no       | `array`    |
+| `forms`         | list of forms (like feedback forms)                                                                                            | (see below)                 | no       | `array`    |
+| `resources`     | list of any other resources (slides, recording, links, etc)                                                                    | (see below)                 | no       | `array`    |
 
+Each of the items in `meetings`, `forms`, and `resources` should follow the same structure:
+
+| property      | description                              | example                           | required | type                                                             |
+| ------------- | ---------------------------------------- | --------------------------------- | -------- | ---------------------------------------------------------------- |
+| `title`       | the name of the item                     | Meet: Kick-Off                    | yes      | `string`                                                         |
+| `description` | item's description                       | The main room where we will meet. | yes      | `string`                                                         |
+| `type`        | item's type (defines which icon to show) | `meeting`                         | yes      | `meeting`,`link`,`slides`,`form`,`video`,`tool`,`game`,`nothing` |
+
+In case `meetings`, `forms`, or `resources` are empty, you should set their values to `[]`
+
+### Examples:
 
 ## Build Setup
 

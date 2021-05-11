@@ -1,18 +1,6 @@
 # dates: always start the week on a Monday and end it on a Sunday
 ---
 timeline:
-  # - title: Past week example
-  #   description: |
-  #     to be deleted!!
-  #   startDate: 2021/03/01
-  #   endDate: 2021/03/07
-  # - title: Selection & Onboarding
-  #   description: |
-  #     We'll analyze all applications carefully and select our new students.
-  #     During this time, we'll get in touch with the results of your application and start your onboarding process into the program.
-  #   startDate: 2021/03/08
-  #   endDate: 2021/03/14
-
   - title: Kick-Off Week
     description: |
       You join the community and get access to our learning platform edyoucated.

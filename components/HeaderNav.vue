@@ -7,27 +7,17 @@
       >
         <nav>
           <ul
+            v-if="content && content.navLinks.length"
             class="space-y-2 text-sm font-semibold text-right uppercase lg:flex lg:items-center lg:space-x-4 lg:space-y-0"
           >
-            <li @click="toggle">
-              <NuxtLink class="hover:text-pink-600 nav-link" to="/"
-                >Timeline</NuxtLink
-              >
-            </li>
-            <li @click="toggle">
-              <NuxtLink class="hover:text-pink-600 nav-link" to="/faq"
-                >FAQ</NuxtLink
-              >
-            </li>
-            <li @click="toggle">
-              <NuxtLink class="hover:text-pink-600 nav-link" to="/media"
-                >Media</NuxtLink
-              >
-            </li>
-            <li @click="toggle">
-              <NuxtLink class="hover:text-pink-600 nav-link" to="/newsletter"
-                >Newsletter</NuxtLink
-              >
+            <li
+              v-for="link in content.navLinks"
+              :key="link.title"
+              @click="toggle"
+            >
+              <NuxtLink class="hover:text-pink-600 nav-link" :to="link.path">{{
+                link.title
+              }}</NuxtLink>
             </li>
           </ul>
         </nav>
@@ -54,13 +44,25 @@
 </template>
 
 <script>
-import { ref, defineComponent } from '@nuxtjs/composition-api'
+import {
+  ref,
+  defineComponent,
+  useContext,
+  useFetch,
+} from '@nuxtjs/composition-api'
 
 export default defineComponent({
   setup() {
     const isOpen = ref(false)
     const toggle = () => (isOpen.value = !isOpen.value)
-    return { isOpen, toggle }
+
+    const { $content } = useContext()
+    const content = ref(null)
+    const { fetchState } = useFetch(async () => {
+      content.value = await $content('nav-links').fetch()
+    })
+
+    return { isOpen, toggle, content, fetchState }
   },
 })
 </script>
