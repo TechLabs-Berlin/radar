@@ -7,14 +7,10 @@
       >
         <nav>
           <ul
-            v-if="content && content.navLinks.length"
+            v-if="navLinks.length"
             class="space-y-2 text-sm font-semibold text-right uppercase lg:flex lg:items-center lg:space-x-4 lg:space-y-0"
           >
-            <li
-              v-for="link in content.navLinks"
-              :key="link.title"
-              @click="toggle"
-            >
+            <li v-for="link in navLinks" :key="link.title" @click="toggle">
               <NuxtLink class="hover:text-pink-600 nav-link" :to="link.path">{{
                 link.title
               }}</NuxtLink>
@@ -53,16 +49,21 @@ import {
 
 export default defineComponent({
   setup() {
+    const isPublic = ref(process.env.SCOPE === 'public')
     const isOpen = ref(false)
     const toggle = () => (isOpen.value = !isOpen.value)
 
     const { $content } = useContext()
-    const content = ref(null)
-    const { fetchState } = useFetch(async () => {
-      content.value = await $content('nav-links').fetch()
+    const navLinks = ref([])
+    useFetch(async () => {
+      const content = await $content('nav-links').fetch()
+
+      navLinks.value = isPublic.value
+        ? content.navLinks.filter((link) => link.is_public)
+        : content.navLinks
     })
 
-    return { isOpen, toggle, content, fetchState }
+    return { isOpen, toggle, navLinks }
   },
 })
 </script>
