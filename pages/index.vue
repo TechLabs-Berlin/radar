@@ -45,8 +45,12 @@ export default defineComponent({
 
 <template>
   <main class="h-full bg-gray-50">
-    <div v-if="!$fetchState.pending" class="w-full main-grid">
-      <div class="w-64 mx-auto timeline" v-if="!isPublic">
+    <div
+      v-if="!$fetchState.pending"
+      class="w-full"
+      :class="isPublic ? 'max-w-2xl mx-auto' : 'main-grid'"
+    >
+      <div v-if="!isPublic" class="w-64 mx-auto timeline">
         <h3 class="md:hidden title-with-lines">Timeline</h3>
         <ClientOnly>
           <Timeline
