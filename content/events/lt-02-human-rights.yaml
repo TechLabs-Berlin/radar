@@ -8,6 +8,7 @@ description: |
   As Artificial Intelligence evolves, so do the many controversies that surround the use of this advanced technology. It is therefore crucial to understand its impact on a societal and public policy level. Scenarios in problem areas: privacy, explainability, reliability and risks of complex systems, responsibility of professionals for applications and consequences of their work.
 
   Charlotte and Vanessa believe that data science and machine learning can help us design intelligent products, services, and systems that improve people’s everyday lives. But in order to have a truly positive impact, AI-powered technologies must be grounded in human rights and work to extend and enhance our capabilities, not replace them.
+showResources: true
 meetings:
   - title: 'Meet: Lightning Talk #2'
     description: 'The main room where we will meet.'
@@ -31,7 +32,10 @@ forms:
   #   description: Please let us know how it went!
   #   url: https://techlabsorg.typeform.com/to/dIjB8ka5
 resources:
-  []
+  - title: "Fishbowl Game"
+    description: "Link for the game"
+    type: game
+    url: https://fishbowl-game.com/
   # - title: 'Slides'
   #   description: The presentation shown during the event
   #   type: slides
