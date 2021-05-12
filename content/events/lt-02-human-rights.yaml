@@ -32,15 +32,15 @@ forms:
   #   description: Please let us know how it went!
   #   url: https://techlabsorg.typeform.com/to/dIjB8ka5
 resources:
-  - title: "Fishbowl Game"
-    description: "Link for the game"
-    type: game
-    url: https://fishbowl-game.com/
-  # - title: 'Slides'
-  #   description: The presentation shown during the event
-  #   type: slides
-  #   url: https://docs.google.com/presentation/d/e/2PACX-1vQ24WlYkTmAV2Xb1XBFozhZeN5DGK0hUPhITOAHkwKAOPHWj35xn1O8m3hrwuraVg6Rg7k6G6f0W3oo/pub?start=false&loop=false&delayms=3000
-  # - title: 'Recording'
-  #   description: The recording of the event
-  #   type: video
-  #   url: https://drive.google.com/file/d/1oWIiX4aDRJkqfLCBsFVWQPXYh3mz4dqr/view?usp=sharing
+  # - title: "Fishbowl Game"
+  #   description: "Link for the game"
+  #   type: game
+  #   url: https://fishbowl-game.com/
+  - title: 'Slides'
+    description: The presentation shown during the event
+    type: slides
+    url: https://docs.google.com/presentation/d/1wWsKf-5HX-fzCcV4UKMAf2v1mGYxSYRIpB7YAci30j0/edit?usp=sharing
+  - title: 'Recording'
+    description: The recording of the event
+    type: video
+    url: https://drive.google.com/file/d/1_svneBU5TeltdQ2CtPVBqQLGdxvVbHf9/view?usp=sharing
