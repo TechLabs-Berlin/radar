@@ -2,24 +2,34 @@
 title: Workshop Weekend
 date: '2021-05-15T10:00:00+02:00'
 description: |
-  During this weekend, we'll have a series of workshops to help you prepare for the upcoming Project Phase.
-showResources: true
+  During this weekend, we'll have a series of workshops to help you prepare for the upcoming Project Phase:
+
+  - GIT workshop by Daniel
+  - Tech for Good by Sebastian
+  - VSCode Can do That by Daniel
+  - Fake it, till you make it by Zubin
+  - Data Ethics for Techies by Sofie & Marcel
+  - Python Backend for DS/AI by Daniel
+  - Bash + Colab = Magic by Zubin
+  - Developing for UX by Benedikt
+  - Building a modern FE app by Matheus
+
 forms:
   []
 resources:
-  - title: Registration all workshops
-    type: form
-    description: Registration for workshops for the workshop weekend
-    url: https://techlabsorg.typeform.com/to/gUsXngfE
-  - title: Registration for Tech for Good
-    type: form
-    description: Limited to 30 participants
-    url: https://techlabsorg.typeform.com/to/heifm6va
-  - title: Schedule & Links
-    description: The schedule with all workshops and their respective links
+  # - title: Registration all workshops
+  #   type: form
+  #   description: Registration for workshops for the workshop weekend
+  #   url: https://techlabsorg.typeform.com/to/gUsXngfE
+  # - title: Registration for Tech for Good
+  #   type: form
+  #   description: Limited to 30 participants
+  #   url: https://techlabsorg.typeform.com/to/heifm6va
+  - title: Slides and Recordings
+    description: All slides and recordings added to our Notion schedule page
     type: link
     url: https://www.notion.so/techlabs/477086fad8a54f3aac6e7e31224f55c5?v=949c64cbf9f144c19983edb4a03a6ddb
-  - title: Workshop Weekend Slack Channel
-    description: Join this channel for questions and general chat about the WW
-    type: tool
-    url: https://techlabs-community.slack.com/archives/C021CMF0K4J
+  # - title: Workshop Weekend Slack Channel
+  #   description: Join this channel for questions and general chat about the WW
+  #   type: tool
+  #   url: https://techlabs-community.slack.com/archives/C021CMF0K4J
