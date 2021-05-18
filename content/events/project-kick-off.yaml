@@ -3,6 +3,16 @@ title: Project Kick-Off
 date: '2021-05-18T19:30:00+02:00'
 description: |
   On this event we will officially kick-off the project phase. It will include updates about the Transition Period, updates from all teams, and some pointers about project management.
+meetings:
+  - title: Main Room
+    description: The main room where we will meet.
+    type: meeting
+    url:  https://us02web.zoom.us/j/83190419338?pwd=UnJRU3A2N0dwM25Sb2NRcklHeWk4dz09
+  - title: 'Backyard'
+    description: 'Let's play some games together! Instructions during the event.'
+    type: game
+    url: https://backyard.co/
+
 forms: []
 # - title: Feedback
 #   description: Please leave feedback for our Kick-Off Event!
@@ -12,35 +22,3 @@ resources: []
 #   description: Our slides we showed during the event.
 #   type: slides
 #   url: https://drive.google.com/file/d/1ov3sbnaF1Xkkd5qkQUrM0S9Y71WrFggZ/view?usp=sharing
-# - title: Main Room
-#   description: The main room where we will meet.
-#   type: meeting
-#   url:  https://us02web.zoom.us/j/83333607747?pwd=a2dWWS9NSXhvZnY5TTNzbmtIN1k5UT09
-# - title: Berlin Historical Tours
-#   description: Project Break-Out Room
-#   type: meeting
-#   url: https://meet.google.com/mau-knvr-cwj
-# - title: Plant Journey
-#   description: Project Break-Out Room
-#   type: meeting
-#   url: https://meet.google.com/eom-wnny-yiw
-# - title: Public Transport Safety App
-#   description: Project Break-Out Room
-#   type: meeting
-#   url: https://meet.google.com/iro-fqrv-sai
-# - title: SOKR
-#   description: Project Break-Out Room
-#   type: meeting
-#   url: https://meet.google.com/tjx-iihy-dfk
-# - title: The Green Gang
-#   description: Project Break-Out Room
-#   type: meeting
-#   url: https://meet.google.com/wec-uedn-mvc
-# - title: Berlinrents.live
-#   description: Project Break-Out Room
-#   type: meeting
-#   url: https://meet.google.com/zgm-eqfk-cop
-# - title: Weltgeist
-#   description: Project Break-Out Room
-#   type: meeting
-#   url: https://meet.google.com/jtm-ebsg-gbc
