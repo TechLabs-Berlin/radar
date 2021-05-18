@@ -3,13 +3,14 @@ title: Project Kick-Off
 date: '2021-05-18T19:30:00+02:00'
 description: |
   On this event we will officially kick-off the project phase. It will include updates about the Transition Period, updates from all teams, and some pointers about project management.
+
 meetings:
   - title: Main Room
     description: The main room where we will meet.
     type: meeting
     url:  https://us02web.zoom.us/j/83190419338?pwd=UnJRU3A2N0dwM25Sb2NRcklHeWk4dz09
   - title: 'Backyard'
-    description: 'Let's play some games together! Instructions during the event.'
+    description: "Let's play some games together! Instructions during the event."
     type: game
     url: https://backyard.co/
 
