@@ -18,8 +18,12 @@ forms: []
 # - title: Feedback
 #   description: Please leave feedback for our Kick-Off Event!
 #   url: https://techlabsorg.typeform.com/to/O7rdPudn
-resources: []
-# - title: Slide Deck
-#   description: Our slides we showed during the event.
-#   type: slides
-#   url: https://drive.google.com/file/d/1ov3sbnaF1Xkkd5qkQUrM0S9Y71WrFggZ/view?usp=sharing
+resources:
+  - title: Slide Deck
+    description: Our slides we showed during the event.
+    type: slides
+    url: https://docs.google.com/presentation/d/14dqGRaT9gAlVHkyvi3ojwhVykCJV3_y7MhrNV3dWCxA/edit?usp=sharing
+  - title: Recording
+    description: The recording of this event
+    type: video
+    url: https://drive.google.com/file/d/1V7rKmLbb__wE71eMIwLBNF2n_kk3m6Cv/view?usp=sharing
