@@ -60,7 +60,9 @@ export default {
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  content: {
+    dir: 'content-bln',
+  },
 
   // https://www.npmjs.com/package/@nuxtjs/markdownit
   markdownit: {
