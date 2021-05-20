@@ -32,7 +32,6 @@ jobs:
         env:
           BASE_URL: ${{ secrets.BASE_URL }}
           MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
-          ONESIGNAL_APP_ID: ${{ secrets.ONESIGNAL_APP_ID }}
 
       - name: Upload build
         uses: actions/upload-artifact@v2
