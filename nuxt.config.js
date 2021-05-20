@@ -1,4 +1,9 @@
+const LOCATION = 'bln'
+
 export default {
+  env: {
+    NUXT_APP_LOCATION: LOCATION,
+  },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   generate: {
@@ -61,7 +66,7 @@ export default {
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
-    dir: 'content-bln',
+    dir: `content-${LOCATION}`,
   },
 
   // https://www.npmjs.com/package/@nuxtjs/markdownit
