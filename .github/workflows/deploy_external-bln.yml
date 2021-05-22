@@ -1,4 +1,4 @@
-name: Radar Deployment
+name: Radar External Deployment
 
 on:
   push:
@@ -15,7 +15,7 @@ jobs:
 
       - uses: actions/setup-node@v2-beta
         with:
-          node-version: '14'
+          node-version: "14"
 
       - uses: actions/cache@v2
         with:
@@ -32,7 +32,7 @@ jobs:
         env:
           BASE_URL: ${{ secrets.BASE_URL }}
           MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
-          ONESIGNAL_APP_ID: ${{ secrets.ONESIGNAL_APP_ID }}
+          SCOPE: "public"
 
       - name: Upload build
         uses: actions/upload-artifact@v2
@@ -49,6 +49,8 @@ jobs:
       - name: Checkout deploy repo
         uses: actions/checkout@v2
         with:
+          repository: TechLabs-Berlin/radar-external.git
+          token: ${{ secrets.PAT }}
           ref: deploy
           path: deploy
 
@@ -74,5 +76,5 @@ jobs:
         working-directory: build
 
       - name: Push deploy repo
-        run: git push
+        run: git push https://${{secrets.PAT}}:x-oauth-basic@github.com/TechLabs-Berlin/radar-external.git
         working-directory: build

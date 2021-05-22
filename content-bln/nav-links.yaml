@@ -6,9 +6,6 @@
     - title: FAQ
       path: /faq
       is_public: true
-    - title: Media
-      path: /media
-      is_public: true
     - title: Newsletter
       path: /newsletter
       is_public: true
