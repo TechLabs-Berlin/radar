@@ -58,9 +58,9 @@ export default defineComponent({
   setup(props) {
     const compiledTimeline = ref(compileTimeline(props.timeline))
 
-    function compileTimeline({ timeline }) {
+    function compileTimeline({ timeline, startsAt }) {
       if (!timeline) return []
-      let weekNumber = 0
+      let weekNumber = startsAt
       return timeline.map((milestone) => {
         const start = startOfDay(new Date(milestone.startDate))
         const end = endOfDay(new Date(milestone.endDate))

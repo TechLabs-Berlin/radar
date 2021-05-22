@@ -1,5 +1,6 @@
 # dates: always start the week on a Monday and end it on a Sunday
 ---
+startsAt: 0
 timeline:
   - title: Kick-Off Week
     description: |
