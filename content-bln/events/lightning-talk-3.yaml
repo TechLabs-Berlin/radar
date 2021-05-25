@@ -7,7 +7,11 @@ description: |
 
   In this talk, he will share part of his story: how he became a developer and left a small town in the countryside to pursue his international career.
 
-meetings: []
+meetings:
+  - title: 'Lightning Talk #3'
+    description: 'The main room where we will meet.'
+    type: meeting
+    url: https://us02web.zoom.us/j/86459570010?pwd=cHZYOXF5amVzWHV6WU5GdlBPc3BvUT09
 
 forms: []
 # - title: Feedback
