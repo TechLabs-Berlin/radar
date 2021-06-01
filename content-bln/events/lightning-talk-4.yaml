@@ -4,15 +4,16 @@ date: "2021-06-01T19:30:00+02:00"
 is_public: true
 description: |
   Guilherme Holz shares his journey through the tech industry from teenage actor to Facebook engineer 15 years later.
-meetings: 
+meetings:
   - title: 'Lightning Talk #4'
     description: 'The main room where we will meet.'
     type: meeting
     url: https://us02web.zoom.us/j/83908274656?pwd=M3V0RUIwcUNPNGVxUzExWTZDeElLZz09
-forms: []
-# - title: Feedback
-#   description: Please leave feedback for our first lightning talk!
-#   url: https://techlabsorg.typeform.com/to/Hv5QT1eR
+forms:
+  - title: Feedback
+    type: form
+    description: Please leave feedback for this lightning talk!
+    url: https://techlabsorg.typeform.com/to/GBlad4TX
 resources:
   []
   # - title: Call Recording
