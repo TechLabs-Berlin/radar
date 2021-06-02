@@ -15,13 +15,11 @@ forms:
     description: Please leave feedback for this lightning talk!
     url: https://techlabsorg.typeform.com/to/GBlad4TX
 resources:
-  []
-  # - title: Call Recording
-  #   type: video
-  #   url: https://drive.google.com/file/d/1uzQQ5-hGRSGskheym8H6SIwSW2rRYTq-/view?usp=sharing
-  # - title: Moritz Entrepreneurship Presentation Part 1
-  #   type: video
-  #   url: https://drive.google.com/file/d/1SNi0eXrVnowlM13ooljPvM_1E7bF0iZ4/view?usp=sharing
-  # - title: Moritz Entrepreneurship Presentation Part 2
-  #   type: video
-  #   url: https://drive.google.com/file/d/1GhXEl1xM8OM44brVYjz6khZo3Zcdn8Qo/view?usp=sharing
+  - title: "Slides"
+    description: The presentation shown during the event
+    type: slides
+    url: https://docs.google.com/presentation/d/e/2PACX-1vR3Pww9RJCq6o7riQhIXSoTkHTeZR5_SbWZR3LlCD9oXpgPOi-wcMvQmRyTUog37xlUZFLpROQKDCIT/pub?start=false&loop=false&delayms=3000
+  - title: "Recording"
+    description: The recording of the event
+    type: video
+    url: https://drive.google.com/file/d/1p9lYP7So-DTiJvN8n9gHmown2K5GqVsI/view?usp=sharing
