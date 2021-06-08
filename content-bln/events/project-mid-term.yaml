@@ -9,6 +9,11 @@ description: |
   * Current stage & plan for the final stretch
   * Anything to show?
 
+meetings:
+  - title: Main Room
+    description: The main room where we will meet.
+    type: meeting
+    url:  https://us02web.zoom.us/j/89890271250?pwd=WlM2M1lBSEgyL3Z2ZHpVMU1xSDcwZz09
 
 forms: []
 # - title: Feedback
