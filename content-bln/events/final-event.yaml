@@ -9,18 +9,10 @@ description: |
   After a short introduction, each group has the chance to present their elevator pitch to their
   fellow participants. Afterwards we'll have a short feedback round as well as a Q&A.
 
-  To wrap it up we will have a open network session where you can celebrate together your great work!
+meetings:
+  - title: 'Zoom Link'
+    description: 'The main room where we will meet.'
+    type: meeting
+    url: https://us02web.zoom.us/j/82770328238?pwd=WEZCQXNFVWpua2dWd3JwNVVZNXNhUT09
 forms: []
 resources: []
-# - title: "Information for Pitch and Submission"
-#   type: link
-#   url: https://www.notion.so/techlabs/Requirements-for-Techies-Summary-adebfd1a49e64e5e882e67edbf915505
-# - title: Meeting Room
-#   description: The main room where we will meet.
-#   type: meeting
-#   url: https://us02web.zoom.us/j/88549038475?pwd=ZTc5Y0Qxc25ST0tYUjdnTHBycXNoQT09
-# - title: Open Networking Session
-#   description: The open network session after the event
-#   type: meeting
-#   url: https://www.wonder.me/r?id=a3f2b91d-5ab4-4127-ac47-894c257e8bdf&emailVerificationToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTQyNDMzNDM4OTcsImVtYWlsIjoibWF4aW1pbGlhbi5zY2hhbGxAbWFpbC5kZSIsInJvb21JZCI6ImEzZjJiOTFkLTVhYjQtNDEyNy1hYzQ3LTg5NGMyNTdlOGJkZiIsImlhdCI6MTYxMzAzMzc0M30.EyNP3NLajeYosiy9RtFvsogzClZIVnxHRVS9irPr7Qg%20Kind%20Regards,
-
