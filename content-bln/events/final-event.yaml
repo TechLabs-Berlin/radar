@@ -8,7 +8,7 @@ description: |
 
   After a short introduction, each group has the chance to present their elevator pitch to their
   fellow participants. Afterwards we'll have a short feedback round as well as a Q&A.
-
+show_resources: true
 meetings:
   - title: 'Zoom Link'
     description: 'The main room where we will meet.'
