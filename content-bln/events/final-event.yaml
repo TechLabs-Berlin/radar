@@ -8,15 +8,14 @@ description: |
 
   After a short introduction, each group has the chance to present their elevator pitch to their
   fellow participants. Afterwards we'll have a short feedback round as well as a Q&A.
-show_resources: true
 meetings:
   - title: 'Zoom Link'
     description: 'The main room where we will meet.'
     type: meeting
     url: https://us02web.zoom.us/j/82770328238?pwd=WEZCQXNFVWpua2dWd3JwNVVZNXNhUT09
-forms: []
-resources:
   - title: 'Social: Wonder'
     description: Join us in our Berliner Wonder Space!
     type: nothing
     url: https://www.wonder.me/r?id=8be41e17-ee7a-450b-8ff3-444a308b4ae4
+forms: []
+resources: []
