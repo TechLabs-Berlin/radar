@@ -15,4 +15,8 @@ meetings:
     type: meeting
     url: https://us02web.zoom.us/j/82770328238?pwd=WEZCQXNFVWpua2dWd3JwNVVZNXNhUT09
 forms: []
-resources: []
+resources:
+  - title: 'Social: Wonder'
+    description: Join us in our Berliner Wonder Space!
+    type: nothing
+    url: https://www.wonder.me/r?id=8be41e17-ee7a-450b-8ff3-444a308b4ae4
