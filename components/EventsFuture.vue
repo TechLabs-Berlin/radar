@@ -18,7 +18,7 @@
       </ul>
     </template>
     <div v-else>
-      <p>No Past Events.</p>
+      <p>No Future Events :(</p>
     </div>
   </div>
 </template>
