@@ -14,6 +14,7 @@ export default defineComponent({
     const events = ref()
     const timeline = ref()
     const milestones = ref()
+    const announcement = ref()
     const isPublic = ref(process.env.SCOPE === 'public')
     useFetch(async () => {
       if (isPublic.value) {
@@ -30,6 +31,7 @@ export default defineComponent({
           .sortBy('deadline')
           .fetch()
       }
+      announcement.value = await $content('announcement').fetch()
     })
 
     return {
@@ -37,6 +39,7 @@ export default defineComponent({
       timeline,
       milestones,
       isPublic,
+      announcement,
     }
   },
   head: {},
@@ -66,12 +69,14 @@ export default defineComponent({
             <Events :events="events" :milestones="milestones" />
           </ClientOnly>
         </div>
-        <div v-else>
+        <div v-if="announcement && announcement.publish">
           <WrapperContentBox>
-            <p class="prose text-center">
-              We are preparing the next term for you.<br />Stay tuned.
-            </p></WrapperContentBox
-          >
+            <!-- eslint-disable-next-line vue/no-v-html -->
+            <div
+              class="prose text-center"
+              v-html="$md.render(announcement.body)"
+            />
+          </WrapperContentBox>
         </div>
       </div>
     </div>
