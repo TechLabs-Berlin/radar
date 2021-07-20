@@ -26,7 +26,7 @@
     </div>
 
     <!-- CURRENT EVENT  -->
-    <div class="mb-8">
+    <div class="mb-8" v-if="currentEvent">
       <ClientOnly>
         <EventListItem
           :tl-event="currentEvent"
