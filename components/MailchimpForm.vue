@@ -118,19 +118,13 @@ export default defineComponent({
     function checkForm(e) {
       errorConsent.value = !form.consent
       errorEmail.value = false
-      if (!form.email || !validEmail(form.email)) {
+      if (!form.email) {
         errorEmail.value = true
       }
       if (!errorConsent.value && !errorEmail.value) {
         submit(form.email, form.name)
       }
       e.preventDefault()
-    }
-
-    function validEmail() {
-      // const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      // return re.test(email)
-      return true
     }
 
     return {
