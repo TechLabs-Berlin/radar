@@ -58,7 +58,21 @@
         </div>
         <div class="pt-4">
           <button
-            class="flex items-center justify-center w-full px-4 py-2 space-x-2 font-bold border-2 border-gray-700 rounded-lg md:min-w-md hover:border-pink-600 hover:text-white hover:bg-pink-600 disabled:opacity-75"
+            class="
+              flex
+              items-center
+              justify-center
+              w-full
+              px-4
+              py-2
+              space-x-2
+              font-bold
+              border-2 border-gray-700
+              rounded-lg
+              md:min-w-md
+              hover:border-pink-600 hover:text-white hover:bg-pink-600
+              disabled:opacity-75
+            "
             :disabled="loading"
             @click="checkForm"
           >
@@ -121,9 +135,9 @@ export default defineComponent({
     function checkForm(e) {
       errorConsent.value = !form.consent
       errorEmail.value = false
-      if (!form.email) {
-        errorEmail.value = true
-      }
+      // if (!form.email) {
+      //   errorEmail.value = true
+      // }
       if (!errorConsent.value && !errorEmail.value) {
         submit(form.email, form.name)
       }
