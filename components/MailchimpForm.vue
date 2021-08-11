@@ -90,7 +90,6 @@ import {
   reactive,
   ref,
   useContext,
-  useFetch,
 } from '@nuxtjs/composition-api'
 
 export default defineComponent({
@@ -101,25 +100,24 @@ export default defineComponent({
     const errorConsent = ref(false)
     const loading = ref(false)
 
-    const { $content, $axios } = useContext()
-    const content = ref(null)
-    useFetch(async () => {
-      content.value = await $content('newsletter').fetch()
-    })
+    const { $axios } = useContext()
 
     async function submit(email, name) {
-      const SIGNUP_URL = content.value.signUpUrl
       loading.value = true
       const data = {
         email,
         name,
       }
       try {
-        const response = await $axios.$post(SIGNUP_URL, data, {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        })
+        const response = await $axios.$post(
+          'https://a696oel4ti.execute-api.eu-central-1.amazonaws.com/dev/add-to-list',
+          data,
+          {
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          }
+        )
         console.log('SUCCESS')
         console.log(response)
         emit('success')

@@ -2,8 +2,8 @@
   <header>
     <div class="flex items-center justify-between pt-4 mx-auto">
       <NuxtLink to="/" class="flex items-center space-x-2">
-        <img src="icon.png" class="w-10 h-10" />
-        <img :src="`icon-${location}.png`" class="w-10 h-10" />
+        <img src="/icon.png" class="w-10 h-10" />
+        <img :src="`/icon-${location}.png`" class="w-10 h-10" />
         <p
           v-if="content"
           class="pl-4 font-bold tracking-wide text-gray-500 uppercase"
