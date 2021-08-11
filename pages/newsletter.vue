@@ -20,10 +20,12 @@
 
         <!-- SHOW SUBSCRIPTION FORM -->
         <div v-else>
-          <MailchimpForm
-            @success="status = 'success'"
-            @failure="status = 'failure'"
-          />
+          <ClientOnly>
+            <MailchimpForm
+              @success="status = 'success'"
+              @failure="status = 'failure'"
+            />
+          </ClientOnly>
         </div>
       </WrapperContentBox>
     </div>
