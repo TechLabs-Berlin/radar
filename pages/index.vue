@@ -53,6 +53,7 @@ export default defineComponent({
       class="w-full"
       :class="isPublic ? 'max-w-2xl mx-auto' : 'main-grid'"
     >
+      <!-- Timeline -->
       <div v-if="!isPublic" class="w-64 mx-auto timeline">
         <h3 class="md:hidden title-with-lines">Timeline</h3>
         <ClientOnly>
@@ -64,11 +65,13 @@ export default defineComponent({
         </ClientOnly>
       </div>
       <div class="events">
+        <!-- "Show Past Events"-Button + Event History -->
         <div v-if="events && events.length">
           <ClientOnly>
             <Events :events="events" :milestones="milestones" />
           </ClientOnly>
         </div>
+        <!-- Announcements -->
         <div v-if="announcement && announcement.publish">
           <WrapperContentBox>
             <!-- eslint-disable-next-line vue/no-v-html -->
@@ -78,6 +81,7 @@ export default defineComponent({
             />
           </WrapperContentBox>
         </div>
+        <AddEventModalContainer></AddEventModalContainer>
       </div>
     </div>
   </main>
