@@ -22,6 +22,12 @@
     </transition>
     <div>
       <button
+        class="text-gray-400 focus:outline-none active:outline-none hover:text-gray-700"
+        @click="toggleLoginModal"
+      >
+        <TIcon icon="lock" class="text-2xl" />
+      </button>
+      <button
         v-if="isOpen"
         class="text-gray-400 focus:outline-none active:outline-none hover:text-gray-700"
         @click="toggle"
@@ -52,6 +58,7 @@ export default defineComponent({
     const isPublic = ref(process.env.SCOPE === 'public')
     const isOpen = ref(false)
     const toggle = () => (isOpen.value = !isOpen.value)
+    const toggleLoginModal = () => null
 
     const { $content } = useContext()
     const navLinks = ref([])
@@ -63,7 +70,7 @@ export default defineComponent({
         : content.navLinks
     })
 
-    return { isOpen, toggle, navLinks }
+    return { isOpen, toggle, navLinks, toggleLoginModal }
   },
 })
 </script>
