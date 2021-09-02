@@ -3,6 +3,7 @@
     <AddEventModalButton @update:toggle="updateToggle"></AddEventModalButton
     ><AddEventModalForm
       v-if="toggle"
+      @keyup.esc="toggle = false"
       @update:toggle-false="updateToggleFalse"
     ></AddEventModalForm>
   </div>

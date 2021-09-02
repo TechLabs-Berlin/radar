@@ -4,10 +4,7 @@
   "version": "2.2.0",
   "private": true,
   "author": "Felix Seidel",
-  "contributors": [
-    "Daniel da Rocha",
-    "Maximilian Schall"
-  ],
+  "contributors": ["Daniel da Rocha", "Maximilian Schall"],
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -19,6 +16,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@nuxtjs/auth-next": "5.0.0-1624817847.21691f1",
     "@nuxt/content": "^1.11.1",
     "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/composition-api": "^0.22.0",

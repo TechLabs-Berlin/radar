@@ -3,7 +3,21 @@
     <div
       v-tippy="{ theme: 'tl' }"
       :content="weekDates"
-      class="relative flex items-center justify-center flex-none w-10 h-10 font-mono text-sm font-semibold border rounded-lg shadow"
+      class="
+        relative
+        flex
+        items-center
+        justify-center
+        flex-none
+        w-10
+        h-10
+        font-mono
+        text-sm
+        font-semibold
+        border
+        rounded-lg
+        shadow
+      "
       :class="
         clsx({
           'text-pink-600': weekStatus === 'current',
@@ -16,7 +30,13 @@
       <template v-if="['current', 'past'].includes(weekStatus)">
         <TIcon
           :icon="weekStatus === 'current' ? 'hourglass-half' : 'check-circle'"
-          class="absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1"
+          class="
+            absolute
+            top-0
+            left-0
+            transform
+            -translate-x-1/2 -translate-y-1
+          "
           :class="weekStatus === 'current' ? 'text-pink-600' : 'text-gray-700'"
         />
       </template>

@@ -53,9 +53,11 @@ export default defineComponent({
       class="w-full"
       :class="isPublic ? 'max-w-2xl mx-auto' : 'main-grid'"
     >
+      {{ $auth.loggedIn }}
       <!-- Timeline -->
       <div v-if="!isPublic" class="w-64 mx-auto timeline">
         <h3 class="md:hidden title-with-lines">Timeline</h3>
+        <div v-for="user in users"></div>
         <ClientOnly>
           <Timeline
             :timeline="timeline"

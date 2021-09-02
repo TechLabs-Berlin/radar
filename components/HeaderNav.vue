@@ -3,12 +3,41 @@
     <transition name="fade">
       <div
         v-if="isOpen"
-        class="absolute top-0 right-0 z-50 flex flex-col items-end p-4 space-y-4 transform translate-y-10 bg-white rounded-lg shadow-lg lg:-translate-y-2 lg:px-4 lg:py-2 lg:space-y-0 lg:-translate-x-10 lg:flex-row lg:items-center lg:space-x-8"
+        class="
+          absolute
+          top-0
+          right-0
+          z-50
+          flex flex-col
+          items-end
+          p-4
+          space-y-4
+          transform
+          translate-y-10
+          bg-white
+          rounded-lg
+          shadow-lg
+          lg:-translate-y-2
+          lg:px-4
+          lg:py-2
+          lg:space-y-0
+          lg:-translate-x-10
+          lg:flex-row
+          lg:items-center
+          lg:space-x-8
+        "
       >
         <nav>
           <ul
             v-if="navLinks.length"
-            class="space-y-2 text-sm font-semibold text-right uppercase lg:flex lg:items-center lg:space-x-4 lg:space-y-0"
+            class="
+              space-y-2
+              text-sm
+              font-semibold
+              text-right
+              uppercase
+              lg:flex lg:items-center lg:space-x-4 lg:space-y-0
+            "
           >
             <li v-for="link in navLinks" :key="link.title" @click="toggle">
               <NuxtLink class="hover:text-pink-600 nav-link" :to="link.path">{{
@@ -21,26 +50,43 @@
       </div>
     </transition>
     <div>
-      <button
-        class="text-gray-400 focus:outline-none active:outline-none hover:text-gray-700"
-        @click="toggleLoginModal"
-      >
-        <TIcon icon="lock" class="text-2xl" />
-      </button>
-      <button
-        v-if="isOpen"
-        class="text-gray-400 focus:outline-none active:outline-none hover:text-gray-700"
-        @click="toggle"
-      >
+      <button v-if="isOpen" @click="toggle">
         <TIcon icon="times" class="text-2xl" />
       </button>
-      <button
+      <ul
         v-else
-        class="text-gray-400 focus:outline-none active:outline-none hover:text-gray-700"
-        @click="toggle"
+        class="
+          space-y-2
+          text-sm text-right
+          lg:flex lg:items-center lg:space-x-4 lg:space-y-0
+        "
       >
-        <TIcon icon="hamburger" class="text-2xl" />
-      </button>
+        <!-- Beginning of Login / Logout -->
+        <button
+          v-if="$auth.loggedIn"
+          v-tippy="{ theme: 'tl' }"
+          :content="'Logout'"
+          @click="$auth.logout()"
+        >
+          <TIcon icon="lock-unlocked" class="text-2xl"></TIcon>
+        </button>
+        <button
+          v-else
+          v-tippy="{ theme: 'tl' }"
+          :content="'Login'"
+          @click="
+            $auth.loginWith('google', {
+              params: { prompt: 'select_account' },
+            })
+          "
+        >
+          <TIcon icon="lock" class="text-2xl"></TIcon>
+        </button>
+        <!-- End of Login / Logout -->
+        <button @click="toggle">
+          <TIcon icon="lock-unlocked" class="text-2xl" />
+        </button>
+      </ul>
     </div>
   </div>
 </template>
@@ -74,3 +120,15 @@ export default defineComponent({
   },
 })
 </script>
+text-gray-400 focus:outline-none active:outline-none hover:text-gray-700
+<style>
+button {
+  color: #9ca3af;
+}
+button:hover {
+  color: #374151;
+}
+button:focus button:active {
+  outline: none;
+}
+</style>

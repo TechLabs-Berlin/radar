@@ -58,8 +58,18 @@ export default {
     '@nuxt/content',
     '@nuxtjs/markdownit',
     '@nuxtjs/axios',
+    '@nuxtjs/auth-next',
   ],
-
+  auth: {
+    strategies: {
+      google: {
+        clientId:
+          '1056463232903-b1notj3ppqcf19lhr3e9knt7sv2bfcqa.apps.googleusercontent.com',
+        codeChallengeMethod: '',
+        responseType: 'token id_token',
+      },
+    },
+  },
   googleFonts: {
     families: {
       Livvic: [300, 400, 600, 700],
