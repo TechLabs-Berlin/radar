@@ -42,7 +42,7 @@
       </template>
     </div>
     <!-- events  -->
-    <div id="tmpID" class="w-full">
+    <div class="w-full">
       <template v-if="week.events.length || week.milestones.length">
         <TimelineWeekItems v-if="week.events.length" :events="week.events">
           <template #event="{ event }">

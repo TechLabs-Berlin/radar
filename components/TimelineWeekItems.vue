@@ -3,7 +3,9 @@
     <li v-for="e in events" :key="e.slug" class="flex justify-between">
       <slot name="event" :event="e" />
       <div v-if="$auth.loggedIn" class="flex">
-        <button class="font-semibold ml-3" @click="log(e)">Edit</button>
+        <button id="tmpID" class="font-semibold ml-3" @click="log(e)">
+          Edit
+        </button>
         <button class="font-semibold ml-3" @click="log(e)">Delete</button>
       </div>
     </li>

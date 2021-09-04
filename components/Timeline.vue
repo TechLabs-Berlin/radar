@@ -1,9 +1,6 @@
 <template>
   <div class="w-full">
-    <div
-      id="tmpID"
-      class="w-full p-8 mx-auto bg-white border shadow-lg rounded-xl"
-    >
+    <div class="w-full p-8 mx-auto bg-white border shadow-lg rounded-xl">
       <ul v-if="compiledTimeline.length" class="space-y-8">
         <li v-for="milestone in compiledTimeline" :key="milestone.startDate">
           <!-- phase title  -->
