@@ -8,6 +8,7 @@ import {
 } from '@nuxtjs/composition-api'
 
 export default defineComponent({
+  middleware: 'auth',
   setup() {
     useMeta({ title: 'FAQ' })
     const { $content } = useContext()

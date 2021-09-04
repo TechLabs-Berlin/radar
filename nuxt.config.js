@@ -1,6 +1,7 @@
 const LOCATION = 'bln'
 
 export default {
+  mode: 'ssr',
   env: {
     NUXT_APP_LOCATION: LOCATION,
   },
@@ -61,6 +62,11 @@ export default {
     '@nuxtjs/auth-next',
   ],
   auth: {
+    redirect: {
+      callback: '/callback',
+      home: '/',
+      login: '/',
+    },
     strategies: {
       google: {
         clientId:

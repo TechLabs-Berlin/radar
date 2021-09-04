@@ -53,7 +53,16 @@ export default defineComponent({
                 <a
                   :href="media.youtubeURL"
                   target="_blank"
-                  class="flex items-center px-4 py-2 space-x-2 border-2 border-gray-700 rounded-xl hover:border-pink-600 hover:text-pink-600"
+                  class="
+                    flex
+                    items-center
+                    px-4
+                    py-2
+                    space-x-2
+                    border-2 border-gray-700
+                    rounded-xl
+                    hover:border-pink-600 hover:text-pink-600
+                  "
                   ><span><TIcon icon="youtube" class="text-xl" /></span
                   ><span class="whitespace-nowrap">Watch it on YouTube</span></a
                 >

@@ -1,5 +1,5 @@
 <template>
-  <div @keyup.esc="toggle = false">
+  <div v-if="$auth.loggedIn" @keyup.esc="toggle = false">
     <AddEventModalButton @update:toggle="updateToggle"></AddEventModalButton
     ><AddEventModalForm
       v-if="toggle"
@@ -11,8 +11,6 @@
 
 <script>
 export default {
-  name: 'AddEventModalContainer',
-
   data() {
     return {
       toggle: false,

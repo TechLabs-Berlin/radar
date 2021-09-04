@@ -74,17 +74,13 @@
           v-else
           v-tippy="{ theme: 'tl' }"
           :content="'Login'"
-          @click="
-            $auth.loginWith('google', {
-              params: { prompt: 'select_account' },
-            })
-          "
+          @click="login"
         >
           <TIcon icon="lock" class="text-2xl"></TIcon>
         </button>
         <!-- End of Login / Logout -->
         <button @click="toggle">
-          <TIcon icon="lock-unlocked" class="text-2xl" />
+          <TIcon icon="hamburger" class="text-2xl" />
         </button>
       </ul>
     </div>
@@ -94,6 +90,7 @@
 <script>
 import {
   ref,
+  /* computed, */
   defineComponent,
   useContext,
   useFetch,
@@ -104,9 +101,16 @@ export default defineComponent({
     const isPublic = ref(process.env.SCOPE === 'public')
     const isOpen = ref(false)
     const toggle = () => (isOpen.value = !isOpen.value)
-    const toggleLoginModal = () => null
 
-    const { $content } = useContext()
+    const { $auth, $content } = useContext()
+    const login = async function () {
+      await $auth.loginWith('google', {
+        params: { prompt: 'select_account' },
+      })
+    }
+    /* const userIsLoggedIn = computed(function () { */
+    /*   return $auth.loggedIn */
+    /* }) */
     const navLinks = ref([])
     useFetch(async () => {
       const content = await $content('nav-links').fetch()
@@ -116,7 +120,7 @@ export default defineComponent({
         : content.navLinks
     })
 
-    return { isOpen, toggle, navLinks, toggleLoginModal }
+    return { isOpen, toggle, navLinks, login }
   },
 })
 </script>
