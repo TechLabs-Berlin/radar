@@ -1,36 +1,79 @@
-name: cd
+name: Radar Deployment
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
-  cd:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [14]
-
+  build:
+    name: Build Release
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
 
-      - name: Setup node env
-        uses: actions/setup-node@v2.1.2
+      - uses: actions/setup-node@v2-beta
         with:
-          node-version: ${{ matrix.node }}
+          node-version: '14'
 
-      - name: Install dependencies
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: npm install
         run: npm install
 
-      - name: Generate
+      - name: nuxt generate
         run: npm run generate
         env:
           BASE_URL: ${{ secrets.BASE_URL }}
           MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload build
+        uses: actions/upload-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          name: build
+          path: dist
+          if-no-files-found: error
+
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+      - name: Checkout deploy branch
+        uses: actions/checkout@v2
+        with:
+          ref: deploy
+          path: deploy
+
+      - name: Download build
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: build
+
+      - name: Copy frontend build to deploy branch
+        run: |
+          #use the next line in case there is no custom domain
+          cp -r deploy/.git deploy/README.md build/
+          #use this line in case there is a custom domain, at this case the CNAME file should exist at the deploy branch with the potential CNAME
+          #cp -r deploy/.git deploy/CNAME deploy/README.md build/
+      - name: Configure git
+        run: |
+          #replace ms@techlabs.org with the email of your potential commiter
+          git config --global user.email "ms@techlabs.org"
+          #replace TechLabs Muenster GitHub Workflow with the name of your potential commiter
+          git config --global user.name "TechLabs Muenster GitHub Workflow"
+      - name: Commit deploy branch
+        run: |
+          git add --all --force .
+          git commit -m "Add frontend build at $(date +%FT%T%Z)" --allow-empty
+        working-directory: build
+
+      - name: Push deploy branch
+        run: git push
+        working-directory: build
