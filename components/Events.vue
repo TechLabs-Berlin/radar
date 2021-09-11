@@ -8,7 +8,13 @@
     <div v-if="pastEvents.length">
       <div class="flex items-start justify-end h-8">
         <button
-          class="flex space-x-4 text-gray-500 focus:outline-none active:outline-none"
+          class="
+            flex
+            space-x-4
+            text-gray-500
+            focus:outline-none
+            active:outline-none
+          "
           @click="showPastEvents = !showPastEvents"
         >
           <p class="text-center">
@@ -38,7 +44,7 @@
     <!-- FUTURE EVENTS  -->
     <EventsFuture
       v-if="futureEvents.length"
-      :events="futureEvents.filter(({ slug }) => slug !== currentEvent.slug)"
+      :events="futureEvents.filter(({ id }) => id !== currentEvent.id)"
     />
   </div>
 </template>

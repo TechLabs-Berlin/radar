@@ -79,6 +79,10 @@ export default {
     runtime: true, // Support `$md()`
   },
 
+  axios: {
+    baseURL: 'https://pvo7xic2xk.execute-api.eu-central-1.amazonaws.com',
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 }

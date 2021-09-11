@@ -41,7 +41,9 @@ export default defineComponent({
       milestones.filter(({ deadline }) => isPast(deadline))
     )
     const futureMilestones = computed(() =>
-      milestones.filter(({ deadline }) => isFuture(deadline))
+      milestones
+        .filter(({ deadline }) => isFuture(deadline))
+        .sort((a, b) => a.deadline - b.deadline)
     )
     const currentMilestone = computed(() =>
       futureMilestones.value && futureMilestones.value.length

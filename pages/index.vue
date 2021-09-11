@@ -10,26 +10,26 @@ export default defineComponent({
   setup() {
     const { title } = useMeta()
     title.value = 'Timeline'
-    const { $content } = useContext()
-    const events = ref()
+    const { $content, $axios } = useContext()
+    const events = ref([])
     const timeline = ref()
-    const milestones = ref()
+    const milestones = ref([])
     const announcement = ref()
     const isPublic = ref(process.env.SCOPE === 'public')
     useFetch(async () => {
       if (isPublic.value) {
-        events.value = await $content('/events')
-          .sortBy('date')
-          .where({ is_public: { $eq: true } })
-          .fetch()
-        timeline.value = []
-        milestones.value = []
+        // events.value = await $content('/events')
+        //   .sortBy('date')
+        //   .where({ is_public: { $eq: true } })
+        //   .fetch()
+        // timeline.value = []
+        // milestones.value = []
       } else {
-        events.value = await $content('/events').sortBy('date').fetch()
-        timeline.value = await $content('timeline').fetch()
-        milestones.value = await $content('/milestones')
-          .sortBy('deadline')
-          .fetch()
+        // events.value = await $content('/events').sortBy('date').fetch()
+        const { data } = await $axios.get()
+        events.value = data.events
+        milestones.value = data.milestones
+        timeline.value = data.timeline // await $content('timeline').fetch()
       }
       announcement.value = await $content('announcement').fetch()
     })
@@ -55,13 +55,12 @@ export default defineComponent({
     >
       <div v-if="!isPublic" class="w-64 mx-auto timeline">
         <h3 class="md:hidden title-with-lines">Timeline</h3>
-        <ClientOnly>
-          <Timeline
-            :timeline="timeline"
-            :events="events"
-            :milestones="milestones"
-          />
-        </ClientOnly>
+
+        <Timeline
+          :timeline="timeline"
+          :events="events"
+          :milestones="milestones"
+        />
       </div>
       <div class="events">
         <div v-if="events && events.length">
@@ -69,15 +68,15 @@ export default defineComponent({
             <Events :events="events" :milestones="milestones" />
           </ClientOnly>
         </div>
-        <div v-if="announcement && announcement.publish">
-          <WrapperContentBox>
-            <!-- eslint-disable-next-line vue/no-v-html -->
-            <div
+        <!-- <div v-if="announcement && announcement.publish">
+          <WrapperContentBox> -->
+        <!-- eslint-disable-next-line vue/no-v-html -->
+        <!-- <div
               class="prose text-center"
               v-html="$md.render(announcement.body)"
             />
           </WrapperContentBox>
-        </div>
+        </div> -->
       </div>
     </div>
   </main>

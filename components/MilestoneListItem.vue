@@ -8,9 +8,7 @@ export default defineComponent({
       type: Object,
       required: true,
     },
-    alwaysShowTasks: {
-      type: Boolean,
-    },
+    alwaysShowTasks: Boolean,
   },
   setup() {
     const showTasks = ref(false)
@@ -38,13 +36,31 @@ export default defineComponent({
       </div>
       <header class="flex items-center space-x-4">
         <div>
-          <NuxtLink :to="`/milestone/${milestone.slug}`" class="title-link">
+          <NuxtLink :to="`/milestone/${milestone.id}`" class="title-link">
             <h2
-              class="relative inline-block mb-1 text-2xl font-bold text-pink-900 hover:underline"
+              class="
+                relative
+                inline-block
+                mb-1
+                text-2xl
+                font-bold
+                text-pink-900
+                hover:underline
+              "
             >
               {{ milestone.title }}
               <div
-                class="absolute top-0 right-0 hidden pl-2 text-base text-pink-600 transform translate-x-full translate-y-1 icon"
+                class="
+                  absolute
+                  top-0
+                  right-0
+                  hidden
+                  pl-2
+                  text-base text-pink-600
+                  transform
+                  translate-x-full translate-y-1
+                  icon
+                "
               >
                 <TIcon icon="link" class="inline-block" />
               </div></h2
@@ -62,8 +78,8 @@ export default defineComponent({
       <div />
       <main class="space-y-8">
         <!-- eslint-disable-next-line vue/no-v-html -->
-        <div class="prose" v-html="$md.render(milestone.description)" />
-        <template v-if="milestone.todos.length">
+        <div class="prose" v-html="milestone.content.html" />
+        <!-- <template v-if="milestone.todos.length">
           <p v-if="!alwaysShowTasks">
             <button
               v-if="showTasks"
@@ -99,7 +115,7 @@ export default defineComponent({
               </div>
             </li>
           </ul>
-        </template>
+        </template> -->
       </main>
     </article>
   </div>

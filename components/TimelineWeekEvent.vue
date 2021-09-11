@@ -13,12 +13,12 @@
     </p>
     <div>
       <p class="font-semibold" :class="{ 'line-through': !isFutureEvent }">
-        <NuxtLink :to="`/event/${event.slug}`" class="regular-link">{{
+        <NuxtLink :to="`/event/${event.id}`" class="regular-link">{{
           event.title
         }}</NuxtLink>
       </p>
       <p>
-        {{ format(new Date(event.date), 'MMM d') }}
+        {{ format(new Date(event.datetime.start), 'MMM d') }}
       </p>
     </div>
   </div>
@@ -42,8 +42,8 @@ export default defineComponent({
   setup(props) {
     const isFutureEvent = computed(
       () =>
-        isFuture(parseISO(props.event.date)) ||
-        isToday(parseISO(props.event.date))
+        isFuture(parseISO(props.event.datetime.start)) ||
+        isToday(parseISO(props.event.datetime.start))
     )
     return { format, isFutureEvent }
   },

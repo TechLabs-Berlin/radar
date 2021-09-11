@@ -22,7 +22,7 @@
 
 <script>
 import { defineComponent, computed } from '@nuxtjs/composition-api'
-import { format, isToday, isFuture, parseISO } from 'date-fns'
+import { format, isToday, isFuture } from 'date-fns'
 
 export default defineComponent({
   props: {
@@ -34,8 +34,8 @@ export default defineComponent({
   setup(props) {
     const isFutureMilestone = computed(
       () =>
-        isFuture(parseISO(props.milestone.deadline)) ||
-        isToday(parseISO(props.milestone.deadline))
+        isFuture(new Date(props.milestone.deadline)) ||
+        isToday(new Date(props.milestone.deadline))
     )
     return { format, isFutureMilestone }
   },
