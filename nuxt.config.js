@@ -1,8 +1,7 @@
-const LOCATION = 'bln'
-
 export default {
-  env: {
-    NUXT_APP_LOCATION: LOCATION,
+  publicRuntimeConfig: {
+    location: process.env.NUXT_APP_LOCATION,
+    apiUrl: 'https://pvo7xic2xk.execute-api.eu-central-1.amazonaws.com/',
   },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -35,7 +34,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/vue-tippy.js'],
+  plugins: ['~/plugins/vue-tippy.js', '~/plugins/store.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -51,6 +50,7 @@ export default {
     '@nuxtjs/composition-api',
     '@nuxt/image',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/dotenv',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -72,7 +72,7 @@ export default {
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
-    dir: `content-${LOCATION}`,
+    dir: `content-${process.env.NUXT_APP_LOCATION}`,
   },
 
   // https://www.npmjs.com/package/@nuxtjs/markdownit

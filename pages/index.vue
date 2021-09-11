@@ -1,18 +1,19 @@
 <script>
 import {
-  useFetch,
   defineComponent,
   useContext,
   ref,
   useMeta,
+  useFetch,
 } from '@nuxtjs/composition-api'
+// import useStore from '@/composables/useStore'
 export default defineComponent({
   setup() {
     const { title } = useMeta()
     title.value = 'Timeline'
-    const { $content, $axios } = useContext()
+    const { $content, $store } = useContext()
     const events = ref([])
-    const timeline = ref()
+    const timeline = ref([])
     const milestones = ref([])
     const announcement = ref()
     const isPublic = ref(process.env.SCOPE === 'public')
@@ -25,11 +26,10 @@ export default defineComponent({
         // timeline.value = []
         // milestones.value = []
       } else {
-        // events.value = await $content('/events').sortBy('date').fetch()
-        const { data } = await $axios.get()
-        events.value = data.events
-        milestones.value = data.milestones
-        timeline.value = data.timeline // await $content('timeline').fetch()
+        // const { data } = await $axios.get()
+        events.value = $store.events
+        milestones.value = $store.milestones
+        timeline.value = $store.timeline
       }
       announcement.value = await $content('announcement').fetch()
     })

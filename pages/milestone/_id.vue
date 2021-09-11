@@ -16,27 +16,33 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import {
+  defineComponent,
+  ref,
+  useRoute,
+  computed,
+  useMeta,
+  useContext,
+} from '@nuxtjs/composition-api'
 import MilestoneListItem from '@/components/MilestoneListItem'
 
 export default defineComponent({
   components: { MilestoneListItem },
-  async asyncData({ $content, params }) {
-    const milestone = await $content('milestones', params.slug).fetch()
-    return {
-      milestone,
-    }
+  setup() {
+    const milestone = ref()
+    const route = useRoute()
+    const id = computed(() => route.value.params.id)
+    const { title } = useMeta()
+    const { $store } = useContext()
+
+    milestone.value = $store.milestones.find(
+      (milestone) => milestone.id === id.value
+    )
+    title.value = milestone.value.title
+
+    return { milestone }
   },
-  data() {
-    return {
-      milestone: null,
-    }
-  },
-  head() {
-    return {
-      title: this.milestone.title,
-    }
-  },
+  head: {},
 })
 </script>
 

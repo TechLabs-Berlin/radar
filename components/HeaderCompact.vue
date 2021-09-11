@@ -26,12 +26,12 @@ import {
 
 export default defineComponent({
   setup() {
-    const { $content, env } = useContext()
+    const { $content, $config } = useContext()
     const content = ref(null)
     useFetch(async () => {
       content.value = await $content('term').fetch()
     })
-    return { content, location: env.NUXT_APP_LOCATION }
+    return { content, location: $config.location }
   },
 })
 </script>
