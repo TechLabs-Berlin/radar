@@ -17,5 +17,9 @@ export default async function ({ $axios }, inject) {
     store.timeline = data.timeline
   }
 
+  store.events.sort(
+    (a, b) => new Date(a.datetime.start) - new Date(b.datetime.start)
+  )
+
   inject('store', store)
 }
