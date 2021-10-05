@@ -65,8 +65,8 @@
         <template
           v-if="
             (isInOneHour || isLive) &&
-            tlEvent.meetings &&
-            tlEvent.meetings.length
+            tlEvent.links.meetings &&
+            tlEvent.links.meetings.length
           "
         >
           <EventListItemResourceList
@@ -126,9 +126,13 @@ export default defineComponent({
     const eventDate = new Date(props.tlEvent.datetime.start)
     const { isPastDate, isFutureDate, isLive, isInOneHour } = useEvent({
       ...props.tlEvent,
-      datetime: { start: eventDate },
+      date: eventDate,
     })
-    const hasResources = computed(() => Boolean(props.tlEvent.links.length))
+    const hasResources = computed(() => {
+      for (const value of Object.values(props.tlEvent.links)) {
+        if (value.length) return true
+      }
+    })
 
     const verb = computed(() => {
       if (isLive.value) return 'Taking'
