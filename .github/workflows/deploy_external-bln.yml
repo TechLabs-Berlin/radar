@@ -3,7 +3,7 @@ name: Radar External Deployment
 on:
   push:
     branches:
-      - master
+      - radar-notion
 
 jobs:
   build:
@@ -12,10 +12,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          ref: 'radar-notion'
 
       - uses: actions/setup-node@v2-beta
         with:
-          node-version: "14"
+          node-version: '14'
 
       - uses: actions/cache@v2
         with:
@@ -32,7 +34,9 @@ jobs:
         env:
           BASE_URL: ${{ secrets.BASE_URL }}
           MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
-          SCOPE: "public"
+          NUXT_APP_LOCATION: bln
+          NUXT_APP_API_URL: https://pvo7xic2xk.execute-api.eu-central-1.amazonaws.com
+          NUXT_APP_SCOPE: public
 
       - name: Upload build
         uses: actions/upload-artifact@v2

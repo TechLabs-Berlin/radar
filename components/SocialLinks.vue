@@ -23,8 +23,8 @@ export default defineComponent({
     },
   },
   setup() {
-    const isPublic = ref(process.env.SCOPE === 'public')
-    const { $content } = useContext()
+    const { $content, $config } = useContext()
+    const isPublic = ref($config.scope === 'public')
 
     const socialLinks = ref([])
 

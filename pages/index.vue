@@ -6,31 +6,21 @@ import {
   useMeta,
   useFetch,
 } from '@nuxtjs/composition-api'
-// import useStore from '@/composables/useStore'
+
 export default defineComponent({
   setup() {
     const { title } = useMeta()
     title.value = 'Timeline'
-    const { $content, $store } = useContext()
+    const { $content, $store, $config } = useContext()
     const events = ref([])
     const timeline = ref([])
     const milestones = ref([])
     const announcement = ref()
-    const isPublic = ref(process.env.SCOPE === 'public')
+    const isPublic = ref($config.scope === 'public')
     useFetch(async () => {
-      if (isPublic.value) {
-        // events.value = await $content('/events')
-        //   .sortBy('date')
-        //   .where({ is_public: { $eq: true } })
-        //   .fetch()
-        // timeline.value = []
-        // milestones.value = []
-      } else {
-        // const { data } = await $axios.get()
-        events.value = $store.events
-        milestones.value = $store.milestones
-        timeline.value = $store.timeline
-      }
+      events.value = $store.events
+      milestones.value = $store.milestones
+      timeline.value = $store.timeline
       announcement.value = await $content('announcement').fetch()
     })
 

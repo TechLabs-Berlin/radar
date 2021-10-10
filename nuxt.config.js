@@ -2,6 +2,7 @@ export default {
   publicRuntimeConfig: {
     location: process.env.NUXT_APP_LOCATION,
     apiUrl: 'https://pvo7xic2xk.execute-api.eu-central-1.amazonaws.com/',
+    scope: process.env.NUXT_APP_SCOPE,
   },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
