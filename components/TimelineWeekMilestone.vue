@@ -11,7 +11,7 @@
     </p>
     <div>
       <p class="font-semibold" :class="{ 'line-through': !isFutureMilestone }">
-        <NuxtLink :to="`/milestone/${milestone.slug}`" class="regular-link">{{
+        <NuxtLink :to="`/milestone/${milestone.id}`" class="regular-link">{{
           milestone.title
         }}</NuxtLink>
       </p>
