@@ -79,18 +79,42 @@ export default defineComponent({
       <main class="space-y-8">
         <!-- eslint-disable-next-line vue/no-v-html -->
         <div class="prose" v-html="milestone.content.html" />
-        <!-- <template v-if="milestone.todos.length">
+        <template v-if="milestone.tasks.length">
           <p v-if="!alwaysShowTasks">
             <button
               v-if="showTasks"
-              class="px-2 py-1 text-sm font-semibold tracking-wide text-pink-900 uppercase border-2 border-pink-900 rounded-lg focus:outline-none active:outline-none"
+              class="
+                px-2
+                py-1
+                text-sm
+                font-semibold
+                tracking-wide
+                text-pink-900
+                uppercase
+                border-2 border-pink-900
+                rounded-lg
+                focus:outline-none
+                active:outline-none
+              "
               @click="toggleTasks"
             >
               <TIcon icon="eye-slash" class="inline-block" /> Hide tasks
             </button>
             <button
               v-else
-              class="px-2 py-1 text-sm font-semibold tracking-wide text-pink-900 uppercase border-2 border-pink-900 rounded-lg focus:outline-none active:outline-none"
+              class="
+                px-2
+                py-1
+                text-sm
+                font-semibold
+                tracking-wide
+                text-pink-900
+                uppercase
+                border-2 border-pink-900
+                rounded-lg
+                focus:outline-none
+                active:outline-none
+              "
               @click="toggleTasks"
             >
               <TIcon icon="chevron-down" class="inline-block" /> Show tasks
@@ -98,24 +122,24 @@ export default defineComponent({
           </p>
           <ul v-if="showTasks || alwaysShowTasks" class="space-y-8 text-lg">
             <li
-              v-for="todo in milestone.todos"
-              :key="todo.name"
+              v-for="task in milestone.tasks"
+              :key="task.id"
               class="flex space-x-4"
             >
               <div>
                 <TIcon icon="check-square" class="text-2xl text-pink-600" />
               </div>
               <div>
-                <p>{{ todo.name }}</p>
-                <ul v-if="todo.resources" class="mt-4 link-grid">
-                  <li v-for="resource in todo.resources" :key="resource.title">
-                    <ResourceListItem :resource="resource" on-pink />
+                <p>{{ task.title }}</p>
+                <ul v-if="task.links.length" class="mt-4 link-grid">
+                  <li v-for="link in task.links" :key="link.id">
+                    <ResourceListItem :resource="link" on-pink />
                   </li>
                 </ul>
               </div>
             </li>
           </ul>
-        </template> -->
+        </template>
       </main>
     </article>
   </div>
