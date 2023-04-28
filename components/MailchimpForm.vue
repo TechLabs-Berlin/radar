@@ -1,8 +1,5 @@
 <template>
   <div>
-    <h4 class="label">
-      Applications are currently closed and will probably open up mid September
-    </h4>
     <p class="mb-8">
       Stay in the loop and get notifications about upcoming events, workshops,
       new application dates, partnership opportunities, and more.
