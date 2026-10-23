@@ -1,0 +1,1 @@
+import{_ as n,o,c as s,a as c,n as t}from"./444uZZFV.js";const a={name:"TIcon",props:{icon:{type:String,required:!0},spin:{type:Boolean}}},r=["href"];function _(i,p,e,l,u,f){return o(),s("svg",{class:t(["icon",{"icon-spin":e.spin}])},[c("use",{href:`#${e.icon}`},null,8,r)],2)}const d=n(a,[["render",_]]);export{d as _};

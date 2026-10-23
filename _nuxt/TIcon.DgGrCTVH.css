@@ -1,0 +1,1 @@
+svg.icon{fill:currentcolor;height:1em;margin-bottom:.125em;vertical-align:middle;width:1em}svg.icon-spin{animation:icon-spin 2s linear infinite}@keyframes icon-spin{0%{transform:rotate(0)}to{transform:rotate(359deg)}}
