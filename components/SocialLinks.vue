@@ -15,10 +15,5 @@ defineProps({
   },
 })
 
-const isPublic = useIsPublic()
-const { data: content } = useSingleDoc('socialLinks')
-const socialLinks = computed(() => {
-  const links = content.value?.socialLinks ?? []
-  return isPublic ? links.filter((link) => link.is_public) : links
-})
+const socialLinks = useSocialLinks()
 </script>

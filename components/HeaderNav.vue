@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div v-if="hasMenu" class="relative">
     <transition name="fade">
       <div
         v-if="isOpen"
@@ -40,13 +40,14 @@
 </template>
 
 <script setup>
-const isPublic = useIsPublic()
 const isOpen = ref(false)
 const toggle = () => (isOpen.value = !isOpen.value)
 
-const { data: content } = useSingleDoc('navLinks')
-const navLinks = computed(() => {
-  const links = content.value?.navLinks ?? []
-  return isPublic ? links.filter((link) => link.is_public) : links
-})
+const navLinks = useNavLinks()
+const socialLinks = useSocialLinks()
+// the menu is hidden when there is nothing to show, e.g. in the public scope
+// when no link is marked as public
+const hasMenu = computed(
+  () => navLinks.value.length || socialLinks.value.length
+)
 </script>

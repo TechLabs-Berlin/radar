@@ -12,6 +12,19 @@ export const useSingleDoc = (collection) =>
     queryCollection(collection).first()
   )
 
+// In the public scope only the links marked with `is_public: true` are shown.
+const useLinks = (collection, key) => {
+  const isPublic = useIsPublic()
+  const { data } = useSingleDoc(collection)
+  return computed(() => {
+    const links = data.value?.[key] ?? []
+    return isPublic ? links.filter((link) => link.is_public) : links
+  })
+}
+
+export const useNavLinks = () => useLinks('navLinks', 'navLinks')
+export const useSocialLinks = () => useLinks('socialLinks', 'socialLinks')
+
 export const useEventList = () => {
   const isPublic = useIsPublic()
   return useAsyncData('content-events', async () => {

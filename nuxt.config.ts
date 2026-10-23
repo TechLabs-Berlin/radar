@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto'
 import { readdirSync } from 'node:fs'
 import { join } from 'node:path'
 import { LOCATION } from './radar.config'
@@ -8,6 +9,12 @@ const contentRoutes = (type: string, prefix: string) =>
   readdirSync(join(import.meta.dirname, `content-${LOCATION}`, type))
     .filter((file) => /\.ya?ml$/.test(file))
     .map((file) => `/${prefix}/${file.replace(/\.ya?ml$/, '')}`)
+
+// Optional access gate: set ACCESS_PASSWORD when building to ask visitors for
+// this password. Only a hash of it ends up in the site, see composables/useAccessGate.js.
+const accessHash = process.env.ACCESS_PASSWORD
+  ? createHash('sha256').update(process.env.ACCESS_PASSWORD).digest('hex')
+  : ''
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -36,25 +43,12 @@ export default defineNuxtConfig({
     },
   },
 
-  hooks: {
-    // The YAML content files start with a `---` document marker (possibly after
-    // some comments). Nuxt Content would read that as unterminated frontmatter
-    // and ignore the whole file, so drop it.
-    'content:file:beforeParse'({ file }) {
-      if (file.extension === '.yaml' || file.extension === '.yml') {
-        file.body = file.body.replace(
-          /^((?:[ \t]*(?:#.*)?\r?\n)*)---[ \t]*\r?\n/,
-          '$1'
-        )
-      }
-    },
-  },
-
   runtimeConfig: {
     public: {
       location: LOCATION,
       // set SCOPE=public to build the reduced public version of the Radar
       scope: process.env.SCOPE || '',
+      accessHash,
     },
   },
 
@@ -63,6 +57,9 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: [
         '/',
+        '/faq',
+        '/media',
+        '/newsletter',
         ...contentRoutes('events', 'event'),
         ...contentRoutes('milestones', 'milestone'),
       ],

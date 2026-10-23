@@ -32,10 +32,15 @@
         </template>
 
         <div>
-          <p class="text-lg text-center">
-            {{ verb }} place on
-            {{ format(eventDate, "MMMM do, 'at' h:mm aaaa") }}
-          </p>
+          <!-- depends on the time zone of the viewer, so only render it in the browser -->
+          <ClientOnly>
+            <p class="text-lg text-center">
+              {{ verb }} place on {{ formatEventDate(eventDate) }}
+            </p>
+            <template #fallback>
+              <p class="text-lg text-center">&nbsp;</p>
+            </template>
+          </ClientOnly>
         </div>
       </header>
       <main>
@@ -82,7 +87,6 @@
 </template>
 
 <script>
-import { format } from 'date-fns'
 import { useEvent } from '@/composables/useEvent'
 
 export default defineComponent({
@@ -122,7 +126,7 @@ export default defineComponent({
     })
 
     return {
-      format,
+      formatEventDate,
       eventDate,
       hasResources,
       isInOneHour,

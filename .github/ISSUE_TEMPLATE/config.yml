@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Questions and show-and-tell
+    url: https://github.com/TechLabs-Berlin/radar/discussions
+    about: Ask how to use or set up the Radar, or tell us how you are using it.

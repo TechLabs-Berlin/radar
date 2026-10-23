@@ -38,7 +38,7 @@
     <!-- FUTURE EVENTS  -->
     <EventsFuture
       v-if="futureEvents.length"
-      :events="futureEvents.filter(({ slug }) => slug !== currentEvent.slug)"
+      :events="futureEvents.filter(({ slug }) => slug !== currentEvent?.slug)"
     />
   </div>
 </template>
