@@ -1,4 +1,15 @@
+import fs from 'fs'
+import path from 'path'
+
 const LOCATION = 'bln'
+
+// Event and milestone pages are only linked from client-rendered lists, so the
+// crawler can't discover them; list them explicitly so they get prerendered.
+const contentRoutes = (type, prefix) =>
+  fs
+    .readdirSync(path.join(__dirname, `content-${LOCATION}`, type))
+    .filter((file) => /\.ya?ml$/.test(file))
+    .map((file) => `/${prefix}/${file.replace(/\.ya?ml$/, '')}`)
 
 export default {
   env: {
@@ -8,6 +19,10 @@ export default {
   target: 'static',
   generate: {
     fallback: true,
+    routes: [
+      ...contentRoutes('events', 'event'),
+      ...contentRoutes('milestones', 'milestone'),
+    ],
   },
 
   // uncomment the lines below if you are deploying to GitHub pages
@@ -48,7 +63,6 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/composition-api',
-    '@nuxt/image',
     '@nuxtjs/google-fonts',
   ],
 
