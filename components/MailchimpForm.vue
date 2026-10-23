@@ -58,21 +58,7 @@
         </div>
         <div class="pt-4">
           <button
-            class="
-              flex
-              items-center
-              justify-center
-              w-full
-              px-4
-              py-2
-              space-x-2
-              font-bold
-              border-2 border-gray-700
-              rounded-lg
-              md:min-w-md
-              hover:border-pink-600 hover:text-white hover:bg-pink-600
-              disabled:opacity-75
-            "
+            class="flex items-center justify-center w-full px-4 py-2 space-x-2 font-bold border-2 border-gray-700 rounded-lg md:min-w-md hover:border-pink-600 hover:text-white hover:bg-pink-600 disabled:opacity-75"
             :disabled="loading"
             @click="checkForm"
           >
@@ -85,22 +71,14 @@
 </template>
 
 <script>
-import {
-  defineComponent,
-  reactive,
-  ref,
-  useContext,
-} from '@nuxtjs/composition-api'
-
 export default defineComponent({
   name: 'MailchimpForm',
+  emits: ['success', 'failure'],
   setup(_, { emit }) {
     const form = reactive({ email: '', name: '', consent: true })
     const errorEmail = ref(false)
     const errorConsent = ref(false)
     const loading = ref(false)
-
-    const { $axios } = useContext()
 
     async function submit(email, name) {
       loading.value = true
@@ -109,13 +87,11 @@ export default defineComponent({
         name,
       }
       try {
-        const response = await $axios.$post(
+        const response = await $fetch(
           'https://a696oel4ti.execute-api.eu-central-1.amazonaws.com/dev/add-to-list',
-          data,
           {
-            headers: {
-              'Content-Type': 'application/json',
-            },
+            method: 'POST',
+            body: data,
           }
         )
         console.log('SUCCESS')
@@ -157,6 +133,7 @@ export default defineComponent({
 .form-input {
   @apply shadow-inner border rounded-lg px-4 py-2 w-full mt-2;
 }
+
 .label {
   @apply font-bold;
 }

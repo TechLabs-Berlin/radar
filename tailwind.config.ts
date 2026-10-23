@@ -1,10 +1,11 @@
-module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+import type { Config } from 'tailwindcss'
+import typography from '@tailwindcss/typography'
+
+export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Livvic', 'sans'],
+        sans: ['Livvic', 'sans-serif'],
       },
       colors: {
         gray: {
@@ -39,8 +40,5 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [require('@tailwindcss/typography')],
-}
+  plugins: [typography],
+} satisfies Partial<Config>

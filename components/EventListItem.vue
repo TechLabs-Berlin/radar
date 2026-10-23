@@ -83,7 +83,6 @@
 
 <script>
 import { format } from 'date-fns'
-import { defineComponent, computed } from '@nuxtjs/composition-api'
 import { useEvent } from '@/composables/useEvent'
 
 export default defineComponent({

@@ -1,35 +1,13 @@
-<script>
-import {
-  defineComponent,
-  useFetch,
-  useContext,
-  ref,
-  useMeta,
-} from '@nuxtjs/composition-api'
-
-export default defineComponent({
-  setup() {
-    useMeta({ title: 'Media' })
-
-    const { $content } = useContext()
-
-    const mediaItems = ref(null)
-
-    const { fetchState } = useFetch(async () => {
-      mediaItems.value = await $content('media').fetch()
-    })
-
-    return { mediaItems, fetchState }
-  },
-  head: {},
-})
+<script setup>
+useHead({ title: 'Media' })
+const { data: mediaItems } = await useSingleDoc('media')
 </script>
 
 <template>
   <main>
     <div class="h-full py-4 md:py-8 lg:mx-auto lg:max-w-2xl">
       <h1 class="mb-8 text-4xl font-bold text-center">Media</h1>
-      <template v-if="!fetchState.pending">
+      <template v-if="mediaItems">
         <template v-if="!mediaItems.items || !mediaItems.items.length">
           <WrapperContentBox>
             <p>

@@ -1,22 +1,16 @@
-import Vue from 'vue'
-import VueCompositionAPI from '@vue/composition-api'
+import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import { useEvents } from '@/composables/useEvents.js'
-
-// `@nuxtjs/composition-api` only works inside a Nuxt build, so use the
-// underlying library directly in tests.
-jest.mock('@nuxtjs/composition-api', () => require('@vue/composition-api'))
-Vue.use(VueCompositionAPI)
 
 const event = (slug, date) => ({ slug, title: slug, date })
 
 describe('useEvents', () => {
   beforeEach(() => {
-    jest.useFakeTimers('modern')
-    jest.setSystemTime(new Date('2021-07-20T12:00:00+02:00'))
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date('2021-07-20T12:00:00+02:00'))
   })
 
   afterEach(() => {
-    jest.useRealTimers()
+    vi.useRealTimers()
   })
 
   test('picks the closest upcoming event as the current event', () => {

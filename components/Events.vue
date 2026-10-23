@@ -44,7 +44,6 @@
 </template>
 
 <script>
-import { defineComponent, ref } from '@nuxtjs/composition-api'
 import { useEvents } from '@/composables/useEvents.js'
 
 export default defineComponent({

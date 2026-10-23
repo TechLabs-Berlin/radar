@@ -1,5 +1,4 @@
 <script>
-import { defineComponent, ref } from '@nuxtjs/composition-api'
 import { format } from 'date-fns'
 
 export default defineComponent({
@@ -63,7 +62,7 @@ export default defineComponent({
       <main class="space-y-8">
         <!-- eslint-disable-next-line vue/no-v-html -->
         <div class="prose" v-html="$md.render(milestone.description)" />
-        <template v-if="milestone.todos.length">
+        <template v-if="milestone.todos?.length">
           <p v-if="!alwaysShowTasks">
             <button
               v-if="showTasks"
@@ -111,10 +110,12 @@ export default defineComponent({
   grid-gap: 1rem;
   grid-template-columns: auto 1fr;
 }
-.shadow-inner-pink {
-  --tw-shadow: inset 0 4px 8px 0 rgba(250, 30, 90, 0.15);
 
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #fa1e5a),
+.shadow-inner-pink {
+  --tw-shadow: inset 0 4px 8px 0 rgb(250 30 90 / 15%);
+
+  box-shadow:
+    var(--tw-ring-offset-shadow, 0 0 #fa1e5a),
     var(--tw-ring-shadow, 0 0 #fa1e5a), var(--tw-shadow);
 }
 

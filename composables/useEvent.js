@@ -1,4 +1,4 @@
-import { computed } from '@nuxtjs/composition-api'
+import { computed } from 'vue'
 import { differenceInMinutes, isFuture, isToday, isPast } from 'date-fns'
 
 export const useEvent = (event) => {

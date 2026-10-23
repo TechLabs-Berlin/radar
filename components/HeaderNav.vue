@@ -39,31 +39,14 @@
   </div>
 </template>
 
-<script>
-import {
-  ref,
-  defineComponent,
-  useContext,
-  useFetch,
-} from '@nuxtjs/composition-api'
+<script setup>
+const isPublic = useIsPublic()
+const isOpen = ref(false)
+const toggle = () => (isOpen.value = !isOpen.value)
 
-export default defineComponent({
-  setup() {
-    const isPublic = ref(process.env.SCOPE === 'public')
-    const isOpen = ref(false)
-    const toggle = () => (isOpen.value = !isOpen.value)
-
-    const { $content } = useContext()
-    const navLinks = ref([])
-    useFetch(async () => {
-      const content = await $content('nav-links').fetch()
-
-      navLinks.value = isPublic.value
-        ? content.navLinks.filter((link) => link.is_public)
-        : content.navLinks
-    })
-
-    return { isOpen, toggle, navLinks }
-  },
+const { data: content } = useSingleDoc('navLinks')
+const navLinks = computed(() => {
+  const links = content.value?.navLinks ?? []
+  return isPublic ? links.filter((link) => link.is_public) : links
 })
 </script>

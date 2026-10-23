@@ -12,8 +12,6 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
-
 export default defineComponent({
   props: {
     faded: {
@@ -40,6 +38,7 @@ export default defineComponent({
     #fafafa
   );
   background-size: 80px 80px;
+
   // color: #7a7a7a;
 }
 </style>

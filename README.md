@@ -9,7 +9,7 @@ At TechLabs Berlin, we use the Semester Radar to present the semester to the stu
 
 # Overview
 
-The Radar is a [NuxtJS](https://nuxtjs.org/) application, rendered as a static site. All it's content is based on simple text files (`.yaml` format) located within this repository, which is converted into simple HTML files during the build process. The application is built by [GitHub Actions](https://docs.github.com/en/actions) and hosted on [GitHub Pages](https://pages.github.com/).
+The Radar is a [Nuxt 3](https://nuxt.com/) application (Vue 3, [Nuxt Content](https://content.nuxt.com/), Tailwind CSS), rendered as a static site. All it's content is based on simple text files (`.yaml` format) located within this repository, which is converted into simple HTML files during the build process. The application is built by [GitHub Actions](https://docs.github.com/en/actions) and hosted on [GitHub Pages](https://pages.github.com/).
 
 ## Structure
 
@@ -31,7 +31,7 @@ While the Radar is a very simple application, is does require some initial confi
 
 ## Local development
 
-Once you clone the repo locally, you can start the dev server with hot reloading, and see the changes live on your browser:
+You need the Node.js version listed in `.nvmrc` (currently 24; with [nvm](https://github.com/nvm-sh/nvm) just run `nvm use`). Once you clone the repo locally, you can start the dev server with hot reloading, and see the changes live on your browser:
 
 ```bash
 # install dependencies
@@ -49,7 +49,9 @@ These are the main parts that need to be configured/modified:
 
 <p align="center"><img src="https://user-images.githubusercontent.com/5139870/117254654-eeab1580-ae48-11eb-80ac-c91dc99117df.png" width="600"/></p>
 
-The title which appears on the browser title window can be changed in `/nuxt.config.js`, under `head: titleTemplate`. The term name, appearing on the top of the page, can be edited in the file `content/term.yaml`.
+The title which appears on the browser title window can be changed in `nuxt.config.ts`, under `app.head.titleTemplate`. The term name, appearing on the top of the page, can be edited in the file `content-bln/term.yaml`.
+
+The location this Radar is built for (which `content-<location>/` folder is used) is set in `radar.config.ts`.
 
 For the location badge, you can replace `static/icon-location.png` with the badge of your location
 
@@ -59,28 +61,28 @@ For the location badge, you can replace `static/icon-location.png` with the badg
 
 The top menu (hamburger) is composed of internal links to other pages and social icons leading to our social media pages.
 
-- Internal links: you can modify the links in the file `content/nav-links.yaml`
-- Social links: you can modify the links in the file `content/social-links.yaml`
+- Internal links: you can modify the links in the file `content-bln/nav-links.yaml`
+- Social links: you can modify the links in the file `content-bln/social-links.yaml`
 
 ### Newsletter
 
-We use a personalized AWS Lambda function endpoint in our newsletter form, connected to out Mailchimp account. You'll need to create your own, and change the endpoint on the file `content/newsletter.yaml`.
+We use a personalized AWS Lambda function endpoint in our newsletter form, connected to out Mailchimp account. You'll need to create your own, and change the endpoint in `components/MailchimpForm.vue`.
 
 ### Footer
 
-The footer contents can be changed in the file `content/footer.yaml`.
+The footer contents can be changed in the file `content-bln/footer.md`.
 
 ## Content
 
 All content in the Radar is written on YAML files. YAML (a recursive acronym for "YAML Ain't Markup Language") is a human-readable data-serialization language. It is commonly used for configuration files and in applications where data is being stored or transmitted. In simple terms, it is a text file that allows structure data.
 
-The content files are located in the folder `/content`. You can edit any of these files and see the changes in real time in you local dev environment. To publish content changes, you'd have to simply `git commit` and `git push` to your repo, so that the action to rebuild and redeploying the content is fired.
+The content files are located in the folder `/content-bln`. You can edit any of these files and see the changes in real time in you local dev environment. To publish content changes, you'd have to simply `git commit` and `git push` to your repo, so that the action to rebuild and redeploying the content is fired.
 
 There are three main pieces of content you'll be working with: the Timeline, the Events, and the Milestones.
 
 ### Timeline
 
-By editing the file `/content/timeline.yaml`, you define the main **sections** within the timeline. The weeks in each section are populated automatically from the start and end dates. The files is a collection of items under `timeline:`, which contain the following properties:
+By editing the file `/content-bln/timeline.yaml`, you define the main **sections** within the timeline. The weeks in each section are populated automatically from the start and end dates. The files is a collection of items under `timeline:`, which contain the following properties:
 
 | property      | description                                                                                              | example        | required | default |
 | ------------- | -------------------------------------------------------------------------------------------------------- | -------------- | -------- | ------- |
@@ -109,7 +111,7 @@ The Events and Milestones are then placed automatically within their respective 
 
 ### Events
 
-Inside the `/content/events` folder, you'll find files to all the events in the semester. Each file contain the following properties:
+Inside the `/content-bln/events` folder, you'll find files to all the events in the semester. Each file contain the following properties:
 
 | property        | description                                                                                                                    | example                     | required | type       |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------- | -------- | ---------- | -------- |
@@ -142,12 +144,23 @@ $ npm install
 # serve with hot reload at localhost:3000
 $ npm run dev
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
+# generate the static site into .output/public
 $ npm run generate
+
+# preview the generated site locally
+$ npm run preview
+
+# lint and test
+$ npm run lint
+$ npm test
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+For detailed explanation on how things work, check out the [Nuxt docs](https://nuxt.com/docs).
+
+## Developer notes
+
+- The content is defined as [Nuxt Content collections](https://content.nuxt.com/docs/collections/collections) in `content.config.ts`. The schemas there list the properties each YAML file may use, so when you add a new property to the content, add it to the schema too.
+- The YAML files start with a `---` line. A small hook in `nuxt.config.ts` strips it before Nuxt Content parses the file, so you don't need to remove it.
+- Events and milestones are prerendered from the file names in `content-bln/events` and `content-bln/milestones`.
+- Set `SCOPE=public` when generating to build the reduced public version (only events and navigation or social links marked `is_public: true`).
+- The generated site contains a `.nojekyll` file, so GitHub Pages serves the `_nuxt` folder.
