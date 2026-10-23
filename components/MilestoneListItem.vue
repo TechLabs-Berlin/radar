@@ -1,6 +1,4 @@
 <script>
-import { format } from 'date-fns'
-
 export default defineComponent({
   props: {
     milestone: {
@@ -17,7 +15,7 @@ export default defineComponent({
     return {
       showTasks,
       toggleTasks,
-      format,
+      formatEventDate,
     }
   },
 })
@@ -50,10 +48,7 @@ export default defineComponent({
           ></NuxtLink>
           <ClientOnly>
             <p class="text-lg">
-              Due
-              {{
-                format(new Date(milestone.deadline), "MMMM do, 'at' h:mm aaaa")
-              }}
+              Due {{ formatEventDate(new Date(milestone.deadline)) }}
             </p>
           </ClientOnly>
         </div>
