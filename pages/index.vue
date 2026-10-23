@@ -1,59 +1,18 @@
-<script>
-import {
-  useFetch,
-  defineComponent,
-  useContext,
-  ref,
-  useMeta,
-} from '@nuxtjs/composition-api'
-export default defineComponent({
-  setup() {
-    const { title } = useMeta()
-    title.value = 'Timeline'
-    const { $content } = useContext()
-    const events = ref()
-    const timeline = ref()
-    const milestones = ref()
-    const announcement = ref()
-    const isPublic = ref(process.env.SCOPE === 'public')
-    useFetch(async () => {
-      if (isPublic.value) {
-        events.value = await $content('/events')
-          .sortBy('date')
-          .where({ is_public: { $eq: true } })
-          .fetch()
-        timeline.value = []
-        milestones.value = []
-      } else {
-        events.value = await $content('/events').sortBy('date').fetch()
-        timeline.value = await $content('timeline').fetch()
-        milestones.value = await $content('/milestones')
-          .sortBy('deadline')
-          .fetch()
-      }
-      announcement.value = await $content('announcement').fetch()
-    })
+<script setup>
+useHead({ title: 'Timeline' })
 
-    return {
-      events,
-      timeline,
-      milestones,
-      isPublic,
-      announcement,
-    }
-  },
-  head: {},
-})
+const isPublic = useIsPublic()
+const { data: events } = await useEventList()
+// the public version of the Radar only shows events
+const milestones = isPublic ? ref([]) : (await useMilestoneList()).data
+const timeline = isPublic ? ref(null) : (await useSingleDoc('timeline')).data
+const { data: announcement } = await useSingleDoc('announcement')
 </script>
 
 <template>
   <main class="h-full bg-gray-50">
-    <div
-      v-if="!$fetchState.pending"
-      class="w-full"
-      :class="isPublic ? 'max-w-2xl mx-auto' : 'main-grid'"
-    >
-      <div v-if="!isPublic" class="w-64 mx-auto timeline">
+    <div class="w-full" :class="isPublic ? 'max-w-2xl mx-auto' : 'main-grid'">
+      <div v-if="!isPublic && timeline" class="w-64 mx-auto timeline">
         <h3 class="md:hidden title-with-lines">Timeline</h3>
         <ClientOnly>
           <Timeline
@@ -104,9 +63,11 @@ export default defineComponent({
     grid-gap: 2rem;
   }
 }
+
 .timeline {
   grid-area: timeline;
 }
+
 .events {
   grid-area: events;
 }

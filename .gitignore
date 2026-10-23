@@ -89,3 +89,7 @@ sw.*
 # Vim swap files
 *.swp
 .dccache
+
+# Nuxt 3 build output and content cache
+.output
+.data

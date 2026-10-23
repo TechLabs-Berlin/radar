@@ -16,22 +16,7 @@
   </header>
 </template>
 
-<script>
-import {
-  defineComponent,
-  useFetch,
-  useContext,
-  ref,
-} from '@nuxtjs/composition-api'
-
-export default defineComponent({
-  setup() {
-    const { $content, env } = useContext()
-    const content = ref(null)
-    useFetch(async () => {
-      content.value = await $content('term').fetch()
-    })
-    return { content, location: env.NUXT_APP_LOCATION }
-  },
-})
+<script setup>
+const { location } = useRuntimeConfig().public
+const { data: content } = useSingleDoc('term')
 </script>

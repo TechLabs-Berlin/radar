@@ -1,0 +1,33 @@
+name: Close superseded Nuxt bump
+
+# One-off housekeeping: the dependabot PR #68 bumps Nuxt 2 to 3.4.3 on its own,
+# which would break the app. The Nuxt 3 migration supersedes it, so this closes
+# #68 as soon as the migration is on master. It does nothing once #68 is closed
+# and can be deleted afterwards.
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  close:
+    name: Close #68
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Close #68 if the Nuxt 3 migration has landed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          major=$(jq -r '.dependencies.nuxt' package.json | tr -d '^~' | cut -d. -f1)
+          state=$(gh pr view 68 --json state --jq .state)
+          echo "nuxt major version on master: $major, PR #68 is $state"
+          if [ "$major" -ge 3 ] && [ "$state" = "OPEN" ]; then
+            gh pr close 68 --comment "Closing: superseded by the Nuxt 3 migration (#81), which is now on master."
+          fi

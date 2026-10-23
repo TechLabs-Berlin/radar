@@ -21,7 +21,6 @@
 </template>
 
 <script>
-import { defineComponent, computed } from '@nuxtjs/composition-api'
 import { isPast, isFuture } from 'date-fns'
 
 export default defineComponent({

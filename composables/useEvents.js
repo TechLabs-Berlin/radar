@@ -1,4 +1,4 @@
-import { computed } from '@nuxtjs/composition-api'
+import { computed } from 'vue'
 import {
   isToday,
   isPast,

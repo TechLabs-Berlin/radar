@@ -1,27 +1,6 @@
-<script>
-import {
-  defineComponent,
-  useFetch,
-  useContext,
-  ref,
-  useMeta,
-} from '@nuxtjs/composition-api'
-
-export default defineComponent({
-  setup() {
-    useMeta({ title: 'FAQ' })
-    const { $content } = useContext()
-
-    const faq = ref(null)
-
-    const { fetchState } = useFetch(async () => {
-      faq.value = await $content('faq').fetch()
-    })
-
-    return { faq, fetchState }
-  },
-  head: {},
-})
+<script setup>
+useHead({ title: 'FAQ' })
+const { data: faq } = await useSingleDoc('faq')
 </script>
 
 <template>
@@ -30,7 +9,7 @@ export default defineComponent({
       <h1 class="mb-8 text-4xl font-bold text-center">
         Frequently Asked Questions
       </h1>
-      <template v-if="!fetchState.pending">
+      <template v-if="faq">
         <WrapperContentBox
           v-for="section in faq.sections"
           :key="section.title"
@@ -53,6 +32,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .section-title::after {
   content: '';
+
   @apply bg-pink-600;
 
   width: 40px;

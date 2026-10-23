@@ -32,22 +32,8 @@
   </main>
 </template>
 
-<script>
-import { useMeta, defineComponent, useRoute } from '@nuxtjs/composition-api'
-import MailchimpForm from '~/components/MailchimpForm'
+<script setup>
+useHead({ title: 'Newsletter' })
 
-export default defineComponent({
-  name: 'PageNewsletter',
-  components: {
-    MailchimpForm,
-  },
-  setup() {
-    useMeta({ title: 'Newsletter' })
-
-    const route = useRoute()
-    const status = route.value.query.status
-    return { status }
-  },
-  head: {},
-})
+const status = useRoute().query.status
 </script>

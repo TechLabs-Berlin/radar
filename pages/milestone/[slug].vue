@@ -15,29 +15,19 @@
   </main>
 </template>
 
-<script>
-import { defineComponent } from '@nuxtjs/composition-api'
-import MilestoneListItem from '@/components/MilestoneListItem'
-
-export default defineComponent({
-  components: { MilestoneListItem },
-  async asyncData({ $content, params }) {
-    const milestone = await $content('milestones', params.slug).fetch()
-    return {
-      milestone,
-    }
-  },
-  data() {
-    return {
-      milestone: null,
-    }
-  },
-  head() {
-    return {
-      title: this.milestone.title,
-    }
-  },
-})
+<script setup>
+const { data: milestone } = await useContentBySlug(
+  'milestones',
+  useRoute().params.slug
+)
+if (!milestone.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Milestone not found',
+    fatal: true,
+  })
+}
+useHead({ title: milestone.value.title })
 </script>
 
 <style scoped>

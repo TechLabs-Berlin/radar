@@ -9,9 +9,12 @@
           >
             <span>{{ milestone.title }}</span
             ><span
-              v-tippy="{ placement: 'right', theme: 'tl' }"
+              v-tippy="{
+                content: milestone.description,
+                placement: 'right',
+                theme: 'tl',
+              }"
               class="py-1 pl-2 text-gray-500"
-              :content="milestone.description"
               ><TIcon icon="question-circle"
             /></span>
           </h3>
@@ -31,7 +34,6 @@
 </template>
 
 <script>
-import { defineComponent, ref } from '@nuxtjs/composition-api'
 import {
   eachWeekOfInterval,
   isSameWeek,

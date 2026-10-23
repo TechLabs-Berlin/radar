@@ -8,39 +8,17 @@
   </ul>
 </template>
 
-<script>
-import {
-  defineComponent,
-  useFetch,
-  useContext,
-  ref,
-} from '@nuxtjs/composition-api'
-
-export default defineComponent({
-  props: {
-    isSmall: {
-      type: Boolean,
-    },
+<script setup>
+defineProps({
+  isSmall: {
+    type: Boolean,
   },
-  setup() {
-    const isPublic = ref(process.env.SCOPE === 'public')
-    const { $content } = useContext()
+})
 
-    const socialLinks = ref([])
-
-    useFetch(async () => {
-      const content = await $content('social-links').fetch()
-      console.log(
-        '%cSocialLinks.vue line:33 isPublic',
-        'color: #007acc;',
-        isPublic.value
-      )
-      socialLinks.value = isPublic.value
-        ? content.socialLinks.filter((link) => link.is_public)
-        : content.socialLinks
-    })
-
-    return { socialLinks }
-  },
+const isPublic = useIsPublic()
+const { data: content } = useSingleDoc('socialLinks')
+const socialLinks = computed(() => {
+  const links = content.value?.socialLinks ?? []
+  return isPublic ? links.filter((link) => link.is_public) : links
 })
 </script>

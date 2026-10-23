@@ -1,7 +1,6 @@
 body,
 html,
-#__nuxt,
-#__layout {
+#__nuxt {
   @apply h-full antialiased text-gray-700 bg-gray-50;
 }
 
@@ -16,10 +15,11 @@ html,
 }
 
 /* links */
-.nav-link.nuxt-link-exact-active {
+.nav-link.router-link-exact-active {
   @apply text-pink-600 font-bold relative;
 }
-.nav-link.nuxt-link-exact-active::after {
+
+.nav-link.router-link-exact-active::after {
   @apply bg-pink-600;
 
   content: '';
@@ -36,7 +36,9 @@ a.regular-link:hover {
 .fade-leave-active {
   transition: opacity 0.5s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
 }
 
@@ -44,6 +46,7 @@ a.regular-link:hover {
 .title-with-lines {
   @apply w-full mb-8 text-xs font-bold tracking-wide uppercase flex flex-none;
 }
+
 .title-with-lines::before,
 .title-with-lines::after {
   content: '';

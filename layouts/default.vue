@@ -2,7 +2,7 @@
   <div class="h-full bg-gray-50">
     <div class="w-full h-full max-w-5xl px-2 mx-auto layout-grid">
       <HeaderCompact />
-      <Nuxt />
+      <slot />
       <FooterPrimary />
     </div>
     <SvgSprite />

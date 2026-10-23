@@ -1,6 +1,6 @@
 <template>
   <svg class="icon" :class="{ 'icon-spin': spin }">
-    <use :xlink:href="`#${icon}`" />
+    <use :href="`#${icon}`" />
   </svg>
 </template>
 
@@ -21,7 +21,7 @@ export default {
 
 <style>
 svg.icon {
-  fill: currentColor;
+  fill: currentcolor;
   height: 1em;
   margin-bottom: 0.125em;
   vertical-align: middle;

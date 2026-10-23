@@ -1,8 +1,7 @@
 <template>
   <div class="flex items-start space-x-2">
     <div
-      v-tippy="{ theme: 'tl' }"
-      :content="weekDates"
+      v-tippy="{ theme: 'tl', content: weekDates }"
       class="relative flex items-center justify-center flex-none w-10 h-10 font-mono text-sm font-semibold border rounded-lg shadow"
       :class="
         clsx({
@@ -46,7 +45,6 @@
 <script>
 import { isSameWeek, format, isPast, startOfWeek, endOfWeek } from 'date-fns'
 import clsx from 'clsx'
-import { computed, defineComponent } from '@nuxtjs/composition-api'
 export default defineComponent({
   props: {
     week: {
