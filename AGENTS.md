@@ -53,7 +53,10 @@ Before opening a pull request, `npm run lint`, `npm test` and `npm run generate`
 
 ## Agents
 
-- The agent identity is the org-owned GitHub App **`techlabs-assistant`**, always **with human review by `@valiantone`**. It has read and write access to contents, issues and pull requests (read-only metadata) on this repository only, and no admin rights. It has no `workflows` permission, so changes to `.github/workflows/` have to be pushed by a person.
+- The agent identity is the org-owned GitHub App **`techlabs-assistant`**, always **with human review by `@valiantone`**. It has read and write access to contents, issues and pull requests (read-only metadata) on this repository only, and no admin rights.
+- **Open every pull request as `techlabs-assistant`**, never under a personal account, so that a person can review and approve it (nobody can approve their own pull request). Locally the maintainers use a helper that runs `gh` and `git` as the app (`techlabs-assistant-gh pr create ...`, `techlabs-assistant-gh git push ...`). After opening a pull request, check that its author reads `app/techlabs-assistant`.
+- **The one exception is a change to `.github/workflows/`.** The app has no `workflows` permission, so a person has to push those. Say so **before starting the work**, keep the workflow change in its own small pull request, and put everything else in a separate pull request that the app opens.
+- **If the app cannot do what was asked** (a permission, repository access, a missing key), stop and tell the maintainer. Do not quietly fall back to a personal account.
 - Agents open pull requests; **a person reviews and merges them**. Do not merge your own pull request, enable auto-merge, or get around branch protection unless a maintainer explicitly tells you to in that moment.
 - The app's private key lives in a maintainer's keychain, never in the repository, in an issue, or in a chat. Never print or log tokens.
 - No destructive actions without being asked: no force-pushes, no deleting branches or files that are not yours, no closing other people's pull requests or issues.
