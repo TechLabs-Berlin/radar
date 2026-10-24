@@ -64,6 +64,9 @@ jobs:
           cp -r deploy/.git deploy/README.md build/
           #use this line in case there is a custom domain, at this case the CNAME file should exist at the deploy branch with the potential CNAME
           #cp -r deploy/.git deploy/CNAME deploy/README.md build/
+          # upload-artifact skips hidden files, and without .nojekyll GitHub Pages
+          # drops the _nuxt folder
+          touch build/.nojekyll
       - name: Configure git
         run: |
           #replace ms@techlabs.org with the email of your potential commiter
