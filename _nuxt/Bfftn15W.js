@@ -1,0 +1,1 @@
+import{Dt as e,I as t,d as n,m as r}from"./CBQ4p8Tj.js";import{r as i}from"#entry";var a={name:`TIcon`,props:{icon:{type:String,required:!0},spin:{type:Boolean}}},o=[`href`];function s(i,a,s,c,l,u){return t(),r(`svg`,{class:e([`icon`,{"icon-spin":s.spin}])},[n(`use`,{href:`#${s.icon}`},null,8,o)],2)}var c=Object.assign(i(a,[[`render`,s]]),{__name:`TIcon`});export{c as t};

@@ -1,0 +1,1 @@
+import{I as e,m as t}from"./CBQ4p8Tj.js";import{r as n}from"#entry";var r={};function i(n,r){return e(),t(`hr`)}var a=Object.assign(n(r,[[`render`,i]]),{__name:`ProseHr`});export{a as default};
