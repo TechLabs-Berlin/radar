@@ -54,20 +54,20 @@ Edit any file in `content-bln/` and the page updates immediately.
 
 Where to change what:
 
-| I want to change... | Edit |
-| --- | --- |
-| The term name in the header | `content-bln/term.yaml` |
-| The phases of the semester | `content-bln/timeline.yaml` |
-| An event | `content-bln/events/<event>.yaml` |
-| A milestone or deadline | `content-bln/milestones/<milestone>.yaml` |
-| The announcement banner | `content-bln/announcement.yaml` |
-| The FAQ | `content-bln/faq.yaml` |
-| Recordings and media | `content-bln/media.yaml` |
+| I want to change...         | Edit                                                          |
+| --------------------------- | ------------------------------------------------------------- |
+| The term name in the header | `content-bln/term.yaml`                                       |
+| The phases of the semester  | `content-bln/timeline.yaml`                                   |
+| An event                    | `content-bln/events/<event>.yaml`                             |
+| A milestone or deadline     | `content-bln/milestones/<milestone>.yaml`                     |
+| The announcement banner     | `content-bln/announcement.yaml`                               |
+| The FAQ                     | `content-bln/faq.yaml`                                        |
+| Recordings and media        | `content-bln/media.yaml`                                      |
 | Menu links and social icons | `content-bln/nav-links.yaml`, `content-bln/social-links.yaml` |
-| The footer | `content-bln/footer.md` |
-| The browser tab title | `nuxt.config.ts` (`app.head.titleTemplate`) |
-| The colors | `tailwind.config.ts` |
-| The newsletter endpoint | `components/MailchimpForm.vue` |
+| The footer                  | `content-bln/footer.md`                                       |
+| The browser tab title       | `nuxt.config.ts` (`app.head.titleTemplate`)                   |
+| The colors                  | `tailwind.config.ts`                                          |
+| The newsletter endpoint     | `components/MailchimpForm.vue`                                |
 
 ## Updating the content
 
@@ -118,7 +118,6 @@ The main items in the Radar are: the **Timeline**, the **Events**, and the **Mil
 All Events and Milestones have their own pages, accessible by either clicking on their titles or on their names within the Timeline. This allows for sending out links to specific events and milestones to the students, when necessary.
 
 Additionally, there are also other secondary pages displayed when clicking on the hamburger menu on top right: **FAQ**, **Media**, and **Newsletter**.
-
 
 ---
 
@@ -199,24 +198,58 @@ The Events and Milestones are then placed automatically within their respective 
 Inside the `/content-bln/events` folder, you'll find files to all the events in the semester. Each file contain the following properties:
 
 | property        | description                                                                                                                    | example                     | required | type       |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------- | -------- | ---------- | -------- |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------- | -------- | ---------- |
 | `title`         | the event title                                                                                                                | Welcome Event ST21          | yes      | `string`   |
 | `date`          | time and date of the event, including timezone                                                                                 | `2021-03-16T19:30:00+02:00` | yes      | `datetime` |
-| `description`   | the event's description (accepts Markdown)                                                                                     | (see below)                 | yes      | `string`   | markdown |
+| `description`   | the event's description (accepts Markdown)                                                                                     | (see below)                 | yes      | `string`   |
 | `showResources` | use in case you want the listing to display the items in `resources` before the event                                          | `true`                      | no       | `boolean`  |
+| `is_public`     | set to `true` to show the event in the reduced public version of the Radar (see the developer notes)                           | `true`                      | no       | `boolean`  |
 | `meetings`      | where you place the video links for the meetings; these are going to appear on the event card 60 minutes before the event time | (see below)                 | no       | `array`    |
 | `forms`         | list of forms (like feedback forms)                                                                                            | (see below)                 | no       | `array`    |
 | `resources`     | list of any other resources (slides, recording, links, etc)                                                                    | (see below)                 | no       | `array`    |
 
 Each of the items in `meetings`, `forms`, and `resources` should follow the same structure:
 
-| property      | description                              | example                           | required | type                                                             |
-| ------------- | ---------------------------------------- | --------------------------------- | -------- | ---------------------------------------------------------------- |
-| `title`       | the name of the item                     | Meet: Kick-Off                    | yes      | `string`                                                         |
-| `description` | item's description                       | The main room where we will meet. | yes      | `string`                                                         |
-| `type`        | item's type (defines which icon to show) | `meeting`                         | yes      | `meeting`,`link`,`slides`,`form`,`video`,`tool`,`game`,`nothing` |
+| property      | description                              | example                                | required | type                                                             |
+| ------------- | ---------------------------------------- | -------------------------------------- | -------- | ---------------------------------------------------------------- |
+| `title`       | the name of the item                     | Meet: Kick-Off                         | yes      | `string`                                                         |
+| `description` | item's description                       | The main room where we will meet.      | no       | `string`                                                         |
+| `type`        | item's type (defines which icon to show) | `meeting`                              | yes      | `meeting`,`link`,`slides`,`form`,`video`,`tool`,`game`,`nothing` |
+| `url`         | the link the item opens                  | `https://meet.google.com/abc-defg-hij` | yes      | `string`                                                         |
 
 In case `meetings`, `forms`, or `resources` are empty, you should set their values to `[]`
+
+### Milestones
+
+Inside the `/content-bln/milestones` folder you'll find the deadlines of the semester, one file per milestone. The file name becomes the link (for example `50-checkpoint.yaml` is `/milestone/50-checkpoint`). Each file contains the following properties:
+
+| property      | description                                                                                              | example                     | required | type       |
+| ------------- | -------------------------------------------------------------------------------------------------------- | --------------------------- | -------- | ---------- |
+| `title`       | the milestone title                                                                                      | 50% Checkpoint              | yes      | `string`   |
+| `deadline`    | date and time of the deadline, including timezone                                                        | `2021-04-25T22:59:59+02:00` | yes      | `datetime` |
+| `type`        | `cutoff` shows a warning icon for hard deadlines; any other value, like `checkpoint`, shows a check mark | `checkpoint`                | yes      | `string`   |
+| `description` | the milestone's description (accepts Markdown)                                                           | (see below)                 | yes      | `string`   |
+| `todos`       | the tasks students have to complete by the deadline; use `[]` if there are none                          | (see below)                 | no       | `array`    |
+
+Each to-do has a `name` and, optionally, a list of `resources`. Resources have the same properties as the items of an event (`title`, `type`, `url`, and optionally `description`).
+
+```yaml
+title: Project Pitch Submission
+deadline: 2021-04-25T23:59:00+02:00
+type: checkpoint
+description: |
+  Submit your project pitch until the end of Sunday.
+
+todos:
+  - name: Submit your pitch
+    resources:
+      - title: Pitch form
+        type: form
+        description: Use this form to submit your pitch
+        url: https://example.com/pitch-form
+```
+
+The next upcoming milestone is shown above the events, and all milestones appear in the Timeline.
 
 ## All commands
 
@@ -242,7 +275,7 @@ For detailed explanation on how things work, check out the [Nuxt docs](https://n
 
 ## Developer notes
 
-- The content is defined as [Nuxt Content collections](https://content.nuxt.com/docs/collections/collections) in `content.config.ts`. The schemas there list the properties each YAML file may use, so when you add a new property to the content, add it to the schema too.
+- The content is defined as [Nuxt Content collections](https://content.nuxt.com/docs/collections/define) in `content.config.ts`. The schemas there list the properties each YAML file may use, so when you add a new property to the content, add it to the schema too.
 - The YAML files start with a `---` line. A small hook in `nuxt.config.ts` strips it before Nuxt Content parses the file, so you don't need to remove it.
 - Events and milestones are prerendered from the file names in `content-bln/events` and `content-bln/milestones`.
 - Set `SCOPE=public` when generating to build the reduced public version: no timeline, no milestones, and only the events and navigation or social links marked `is_public: true`. If no link is marked as public the menu is hidden completely.
