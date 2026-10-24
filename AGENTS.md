@@ -66,7 +66,6 @@ This is a volunteer-run community project. Be welcoming and patient, especially 
 ## Deployment
 
 - **`ci.yml`**: on every pull request, installs, lints, tests and builds.
-- **`deploy-bln.yml`**: on every push to `master`, builds the site and pushes `.output/public` to this repository's `deploy` branch, which GitHub Pages serves on the custom domain.
-- **`deploy_external-bln.yml`**: the same with `SCOPE=public` (the reduced public version), pushed to the `deploy` branch of `TechLabs-Berlin/radar-external`. It needs the repository secret `PAT` to check out that repository.
+- **`deploy-bln.yml`**: on every push to `master`, builds the site and pushes `.output/public` to this repository's `deploy` branch, which GitHub Pages serves at **`eventsberlin.techlabs.org`**. The deploy must keep the `.nojekyll` file, otherwise GitHub Pages drops the `_nuxt` folder.
 - The optional repository secret `ACCESS_PASSWORD` turns on the password gate.
 - Merging to `master` publishes. After a merge, check that the deploy workflows succeeded in the Actions tab and that the live site works, and tell a maintainer if not. Deployment problems and the launch checklist are tracked in [#83](https://github.com/TechLabs-Berlin/radar/issues/83).
