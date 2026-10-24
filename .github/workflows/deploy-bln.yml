@@ -62,6 +62,9 @@ jobs:
       - name: Copy frontend build to deploy repo
         run: |
           cp -r deploy/.git deploy/CNAME deploy/README.md build/
+          # upload-artifact skips hidden files, and without .nojekyll GitHub Pages
+          # drops the _nuxt folder
+          touch build/.nojekyll
 
       - name: Configure git
         run: |
