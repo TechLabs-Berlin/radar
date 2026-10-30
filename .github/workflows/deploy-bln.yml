@@ -47,8 +47,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     steps:
+      # Keep v4 here: the push below uses a copy of this checkout's .git, and
+      # since v6 the credentials are stored outside .git. With v7 the push failed.
       - name: Checkout deploy repo
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
         with:
           ref: deploy
           path: deploy
