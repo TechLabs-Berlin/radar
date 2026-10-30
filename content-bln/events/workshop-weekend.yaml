@@ -1,35 +1,19 @@
 ---
 title: Workshop Weekend
-date: '2021-05-15T10:00:00+02:00'
+date: '2025-12-13T10:00:00+01:00'
 description: |
   During this weekend, we'll have a series of workshops to help you prepare for the upcoming Project Phase:
 
-  - GIT workshop by Daniel
-  - Tech for Good by Sebastian
-  - VSCode Can do That by Daniel
-  - Fake it, till you make it by Zubin
-  - Data Ethics for Techies by Sofie & Marcel
-  - Python Backend for DS/AI by Daniel
-  - Bash + Colab = Magic by Zubin
-  - Developing for UX by Benedikt
-  - Building a modern FE app by Matheus
+  - GIT workshop by a mentor
+  - Tech for Good by a mentor
+  - VSCode Can do That by a mentor
+  - Fake it, till you make it by a mentor
+  - Data Ethics for Techies by two mentors
+  - Python Backend for DS/AI by a mentor
+  - Bash + Colab = Magic by a mentor
+  - Developing for UX by a mentor
+  - Building a modern FE app by a mentor
 
-forms:
-  []
+forms: []
 resources:
-  # - title: Registration all workshops
-  #   type: form
-  #   description: Registration for workshops for the workshop weekend
-  #   url: https://techlabsorg.typeform.com/to/gUsXngfE
-  # - title: Registration for Tech for Good
-  #   type: form
-  #   description: Limited to 30 participants
-  #   url: https://techlabsorg.typeform.com/to/heifm6va
-  - title: Slides and Recordings
-    description: All slides and recordings added to our Notion schedule page
-    type: link
-    url: https://www.notion.so/techlabs/477086fad8a54f3aac6e7e31224f55c5?v=949c64cbf9f144c19983edb4a03a6ddb
-  # - title: Workshop Weekend Slack Channel
-  #   description: Join this channel for questions and general chat about the WW
-  #   type: tool
-  #   url: https://techlabs-community.slack.com/archives/C021CMF0K4J
+  []

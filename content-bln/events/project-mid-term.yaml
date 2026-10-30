@@ -1,6 +1,6 @@
 ---
 title: Project Mid-Term
-date: '2021-06-08T19:30:00+02:00'
+date: '2026-01-06T19:30:00+01:00'
 description: |
   Every team will have the oppurtunity to present their current status in a short presentation. We would like to see **what have you been up to these past 4 weeks**:
 
@@ -9,22 +9,7 @@ description: |
   * Current stage & plan for the final stretch
   * Anything to show?
 
-meetings:
-  - title: Main Room
-    description: The main room where we will meet.
-    type: meeting
-    url:  https://us02web.zoom.us/j/89890271250?pwd=WlM2M1lBSEgyL3Z2ZHpVMU1xSDcwZz09
+meetings: []
 
 forms: []
-# - title: Feedback
-#   description: Please leave feedback for our Kick-Off Event!
-#   url: https://techlabsorg.typeform.com/to/DsoDLEfG
-resources:
-  - title: Meeting Recording
-    description: Recording of our intro, pitches and Q&A
-    type: video
-    url: https://drive.google.com/file/d/1ki_ETZwHMggcGVUaZ8C_2Bh_9DmQOvs9/view?usp=sharing
-  - title: Slide Deck
-    description: Our slides we showed during the event.
-    type: slides
-    url: https://docs.google.com/presentation/d/e/2PACX-1vTZ793Zdb6IsDPJ9tcsglU4sWFaGdeJHvynHRfmdfjbpsf_O6LUG4a7ycxNGk5xivAIal74V6VejnZn/pub?start=false&loop=false&delayms=3000
+resources: []

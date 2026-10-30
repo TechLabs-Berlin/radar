@@ -18,10 +18,17 @@
           </p>
         </div>
 
+        <!-- SHOW THAT SIGN-UP IS OFF (the demo has no sign-up endpoint) -->
+        <div v-else-if="!newsletterUrl">
+          <h3 class="mb-2 font-bold">Newsletter sign-up is off</h3>
+          <p>This demo does not add anyone to a mailing list.</p>
+        </div>
+
         <!-- SHOW SUBSCRIPTION FORM -->
         <div v-else>
           <ClientOnly>
             <MailchimpForm
+              :sign-up-url="newsletterUrl"
               @success="status = 'success'"
               @failure="status = 'failure'"
             />
@@ -36,4 +43,5 @@
 useHead({ title: 'Newsletter' })
 
 const status = useRoute().query.status
+const newsletterUrl = useRuntimeConfig().public.newsletterUrl
 </script>

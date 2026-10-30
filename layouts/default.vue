@@ -1,5 +1,10 @@
+<script setup>
+const { demoNotice } = useRuntimeConfig().public
+</script>
+
 <template>
   <div class="h-full bg-gray-50">
+    <DemoNotice :text="demoNotice" />
     <div class="w-full h-full max-w-5xl px-2 mx-auto layout-grid">
       <HeaderCompact />
       <slot />
