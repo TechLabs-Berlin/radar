@@ -1,36 +1,16 @@
 ---
 title: Terminal Workshop
-date: '2021-03-30T19:30:00+02:00'
+date: '2025-10-28T19:30:00+01:00'
 description: |
   Terminal Workshop!
 
   We will provide the Terminal Workshop where you'll learn how to control the system via a text-based interface through the command-line app.
 
   If you have never worked with the Terminal/Bash/Command Line before we **strongly recommend** to attend this event, to learn the skills required for the Git workshop.
-meetings:
-  - title: 'Meet: Terminal Workshop'
-    description: 'The main room where we will meet.'
-    type: meeting
-    url: https://us02web.zoom.us/j/84554906516?pwd=QnNyQkRzYWpwNFRadDNEYTE2RWZnQT09
-  - title: Social Polls
-    description: Link to participate in the special social experiment
-    type: game
-    url: https://vevox.app/#/m/173131964
-forms:
-  - title: 'Feedback: Terminal Workshop'
-    type: form
-    description: Please leave your feedback!
-    url: https://techlabsorg.typeform.com/to/dMrncvs6
+meetings: []
+forms: []
 showResources: true
 resources:
-  - title: 'Slides'
-    description: The presentation showed during the workshop
-    type: slides
-    url: https://docs.google.com/presentation/d/e/2PACX-1vThqw-slf5LZhaODT2pthFl1jQjbkVfOR914HZexPV-_7LNMxwqy570dhsqNlZkoeoMqirBzg6UVXow/pub?start=false&loop=false&delayms=3000
-  - title: 'Recording'
-    description: Watch the Terminal Workshop
-    type: video
-    url: https://drive.google.com/file/d/1QGZBRQuKuwaqiKLSKRfG1vnn9M93OkMz/view?usp=sharing
   - title: Git Bash
     description: For Windows users
     type: link

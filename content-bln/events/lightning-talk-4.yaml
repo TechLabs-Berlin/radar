@@ -1,25 +1,9 @@
 ---
 title: "Lightning Talk #4: A little bit of everything"
-date: "2021-06-01T19:30:00+02:00"
+date: "2025-12-30T19:30:00+01:00"
 is_public: true
 description: |
-  Guilherme Holz shares his journey through the tech industry from teenage actor to Facebook engineer 15 years later.
-meetings:
-  - title: 'Lightning Talk #4'
-    description: 'The main room where we will meet.'
-    type: meeting
-    url: https://us02web.zoom.us/j/83908274656?pwd=M3V0RUIwcUNPNGVxUzExWTZDeElLZz09
-forms:
-  - title: Feedback
-    type: form
-    description: Please leave feedback for this lightning talk!
-    url: https://techlabsorg.typeform.com/to/GBlad4TX
-resources:
-  - title: "Slides"
-    description: The presentation shown during the event
-    type: slides
-    url: https://docs.google.com/presentation/d/e/2PACX-1vR3Pww9RJCq6o7riQhIXSoTkHTeZR5_SbWZR3LlCD9oXpgPOi-wcMvQmRyTUog37xlUZFLpROQKDCIT/pub?start=false&loop=false&delayms=3000
-  - title: "Recording"
-    description: The recording of the event
-    type: video
-    url: https://drive.google.com/file/d/1p9lYP7So-DTiJvN8n9gHmown2K5GqVsI/view?usp=sharing
+  A guest speaker shares their journey through the tech industry.
+meetings: []
+forms: []
+resources: []

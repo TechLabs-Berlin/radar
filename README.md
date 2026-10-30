@@ -188,8 +188,8 @@ By editing the file `/content-bln/timeline.yaml`, you define the main **sections
 | ------------- | -------------------------------------------------------------------------------------------------------- | -------------- | -------- | ------- |
 | `title`       | the title of the timeline section                                                                        | Academic Phase | yes      | -       |
 | `description` | the description of the timeline section, shown when hovering over the (?) icon next to the section title | (see below)    | yes      | -       |
-| `startDate`   | the section's starting date (Monday), in the format YYY/MM/DD                                            | 2021/05/17     | yes      | -       |
-| `endDate`     | the section's ending date (Sunday), in the format YYY/MM/DD                                              | 2021/07/04     | yes      | -       |
+| `startDate`   | the section's starting date (Monday), in the format YYY/MM/DD                                            | 2025/12/15     | yes      | -       |
+| `endDate`     | the section's ending date (Sunday), in the format YYY/MM/DD                                              | 2026/02/01     | yes      | -       |
 
 For example:
 
@@ -199,8 +199,8 @@ For example:
     This is prime time! You imagine and implement a prototype in a project of your own.
 
     You team up as a group of 4-6 Techies and work together to create something big. Experienced mentors will be on your side for support.
-  startDate: 2021/05/17
-  endDate: 2021/07/04
+  startDate: 2025/12/15
+  endDate: 2026/02/01
 ```
 
 ... will result in:
@@ -216,7 +216,7 @@ Inside the `/content-bln/events` folder, you'll find files to all the events in 
 | property        | description                                                                                                                    | example                     | required | type       |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------- | -------- | ---------- |
 | `title`         | the event title                                                                                                                | Welcome Event ST21          | yes      | `string`   |
-| `date`          | time and date of the event, including timezone                                                                                 | `2021-03-16T19:30:00+02:00` | yes      | `datetime` |
+| `date`          | time and date of the event, including timezone                                                                                 | `2025-10-14T19:30:00+02:00` | yes      | `datetime` |
 | `description`   | the event's description (accepts Markdown)                                                                                     | (see below)                 | yes      | `string`   |
 | `showResources` | use in case you want the listing to display the items in `resources` before the event                                          | `true`                      | no       | `boolean`  |
 | `is_public`     | set to `true` to show the event in the reduced public version of the Radar (see the developer notes)                           | `true`                      | no       | `boolean`  |
@@ -242,7 +242,7 @@ Inside the `/content-bln/milestones` folder you'll find the deadlines of the sem
 | property      | description                                                                                              | example                     | required | type       |
 | ------------- | -------------------------------------------------------------------------------------------------------- | --------------------------- | -------- | ---------- |
 | `title`       | the milestone title                                                                                      | 50% Checkpoint              | yes      | `string`   |
-| `deadline`    | date and time of the deadline, including timezone                                                        | `2021-04-25T22:59:59+02:00` | yes      | `datetime` |
+| `deadline`    | date and time of the deadline, including timezone                                                        | `2025-11-23T22:59:59+01:00` | yes      | `datetime` |
 | `type`        | `cutoff` shows a warning icon for hard deadlines; any other value, like `checkpoint`, shows a check mark | `checkpoint`                | yes      | `string`   |
 | `description` | the milestone's description (accepts Markdown)                                                           | (see below)                 | yes      | `string`   |
 | `todos`       | the tasks students have to complete by the deadline; use `[]` if there are none                          | (see below)                 | no       | `array`    |
@@ -251,7 +251,7 @@ Each to-do has a `name` and, optionally, a list of `resources`. Resources have t
 
 ```yaml
 title: Project Pitch Submission
-deadline: 2021-04-25T23:59:00+02:00
+deadline: 2025-11-23T23:59:00+01:00
 type: checkpoint
 description: |
   Submit your project pitch until the end of Sunday.

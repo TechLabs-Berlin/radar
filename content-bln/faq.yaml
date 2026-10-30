@@ -4,21 +4,21 @@ sections:
     questions:
       - title: What tools do I need? How do I get them?
         content: |
-          - We use Slack to stay in touch with each other. 
-          - Your learning material will be provided on our learning platform edyoucated. 
+          - We use a community chat to stay in touch with each other. 
+          - Your learning material will be provided on our learning platform. 
 
-          We will provide instructions on how to join both our Slack workspace and edyoucated in our Kick-Off event.
+          We will provide instructions on how to join both our community chat and our learning platform in our Kick-Off event.
       - title: How do I keep up-to-date?
         content: |
-          Please make sure to keep track of the `#bl-wt20-10_announcements` channel in Slack. It's a good idea to download the Slack desktop and mobile apps to get notified of new messages in this channel. We don't expect you to monitor it 24/7 but you should check it regularly.
-      - title: How can I get access to edyoucated?
+          Please make sure to keep track of the announcements channel in our community chat. It's a good idea to download the chat's desktop and mobile apps to get notified of new messages in this channel. We don't expect you to monitor it 24/7 but you should check it regularly.
+      - title: How can I get access to the learning platform?
         content: |
-          We will provide instructions to join edyoucated in our Kick-Off event.
+          We will provide instructions to join the learning platform in our Kick-Off event.
       - title: Is there an attendance requirement for meetings?
         content: |
           We don't have an attendance requirement, but one of the key aspects of TechLabs is a community which will help you learn and build something together. This means that we strongly recommend participating in as many community events as you can.
 
-          Although we can't meet in-person while the COVID-19 situation persists, meeting new people and (possibly) making new friends is another important aspect why becoming a TechLabs Digital Shaper is fun and worthwhile. You don't want to miss out on that chance.
+          Meeting new people and (possibly) making new friends is another important aspect why becoming a TechLabs Digital Shaper is fun and worthwhile. You don't want to miss out on that chance.
 
   - title: Tracks
     questions:
@@ -56,7 +56,7 @@ sections:
           - There will be social events for getting to know each other better.
           - Industry experts will contribute some talks about broader tech topics, such as productivity, habit hacking, user research, design thinking etc.
 
-          We will facilitate your engagement in the community, but we rely on your motivation for it to be successful. The meetings will take place remotely as long as the COVID-19 situation persists. If circumstances allow, we will switch to in-person meetings during this semester, or for the next one.
+          We will facilitate your engagement in the community, but we rely on your motivation for it to be successful. Meetings take place both online and in person.
       - title: Are any resources or materials required to participate?
         content: |
           This depends on your track choice, but the material for all tracks is either free, or it costs an insignificant amount of money. We don't want to lose anyone just because they can't afford to pay for online learning resources.
@@ -69,9 +69,9 @@ sections:
       - title: Are there any fees associated with any of the courses?
         content: |
           No, TechLabs provides everything for you free-of-charge. Depending on your track there may be some cost for online learning resources (see above), but they are not significant.
-      - title: Are the tracks only on educated, or are there also other online courses?
+      - title: Are the tracks only on the learning platform, or are there also other online courses?
         content: |
-          The track content is provided on edyoucated, which will link to other platforms depending on your track. Moreover, we will host video conferences for talks which are not focused on one particular track, but on larger technology-related areas, such as Time Management, Habit Building and User Research.
+          The track content is provided on the learning platform, which will link to other platforms depending on your track. Moreover, we will host video conferences for talks which are not focused on one particular track, but on larger technology-related areas, such as Time Management, Habit Building and User Research.
       - title: What does Track Personalization mean?
         content: |
           Track Personalization means that we tailor your learning experience to your interests and previous knowledge. For example, if you don't have any previous data science background, we'll help you to learn the statistical backgrounds in addition to the Python/R coding exercises. This allows you to start learning right where you will benefit from the most.
@@ -113,7 +113,7 @@ sections:
     questions:
       - title: Will you offer another TechLabs semester this winter?
         content: |
-          Although there is no fixed schedule yet, we definitely plan on doing so. Please [subscribe to our newsletter](https://bln.techlabs.org/newsletter) or follow us on social media (linked in the header) to stay updated.
+          Although there is no fixed schedule yet, we definitely plan on doing so. Please [subscribe to our newsletter](/newsletter) or follow us on social media (linked in the header) to stay updated.
       - title: How are you going to select the students?
         content: |
           We aspire to enable our participants to use the skills they've acquired in one of our courses to have a real world impact. This is the main goal of our program and the main criteria for our evaluation. You should show that you're willing and able to take the time to complete the course successfully. And you should provide a clear vision of what you think you would be able to accomplish with digital skills learned in the course.

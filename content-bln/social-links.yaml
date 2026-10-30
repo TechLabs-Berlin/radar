@@ -9,6 +9,3 @@ socialLinks:
   - type: linkedin
     url: https://www.linkedin.com/company/techlabs-berlin
     is_public: true
-  - type: slack
-    url: https://techlabs-community.slack.com/
-    is_public: false

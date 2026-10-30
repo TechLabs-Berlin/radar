@@ -44,7 +44,8 @@ export default defineNuxtConfig({
           content: process.env.npm_package_description || '',
         },
       ],
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+      // there is no favicon.ico in public/, so point at the app icon
+      link: [{ rel: 'icon', type: 'image/png', href: '/icon.png' }],
     },
   },
 

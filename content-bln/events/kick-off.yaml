@@ -1,6 +1,6 @@
 ---
-title: Welcome Event ST21
-date: '2021-03-16T19:30:00+01:00'
+title: Welcome Event
+date: '2025-10-14T19:30:00+02:00'
 description: |
   This is where your Digital Shaper Journey will start. We'll give you a summary on all you need to know to master your track.
   Our topics include:
@@ -11,47 +11,6 @@ description: |
 
   Our goal is for everybody to have a clear understanding about TechLabs Berlin. We will share the link to join here a few days before the event.
 
-meetings:
-  - title: 'Meet: Kick-Off'
-    description: 'The main room where we will meet.'
-    type: meeting
-    url: https://us02web.zoom.us/j/86819382795?pwd=VnM5VC9CaHNEc1ZMcTY3TURhSFB0QT09
-  - title: 'Meet: DS'
-    description: Break-Out Room for Data Science
-    type: meeting
-    url: https://meet.google.com/ept-mmdn-nyx
-  - title: 'Meet: AI'
-    description: Break-Out Room for AI
-    type: meeting
-    url: https://meet.google.com/vam-djgi-iof
-  - title: 'Meet: WebDev'
-    description: Break-Out Room for Web Development
-    type: meeting
-    url: https://meet.google.com/prb-ifih-qnt
-  - title: 'Meet: UX'
-    description: Break-Out Room for UX Design
-    type: meeting
-    url: https://meet.google.com/aep-cocb-wyq
-  - title: 'Social: Wonder'
-    description: Join us in our Berliner Wonder Space!
-    type: meeting
-    url: https://www.wonder.me/r?id=a3f2b91d-5ab4-4127-ac47-894c257e8bdf&emailVerificationToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTQyNDMzNDM4OTcsImVtYWlsIjoibWF4aW1pbGlhbi5zY2hhbGxAbWFpbC5kZSIsInJvb21JZCI6ImEzZjJiOTFkLTVhYjQtNDEyNy1hYzQ3LTg5NGMyNTdlOGJkZiIsImlhdCI6MTYxMzAzMzc0M30.EyNP3NLajeYosiy9RtFvsogzClZIVnxHRVS9irPr7Qg%20Kind%20Regards
-forms:
-  []
-  # - title: Feedback
-  #   description: Please leave feedback for our Kick-Off Event!
-  #   type: form
-  #   url: https://techlabsorg.typeform.com/to/bEsJr5Gh
-resources:
-  - title: 'Slides'
-    description: The presentation we showed you during the Kick-Off
-    type: slides
-    url: https://docs.google.com/presentation/d/e/2PACX-1vTHjTj5f6Kg6oD1iUSYrW8-T60ShHCOKBEXOr4e-9ADaaUsnmI7XSOZFlsy5vnFVUDU4lsbdu0gDVOu/pub?start=false&loop=false&delayms=3000
-  - title: 'ST21 Google Calendar'
-    description: Link to our shared calendar with all events and milestones
-    type: link
-    url: https://calendar.google.com/calendar/u/1?cid=Y18ydHRmNWxycW11b25qdDVrNXFqZzBmaG5iZ0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t
-  - title: 'Recording'
-    description: The recording of the Kick-Off Event
-    type: video
-    url: https://drive.google.com/file/d/1fM-QE8TqLhqvdjiXg3JcgtMD0pM699gs/view?usp=sharing
+meetings: []
+forms: []
+resources: []

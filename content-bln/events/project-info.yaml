@@ -1,56 +1,11 @@
 ---
 title: Project Info Session
-date: '2021-04-13T19:30:00+02:00'
+date: '2025-11-11T19:30:00+01:00'
 description: |
   This session will provide you with all information you need to enter and complete the Project Phase.
 
   We'll get into details about generating ideas, pitching, selecting teams and mentors, project development, and final deliverables. And, of course, answer any extra questions you might have.
 
-meetings:
-  - title: 'Project Info Session'
-    description: 'The main room where we will meet.'
-    type: meeting
-    url: https://stroeer.zoom.us/j/6376720436
-  - title: Q&A
-    description: Write your questions here and we'll answer at the end of the event.
-    type: form
-    url: https://vevox.app/#/m/198368616
-  - title: Wonder Room
-    description: Get in and find your group!
-    type: game
-    url: https://www.wonder.me/r?id=60f06e54-ab00-4558-8c4e-b8cc383b9f57
-  - title: Escape Room Game
-    description: A Murderer is on the loose...
-    type: game
-    url: http://escape.verhellen.be/
-forms:
-  - title: Feedback
-    type: form
-    description: Please leave feedback for our Project Info Session Event
-    url: https://techlabsorg.typeform.com/to/eAUNSlXW
-resources:
-  - title: Slide Deck
-    description: Our slides we showed during the event.
-    type: slides
-    url: https://docs.google.com/presentation/d/e/2PACX-1vStLu24nxWZzbteE0uB7Fnf7PdqkOs3Bfn8mIja0y0kx1EEdI-dD5vpXw2SPdvTmoVJ2Lut1Hjf4IhE/pub?start=false&loop=false&delayms=3000
-  - title: ST21 Project Info Session Recording
-    description: The recording of this event
-    type: video
-    url: https://drive.google.com/file/d/1MOFJMA5PcCBW9P1Mj-CeRoz9OJtJc-7L/view?usp=sharing
-  - title: Project Pitches - ST20
-    description: The recording of the ST20 Project Pitching Session
-    type: video
-    url: https://drive.google.com/file/d/1FN8jAaUkcslNobALNRP3kpOwcBNFOguv/view?usp=sharing
-  - title: Final Event - ST20
-    description: The recording of the ST20 Final Event
-    type: video
-    url: https://drive.google.com/file/d/1fXMPJtwCavtqdsrUyFu_L0OHYk62Dy52/view?usp=sharing
-  - title: Project Pitches - WT20/21
-    description: The recording of the WT20/21 Project Pitching Session
-    type: video
-    url: https://drive.google.com/file/d/10B3OqgHaS1Om-PxGwxocH0ek0b-2PqCE/view?usp=sharing
-  - title: Final Event - WT20/21
-    description: The recording of the WT20/21 Final Event
-    type: video
-    url: https://www.youtube.com/watch?v=gTOKrfjXu9E
-
+meetings: []
+forms: []
+resources: []

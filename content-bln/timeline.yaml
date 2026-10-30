@@ -4,30 +4,30 @@ startsAt: 0
 timeline:
   - title: Kick-Off Week
     description: |
-      You join the community and get access to our learning platform edyoucated.
+      You join the community and get access to our learning platform.
 
       We present our four tracks, you choose one and create your personal TechLabs journey based on your previous knowledge.
-    startDate: 2021/03/15
-    endDate: 2021/03/21
+    startDate: 2025/10/13
+    endDate: 2025/10/19
 
   - title: Academy Phase
     description: |
-      You work through your track on edyoucated and become a master of your class.
+      You work through your track on the learning platform and become a master of your class.
 
       We organize social events regularly so that you can connect with fellow Techies, share your insights and work together on difficulties.
-    startDate: 2021/03/22
-    endDate: 2021/05/16
+    startDate: 2025/10/20
+    endDate: 2025/12/14
 
   - title: Project Phase
     description: |
       This is prime time! You imagine and implement a prototype in a project of your own.
 
       You team up as a group of 4-6 Techies and work together to create something big. Experienced mentors will be on your side for support.
-    startDate: 2021/05/17
-    endDate: 2021/07/04
+    startDate: 2025/12/15
+    endDate: 2026/02/01
 
   - title: Closing Week
     description: |
       You finish up your prototype and submit the final result to us. We organize a closing ceremony where you will be given your Digital Shaper Certificate.
-    startDate: 2021/07/05
-    endDate: 2021/07/11
+    startDate: 2026/02/02
+    endDate: 2026/02/08

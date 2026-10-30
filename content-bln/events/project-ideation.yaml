@@ -1,6 +1,6 @@
 ---
 title: Project Ideation Session
-date: '2021-04-20T19:30:00+02:00'
+date: '2025-11-18T19:30:00+01:00'
 description: |
   We will foster your creativity to imagine project ideas based on real-world problems.
 
@@ -14,22 +14,8 @@ description: |
   1. Introduction to our ideation format
   2. Ideation in break-out rooms
   3. Debrief with the whole group
-forms:
-  - title: Feedback
-    description: Please leave feedback for our Ideation Session!
-    url: https://techlabsorg.typeform.com/to/dpLdXQPb
+forms: []
 showResources: true
 resources:
-  # []
-  - title: "Miro Board Learning Board"
-    description: Please use this Miro Board to familiarize yourself with Miro
-    type: tool
-    url: https://miro.com/app/board/o9J_lfbo188=/
-# - title: "Result Miro Boards"
-#   description: Your results of the Ideation Session!
-#   type: tool
-#   url: https://miro.com/app/board/o9J_ks1KKlQ=/
-# - title: "Presentation Slides"
-#   description: Introduction slides we showed you
-#   type: slides
-#   url: https://drive.google.com/file/d/1HtQKJ9Sz4ePheT9K6sSGYFsNX1Q0dLbS/view?usp=sharing
+  []
+
