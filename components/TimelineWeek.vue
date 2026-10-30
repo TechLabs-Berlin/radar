@@ -3,13 +3,7 @@
     <div
       v-tippy="{ theme: 'tl', content: weekDates }"
       class="relative flex items-center justify-center flex-none w-10 h-10 font-mono text-sm font-semibold border rounded-lg shadow"
-      :class="
-        clsx({
-          'text-pink-600': weekStatus === 'current',
-          'bg-gray-100 text-gray-500': weekStatus === 'past',
-          'bg-white': weekStatus === 'future',
-        })
-      "
+      :class="weekClass"
     >
       W{{ week.number }}
       <template v-if="['current', 'past'].includes(weekStatus)">
@@ -43,8 +37,8 @@
 </template>
 
 <script>
+import { computed, defineComponent } from 'vue'
 import { isSameWeek, format, isPast, startOfWeek, endOfWeek } from 'date-fns'
-import clsx from 'clsx'
 export default defineComponent({
   props: {
     week: {
@@ -60,6 +54,11 @@ export default defineComponent({
       if (isPast(date.value)) return 'past'
       return 'future'
     })
+    const weekClass = computed(() => ({
+      'text-pink-600': weekStatus.value === 'current',
+      'bg-gray-100 text-gray-500': weekStatus.value === 'past',
+      'bg-white': weekStatus.value === 'future',
+    }))
     const weekDates = computed(
       () =>
         `${format(
@@ -70,8 +69,8 @@ export default defineComponent({
     return {
       format,
       weekStatus,
+      weekClass,
       weekDates,
-      clsx,
     }
   },
 })
