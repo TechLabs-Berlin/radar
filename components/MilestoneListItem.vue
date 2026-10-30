@@ -102,7 +102,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .milestone-grid {
   display: grid;
-  grid-gap: 1rem;
+  gap: 1rem;
   grid-template-columns: auto 1fr;
 }
 

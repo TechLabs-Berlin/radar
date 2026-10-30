@@ -12,7 +12,7 @@
 <style lang="scss" scoped>
 .layout-grid {
   display: grid;
-  grid-gap: 1.5rem;
+  gap: 1.5rem;
   grid-template-rows: auto 1fr auto;
 }
 </style>
