@@ -7,6 +7,7 @@ const { data: events } = await useEventList()
 const milestones = isPublic ? ref([]) : (await useMilestoneList()).data
 const timeline = isPublic ? ref(null) : (await useSingleDoc('timeline')).data
 const { data: announcement } = await useSingleDoc('announcement')
+const { data: blogPosts } = await useBlogFeed()
 </script>
 
 <template>
@@ -36,6 +37,9 @@ const { data: announcement } = await useSingleDoc('announcement')
               v-html="$md.render(announcement.body)"
             />
           </WrapperContentBox>
+        </div>
+        <div v-if="blogPosts?.length" class="mt-8">
+          <BlogFeed :items="blogPosts" />
         </div>
       </div>
     </div>

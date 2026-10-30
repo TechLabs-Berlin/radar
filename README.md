@@ -156,6 +156,10 @@ We use a personalized AWS Lambda function endpoint in our newsletter form, conne
 
 The footer contents can be changed in the file `content-bln/footer.md`.
 
+### Blog posts
+
+The home page shows the latest posts of an RSS 2.0 feed under the events. Set `RSS_FEED_URL` and `RSS_ITEM_COUNT` in `radar.config.ts` (the default is the last 5 posts of `https://blog.bifunctional.xyz/rss.xml`). The feed is read when the site is built, so the posts update on the next build. Set `RSS_FEED_URL` to `''` to hide the section. If the feed cannot be read, the build still succeeds and the section is left out.
+
 ## Content
 
 All content in the Radar is written on YAML files. YAML (a recursive acronym for "YAML Ain't Markup Language") is a human-readable data-serialization language. It is commonly used for configuration files and in applications where data is being stored or transmitted. In simple terms, it is a text file that allows structure data.
