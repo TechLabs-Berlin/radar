@@ -1,7 +1,12 @@
 import { createHash } from 'node:crypto'
 import { readdirSync } from 'node:fs'
 import { join } from 'node:path'
-import { LOCATION, RSS_FEED_URL, RSS_ITEM_COUNT } from './radar.config'
+import {
+  DEMO_NOTICE,
+  LOCATION,
+  RSS_FEED_URL,
+  RSS_ITEM_COUNT,
+} from './radar.config'
 
 // Event and milestone pages are only linked from client-rendered lists, so the
 // crawler can't discover them; list them explicitly so they get prerendered.
@@ -48,6 +53,7 @@ export default defineNuxtConfig({
       location: LOCATION,
       rssFeedUrl: RSS_FEED_URL,
       rssItemCount: RSS_ITEM_COUNT,
+      demoNotice: DEMO_NOTICE,
       // set SCOPE=public to build the reduced public version of the Radar
       scope: process.env.SCOPE || '',
       accessHash,
