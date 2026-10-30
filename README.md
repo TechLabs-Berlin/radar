@@ -67,7 +67,7 @@ Where to change what:
 | The footer                  | `content-bln/footer.md`                                       |
 | The browser tab title       | `nuxt.config.ts` (`app.head.titleTemplate`)                   |
 | The colors                  | `tailwind.config.ts`                                          |
-| The newsletter endpoint     | `components/MailchimpForm.vue`                                |
+| The newsletter endpoint     | `NEWSLETTER_URL` in `radar.config.ts`                         |
 
 ## Updating the content
 
@@ -162,7 +162,7 @@ The top menu (hamburger) is composed of internal links to other pages and social
 
 ### Newsletter
 
-We use a personalized AWS Lambda function endpoint in our newsletter form, connected to our Mailchimp account. You'll need to create your own, and change the endpoint in `components/MailchimpForm.vue`.
+The newsletter form sends sign-ups to the endpoint set as `NEWSLETTER_URL` in `radar.config.ts`. We use an AWS Lambda function connected to Mailchimp; you'll need to create your own. Leave `NEWSLETTER_URL` empty to turn sign-up off, as the demo does.
 
 ### Footer
 

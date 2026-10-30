@@ -4,6 +4,7 @@ import { join } from 'node:path'
 import {
   DEMO_NOTICE,
   LOCATION,
+  NEWSLETTER_URL,
   RSS_FEED_URL,
   RSS_ITEM_COUNT,
 } from './radar.config'
@@ -55,6 +56,7 @@ export default defineNuxtConfig({
       rssFeedUrl: RSS_FEED_URL,
       rssItemCount: RSS_ITEM_COUNT,
       demoNotice: DEMO_NOTICE,
+      newsletterUrl: NEWSLETTER_URL,
       // set SCOPE=public to build the reduced public version of the Radar
       scope: process.env.SCOPE || '',
       accessHash,

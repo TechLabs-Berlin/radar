@@ -71,10 +71,15 @@
 </template>
 
 <script>
+import { defineComponent, reactive, ref } from 'vue'
+
 export default defineComponent({
   name: 'MailchimpForm',
+  props: {
+    signUpUrl: { type: String, required: true },
+  },
   emits: ['success', 'failure'],
-  setup(_, { emit }) {
+  setup(props, { emit }) {
     const form = reactive({ email: '', name: '', consent: true })
     const errorEmail = ref(false)
     const errorConsent = ref(false)
@@ -87,13 +92,10 @@ export default defineComponent({
         name,
       }
       try {
-        const response = await $fetch(
-          'https://a696oel4ti.execute-api.eu-central-1.amazonaws.com/dev/add-to-list',
-          {
-            method: 'POST',
-            body: data,
-          }
-        )
+        const response = await $fetch(props.signUpUrl, {
+          method: 'POST',
+          body: data,
+        })
         console.log('SUCCESS')
         console.log(response)
         emit('success')

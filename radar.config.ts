@@ -11,3 +11,7 @@ export const RSS_ITEM_COUNT = 5
 // a demo. Set DEMO_NOTICE to '' to hide the banner.
 export const DEMO_NOTICE =
   'TechLabs Berlin is currently on hiatus. This Radar shows a mock semester for demo purposes.'
+
+// Where the newsletter form sends new sign-ups (an AWS Lambda endpoint connected
+// to Mailchimp). Set it to '' to turn sign-up off, as in the demo.
+export const NEWSLETTER_URL = ''
