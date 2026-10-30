@@ -59,7 +59,7 @@ export default defineComponent({
 <style lang="postcss" scoped>
 .link-grid {
   display: grid;
-  grid-gap: 1rem;
+  gap: 1rem;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: max-content;
 }

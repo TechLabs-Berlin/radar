@@ -56,7 +56,7 @@ const { data: blogPosts } = await useBlogFeed()
 
 @screen md {
   .main-grid {
-    grid-column-gap: 1rem;
+    column-gap: 1rem;
     grid-template-columns: min-content 1fr;
     grid-template-areas: 'timeline events';
   }
@@ -64,7 +64,7 @@ const { data: blogPosts } = await useBlogFeed()
 
 @screen lg {
   .main-grid {
-    grid-gap: 2rem;
+    gap: 2rem;
   }
 }
 
