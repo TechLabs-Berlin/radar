@@ -46,7 +46,7 @@ Edit any file in `content-bln/` and the page updates immediately.
 
 ## Make it yours
 
-1. **Choose your location code.** In `radar.config.ts` change `LOCATION`, rename the `content-bln/` folder to `content-<your code>/`, and add your badge as `public/icon-<your code>.png`.
+1. **Choose your location code.** Run `npm run init -- <your code>` (for example `npm run init -- ber`). It sets `LOCATION` in `radar.config.ts`, renames `content-bln/` to `content-<your code>/` and copies the current badge to `public/icon-<your code>.png`. Replace that copy with your own badge. Run it once, from a clean checkout.
 2. **Set the term and the timeline.** Edit `term.yaml` and `timeline.yaml`.
 3. **Replace the events and milestones.** Delete the ones in `events/` and `milestones/` and add your own, starting from a copy of an existing file.
 4. **Adjust the extras.** Menu and social links, FAQ, media, announcement banner, footer and the newsletter form (see the table below).
@@ -90,6 +90,18 @@ The repository ships with a GitHub Actions setup for GitHub Pages:
 2. Create a branch named `deploy` that contains a `README.md` (and a `CNAME` file if you use a custom domain). The workflow builds the site, copies those files next to it and pushes the result to this branch.
 3. In the repository settings, serve GitHub Pages from the `deploy` branch.
 4. Optional: add a repository secret `ACCESS_PASSWORD` to ask visitors for a shared password (see the [developer notes](#developer-notes) for what this does and does not protect).
+
+### Netlify
+
+1. Create a new site from your fork or copy of this repository.
+2. Set the build command to `npm run generate` and the publish directory to `.output/public`.
+3. Netlify reads the Node version from `.nvmrc`. Deploy, and the site is served at the URL Netlify gives you.
+
+### Cloudflare Pages
+
+1. Create a new Pages project from your fork or copy of this repository and choose the framework preset **None**.
+2. Set the build command to `npm run generate` and the build output directory to `.output/public`.
+3. Set the environment variable `NODE_VERSION` to the version in `.nvmrc` (for example `24`). Deploy, and the site is served at the `*.pages.dev` address Cloudflare gives you.
 
 ## Contributing
 

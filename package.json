@@ -14,6 +14,7 @@
     "build": "nuxt build",
     "preview": "nuxt preview",
     "generate": "nuxt generate",
+    "init": "node scripts/init.mjs",
     "postinstall": "nuxt prepare",
     "lint:js": "eslint .",
     "lint:style": "stylelint \"**/*.{vue,css,scss}\" --ignore-path .gitignore",
@@ -24,17 +25,12 @@
     "@nuxt/content": "^3.16.2",
     "@tailwindcss/typography": "^0.5.16",
     "better-sqlite3": "^13.0.3",
-    "clsx": "^2.1.1",
     "date-fns": "^2.30.0",
     "fast-xml-parser": "^5.11.2",
     "markdown-it": "^15.0.3",
     "nuxt": "^4.6.3",
     "vue": "^3.5.0",
-    "vue-router": "^4.5.0",
     "vue-tippy": "^6.7.0"
-  },
-  "overrides": {
-    "compression": "1.8.2"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.17.0",
@@ -48,7 +44,6 @@
     "postcss-html": "^2.0.0",
     "prettier": "^3.5.0",
     "sass": "^1.89.0",
-    "serve": "^14.2.6",
     "stylelint": "^17.16.0",
     "stylelint-config-html": "^2.0.0",
     "stylelint-config-recommended-vue": "^2.0.0",
