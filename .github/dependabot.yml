@@ -1,0 +1,39 @@
+version: 2
+updates:
+  # No routine version-update pull requests. Security fixes still arrive.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 0
+    labels:
+      - dependencies
+    assignees:
+      - valiantone
+    reviewers:
+      - valiantone
+    groups:
+      minor-and-patch:
+        update-types:
+          - minor
+          - patch
+      major:
+        update-types:
+          - major
+
+  # No routine version-update pull requests. Security fixes still arrive.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 0
+    labels:
+      - dependencies
+    assignees:
+      - valiantone
+    reviewers:
+      - valiantone
+    groups:
+      actions:
+        patterns:
+          - "*"
