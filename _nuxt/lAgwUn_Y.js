@@ -1,0 +1,1 @@
+import{i as e}from"#entry";import{B as t,I as n,f as r,q as i}from"./CBQ4p8Tj.js";var a={__name:`ProseA`,props:{href:{type:String,default:``},target:{type:String,default:void 0,required:!1}},setup(a){let o=a;return(a,s)=>{let c=e;return n(),r(c,{href:o.href,target:o.target},{default:i(()=>[t(a.$slots,`default`)]),_:3},8,[`href`,`target`])}}};export{a as default};
